@@ -1,0 +1,56 @@
+/* Suggested order:
+ * display
+ * list-style
+ * position
+ * float
+ * clear
+ * width
+ * height
+ * margin
+ * padding
+ * border
+ * background
+ * color
+ * font
+ * text-decoration
+ * text-align
+ * vertical-align
+ * white-space
+ * other text
+ * content
+ */
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1rem;
+  // line-height: 1.5;
+  color: #373a3c;
+  background-color: #fff;
+  height: 100%;
+}
+
+a {
+  color: #0275d8;
+  text-decoration: none;
+  &:focus,
+  &:hover {
+    color: #014c8c;
+    // text-decoration: underline;
+  }
+}
+
+::selection {
+  color: #fff;
+  background: #bee4fd;
+  text-shadow: none;
+}
+
+.page-title {
+  padding-bottom: .5rem;
+  margin: 1rem 0;
+  border-bottom: .0625rem solid #eee;
+}
