@@ -1,7 +1,6 @@
 // https://github.com/dingyiming/example-vue2/issues/9
 const path = require('path')
 const webpack = require('webpack')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const config = require('./config')
@@ -13,7 +12,7 @@ module.exports = {
     app: [path.resolve(config.paths.source, 'main.js')]
   },
   output: {
-    filename: utils.asset('js', '[name].[hash:8].js'),
+    filename: utils.asset('js', '[name].[hash:6].js'),
     path: config.paths.output,
     publicPath: config.paths.publicPath
   },
@@ -25,8 +24,8 @@ module.exports = {
     loaders: [
       { test: /\.js$/, loader: 'babel', exclude: /node_modules/ },
       { test: /\.vue$/, loader: 'vue' },
-      { test: /\.(png|jpe?g|gif|svg)(\?.*)?$/, loader: 'url', query: { limit: 10000, name: utils.asset('img', '[name].[hash:8].[ext]') } },
-      { test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/, loader: 'url', query: { limit: 10000, name: utils.asset('font', '[name].[hash:8].[ext]') } }
+      { test: /\.(png|jpe?g|gif|svg)(\?.*)?$/, loader: 'url', query: { limit: 10000, name: utils.asset('img', '[name].[hash:6].[ext]') } },
+      { test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/, loader: 'url', query: { limit: 10000, name: utils.asset('font', '[name].[hash:6].[ext]') } }
     ]
   },
   resolve: {
@@ -57,7 +56,6 @@ module.exports = {
       // {output}/file.txt
       { from: config.paths.static, context: __dirname }
     ]),
-    new HtmlWebpackPlugin({ title: 'WEDN.NET', template: path.resolve(config.paths.source, 'index.ejs') }),
     new webpack.DefinePlugin({ 'process.env': { NODE_ENV: JSON.stringify(config.env) } })
   ]
 }

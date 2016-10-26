@@ -3,8 +3,9 @@ process.env.NODE_ENV = process.env.NODE_ENV || 'production'
 const path = require('path')
 const webpack = require('webpack')
 const webpackMerge = require('webpack-merge')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 const webpackBaseConfig = require('./webpack.config.base')
 const config = require('./config')
@@ -25,14 +26,15 @@ module.exports = webpackMerge(webpackBaseConfig, {
   devtool: config.sourceMap.js ? '#source-map' : '',
   plugins: [
     new CleanWebpackPlugin(['dist'], { root: path.resolve(__dirname, '..') }),
-    new ExtractTextPlugin(path.posix.join(config.paths.asset, 'css', '[name].[hash:8].css')),
+    new ExtractTextPlugin(path.posix.join(config.paths.asset, 'css', '[name].[hash:6].css')),
+    new HtmlWebpackPlugin({ title: 'WEDN.NET', filename: config.paths.index, template: path.resolve(config.paths.source, 'index.ejs') }),
     new webpack.optimize.UglifyJsPlugin({ comments: false, compress: { warnings: false } }),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.BannerPlugin('Copyright (c) WEDN.NET'),
     // split vendor js into its own file
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
-      minChunks: function (module, count) {
+      minChunks: (module, count) => {
         // any required modules inside node_modules are extracted to vendor
         return (
           module.resource && /\.js$/.test(module.resource) &&

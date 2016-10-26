@@ -8,7 +8,8 @@ module.exports = {
     static: path.resolve(__dirname, '../static'),
     output: path.resolve(__dirname, '../dist'),
     publicPath: '/',
-    asset: 'assets'
+    asset: 'assets',
+    index: path.resolve(__dirname, '../dist/index.html')
   },
   sourceMap: {
     js: true,
