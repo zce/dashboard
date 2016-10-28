@@ -3,8 +3,8 @@ process.env.NODE_ENV = process.env.NODE_ENV || 'production'
 const path = require('path')
 const webpack = require('webpack')
 const webpackMerge = require('webpack-merge')
-const CleanWebpackPlugin = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 const webpackBaseConfig = require('./webpack.config.base')
@@ -25,7 +25,7 @@ module.exports = webpackMerge(webpackBaseConfig, {
   },
   devtool: config.sourceMap.js ? '#source-map' : '',
   plugins: [
-    new CleanWebpackPlugin(['dist'], { root: path.resolve(__dirname, '..') }),
+    new CleanWebpackPlugin([config.paths.output], { root: path.resolve(config.paths.output, '..') }),
     new ExtractTextPlugin(path.posix.join(config.paths.asset, 'css', '[name].[hash:6].css')),
     new HtmlWebpackPlugin({ title: 'WEDN.NET', filename: config.paths.index, template: path.resolve(config.paths.source, 'index.ejs') }),
     new webpack.optimize.UglifyJsPlugin({ comments: false, compress: { warnings: false } }),
