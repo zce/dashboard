@@ -6,8 +6,8 @@
   "private": true,
   "scripts": {
     "lint": "eslint --ext .js,.vue app task",
-    "dev": "webpack-dev-server --config task/webpack.config.development.js --hot --inline --progress --colors --open",
-    "build": "webpack --config task/webpack.config.production.js --progress --colors",
+    "build": "cross-env NODE_ENV=production webpack --progress --colors",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --hot --inline --progress --open",
     "prestart": "npm run build",
     "start": "webpack-dev-server --content-base dist --port 3000 --history-api-fallback --open"
   },
@@ -46,6 +46,7 @@
     "babel-preset-es2015": "^6.18.0",
     "clean-webpack-plugin": "^0.1.13",
     "copy-webpack-plugin": "^4.0.0",
+    "cross-env": "^3.1.3",
     "css-loader": "^0.25.0",
     "eslint": "^3.8.1",
     "eslint-config-standard": "^6.2.0",
@@ -54,7 +55,7 @@
     "eslint-plugin-html": "^1.5.5",
     "eslint-plugin-promise": "^3.3.0",
     "eslint-plugin-standard": "^2.0.1",
-    "extract-text-webpack-plugin": "^1.0.1",
+    "extract-text-webpack-plugin": "^2.0.0-beta.4",
     "file-loader": "^0.9.0",
     "html-webpack-plugin": "^2.24.0",
     "less": "^2.7.1",
@@ -62,8 +63,8 @@
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
     "vue-loader": "^9.7.0",
-    "webpack": "^1.13.2",
-    "webpack-dev-server": "^1.16.2",
+    "webpack": "^2.1.0-beta.25",
+    "webpack-dev-server": "^2.1.0-beta.0",
     "webpack-merge": "^0.15.0"
   }
 }
