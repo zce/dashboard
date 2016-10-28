@@ -25,8 +25,8 @@ module.exports = webpackMerge(webpackBaseConfig, {
   },
   devtool: config.sourceMap.js ? '#source-map' : '',
   plugins: [
-    new CleanWebpackPlugin([config.paths.output], { root: path.resolve(config.paths.output, '..') }),
     new ExtractTextPlugin(path.posix.join(config.paths.asset, 'css', '[name].[hash:6].css')),
+    new CleanWebpackPlugin([config.paths.output], { root: path.resolve(config.paths.output, '..') }),
     new HtmlWebpackPlugin({ title: 'WEDN.NET', filename: config.paths.index, template: path.resolve(config.paths.source, 'index.ejs') }),
     new webpack.optimize.UglifyJsPlugin({ comments: false, compress: { warnings: false } }),
     new webpack.optimize.OccurrenceOrderPlugin(),

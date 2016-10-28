@@ -5,7 +5,7 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "lint": "eslint --ext .js,.vue app config task",
+    "lint": "eslint --ext .js,.vue app task",
     "dev": "webpack-dev-server --config task/webpack.config.development.js --hot --inline --progress --colors --open",
     "build": "webpack --config task/webpack.config.production.js --progress --colors",
     "prestart": "npm run build",

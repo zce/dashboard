@@ -12,7 +12,7 @@ module.exports = {
     app: [path.resolve(config.paths.source, 'main.js')]
   },
   output: {
-    filename: utils.asset('js', '[name].[hash:6].js'),
+    filename: utils.asset('js', '[name].js'),
     path: config.paths.output,
     publicPath: config.paths.publicPath
   },
@@ -52,10 +52,10 @@ module.exports = {
     hot: true
   },
   plugins: [
+    new webpack.DefinePlugin({ 'process.env': { NODE_ENV: JSON.stringify(config.env) } }),
     new CopyWebpackPlugin([
       // {output}/file.txt
       { from: config.paths.static, context: __dirname }
-    ]),
-    new webpack.DefinePlugin({ 'process.env': { NODE_ENV: JSON.stringify(config.env) } })
+    ])
   ]
 }
