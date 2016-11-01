@@ -2,6 +2,7 @@ const path = require('path')
 const webpack = require('webpack')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 // options
 const config = {
@@ -16,13 +17,38 @@ const config = {
     index: path.join(__dirname, 'dist/index.html')
   },
   server: {
-    port: process.env.PORT || 1368
+    port: process.env.PORT || 1368,
+    proxy: {
+      '/api': {
+        target: 'http://localhost:2080/',
+        secure: false
+      }
+    }
   },
   sourceMap: { js: true, css: true }
 }
 
+const isProd = config.env === 'production'
+
 function assetPath (...paths) {
   return path.posix.join(config.paths.assets, ...paths)
+}
+
+function styleLoader (type) {
+  if (config.env !== 'production') {
+    return `style!${(type === 'css' ? '' : 'css!')}${type}`
+  }
+  return ExtractTextPlugin.extract({
+    fallbackLoader: 'style',
+    loader: (type === 'css' ? [] : ['css']).concat([
+      {
+        loader: type,
+        options: {
+          sourceMap: true
+        }
+      }
+    ])
+  })
 }
 
 module.exports = {
@@ -31,10 +57,27 @@ module.exports = {
   output: {
     path: config.paths.output,
     publicPath: config.paths.publicPath,
-    filename: assetPath('js', '[name].js')
+    filename: assetPath('js', '[name].js?v=[hash:6]')
   },
   module: {
     rules: [
+      {
+        test: /\.js$/,
+        enforce: 'pre',
+        loader: 'eslint',
+        exclude: /node_modules/,
+        options: {
+          formatter: require("eslint-friendly-formatter")
+        }
+      },
+      {
+        test: /\.vue$/,
+        enforce: 'pre',
+        loader: 'eslint',
+        options: {
+          formatter: require("eslint-friendly-formatter")
+        }
+      },
       {
         test: /\.js$/,
         loader: 'babel',
@@ -44,38 +87,26 @@ module.exports = {
         test: /\.vue$/,
         loader: 'vue',
         options: {
-          // vue-loader options go here
+          loaders: {
+            css: styleLoader('css'),
+            less: styleLoader('less')
+          }
         }
       },
       {
         test: /\.css$/,
-        use: [
-          'style',
-          'css'
-        ],
-        options: {
-          sourceMap: true
-        }
+        loader: styleLoader('css')
       },
       {
         test: /\.less$/,
-        use: [
-          'style',
-          'css',
-          {
-            loader: 'less',
-            options: {
-              sourceMap: true
-            }
-          }
-        ]
+        loader: styleLoader('less')
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         loader: 'url',
         options: {
           limit: 10000,
-          name: assetPath('img', '[name].[ext]?[hash:6]')
+          name: assetPath('img', '[name].[ext]?v=[hash:6]')
         }
       },
       {
@@ -83,7 +114,7 @@ module.exports = {
         loader: 'url',
         options: {
           limit: 10000,
-          name: assetPath('font', '[name].[ext]?[hash:6]')
+          name: assetPath('font', '[name].[ext]?v=[hash:6]')
         }
       }
     ]
@@ -100,11 +131,13 @@ module.exports = {
   },
   devServer: {
     port: config.server.port,
+    proxy: config.server.proxy,
     outputPath: config.paths.output,
     contentBase: config.paths.output,
     historyApiFallback: true,
-    noInfo: true,
-    quiet: true, // no default console
+    // // no default console
+    // noInfo: true,
+    // quiet: true,
     inline: true,
     hot: true
   },
@@ -114,8 +147,8 @@ module.exports = {
       'process.env': { NODE_ENV: JSON.stringify(config.env) }
     }),
     new HtmlWebpackPlugin({
-      title: 'WEDN.NET',
-      filename: config.paths.index,
+      title: isProd ? '{{ title }}' : 'WEDN.NET',
+      filename: isProd ? config.paths.index : 'index.html',
       template: path.join(config.paths.source, 'index.ejs')
     }),
     new CopyWebpackPlugin([
@@ -125,10 +158,10 @@ module.exports = {
   ]
 }
 
-if (config.env === 'production') {
-  // module.exports.devtool = 'source-map'
-  // http://vue-loader.vuejs.org/en/workflow/production.html
+if (isProd) {
+  module.exports.devtool = 'source-map'
   module.exports.plugins = (module.exports.plugins || []).concat([
+    new ExtractTextPlugin(assetPath('css', '[name].css?v=[hash:6]')),
     new webpack.optimize.UglifyJsPlugin({
       compress: { warnings: false },
       comments: false,
