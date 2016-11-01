@@ -12,17 +12,17 @@ const config = {
     source: path.join(__dirname, 'app'),
     static: path.join(__dirname, 'static'),
     output: path.join(__dirname, 'dist'),
-    publicPath: '',
+    publicPath: '/',
     assets: 'assets',
     index: path.join(__dirname, 'dist/index.html')
   },
   server: {
-    port: process.env.PORT || 1368,
+    port: process.env.PORT || 2368,
     proxy: {
-      '/api': {
-        target: 'http://localhost:2080/',
-        secure: false
-      }
+      // '/api': {
+      //   target: 'http://localhost:2080/',
+      //   secure: false
+      // }
     }
   },
   sourceMap: { js: true, css: true }
@@ -147,7 +147,7 @@ module.exports = {
       'process.env': { NODE_ENV: JSON.stringify(config.env) }
     }),
     new HtmlWebpackPlugin({
-      title: isProd ? '{{ title }}' : 'WEDN.NET',
+      title: 'WEDN.NET',
       filename: isProd ? config.paths.index : 'index.html',
       template: path.join(config.paths.source, 'index.ejs')
     }),

@@ -15,12 +15,15 @@
   import Content from './components/content'
 
   export default {
+    name: 'app',
+
     components: {
       'app-header': Header,
       'app-main': Main,
       'app-sidebar': Sidebar,
       'app-content': Content
     },
+
     data () {
       return {
         message: 'Hello Vue!'

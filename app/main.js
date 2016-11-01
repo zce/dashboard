@@ -1,31 +1,25 @@
 import Vue from 'vue'
-import VueRouter from 'vue-router'
-import VueResource from 'vue-resource'
+import Resource from 'vue-resource'
 import Element from 'element-ui'
 
 import App from './app'
-import routes from './routes'
+import router from './router'
 
+// Import style sheets
 import 'normalize.css/normalize.css'
-// import 'bootstrap/dist/css/bootstrap.css'
 import 'element-ui/lib/theme-default/index.css'
-
 import './assets/less/global.less'
 
-Vue.use(VueRouter)
-Vue.use(VueResource)
+// Use plugins
+Vue.use(Resource)
 Vue.use(Element)
 
-const router = new VueRouter({
-  // http://router.vuejs.org/en/api/options.html
-  mode: 'history',
-  base: '/',
-  routes: routes
-})
-
-/* eslint-disable no-new */
-new Vue({
-  el: '#app',
+// Root app
+const app = new Vue({
+  name: 'root',
   router: router,
   render: h => h(App)
 })
+
+// Mount to #app element
+app.$mount('#app')

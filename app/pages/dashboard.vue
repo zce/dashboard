@@ -13,7 +13,11 @@
 <script>
   export default {
     name: 'dashboard',
+
     path: '/dashboard',
+
+    default: true,
+
     data () {
       const todos = []
       for (let i = 0; i < 100; i++) {

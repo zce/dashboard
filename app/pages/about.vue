@@ -7,6 +7,7 @@
 <script>
   export default {
     name: 'about',
+
     path: '/about'
   }
 </script>

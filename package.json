@@ -7,9 +7,7 @@
   "scripts": {
     "lint": "eslint --ext .js,.vue app task",
     "build": "cross-env NODE_ENV=production webpack --progress --colors",
-    "dev": "webpack-dev-server --hot --inline --progress --open",
-    "prestart": "npm run build",
-    "start": "webpack-dev-server --content-base dist --port 3000 --history-api-fallback --open"
+    "start": "webpack-dev-server --hot --inline --progress --open"
   },
   "repository": {
     "type": "git",
