@@ -19,10 +19,10 @@ const config = {
   server: {
     port: process.env.PORT || 2368,
     proxy: {
-      // '/api': {
-      //   target: 'http://localhost:2080/',
-      //   secure: false
-      // }
+      '/v2': {
+        target: 'https://api.douban.com/',
+        secure: false
+      }
     }
   },
   sourceMap: { js: true, css: true }
@@ -121,7 +121,7 @@ module.exports = {
   },
   resolve: {
     modules: ['node_modules', config.paths.source],
-    extensions: ['.js', '.json', '.vue', '.css', '.less', '.sass'],
+    extensions: ['.js', '.json', '.vue', '.css', '.less'],
     alias: {
       // $: only module name
       // // runtime-only build, template option is not available.
@@ -152,7 +152,6 @@ module.exports = {
       template: path.join(config.paths.source, 'index.ejs')
     }),
     new CopyWebpackPlugin([
-      // {output}/file.txt
       { from: config.paths.static, context: __dirname }
     ])
   ]
@@ -168,7 +167,17 @@ if (isProd) {
       sourceMap: true
     }),
     new webpack.LoaderOptionsPlugin({
+      debug: false,
       minimize: true
-    })
+    }),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor',
+      minChunks: module => console.log(module.resource) || module.resource && /\.js$/.test(module.resource) && module.resource.includes('node_modules')
+    }),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'manifest',
+      chunks: ['vendor']
+    }),
+    new webpack.BannerPlugin('Copyright (c) WEDN.NET')
   ])
 }
