@@ -53,11 +53,13 @@ function styleLoader (type) {
 
 module.exports = {
   context: config.paths.root,
-  entry: [path.join(config.paths.source, 'main.js')],
+  entry: {
+    main: [path.join(config.paths.source, 'main.js')]
+  },
   output: {
     path: config.paths.output,
     publicPath: config.paths.publicPath,
-    filename: assetPath('js', '[name].js?v=[hash:6]')
+    filename: assetPath('js', '[name].js?v=[chunkhash:6]')
   },
   module: {
     rules: [
@@ -172,7 +174,7 @@ if (isProd) {
     }),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
-      minChunks: module => console.log(module.resource) || module.resource && /\.js$/.test(module.resource) && module.resource.includes('node_modules')
+      minChunks: m => m.resource && /\.js$/.test(m.resource) && m.resource.includes('node_modules')
     }),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'manifest',
