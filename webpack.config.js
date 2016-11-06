@@ -59,7 +59,7 @@ module.exports = {
   output: {
     path: config.paths.output,
     publicPath: config.paths.publicPath,
-    filename: assetPath('js', '[name].js?v=[chunkhash:6]')
+    filename: isProd ? assetPath('js', '[name].js?v=[chunkhash:6]') : '[name].js'
   },
   module: {
     rules: [
