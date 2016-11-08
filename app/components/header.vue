@@ -20,7 +20,7 @@
 </script>
 
 <style lang="less">
-  @height: 3.5rem;
+  @height: 3rem;
 
   .header .navbar {
     display: flex;

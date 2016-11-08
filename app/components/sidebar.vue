@@ -40,9 +40,9 @@
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    width: 14rem;
+    width: 12rem;
     color: #fff;
-    transform: translateX(-14rem);
+    transform: translateX(-12rem);
     transition: translateX 1s ease;
     .search {
       padding: .8rem .6rem;

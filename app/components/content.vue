@@ -22,18 +22,18 @@
     border-top-right-radius: .2rem;
   }
 
-  ::-webkit-scrollbar {
-    width: .3rem;
-    height: .3rem;
-    -webkit-appearance: none;
-  }
+  // ::-webkit-scrollbar {
+  //   width: .3rem;
+  //   height: .3rem;
+  //   -webkit-appearance: none;
+  // }
 
-  ::-webkit-scrollbar-track {
-    background-color: transparent;
-  }
+  // ::-webkit-scrollbar-track {
+  //   background-color: transparent;
+  // }
 
-  ::-webkit-scrollbar-thumb {
-    border-radius: .3rem;
-    background-color: rgba(100, 100, 100, .5);
-  }
+  // ::-webkit-scrollbar-thumb {
+  //   border-radius: .3rem;
+  //   background-color: rgba(100, 100, 100, .5);
+  // }
 </style>
