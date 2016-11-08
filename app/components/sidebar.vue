@@ -33,6 +33,7 @@
 </script>
 
 <style lang="less">
+  @width: 12rem;
   @height: 2.5rem;
   @color: fade(#93b9cc, 10%);
 
@@ -40,10 +41,10 @@
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    width: 12rem;
+    width: @width;
     color: #fff;
-    transform: translateX(-12rem);
-    transition: translateX 1s ease;
+    margin-left: -@width;
+    transition: margin-left .3s ease;
     .search {
       padding: .8rem .6rem;
       .el-input {
@@ -101,7 +102,7 @@
 
   @media screen and (min-width: 720px) {
     .sidebar {
-      transform: translateX(0);
+      margin-left: 0;
     }
   }
 </style>
