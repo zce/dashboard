@@ -1,15 +1,27 @@
 import Vue from 'vue'
 // import Resource from 'vue-resource'
-
+import NProgress from 'nprogress'
 import App from './app'
 import router from './router'
 
 // Import style sheets
 import 'normalize.css/normalize.css'
+import 'nprogress/nprogress.css'
 import './assets/less/global.less'
 
 // Use plugins
 // Vue.use(Resource)
+
+// start
+router.beforeEach((to, from, next) => {
+  NProgress.start()
+  next()
+})
+
+// end
+router.afterEach(() => {
+  NProgress.done()
+})
 
 // Root app
 const app = new Vue({
