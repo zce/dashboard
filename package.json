@@ -34,6 +34,7 @@
   "homepage": "https://github.com/wedn/wedn.net#readme",
   "dependencies": {
     "normalize.css": "^5.0.0",
+    "nprogress": "^0.2.0",
     "vue": "^2.0.3",
     "vue-resource": "^1.0.3",
     "vue-router": "^2.0.1"
