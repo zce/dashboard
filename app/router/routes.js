@@ -13,6 +13,9 @@
 // export default defaults.concat(pages.map(page => ({ name: page.name, path: page.path, component: page })))
 
 // 异步分块加载所有组件
+// https://github.com/wengang/vue-router-async-components/blob/master/src/main.js#L26
+// TODO: code splite group
+// https://github.com/webpack/webpack/issues/2369
 export default [
   {
     name: 'default',
@@ -20,23 +23,27 @@ export default [
     redirect: { name: 'dashboard' }
   },
   {
-    name: 'component',
-    path: '/component',
-    component: resolve => require.ensure([], () => resolve(require('../pages/component')), 'component')
-  },
-  {
     name: 'dashboard',
     path: '/dashboard',
-    component: resolve => require.ensure([], () => resolve(require('../pages/dashboard')), 'dashboard')
+    component: () => System.import('../pages/dashboard')
+    // component: resolve => require.ensure([], () => resolve(require('../pages/dashboard')), 'dashboard')
+  },
+  {
+    name: 'component',
+    path: '/component',
+    component: () => System.import('../pages/component')
+    // component: resolve => require.ensure([], () => resolve(require('../pages/component')), 'component')
   },
   {
     name: 'about',
     path: '/about',
-    component: resolve => require.ensure([], () => resolve(require('../pages/about')), 'about')
+    component: () => System.import('../pages/about')
+    // component: resolve => require.ensure([], () => resolve(require('../pages/about')), 'about')
   },
   {
     name: '404',
     path: '*',
-    component: resolve => require.ensure([], () => resolve(require('../pages/404')), '404')
+    component: () => System.import('../pages/404')
+    // component: resolve => require.ensure([], () => resolve(require('../pages/404')), '404')
   }
 ]

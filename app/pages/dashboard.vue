@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Dashboard</h1>
+    <h1 class="page-title">Dashboard</h1>
     <ul>
       <li v-for="todo in todos">
         <input type="checkbox" v-model="todo.competed">
