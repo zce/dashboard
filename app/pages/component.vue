@@ -6,8 +6,6 @@
 
 <script>
   export default {
-    name: 'component',
-
-    path: '/component'
+    name: 'component'
   }
 </script>

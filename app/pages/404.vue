@@ -6,9 +6,7 @@
 
 <script>
   export default {
-    name: 'not-found',
-
-    path: '*'
+    name: 'not-found'
   }
 </script>
 
