@@ -14,7 +14,9 @@ const config = {
     output: path.join(__dirname, 'dist'),
     publicPath: '/',
     assets: 'assets',
-    index: path.join(__dirname, 'dist/index.html')
+    index: path.join(__dirname, 'dist/index.html'),
+    // just for gh-pages
+    notfound: path.join(__dirname, 'dist/404.html')
   },
   server: {
     port: process.env.PORT || 2368,
@@ -165,6 +167,13 @@ if (isProd) {
   module.exports.devtool = 'source-map'
   module.exports.plugins = (module.exports.plugins || []).concat([
     new ExtractTextPlugin(assetPath('css', '[name].css?v=[hash:6]')),
+    // just for gh-pages
+    new HtmlWebpackPlugin({
+      title: 'WEDN.NET',
+      filename: config.paths.notfound,
+      template: path.join(config.paths.source, 'index.ejs'),
+      inject: false
+    }),
     new webpack.optimize.UglifyJsPlugin({
       compress: { warnings: false },
       comments: false,
