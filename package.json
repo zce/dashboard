@@ -33,7 +33,6 @@
   },
   "homepage": "https://github.com/wedn/wedn.net#readme",
   "dependencies": {
-    "element-ui": "^1.0.0-rc.8",
     "normalize.css": "^5.0.0",
     "vue": "^2.0.3",
     "vue-resource": "^1.0.3",

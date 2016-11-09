@@ -1,9 +1,6 @@
 <template>
   <aside class="sidebar">
     <section class="search">
-      <el-input placeholder="请输入内容">
-        <el-button slot="append" icon="search"></el-button>
-      </el-input>
     </section>
     <nav class="navbar">
       <ul class="nav">
