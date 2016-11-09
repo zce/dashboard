@@ -40,11 +40,11 @@
     height: 100%;
     overflow: hidden;
     color: #fff;
-    // background-color: #373a3c;
-    background-color: #93b9cc;
-    background-image: url('./assets/img/main_bg.jpg');
-    background-position: center 0;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: #2f4050; // #373a3c;
+    // background-color: #93b9cc;
+    // background-image: url('./assets/img/main_bg.jpg');
+    // background-position: center 0;
+    // background-repeat: no-repeat;
+    // background-size: cover;
   }
 </style>

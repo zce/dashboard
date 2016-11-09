@@ -7,6 +7,7 @@ import router from './router'
 // Import style sheets
 import 'normalize.css/normalize.css'
 import 'nprogress/nprogress.css'
+import 'font-awesome/css/font-awesome.css'
 import './assets/less/global.less'
 
 // Use plugins

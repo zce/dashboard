@@ -21,8 +21,12 @@
     data () {
       return {
         menus: [
-          { title: 'Dashboard', icon: 'el-icon-star-on', name: 'dashboard', params: { id: 1 } },
-          { title: 'Components', icon: 'el-icon-menu', name: 'component' }
+          { title: 'Dashboard', icon: 'fa fa-tachometer', name: 'dashboard' },
+          { title: 'Components', icon: 'fa fa-codepen', name: 'component' },
+          { title: 'Test', icon: 'fa fa-codepen', name: 'demo', params: { id: 1 } },
+          { title: 'Star', icon: 'fa fa-star', name: 'component' },
+          { title: 'Components', icon: 'fa fa-codepen', name: 'component' },
+          { title: 'Options', icon: 'fa fa-cog', name: 'option' }
         ]
       }
     }
@@ -32,7 +36,7 @@
 <style lang="less">
   @width: 12rem;
   @height: 2.5rem;
-  @color: fade(#93b9cc, 10%);
+  @color: fade(#fff, 5%);
 
   .sidebar {
     display: flex;
@@ -44,20 +48,6 @@
     transition: margin-left .3s ease;
     .search {
       padding: .8rem .6rem;
-      .el-input {
-        font-size: .8rem;
-        line-height: 1.5rem;
-      }
-      .el-input__inner {
-        color: #fff;
-        height: 2rem;
-        background-color: @color;
-        border-color: @color;
-      }
-      .el-input-group__append {
-        background-color: @color;
-        border-color: @color;
-      }
     }
     .navbar {
       display: flex;
