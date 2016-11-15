@@ -38,13 +38,13 @@ function assetPath (...paths) {
 
 function styleLoader (type) {
   if (config.env !== 'production') {
-    return `style!${(type === 'css' ? '' : 'css!')}${type}`
+    return `style-loader!${(type === 'css' ? '' : 'css-loader!')}${type}-loader`
   }
   return ExtractTextPlugin.extract({
-    fallbackLoader: 'style',
-    loader: (type === 'css' ? [] : ['css']).concat([
+    fallbackLoader: 'style-loader',
+    loader: (type === 'css' ? [] : ['css-loader']).concat([
       {
-        loader: type,
+        loader: `${type}-loader`,
         options: {
           sourceMap: true
         }
@@ -69,7 +69,7 @@ module.exports = {
       {
         test: /\.js$/,
         enforce: 'pre',
-        loader: 'eslint',
+        loader: 'eslint-loader',
         exclude: /node_modules/,
         options: {
           formatter: require("eslint-friendly-formatter")
@@ -78,19 +78,19 @@ module.exports = {
       {
         test: /\.vue$/,
         enforce: 'pre',
-        loader: 'eslint',
+        loader: 'eslint-loader',
         options: {
           formatter: require("eslint-friendly-formatter")
         }
       },
       {
         test: /\.js$/,
-        loader: 'babel',
+        loader: 'babel-loader',
         exclude: /node_modules/
       },
       {
         test: /\.vue$/,
-        loader: 'vue',
+        loader: 'vue-loader',
         options: {
           loaders: {
             css: styleLoader('css'),
@@ -108,7 +108,7 @@ module.exports = {
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
-        loader: 'url',
+        loader: 'url-loader',
         options: {
           limit: 10000,
           name: assetPath('img', '[name].[ext]?v=[hash:6]')
@@ -116,7 +116,7 @@ module.exports = {
       },
       {
         test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
-        loader: 'url',
+        loader: 'url-loader',
         options: {
           limit: 10000,
           name: assetPath('font', '[name].[ext]?v=[hash:6]')
@@ -137,7 +137,7 @@ module.exports = {
   devServer: {
     port: config.server.port,
     proxy: config.server.proxy,
-    outputPath: config.paths.output,
+    // outputPath: config.paths.output,
     contentBase: config.paths.output,
     historyApiFallback: true,
     // // no default console
