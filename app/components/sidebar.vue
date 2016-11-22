@@ -1,7 +1,6 @@
 <template>
   <aside class="sidebar">
-    <section class="search">
-    </section>
+    <!-- <section class="search"></section> -->
     <nav class="navbar">
       <ul class="nav">
         <li class="nav-title">Actions</li>
