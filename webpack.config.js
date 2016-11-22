@@ -167,13 +167,6 @@ if (isProd) {
   module.exports.devtool = 'source-map'
   module.exports.plugins = (module.exports.plugins || []).concat([
     new ExtractTextPlugin(assetPath('css', '[name].css?v=[hash:6]')),
-    // just for gh-pages
-    new HtmlWebpackPlugin({
-      title: 'WEDN.NET',
-      filename: config.paths.notfound,
-      template: path.join(config.paths.source, 'index.ejs'),
-      inject: false
-    }),
     new webpack.optimize.UglifyJsPlugin({
       compress: { warnings: false },
       comments: false,
@@ -193,4 +186,14 @@ if (isProd) {
     }),
     new webpack.BannerPlugin('Copyright (c) WEDN.NET')
   ])
+
+  // just for gh-pages
+  if (config.paths.notfound) {
+    module.exports.plugins.push(new HtmlWebpackPlugin({
+      title: 'WEDN.NET',
+      filename: config.paths.notfound,
+      template: path.join(config.paths.source, 'index.ejs'),
+      inject: false
+    }))
+  }
 }

@@ -16,6 +16,10 @@
 // https://github.com/wengang/vue-router-async-components/blob/master/src/main.js#L26
 // TODO: code splite group
 // https://github.com/webpack/webpack/issues/2369
+// component: resolve => require.ensure([], () => resolve(require('../pages/component')), 'component')
+// component: () => System.import('../pages/component')
+// component: require('../pages/dashboard')
+
 export default [
   {
     name: 'default',
@@ -25,25 +29,36 @@ export default [
   {
     name: 'dashboard',
     path: '/dashboard',
-    component: () => System.import('../pages/dashboard')
-    // component: resolve => require.ensure([], () => resolve(require('../pages/dashboard')), 'dashboard')
+    component: require('../pages/dashboard')
   },
   {
     name: 'component',
     path: '/component',
     component: () => System.import('../pages/component')
-    // component: resolve => require.ensure([], () => resolve(require('../pages/component')), 'component')
+  },
+  {
+    name: 'option',
+    path: '/option',
+    component: () => System.import('../pages/option')
   },
   {
     name: 'about',
     path: '/about',
     component: () => System.import('../pages/about')
-    // component: resolve => require.ensure([], () => resolve(require('../pages/about')), 'about')
+  },
+  {
+    name: 'param',
+    path: '/param',
+    component: () => System.import('../pages/param')
+  },
+  {
+    name: 'demo',
+    path: '/demo',
+    component: () => System.import('../pages/demo')
   },
   {
     name: '404',
     path: '*',
     component: () => System.import('../pages/404')
-    // component: resolve => require.ensure([], () => resolve(require('../pages/404')), '404')
   }
 ]

@@ -23,8 +23,8 @@
         menus: [
           { title: 'Dashboard', icon: 'fa fa-tachometer', name: 'dashboard' },
           { title: 'Components', icon: 'fa fa-codepen', name: 'component' },
-          { title: 'Test', icon: 'fa fa-codepen', name: 'demo', params: { id: 1 } },
-          { title: 'Star', icon: 'fa fa-star', name: 'component' },
+          { title: 'Demo', icon: 'fa fa-codepen', name: 'demo' },
+          { title: 'Parameters', icon: 'fa fa-star', name: 'param', params: { id: 1 } },
           { title: 'Components', icon: 'fa fa-codepen', name: 'component' },
           { title: 'Options', icon: 'fa fa-cog', name: 'option' }
         ]
