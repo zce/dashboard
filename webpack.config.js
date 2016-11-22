@@ -23,6 +23,7 @@ const config = {
     proxy: {
       '/v2': {
         target: 'https://api.douban.com/',
+        changeOrigin: true,
         secure: false
       }
     }

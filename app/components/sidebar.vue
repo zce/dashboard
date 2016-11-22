@@ -23,9 +23,9 @@
         menus: [
           { title: 'Dashboard', icon: 'fa fa-tachometer', name: 'dashboard' },
           { title: 'Components', icon: 'fa fa-codepen', name: 'component' },
-          { title: 'Demo', icon: 'fa fa-codepen', name: 'demo' },
-          { title: 'Parameters', icon: 'fa fa-star', name: 'param', params: { id: 1 } },
-          { title: 'Components', icon: 'fa fa-codepen', name: 'component' },
+          { title: 'Demo', icon: 'fa fa-chrome', name: 'demo' },
+          { title: 'Proxy', icon: 'fa fa-star', name: 'proxy' },
+          { title: 'Parameters', icon: 'fa fa-list-ul', name: 'param', params: { id: 1 } },
           { title: 'Options', icon: 'fa fa-cog', name: 'option' }
         ]
       }

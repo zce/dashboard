@@ -1,5 +1,5 @@
 import Vue from 'vue'
-// import Resource from 'vue-resource'
+import Resource from 'vue-resource'
 import NProgress from 'nprogress'
 import App from './app'
 import router from './router'
@@ -11,7 +11,7 @@ import 'font-awesome/css/font-awesome.css'
 import './assets/less/global.less'
 
 // Use plugins
-// Vue.use(Resource)
+Vue.use(Resource)
 
 // start
 router.beforeEach((to, from, next) => {

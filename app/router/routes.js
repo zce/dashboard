@@ -47,14 +47,19 @@ export default [
     component: () => System.import('../pages/about')
   },
   {
-    name: 'param',
-    path: '/param',
-    component: () => System.import('../pages/param')
-  },
-  {
     name: 'demo',
     path: '/demo',
     component: () => System.import('../pages/demo')
+  },
+  {
+    name: 'proxy',
+    path: '/proxy',
+    component: () => System.import('../pages/proxy')
+  },
+  {
+    name: 'param',
+    path: '/param',
+    component: () => System.import('../pages/param')
   },
   {
     name: '404',
