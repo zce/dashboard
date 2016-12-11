@@ -5,8 +5,8 @@ import routes from './routes'
 
 Vue.use(Router)
 
+// http://router.vuejs.org/en/api/options.html
 export default new Router({
-  // http://router.vuejs.org/en/api/options.html
   mode: 'history',
   base: '/',
   routes: routes

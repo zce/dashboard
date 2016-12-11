@@ -20,7 +20,7 @@
     data () {
       return {
         menus: [
-          { title: 'Dashboard', icon: 'fa fa-tachometer', name: 'dashboard' },
+          { title: this.$t('dashboard'), icon: 'fa fa-tachometer', name: 'dashboard' },
           { title: 'Components', icon: 'fa fa-codepen', name: 'component' },
           { title: 'Demo', icon: 'fa fa-chrome', name: 'demo' },
           { title: 'Proxy', icon: 'fa fa-star', name: 'proxy' },
