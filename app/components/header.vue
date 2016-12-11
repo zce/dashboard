@@ -3,11 +3,11 @@
     <nav class="navbar">
       <h1 class="brand"><router-link to="/">WEDN.NET</router-link></h1>
       <ul class="nav">
-        <li class="nav-item"><router-link to="/dashboard">Dashboard</router-link></li>
-        <li class="nav-item"><router-link to="/demo">Demo</router-link></li>
+        <li class="nav-item"><router-link to="/dashboard">{{ $t('dashboard') }}</router-link></li>
+        <li class="nav-item"><router-link to="/demo">{{ $t('demo') }}</router-link></li>
       </ul>
       <ul class="nav nav-right">
-        <li class="nav-item"><router-link to="/about">About</router-link></li>
+        <li class="nav-item"><router-link to="/about">{{ $t('about') }}</router-link></li>
       </ul>
     </nav>
   </header>
@@ -48,7 +48,7 @@
       margin: 0 0 0 .5rem;
       list-style: none;
       &-right {
-        flex: 0;
+        flex: none;
       }
       &-item {
         margin-left: 1rem;

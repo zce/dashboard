@@ -1,3 +1,9 @@
 {
-  "dashboard": "Dashboard"
+  "dashboard": "Dashboard",
+  "demo": "Demo",
+  "about": "About",
+  "components": "Components",
+  "proxy": "Proxy",
+  "parameters": "Parameters",
+  "options": "Options"
 }

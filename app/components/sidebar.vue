@@ -4,7 +4,7 @@
     <nav class="navbar">
       <ul class="nav">
         <li class="nav-title">Actions</li>
-        <li class="nav-item" v-for="menu in menus"><router-link :to="menu"><i :class="menu.icon"></i> {{ menu.title }}</router-link></li>
+        <li class="nav-item" v-for="menu in menus"><router-link :to="menu"><i :class="'dashicons dashicons-' + menu.icon"></i><span>{{ menu.title }}</span></router-link></li>
       </ul>
     </nav>
     <section class="meta">
@@ -20,12 +20,12 @@
     data () {
       return {
         menus: [
-          { title: this.$t('dashboard'), icon: 'fa fa-tachometer', name: 'dashboard' },
-          { title: 'Components', icon: 'fa fa-codepen', name: 'component' },
-          { title: 'Demo', icon: 'fa fa-chrome', name: 'demo' },
-          { title: 'Proxy', icon: 'fa fa-star', name: 'proxy' },
-          { title: 'Parameters', icon: 'fa fa-list-ul', name: 'param', params: { id: 1 } },
-          { title: 'Options', icon: 'fa fa-cog', name: 'option' }
+          { title: this.$t('dashboard'), icon: 'dashboard', name: 'dashboard' },
+          { title: this.$t('components'), icon: 'admin-post', name: 'component' },
+          { title: this.$t('demo'), icon: 'admin-media', name: 'demo' },
+          { title: this.$t('proxy'), icon: 'admin-page', name: 'proxy' },
+          { title: this.$t('parameters'), icon: 'admin-comments', name: 'param', params: { id: 1 } },
+          { title: this.$t('options'), icon: 'admin-appearance', name: 'option' }
         ]
       }
     }
@@ -33,9 +33,8 @@
 </script>
 
 <style lang="less">
-  @width: 12rem;
+  @width: 10rem;
   @height: 2.5rem;
-  @color: fade(#fff, 5%);
 
   .sidebar {
     display: flex;
@@ -63,17 +62,22 @@
         .nav-item {
           a {
             display: block;
-            padding: (@height - 1.5rem) / 2 1rem;
             color: rgba(255, 255, 255, .7);
-            font-size: .875rem;
-            line-height: 1.5rem;
             i {
-              vertical-align: baseline;
-              margin-right: .5rem;
+              display: inline-block;
+              width: 1.25rem;
+              height: 1.25rem;
+              padding: (@height - 1.25rem) / 2;
+            }
+            span {
+              display: inline-block;
+              padding: (@height - 1.5rem) / 2 0;
+              font-size: .875rem;
+              line-height: 1.5rem;
             }
             &:hover {
               color: rgba(255, 255, 255, .9);
-              background-color: @color;
+              background-color: fade(#fff, 5%);
             }
           }
         }
