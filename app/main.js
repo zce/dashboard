@@ -4,6 +4,8 @@ import router from './libraries/router'
 import './libraries/i18n'
 import './libraries/resource'
 
+import './libraries/menu'
+
 // Import style sheets
 import 'normalize.css/normalize.css'
 import 'nprogress/nprogress.css'

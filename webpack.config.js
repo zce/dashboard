@@ -19,7 +19,7 @@ const config = {
     notfound: path.join(__dirname, 'dist/404.html')
   },
   server: {
-    port: process.env.PORT || 2368,
+    port: process.env.PORT || 2080,
     proxy: {
       '/v2': {
         target: 'https://api.douban.com/',
@@ -151,7 +151,7 @@ module.exports = {
     inline: true,
     hot: true
   },
-  devtool: 'eval-source-map',
+  devtool: '#eval-source-map', // 'eval-source-map',
   plugins: [
     new webpack.DefinePlugin({
       'process.env': { NODE_ENV: JSON.stringify(config.env) }

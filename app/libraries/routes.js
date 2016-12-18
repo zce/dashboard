@@ -32,35 +32,77 @@ export default [
     component: require('../pages/dashboard')
   },
   {
-    name: 'component',
-    path: '/component',
-    component: () => System.import('../pages/component')
+    name: 'post',
+    path: '/post',
+    component: require('../pages/post')
   },
   {
-    name: 'option',
-    path: '/option',
-    component: () => System.import('../pages/option')
+    name: 'media',
+    path: '/media',
+    component: require('../pages/media')
+  },
+  {
+    name: 'user',
+    path: '/user',
+    component: require('../pages/user')
+  },
+  {
+    name: 'comment',
+    path: '/comment',
+    component: require('../pages/comment')
+  },
+  {
+    name: 'theme',
+    path: '/theme',
+    component: require('../pages/theme')
+  },
+  {
+    name: 'plugin',
+    path: '/plugin',
+    component: require('../pages/plugin')
+  },
+  {
+    name: 'tool',
+    path: '/tool',
+    component: require('../pages/tool')
+  },
+  {
+    name: 'setting',
+    path: '/setting',
+    component: require('../pages/setting')
   },
   {
     name: 'about',
     path: '/about',
     component: () => System.import('../pages/about')
   },
+  // demo pages
+  {
+    name: 'component',
+    path: '/component',
+    component: () => System.import('../pages/demo/component')
+  },
+  {
+    name: 'option',
+    path: '/option',
+    component: () => System.import('../pages/demo/option')
+  },
   {
     name: 'demo',
     path: '/demo',
-    component: () => System.import('../pages/demo')
+    component: () => System.import('../pages/demo/demo')
   },
   {
     name: 'proxy',
     path: '/proxy',
-    component: () => System.import('../pages/proxy')
+    component: () => System.import('../pages/demo/proxy')
   },
   {
     name: 'param',
     path: '/param',
-    component: () => System.import('../pages/param')
+    component: () => System.import('../pages/demo/param')
   },
+  // not found
   {
     name: '404',
     path: '*',

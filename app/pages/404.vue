@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <h1>Not Found!</h1>
-  </div>
+  <h1>{{ $t('not_found') }}</h1>
 </template>
 
 <script>
