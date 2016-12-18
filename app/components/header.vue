@@ -5,22 +5,14 @@
     </h1>
     <nav class="menu">
       <ul class="list">
-        <!-- add `.active` class name if item active -->
-        <li class="item">
-          <a href="#"><i class="dashicons dashicons-admin-comments"></i><span>0</span></a>
-        </li>
-        <li class="item">
-          <a href="#"><i class="dashicons dashicons-plus"></i><span>新建</span></a>
-          <!-- sub list -->
-          <nav class="submenu">
+        <router-link tag="li" class="item" active-class="active" v-for="item in menus" :to="item">
+          <a><i :class="'dashicons dashicons-' + item.icon"></i><span>{{ item.title }}</span></a>
+          <nav class="submenu" v-if="item.children">
             <ul class="list">
-              <li class="item active"><a href="#">文章</a></li>
-              <li class="item"><a href="#">页面</a></li>
-              <li class="item"><a href="#">媒体</a></li>
-              <li class="item"><a href="#">用户</a></li>
+              <router-link tag="li" class="item" active-class="active" v-for="sub in item.children" :to="sub"><a>{{ sub.title }}</a></router-link>
             </ul>
           </nav>
-        </li>
+        </router-link>
       </ul>
       <ul class="list right">
         <li class="item">
@@ -41,7 +33,15 @@
 </template>
 
 <script>
+  import Vue from 'vue'
+
   export default {
-    name: 'header'
+    name: 'header',
+
+    data () {
+      return {
+        menus: Vue.topbarMenus
+      }
+    }
   }
 </script>

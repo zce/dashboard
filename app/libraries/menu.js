@@ -117,12 +117,12 @@ Menu.topbar = [
   },
   {
     title: '新建',
-    icon: 'admin-plus',
+    icon: 'plus',
     name: 'post',
     children: [
       { title: '文章', name: 'post' },
       { title: '媒体', name: 'media' },
-      { title: '文章', name: 'post/page' },
+      { title: '页面', name: 'post' },
       { title: '更新', name: 'user' }
     ]
   }
