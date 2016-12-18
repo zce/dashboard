@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="page-title">{{ $t('dashboard') }}</h1>
+    <h1 class="content-title">{{ $t('dashboard') }}</h1>
   </div>
 </template>
 

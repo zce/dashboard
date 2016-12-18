@@ -7,7 +7,7 @@ import './libraries/resource'
 // Import style sheets
 import 'normalize.css/normalize.css'
 import 'nprogress/nprogress.css'
-import 'font-awesome/css/font-awesome.css'
+// import 'font-awesome/css/font-awesome.css'
 import './assets/less/global.less'
 import './assets/less/dashicons.less'
 

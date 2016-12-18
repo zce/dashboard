@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="page-title">{{ $t('demo') }}</h1>
+    <h1 class="content-title">{{ $t('demo') }}</h1>
     <ul>
       <li v-for="todo in todos">
         <input type="checkbox" v-model="todo.competed">

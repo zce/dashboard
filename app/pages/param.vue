@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="page-title">{{ $t('parameters') }}</h1>
+    <h1 class="content-title">{{ $t('parameters') }}</h1>
     <div>{{ $route.params.id }}</div>
   </div>
 </template>

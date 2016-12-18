@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="page-title">HTTP {{ $t('proxy') }} - {{ top250.title }}</h1>
+    <h1 class="content-title">HTTP {{ $t('proxy') }} - {{ top250.title }}</h1>
     <div>
       <button @click="fetch()">Fetch douban api by proxy</button>
     </div>
