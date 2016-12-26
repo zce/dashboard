@@ -63,7 +63,7 @@ module.exports = {
     path: config.paths.output,
     publicPath: config.paths.publicPath,
     filename: isProd ? assetPath('js', '[name].js?v=[chunkhash:6]') : '[name].js',
-    chunkFilename: isProd ? assetPath('js', '[name].[chunkhash:6].js') : '[name].[chunkhash:6].js',
+    chunkFilename: isProd ? assetPath('js', '[name].[chunkhash:6].js') : '[name].[chunkhash:6].js'
   },
   module: {
     rules: [
@@ -73,7 +73,7 @@ module.exports = {
         loader: 'eslint-loader',
         exclude: /node_modules/,
         options: {
-          formatter: require("eslint-friendly-formatter")
+          formatter: require('eslint-friendly-formatter')
         }
       },
       {
@@ -81,7 +81,7 @@ module.exports = {
         enforce: 'pre',
         loader: 'eslint-loader',
         options: {
-          formatter: require("eslint-friendly-formatter")
+          formatter: require('eslint-friendly-formatter')
         }
       },
       {
@@ -146,7 +146,6 @@ module.exports = {
     contentBase: config.paths.output,
     historyApiFallback: true,
     // // no default console
-    // noInfo: true,
     // quiet: true,
     inline: true,
     hot: true
@@ -160,7 +159,14 @@ module.exports = {
       title: 'WEDN.NET',
       filename: isProd ? config.paths.index : 'index.html',
       template: path.join(config.paths.source, 'index.ejs'),
-      inject: false
+      inject: false,
+      minify: isProd ? {
+        removeComments: true,
+        collapseWhitespace: true,
+        removeAttributeQuotes: true
+        // more options:
+        // https://github.com/kangax/html-minifier#options-quick-reference
+      } : false
     }),
     new CopyWebpackPlugin([
       { from: config.paths.static, context: __dirname }
@@ -172,6 +178,14 @@ if (isProd) {
   module.exports.devtool = 'source-map'
   module.exports.plugins = (module.exports.plugins || []).concat([
     new ExtractTextPlugin(assetPath('css', '[name].css?v=[hash:6]')),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor',
+      minChunks: m => m.resource && /\.js$/.test(m.resource) && m.resource.includes('node_modules')
+    }),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'manifest',
+      chunks: ['vendor']
+    }),
     new webpack.optimize.UglifyJsPlugin({
       compress: { warnings: false },
       comments: false,
@@ -180,14 +194,6 @@ if (isProd) {
     new webpack.LoaderOptionsPlugin({
       debug: false,
       minimize: true
-    }),
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'vendor',
-      minChunks: m => m.resource && /\.js$/.test(m.resource) && m.resource.includes('node_modules')
-    }),
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'manifest',
-      chunks: ['vendor']
     }),
     new webpack.BannerPlugin('Copyright (c) WEDN.NET')
   ])
@@ -198,7 +204,14 @@ if (isProd) {
       title: 'WEDN.NET',
       filename: config.paths.notfound,
       template: path.join(config.paths.source, 'index.ejs'),
-      inject: false
+      inject: false,
+      minify: {
+        removeComments: true,
+        collapseWhitespace: true,
+        removeAttributeQuotes: true
+        // more options:
+        // https://github.com/kangax/html-minifier#options-quick-reference
+      }
     }))
   }
 }
