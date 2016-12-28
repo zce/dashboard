@@ -22,12 +22,6 @@
       'app-main': Main,
       'app-sidebar': Sidebar,
       'app-content': Content
-    },
-
-    data () {
-      return {
-        message: 'Hello Vue!'
-      }
     }
   }
 </script>

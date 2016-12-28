@@ -1,11 +1,11 @@
 <template>
   <div>
-    <h1 class="content-title">{{ $t('setting') }}</h1>
+    <h1 class="content-title">{{ $t('options') }}</h1>
   </div>
 </template>
 
 <script>
   export default {
-    name: 'setting'
+    name: 'options'
   }
 </script>

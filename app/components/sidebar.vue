@@ -15,8 +15,8 @@
       </ul>
     </nav>
     <section class="footer">
-      <a href="#" class="collapse" title="Collapse menu" @click="toggleCollapse"><i class="dashicons dashicons-admin-collapse"></i></a>
-      <a href="#" class="copyright"><span>&copy; WEDN.NET</span></a>
+      <a class="collapse" title="Collapse menu" @click="toggleCollapse"><i class="dashicons dashicons-admin-collapse"></i></a>
+      <a href="http://wedn.net" class="copyright"><span>&copy; {{ copyright }}</span></a>
     </section>
   </aside>
 </template>
@@ -34,7 +34,8 @@
     },
 
     computed: mapGetters({
-      menus: 'sidebar'
+      menus: 'sidebar',
+      copyright: 'copyright'
     }),
 
     methods: {

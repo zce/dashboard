@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <h1 class="logo">
-      <router-link to="/">WEDN.NET</router-link>
+      <router-link to="/">{{ name }}</router-link>
     </h1>
     <nav class="menu">
       <ul class="list">
@@ -39,7 +39,8 @@
     name: 'header',
 
     computed: mapGetters({
-      menus: 'topbar'
+      menus: 'topbar',
+      name: 'name'
     })
   }
 </script>

@@ -1,25 +1,32 @@
-// import options from '../../api/options'
-
-// initial state
+/**
+ * Initial state
+ * @type {Object}
+ */
 const state = {
   options: {}
 }
 
-// getters
+/**
+ * Getters
+ * @type {Object}
+ */
 const getters = {
   options: state => state.options
 }
 
-// mutations
+/**
+ * Mutations
+ * @type {Object}
+ */
 const mutations = {
-  saveOptions (state) {
-  }
 }
 
-// actions
+/**
+ * Actions
+ * @type {Object}
+ */
 const actions = {
-  set ({ commit, state }, option) {
-  }
 }
 
+// Export module
 export default { state, getters, mutations, actions }
