@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1 class="content-title">{{ $t('parameters') }}</h1>
-    <div>{{ $route.params.id }}</div>
+    <h3>Param: {{ $route.params.name }}</h3>
   </div>
 </template>
 

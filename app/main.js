@@ -1,10 +1,9 @@
 import Vue from 'vue'
 import App from './app'
+import store from './libraries/store'
 import router from './libraries/router'
 import './libraries/i18n'
 import './libraries/resource'
-
-import './libraries/menu'
 
 // Import style sheets
 import 'normalize.css/normalize.css'
@@ -13,11 +12,13 @@ import 'nprogress/nprogress.css'
 import './assets/less/global.less'
 import './assets/less/dashicons.less'
 
-// Use plugins
+// // Use plugins
+// Vue.use(Router)
 
 // Root app
 const app = new Vue({
   name: 'root',
+  store: store,
   router: router,
   render: h => h(App)
 })

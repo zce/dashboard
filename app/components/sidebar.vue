@@ -22,17 +22,20 @@
 </template>
 
 <script>
-  import Vue from 'vue'
+  import { mapGetters } from 'vuex'
 
   export default {
     name: 'sidebar',
 
     data () {
       return {
-        collapse: false,
-        menus: Vue.sidebarMenus
+        collapse: false
       }
     },
+
+    computed: mapGetters({
+      menus: 'sidebar'
+    }),
 
     methods: {
       toggleCollapse () {

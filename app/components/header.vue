@@ -33,15 +33,13 @@
 </template>
 
 <script>
-  import Vue from 'vue'
+  import { mapGetters } from 'vuex'
 
   export default {
     name: 'header',
 
-    data () {
-      return {
-        menus: Vue.topbarMenus
-      }
-    }
+    computed: mapGetters({
+      menus: 'topbar'
+    })
   }
 </script>

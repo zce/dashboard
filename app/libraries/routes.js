@@ -1,25 +1,6 @@
-// // 同步加载所有组件
-// const pages = [
-//   require('../pages/component'),
-//   require('../pages/dashboard'),
-//   require('../pages/about'),
-//   require('../pages/404')
-// ]
-//
-// const defaultPage = pages.find(p => p.default) || { path: '/' }
-//
-// const defaults = [{ name: 'default', path: '/', redirect: defaultPage.path }]
-//
-// export default defaults.concat(pages.map(page => ({ name: page.name, path: page.path, component: page })))
-
-// 异步分块加载所有组件
-// https://github.com/wengang/vue-router-async-components/blob/master/src/main.js#L26
-// TODO: code splite group
-// https://github.com/webpack/webpack/issues/2369
-// component: resolve => require.ensure([], () => resolve(require('../pages/component')), 'component')
-// component: () => System.import('../pages/component')
-// component: require('../pages/dashboard')
-
+/**
+ * 路由表
+ */
 export default [
   {
     name: 'default',
@@ -29,83 +10,100 @@ export default [
   {
     name: 'dashboard',
     path: '/dashboard',
-    component: require('../pages/dashboard')
+    component: require('../views/dashboard')
   },
   {
-    name: 'post',
-    path: '/post',
-    component: require('../pages/post')
+    name: 'posts',
+    path: '/posts/:type?',
+    component: require('../views/posts')
   },
   {
     name: 'media',
     path: '/media',
-    component: require('../pages/media')
+    component: require('../views/media')
   },
   {
-    name: 'user',
-    path: '/user',
-    component: require('../pages/user')
+    name: 'users',
+    path: '/users',
+    component: require('../views/users')
   },
   {
-    name: 'comment',
-    path: '/comment',
-    component: require('../pages/comment')
+    name: 'comments',
+    path: '/comments',
+    component: require('../views/comments')
   },
   {
-    name: 'theme',
-    path: '/theme',
-    component: require('../pages/theme')
+    name: 'themes',
+    path: '/themes',
+    component: require('../views/themes')
   },
   {
-    name: 'plugin',
-    path: '/plugin',
-    component: require('../pages/plugin')
+    name: 'plugins',
+    path: '/plugins',
+    component: require('../views/plugins')
   },
   {
-    name: 'tool',
-    path: '/tool',
-    component: require('../pages/tool')
+    name: 'tools',
+    path: '/tools',
+    component: require('../views/tools')
   },
   {
-    name: 'setting',
-    path: '/setting',
-    component: require('../pages/setting')
+    name: 'options',
+    path: '/options',
+    component: require('../views/options')
   },
   {
     name: 'about',
     path: '/about',
-    component: () => System.import('../pages/about')
+    component: () => System.import('../views/about')
   },
-  // demo pages
-  {
-    name: 'component',
-    path: '/component',
-    component: () => System.import('../pages/demo/component')
-  },
-  {
-    name: 'option',
-    path: '/option',
-    component: () => System.import('../pages/demo/option')
-  },
+  // ## demo views
   {
     name: 'demo',
     path: '/demo',
-    component: () => System.import('../pages/demo/demo')
+    component: () => System.import('../views/demo/demo')
+  },
+  {
+    name: 'components',
+    path: '/components',
+    component: () => System.import('../views/demo/components')
   },
   {
     name: 'proxy',
-    path: '/proxy',
-    component: () => System.import('../pages/demo/proxy')
+    path: '/demo/proxy',
+    component: () => System.import('../views/demo/proxy')
   },
   {
-    name: 'param',
-    path: '/param',
-    component: () => System.import('../pages/demo/param')
+    name: 'parameter',
+    path: '/demo/:name',
+    component: () => System.import('../views/demo/parameter')
   },
-  // not found
+  // ## not found
   {
     name: '404',
     path: '*',
-    component: () => System.import('../pages/404')
+    component: () => System.import('../views/404')
   }
 ]
+
+// // 同步加载所有组件
+// const views = [
+//   require('../views/component'),
+//   require('../views/dashboard'),
+//   require('../views/about'),
+//   require('../views/404')
+// ]
+//
+// const defaultPage = views.find(p => p.default) || { path: '/' }
+//
+// const defaults = [{ name: 'default', path: '/', redirect: defaultPage.path }]
+//
+// export default defaults.concat(views.map(page => ({ name: page.name, path: page.path, component: page })))
+
+// 异步分块加载所有组件
+// https://github.com/wengang/vue-router-async-components/blob/master/src/main.js#L26
+// TODO: code splite group
+// https://github.com/webpack/webpack/issues/2369
+// component: resolve => require.ensure([], () => resolve(require('../views/component')), 'component')
+// component: () => System.import('../views/component')
+// component: require('../views/dashboard')

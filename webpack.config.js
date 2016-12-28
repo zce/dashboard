@@ -21,8 +21,8 @@ const config = {
   server: {
     port: process.env.PORT || 2080,
     proxy: {
-      '/v2': {
-        target: 'https://api.douban.com/',
+      '/api': {
+        target: 'https://cnodejs.org/',
         changeOrigin: true,
         secure: false
       }
@@ -33,11 +33,9 @@ const config = {
 
 const isProd = config.env === 'production'
 
-function assetPath (...paths) {
-  return path.posix.join(config.paths.assets, ...paths)
-}
+const assetPath = (...paths) => path.posix.join(config.paths.assets, ...paths)
 
-function styleLoader (type) {
+const styleLoader = (type) => {
   if (config.env !== 'production') {
     return `style-loader!${(type === 'css' ? '' : 'css-loader!')}${type}-loader`
   }
@@ -145,8 +143,10 @@ module.exports = {
     // outputPath: config.paths.output,
     contentBase: config.paths.output,
     historyApiFallback: true,
+    noInfo: true,
     // // no default console
     // quiet: true,
+    lazy: false,
     inline: true,
     hot: true
   },

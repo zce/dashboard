@@ -1,16 +1,16 @@
 <template>
   <div>
-    <h1 class="content-title">HTTP {{ $t('proxy') }} - {{ top250.title }}</h1>
+    <h1 class="content-title">HTTP {{ $t('proxy') }}</h1>
     <div>
-      <button @click="fetch()">Fetch douban api by proxy</button>
+      <button @click="fetch()">Fetch cnode api by proxy</button>
     </div>
     <div v-if="error">
       <h2>{{ error.status }} - {{ error.statusText }}</h2>
       <p>{{ error.body }}</p>
     </div>
     <ul v-if="!error">
-      <li v-for="movie in top250.subjects">
-        <span>{{ movie.title }}</span>
+      <li v-for="topic in topics.data">
+        <span>{{ topic.title }}</span>
       </li>
     </ul>
   </div>
@@ -21,7 +21,7 @@
     name: 'proxy',
 
     data () {
-      return { top250: {}, error: false }
+      return { topics: {}, error: false }
     },
 
     mounted () { },
@@ -30,8 +30,8 @@
       fetch () {
         this
           .$http
-          .get('/v2/movie/top250')
-          .then(res => { this.top250 = res.data })
+          .get('/api/v1/topics')
+          .then(res => { this.topics = res.data })
           .catch(err => {
             console.log(err)
             this.error = err

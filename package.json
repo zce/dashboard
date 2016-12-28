@@ -5,7 +5,8 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "lint": "eslint --ext .js,.vue app",
+    "lint": "eslint app --ext .js,.vue",
+    "prebuild": "npm run lint",
     "build": "cross-env NODE_ENV=production webpack --progress --colors",
     "dev": "webpack-dev-server --hot --inline --progress --open",
     "prestart": "npm run build",
@@ -39,7 +40,8 @@
     "vue": "^2.1.7",
     "vue-i18n": "^4.9.0",
     "vue-resource": "^1.0.3",
-    "vue-router": "^2.1.1"
+    "vue-router": "^2.1.1",
+    "vuex": "^2.1.1"
   },
   "devDependencies": {
     "babel-core": "^6.21.0",
@@ -65,7 +67,7 @@
     "url-loader": "^0.5.7",
     "vue-loader": "^10.0.2",
     "vue-template-compiler": "^2.1.7",
-    "webpack": "^2.1.0-beta.28",
-    "webpack-dev-server": "^2.1.0-beta.12"
+    "webpack": "^2.2.0-beta.2",
+    "webpack-dev-server": "^2.2.0-rc.0"
   }
 }

@@ -59,6 +59,8 @@ body {
   color: #373a3c;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   background-color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -90,7 +92,7 @@ a {
   flex-direction: column;
   height: 100%;
   width: 100%;
-  min-width: 60rem; // ???
+  min-width: 45rem; // ???
   overflow: hidden;
   color: #fff;
   background-color: @bg-color;
@@ -382,9 +384,9 @@ a {
 
 .content {
   flex: 1;
-  color: #373a3c;
   margin: 0 @content-margin;
   overflow-y: auto;
+  color: #373a3c;
   background-color: @content-bg-color;
   border-top-left-radius: .2rem;
   border-top-right-radius: .2rem;
