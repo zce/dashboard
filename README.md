@@ -1,11 +1,20 @@
 # Dashboard
 
-> Dashboard pages
+[![Build Status][travis-image]][travis-url]
+[![Dependency Status][dependency-image]][dependency-url]
+[![devDependency Status][devdependency-image]][devdependency-url]
+[![Code Style][style-image]][style-url]
 
-[![Build Status](https://travis-ci.org/zce/dashboard.svg?branch=vue2-webpack1)](https://travis-ci.org/zce/dashboard)
-[![Dependency Status](https://david-dm.org/zce/dashboard.svg)](https://david-dm.org/zce/dashboard)
-[![devDependency Status](https://david-dm.org/zce/dashboard/dev-status.svg)](https://david-dm.org/zce/dashboard#info=devDependencies)
-[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
+[travis-image]: https://travis-ci.org/zce/dashboard.svg?branch=vue2-webpack2
+[travis-url]: https://travis-ci.org/zce/dashboard
+[dependency-image]: https://david-dm.org/zce/dashboard/status.svg
+[dependency-url]: https://david-dm.org/zce/dashboard
+[devdependency-image]: https://david-dm.org/zce/dashboard/dev-status.svg
+[devdependency-url]: https://david-dm.org/zce/dashboard?type=dev
+[style-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg
+[style-url]: http://standardjs.com/
+
+> Dashboard pages
 
 ## Stacks
 
