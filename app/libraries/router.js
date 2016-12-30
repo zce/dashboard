@@ -10,7 +10,7 @@ Vue.use(Router)
 // http://router.vuejs.org/en/advanced/scroll-behavior.html
 const router = new Router({
   mode: 'history',
-  base: '/',
+  base: process.env.ADMIN_BASE || '/',
   routes: routes,
   scrollBehavior (to, from, savedPosition) {
     if (savedPosition) {

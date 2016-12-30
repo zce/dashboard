@@ -10,9 +10,11 @@ for (const key in devServer.proxy) {
   app.use(key, proxy(Object.assign({ changeOrigin: true }, item)))
 }
 
-app.use(history())
+app.use(history({
+  index: devServer.publicPath
+}))
 
-app.use(express.static('dist'))
+app.use(devServer.publicPath, express.static('dist'))
 
 app.listen(process.env.PORT || 2080, err => {
   if (err) throw err

@@ -13,7 +13,7 @@ const config = {
     source: path.join(__dirname, 'app'),
     static: path.join(__dirname, 'static'),
     output: path.join(__dirname, 'dist'),
-    publicPath: '/',
+    publicPath: '/wedn/', // admin prefix
     assets: 'assets',
     index: path.join(__dirname, 'dist/index.html'),
     // just for gh-pages
@@ -168,7 +168,8 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin({
       'process.env': {
-        NODE_ENV: JSON.stringify(config.env)
+        NODE_ENV: JSON.stringify(config.env),
+        ADMIN_BASE: JSON.stringify(config.paths.publicPath)
       }
     }),
     new HtmlWebpackPlugin({
