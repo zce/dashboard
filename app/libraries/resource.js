@@ -12,3 +12,5 @@ Vue.http.interceptors.push((request, next) => {
   request.before = () => NProgress.start()
   next(response => { NProgress.done() })
 })
+
+export default Vue.http

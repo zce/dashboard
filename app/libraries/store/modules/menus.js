@@ -134,6 +134,7 @@ const state = {
       name: 'demo',
       children: [
         { title: 'Components', name: 'components' },
+        { title: 'Vuex', name: 'vuex' },
         { title: 'Parameter', name: 'parameter', params: { name: '汪磊' } },
         { title: 'Proxy', name: 'proxy' }
       ]

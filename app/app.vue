@@ -1,5 +1,6 @@
 <template>
-  <div id="app">
+  <router-view v-if="$router.currentRoute.name === 'login'"></router-view>
+  <div id="app" v-else>
     <app-header/>
     <app-main>
       <app-sidebar/>
@@ -16,7 +17,6 @@
 
   export default {
     name: 'app',
-
     components: {
       'app-header': Header,
       'app-main': Main,

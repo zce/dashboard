@@ -34,14 +34,15 @@
   },
   "homepage": "https://github.com/wedn/wedn.net#readme",
   "dependencies": {
-    "font-awesome": "^4.7.0",
-    "normalize.css": "^5.0.0",
+    "animate.css": "^3.5.2",
     "nprogress": "^0.2.0",
+    "purecss": "^0.6.1",
     "vue": "^2.1.8",
     "vue-i18n": "^4.9.0",
     "vue-resource": "^1.0.3",
     "vue-router": "^2.1.1",
-    "vuex": "^2.1.1"
+    "vuex": "^2.1.1",
+    "vuex-router-sync": "^4.0.2"
   },
   "devDependencies": {
     "babel-core": "^6.21.0",

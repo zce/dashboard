@@ -163,7 +163,7 @@ module.exports = {
     maxEntrypointSize: 2 * 1024 * 1000,
     assetFilter: name => name.endsWith('.css') || name.endsWith('.js')
   },
-  devtool: 'eval-source-map',
+  devtool: '#eval-source-map',
   target: 'web',
   plugins: [
     new webpack.DefinePlugin({
