@@ -29,15 +29,6 @@ const state = {
       ]
     },
     {
-      title: '多媒体',
-      icon: 'admin-media',
-      name: 'media',
-      children: [
-        { title: '媒体库', name: 'media' },
-        { title: '添加', name: 'media' }
-      ]
-    },
-    {
       title: '页面',
       icon: 'admin-page',
       name: 'posts',
@@ -45,6 +36,15 @@ const state = {
       children: [
         { title: '所有页面', name: 'posts', params: { type: 'page' } },
         { title: '新建页面', name: 'posts', params: { type: 'page' } }
+      ]
+    },
+    {
+      title: '多媒体',
+      icon: 'admin-media',
+      name: 'media',
+      children: [
+        { title: '媒体库', name: 'media' },
+        { title: '添加', name: 'media' }
       ]
     },
     {

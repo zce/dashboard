@@ -7,10 +7,10 @@
   "scripts": {
     "lint": "eslint app --ext .js,.vue",
     "prebuild": "npm run lint",
-    "build": "cross-env NODE_ENV=production webpack --progress --colors",
-    "dev": "webpack-dev-server --hot --inline --progress --open",
+    "build": "cross-env NODE_ENV=production webpack --colors --progress --hide-modules",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --colors --hot --inline --open",
     "prestart": "npm run build",
-    "start": "node dist-server"
+    "start": "cross-env NODE_ENV=production node server"
   },
   "repository": {
     "type": "git",

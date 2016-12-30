@@ -1,3 +1,4 @@
+// import packages
 const path = require('path')
 const webpack = require('webpack')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
@@ -33,6 +34,7 @@ const config = {
 
 const isProd = config.env === 'production'
 
+// # ===== utils function =====
 const assetPath = (...paths) => path.posix.join(config.paths.assets, ...paths)
 
 const styleLoader = (type) => {
@@ -42,16 +44,12 @@ const styleLoader = (type) => {
   return ExtractTextPlugin.extract({
     fallbackLoader: 'style-loader',
     loader: (type === 'css' ? [] : ['css-loader']).concat([
-      {
-        loader: `${type}-loader`,
-        options: {
-          sourceMap: true
-        }
-      }
+      { loader: `${type}-loader`, options: { sourceMap: true } }
     ])
   })
 }
 
+// # ===== webpack config =====
 module.exports = {
   context: config.paths.root,
   entry: {
@@ -59,9 +57,12 @@ module.exports = {
   },
   output: {
     path: config.paths.output,
-    publicPath: config.paths.publicPath,
     filename: isProd ? assetPath('js', '[name].js?v=[chunkhash:6]') : '[name].js',
-    chunkFilename: isProd ? assetPath('js', '[name].[chunkhash:6].js') : '[name].[chunkhash:6].js'
+    publicPath: config.paths.publicPath,
+    libraryTarget: 'umd',
+    chunkFilename: isProd ? assetPath('js', '[name].[chunkhash:6].js') : '[name].[chunkhash:6].js',
+    sourceMapFilename: '[file].map',
+    devtoolModuleFilenameTemplate: 'wedn'
   },
   module: {
     rules: [
@@ -93,7 +94,8 @@ module.exports = {
         options: {
           loaders: {
             css: styleLoader('css'),
-            less: styleLoader('less')
+            less: styleLoader('less'),
+            scss: styleLoader('scss')
           }
         }
       },
@@ -104,6 +106,10 @@ module.exports = {
       {
         test: /\.less$/,
         loader: styleLoader('less')
+      },
+      {
+        test: /\.scss$/,
+        loader: styleLoader('scss')
       },
       {
         test: /\.json$/,
@@ -129,20 +135,21 @@ module.exports = {
   },
   resolve: {
     modules: ['node_modules', config.paths.source],
-    extensions: ['.js', '.json', '.vue', '.css', '.less'],
+    extensions: ['.js', '.json', '.vue', '.css', '.less', '.scss'],
     alias: {
       // $: only module name
-      // // runtime-only build, template option is not available.
-      // 'vue$': 'vue/dist/vue.common'
-      'vue$': 'vue/dist/vue'
+      // runtime-only build, template option is not available.
+      'vue$': 'vue/dist/vue.common'
     }
   },
   devServer: {
     port: config.server.port,
     proxy: config.server.proxy,
-    // outputPath: config.paths.output,
-    contentBase: config.paths.output,
-    historyApiFallback: true,
+    contentBase: config.paths.static,
+    publicPath: config.paths.publicPath,
+    historyApiFallback:  {
+      index: config.paths.publicPath
+    },
     noInfo: true,
     // // no default console
     // quiet: true,
@@ -150,10 +157,19 @@ module.exports = {
     inline: true,
     hot: true
   },
-  devtool: '#eval-source-map', // 'eval-source-map',
+  performance: {
+    hints: false,
+    maxAssetSize: 1 * 1024 * 1000,
+    maxEntrypointSize: 2 * 1024 * 1000,
+    assetFilter: name => name.endsWith('.css') || name.endsWith('.js')
+  },
+  devtool: 'eval-source-map',
+  target: 'web',
   plugins: [
     new webpack.DefinePlugin({
-      'process.env': { NODE_ENV: JSON.stringify(config.env) }
+      'process.env': {
+        NODE_ENV: JSON.stringify(config.env)
+      }
     }),
     new HtmlWebpackPlugin({
       title: 'WEDN.NET',
