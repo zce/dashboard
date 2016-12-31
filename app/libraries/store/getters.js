@@ -13,11 +13,11 @@ export const name = state => state.name
 export const copyright = state => state.copyright
 
 /**
- * 获取是否启用无框架模式
+ * 获取当前登录用户
  * @param  {Object} state Vuex状态对象
- * @return {Boolean}       是否启用无框架模式
+ * @return {String}       当前登录用户
  */
-export const frameless = state => state.frameless
+export const user = state => state.user
 
 /**
  * 获取是否收起边栏

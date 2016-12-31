@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import Element from 'element-ui'
 import { sync } from 'vuex-router-sync'
 
 import App from './app'
@@ -15,8 +16,8 @@ import 'animate.css/animate.css'
 import './assets/less/global.less'
 import './assets/less/dashicons.less'
 
-// // Use plugins
-// Vue.use(Router)
+// Use plugins
+Vue.use(Element)
 sync(store, router)
 
 // Root app

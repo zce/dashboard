@@ -1,17 +1,12 @@
 /**
- * 隐藏框架展示
+ * 改变当前登录用户
  * @param  {Object} state Vuex状态对象
  */
-export const HIDE_FRAME = state => {
-  state.frameless = false
-}
-
-/**
- * 使用框架展示
- * @param  {Object} state Vuex状态对象
- */
-export const SHOW_FRAME = state => {
-  state.frameless = true
+export const USER_CHANGE = (state, user) => {
+  state.user.token = user.token
+  state.user.slug = user.slug
+  state.user.nickname = user.nickname
+  state.user.avatar = user.avatar
 }
 
 /**

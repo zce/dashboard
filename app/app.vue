@@ -1,5 +1,5 @@
 <template>
-  <router-view v-if="$router.currentRoute.name === 'login'"></router-view>
+  <router-view v-if="route.name === 'login'"></router-view>
   <div id="app" v-else>
     <app-header/>
     <app-main>
@@ -10,6 +10,7 @@
 </template>
 
 <script>
+  import { mapState } from 'vuex'
   import Header from './components/header'
   import Main from './components/main'
   import Sidebar from './components/sidebar'
@@ -22,6 +23,9 @@
       'app-main': Main,
       'app-sidebar': Sidebar,
       'app-content': Content
-    }
+    },
+    computed: mapState({
+      route: 'route'
+    })
   }
 </script>
