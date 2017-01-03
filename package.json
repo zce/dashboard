@@ -8,7 +8,7 @@
     "lint": "eslint app --ext .js,.vue",
     "prebuild": "npm run lint",
     "build": "cross-env NODE_ENV=production webpack --colors --progress --hide-modules",
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --colors --hot --inline --open",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --colors --hot --inline",
     "prestart": "npm run build",
     "start": "cross-env NODE_ENV=production node server"
   },
@@ -39,11 +39,11 @@
     "nprogress": "^0.2.0",
     "purecss": "^0.6.1",
     "vue": "^2.1.8",
-    "vue-i18n": "^4.9.0",
+    "vue-i18n": "^4.10.0",
     "vue-resource": "^1.0.3",
     "vue-router": "^2.1.1",
     "vuex": "^2.1.1",
-    "vuex-router-sync": "^4.0.2"
+    "vuex-router-sync": "^4.1.0"
   },
   "devDependencies": {
     "babel-core": "^6.21.0",
@@ -54,14 +54,15 @@
     "css-loader": "^0.26.1",
     "eslint": "^3.12.2",
     "eslint-config-standard": "^6.2.1",
-    "eslint-friendly-formatter": "^2.0.6",
+    "eslint-friendly-formatter": "^2.0.7",
     "eslint-loader": "^1.6.1",
     "eslint-plugin-html": "^1.7.0",
     "eslint-plugin-promise": "^3.4.0",
     "eslint-plugin-standard": "^2.0.1",
     "extract-text-webpack-plugin": "^2.0.0-beta.4",
     "file-loader": "^0.9.0",
-    "html-webpack-plugin": "^2.24.1",
+    "friendly-errors-webpack-plugin": "^1.1.2",
+    "html-webpack-plugin": "^2.25.0",
     "json-loader": "^0.5.4",
     "less": "^2.7.1",
     "less-loader": "^2.2.3",
@@ -69,7 +70,7 @@
     "url-loader": "^0.5.7",
     "vue-loader": "^10.0.2",
     "vue-template-compiler": "^2.1.8",
-    "webpack": "^2.2.0-beta.2",
+    "webpack": "^2.2.0-rc.3",
     "webpack-dev-server": "^2.2.0-rc.0"
   }
 }

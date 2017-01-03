@@ -3,35 +3,65 @@
     <header class="logo">
       <h1><a class="title" href="/">WEDN.NET</a></h1>
     </header>
-    <main class="container zoomIn animated">
-      <form class="pure-form login-form">
-        <h2 class="heading">Sign in</h2>
-        <fieldset class="pure-group">
-          <input type="text" class="pure-input-1" placeholder="Username" v-model="username">
-          <input type="text" class="pure-input-1" placeholder="Password" v-model="password">
-        </fieldset>
-        <button type="button" class="pure-button pure-input-1 pure-button-primary" @click="login">Sign in</button>
-      </form>
-      <div class="footer">
-        ← 返回到 <a href="/">WEDN.NET</a>
-      </div>
+    <main class="container">
+      <el-alert :title="error" :description="message" v-show="error" class="alert" type="warning" show-icon/>
+      <el-form :model="model" :rules="rules" class="login-form" ref="login-form" auto-complete="off" label-position="top">
+        <h2 class="heading">登录</h2>
+        <el-form-item label="用户名" prop="username">
+          <el-input type="text" v-model="model.username" placeholder="请输入用户名"/>
+        </el-form-item>
+        <el-form-item label="密码" prop="password">
+          <el-input type="password" v-model="model.password" placeholder="请输入密码"/>
+        </el-form-item>
+        <el-button class="form-button" type="primary" native-type="submit" @click.prevent="submit">提交</el-button>
+      </el-form>
+      <div class="footer">← 返回到 <a href="/">WEDN.NET</a></div>
     </main>
   </div>
 </template>
 
 <script>
+  import storage from '../libraries/storage'
+
   export default {
     name: 'login',
     data () {
       return {
-        username: '',
-        password: '',
-        error: ''
+        error: '',
+        message: '',
+        model: {
+          username: '',
+          password: ''
+        },
+        rules: {
+          username: [
+            { required: true, message: '请输入用户名' },
+            { min: 2, max: 16, message: '长度在 2 到 16 个字符' }
+          ],
+          password: [
+            { required: true, message: '请输入密码' },
+            { min: 6, max: 16, message: '长度在 6 到 16 个字符' }
+          ]
+        }
       }
     },
     methods: {
-      login () {
-
+      submit () {
+        this.$refs['login-form'].validate(valid => {
+          if (!valid) return false
+          this.$store.dispatch('createToken', {
+            username: this.model.username,
+            password: this.model.password
+          })
+          .then(token => {
+            storage.set('toooken', token)
+            this.$router.replace({ path: this.$route.query.redirect })
+          })
+          .catch(err => {
+            this.message = err.message
+            this.error = '发生错误'
+          })
+        })
       }
     }
   }
@@ -75,6 +105,10 @@
     margin: 0 auto;
   }
 
+  .alert {
+    margin-bottom: 1rem;
+  }
+
   .login-form {
     padding: 1.5rem 1.25rem;
     margin: 0 auto;
@@ -89,12 +123,12 @@
       font-size: 1.5rem;
     }
 
-    > .pure-group {
-      margin-bottom: 1rem;
+    > .form-group {
+      // margin-bottom: 1.25rem;
     }
 
-    > .pure-button {
-      font-size: 1rem;
+    > .form-button {
+      width: 100%;
     }
   }
 
@@ -104,18 +138,4 @@
     border: .0625rem solid #e9e9e9;
     text-align: center;
   }
-  // #app {
-  //   > .header {
-  //     display: none;
-  //   }
-  //   > .main {
-  //     > .sidebar {
-  //       display: none;
-  //     }
-  //     > .content {
-  //       margin: 0;
-  //       border-radius: 0;
-  //     }
-  //   }
-  // }
 </style>

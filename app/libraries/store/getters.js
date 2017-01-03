@@ -17,7 +17,7 @@ export const copyright = state => state.copyright
  * @param  {Object} state Vuex状态对象
  * @return {String}       当前登录用户
  */
-export const user = state => state.user
+export const currentUser = state => state.current_user
 
 /**
  * 获取是否收起边栏

@@ -2,11 +2,10 @@
  * 改变当前登录用户
  * @param  {Object} state Vuex状态对象
  */
-export const USER_CHANGE = (state, user) => {
-  state.user.token = user.token
-  state.user.slug = user.slug
-  state.user.nickname = user.nickname
-  state.user.avatar = user.avatar
+export const CHANGE_USER = (state, user) => {
+  state.current_user.slug = user.slug
+  state.current_user.nickname = user.nickname
+  state.current_user.avatar = user.avatar
 }
 
 /**

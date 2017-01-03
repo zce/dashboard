@@ -4,6 +4,7 @@ const webpack = require('webpack')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin')
 
 // options
 const config = {
@@ -13,14 +14,14 @@ const config = {
     source: path.join(__dirname, 'app'),
     static: path.join(__dirname, 'static'),
     output: path.join(__dirname, 'dist'),
-    publicPath: '/wedn/', // admin prefix
+    publicPath: '/', // admin prefix
     assets: 'assets',
     index: path.join(__dirname, 'dist/index.html'),
     // just for gh-pages
     notfound: path.join(__dirname, 'dist/404.html')
   },
   server: {
-    port: process.env.PORT || 2080,
+    port: process.env.PORT || 2081,
     proxy: {
       '/api': {
         target: 'https://cnodejs.org/',
@@ -35,7 +36,9 @@ const config = {
 const isProd = config.env === 'production'
 
 // # ===== utils function =====
-const assetPath = (...paths) => path.posix.join(config.paths.assets, ...paths)
+const assetPath = (...paths) => {
+  return path.posix.join(config.paths.assets, ...paths)
+}
 
 const styleLoader = (type) => {
   if (config.env !== 'production') {
@@ -44,7 +47,7 @@ const styleLoader = (type) => {
   return ExtractTextPlugin.extract({
     fallbackLoader: 'style-loader',
     loader: (type === 'css' ? [] : ['css-loader']).concat([
-      { loader: `${type}-loader`, options: { sourceMap: true } }
+      { loader: `${type}-loader`, options: { sourceMap: config.sourceMap.css } }
     ])
   })
 }
@@ -94,8 +97,7 @@ module.exports = {
         options: {
           loaders: {
             css: styleLoader('css'),
-            less: styleLoader('less'),
-            scss: styleLoader('scss')
+            less: styleLoader('less')
           }
         }
       },
@@ -106,10 +108,6 @@ module.exports = {
       {
         test: /\.less$/,
         loader: styleLoader('less')
-      },
-      {
-        test: /\.scss$/,
-        loader: styleLoader('scss')
       },
       {
         test: /\.json$/,
@@ -135,7 +133,7 @@ module.exports = {
   },
   resolve: {
     modules: ['node_modules', config.paths.source],
-    extensions: ['.js', '.json', '.vue', '.css', '.less', '.scss'],
+    extensions: ['.js', '.json', '.vue', '.css', '.less'],
     alias: {
       // $: only module name
       // runtime-only build, template option is not available.
@@ -151,8 +149,8 @@ module.exports = {
       index: config.paths.publicPath
     },
     noInfo: true,
-    // // no default console
-    // quiet: true,
+    // no default console
+    quiet: true,
     lazy: false,
     inline: true,
     hot: true
@@ -163,7 +161,7 @@ module.exports = {
     maxEntrypointSize: 2 * 1024 * 1000,
     assetFilter: name => name.endsWith('.css') || name.endsWith('.js')
   },
-  devtool: '#eval-source-map',
+  devtool: 'source-map', // ???? eval-source-map
   target: 'web',
   plugins: [
     new webpack.DefinePlugin({
@@ -184,17 +182,17 @@ module.exports = {
         // more options:
         // https://github.com/kangax/html-minifier#options-quick-reference
       } : false
-    }),
-    new CopyWebpackPlugin([
-      { from: config.paths.static, context: __dirname }
-    ])
+    })
   ]
 }
 
 if (isProd) {
-  module.exports.devtool = 'source-map'
+  module.exports.devtool = config.sourceMap.js ? 'source-map' : false
   module.exports.plugins = (module.exports.plugins || []).concat([
     new ExtractTextPlugin(assetPath('css', '[name].css?v=[hash:6]')),
+    new CopyWebpackPlugin([
+      { from: config.paths.static, context: __dirname }
+    ]),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
       minChunks: m => m.resource && /\.js$/.test(m.resource) && m.resource.includes('node_modules')
@@ -231,4 +229,8 @@ if (isProd) {
       }
     }))
   }
+} else {
+  module.exports.plugins = (module.exports.plugins || []).concat([
+    new FriendlyErrorsWebpackPlugin()
+  ])
 }

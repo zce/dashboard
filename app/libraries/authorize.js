@@ -19,10 +19,8 @@ http.interceptors.push((request, next) => {
 // Some middleware to help us ensure the user is authenticated.
 router.beforeEach((to, from, next) => {
   // next()
-
   if (!to.meta.requiresAuth) return next()
-  console.log(router.app.$store.getters.accessToken)
-  if (router.app.$store.getters.accessToken) return next()
+  if (router.app.$store.getters.token) return next()
   console.log('Unauthorized')
   next({ name: 'login', query: { redirect: to.fullPath } })
 

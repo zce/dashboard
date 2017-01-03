@@ -18,16 +18,16 @@ max_line_length = 0
 trim_trailing_whitespace = false
 
 [*.{htm,html}]
-indent_style = space
 indent_size = 2
+indent_style = space
 
 [*.{css,less,sass,scss}]
-indent_style = space
 indent_size = 2
+indent_style = space
 
 [*.{js,json}]
-indent_style = space
 indent_size = 2
+indent_style = space
 
 [{.travis.yml,package.json}]
 # The indent size used in the `package.json` file cannot be changed

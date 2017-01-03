@@ -16,7 +16,7 @@ app.use(history({
 
 app.use(devServer.publicPath, express.static('dist'))
 
-app.listen(process.env.PORT || 2080, err => {
+app.listen(process.env.PORT || 2081, err => {
   if (err) throw err
-  console.log('server is ready, please visit http://localhost:2080/')
+  console.log('server is ready, please visit http://localhost:2081/')
 })

@@ -28,12 +28,12 @@
 
     methods: {
       fetch () {
-        this
-          .$http
+        this.$http
           .get('/api/v1/topics')
-          .then(res => { this.topics = res.data })
+          .then(res => {
+            this.topics = res.data
+          })
           .catch(err => {
-            console.log(err)
             this.error = err
           })
       }
