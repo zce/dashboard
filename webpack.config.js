@@ -64,8 +64,9 @@ module.exports = {
     publicPath: config.paths.publicPath,
     libraryTarget: 'umd',
     chunkFilename: isProd ? assetPath('js', '[name].[chunkhash:6].js') : '[name].[chunkhash:6].js',
-    sourceMapFilename: '[file].map',
-    devtoolModuleFilenameTemplate: 'wedn'
+    // // source map not work
+    // devtoolModuleFilenameTemplate: 'wedn',
+    sourceMapFilename: '[file].map'
   },
   module: {
     rules: [
@@ -161,7 +162,7 @@ module.exports = {
     maxEntrypointSize: 2 * 1024 * 1000,
     assetFilter: name => name.endsWith('.css') || name.endsWith('.js')
   },
-  devtool: 'source-map', // ???? eval-source-map
+  devtool: 'eval-source-map', // ???? eval-source-map
   target: 'web',
   plugins: [
     new webpack.DefinePlugin({
