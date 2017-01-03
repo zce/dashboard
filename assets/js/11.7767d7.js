@@ -1,0 +1,3 @@
+/*! Copyright (c) WEDN.NET */
+webpackJsonp([11,18],{118:function(e,t,n){var r,a;r=n(134);var c=n(155);a=r=r||{},"object"!=typeof r.default&&"function"!=typeof r.default||(a=r=r.default),"function"==typeof a&&(a=a.options),a.render=c.render,a.staticRenderFns=c.staticRenderFns,e.exports=r},134:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.default={name:"media"}},155:function(e,t){e.exports={render:function(){var e=this;e.$createElement;return e._c("div",[e._c("h1",{staticClass:"content-title"},[e._v(e._s(e.$t("media")))])])},staticRenderFns:[]}}});
+//# sourceMappingURL=11.7767d7.js.map
