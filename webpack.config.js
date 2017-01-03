@@ -14,7 +14,7 @@ const config = {
     source: path.join(__dirname, 'app'),
     static: path.join(__dirname, 'static'),
     output: path.join(__dirname, 'dist'),
-    publicPath: '/', // admin prefix
+    publicPath: '/wedn/', // admin prefix
     assets: 'assets',
     index: path.join(__dirname, 'dist/index.html'),
     // just for gh-pages
