@@ -4,7 +4,7 @@ const webpack = require('webpack')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin')
+const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 
 // options
 const config = {
@@ -146,7 +146,7 @@ module.exports = {
     proxy: config.server.proxy,
     contentBase: config.paths.static,
     publicPath: config.paths.publicPath,
-    historyApiFallback:  {
+    historyApiFallback: {
       index: config.paths.publicPath
     },
     noInfo: true,
@@ -232,6 +232,6 @@ if (isProd) {
   }
 } else {
   module.exports.plugins = (module.exports.plugins || []).concat([
-    new FriendlyErrorsWebpackPlugin()
+    new FriendlyErrorsPlugin()
   ])
 }
