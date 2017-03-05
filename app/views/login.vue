@@ -21,7 +21,7 @@
 </template>
 
 <script>
-  import storage from '../libraries/storage'
+  import store from '../libraries/store'
 
   export default {
     name: 'login',
@@ -47,6 +47,7 @@
     },
     methods: {
       submit () {
+        this.error = ''
         this.$refs['login-form'].validate(valid => {
           if (!valid) return false
           this.$store.dispatch('createToken', {
@@ -54,14 +55,31 @@
             password: this.model.password
           })
           .then(token => {
-            storage.set('toooken', token)
-            this.$router.replace({ path: this.$route.query.redirect })
+            this.$router.replace({ path: this.$route.query.redirect || '/' })
           })
           .catch(err => {
-            this.message = err.message
-            this.error = '发生错误'
+            this.error = '错误'
+            if (err.data && err.data.error) {
+              switch (err.status) {
+                case 401:
+                  this.message = '用户名或密码错误！'
+                  break
+                case 500:
+                  this.message = '服务器内部异常，请稍后再试！'
+                  break
+                default:
+                  this.message = '出现异常，请稍后再试！'
+              }
+            } else {
+              this.message = err.message
+            }
           })
         })
+      }
+    },
+    beforeCreate () {
+      if (store.getters.token) {
+        this.$router.replace({ path: this.$route.query.redirect || '/' })
       }
     }
   }

@@ -1,9 +1,10 @@
 {
   "dashboard": "Dashboard",
-  "demo": "Demo",
   "about": "About",
+  "demo": "Demo",
   "components": "Components",
-  "proxy": "Proxy",
+  "vuex": "Vuex",
   "parameters": "Parameters",
+  "proxy": "Proxy",
   "options": "Options"
 }

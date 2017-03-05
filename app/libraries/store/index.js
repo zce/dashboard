@@ -23,6 +23,9 @@ const plugins = []
 
 const store = new Vuex.Store({ state, getters, mutations, actions, modules, strict, plugins })
 
+// Initial
+store.dispatch('initToken')
+
 if (module.hot) {
   const accepts = [
     './state',

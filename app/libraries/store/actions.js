@@ -15,8 +15,22 @@ export const increment = ({ commit }) => {
 }
 
 /**
+ * 增加计数器计数
+ */
+export const incrementAsync = ({ commit }) => {
+  setTimeout(() => commit('INCREMENT'), 1000)
+}
+
+/**
  * 减少计数器计数
  */
 export const decrement = ({ commit }) => {
   commit('DECREMENT')
+}
+
+/**
+ * 减少计数器计数
+ */
+export const decrementAsync = ({ commit }) => {
+  setTimeout(() => commit('DECREMENT'), 1000)
 }

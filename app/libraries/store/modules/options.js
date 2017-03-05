@@ -1,8 +1,13 @@
+// import { options } from '../../api'
 /**
  * Initial state
  * @type {Object}
  */
 const state = {
+  /**
+   * 配置选项
+   * @type {Object}
+   */
   options: {}
 }
 
@@ -11,6 +16,11 @@ const state = {
  * @type {Object}
  */
 const getters = {
+  /**
+   * 获取配置选项
+   * @param  {Object} state Vuex状态对象
+   * @return {Object}       配置选项
+   */
   options: state => state.options
 }
 
@@ -19,6 +29,14 @@ const getters = {
  * @type {Object}
  */
 const mutations = {
+  /**
+   * 设置配置选项
+   * @param  {Object} state   Vuex状态对象
+   * @param  {Object} options 新的配置选项
+   */
+  CHANGE_OPTIONS: (state, options) => {
+    Object.assign(state.options, options)
+  }
 }
 
 /**
@@ -26,6 +44,13 @@ const mutations = {
  * @type {Object}
  */
 const actions = {
+  /**
+   * 设置配置选项
+   */
+  // changeOptions: async ({ commit }, options) => {
+  //   const res = await options.save({ options })
+  //   commit('CHANGE_OPTIONS', res.data)
+  // }
 }
 
 // Export module

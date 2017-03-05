@@ -15,22 +15,26 @@
 <style lang="less">
   .content {
     position: relative;
+
     & > div {
       overflow: hidden;
-      margin: 1rem;
+      margin: .75rem;
     }
-  }
 
-  .content-enter-active, .content-leave-active {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    transition: opacity .3s ease;
-  }
-  .content-enter, .content-leave-active {
-    opacity: 0
+    &-enter-active,
+    &-leave-active {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      transition: opacity .3s ease;
+    }
+
+    &-enter,
+    &-leave-active {
+      opacity: 0
+    }
   }
 
   // ::-webkit-scrollbar {

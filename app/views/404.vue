@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="not-found">
     <h1>404</h1>
     <h2>Not Found</h2>
     <p>The page you requested was not found!</p>
@@ -7,9 +7,7 @@
 </template>
 
 <script>
-  export default {
-    name: 'not-found'
-  }
+  export default { name: 'not-found' }
 </script>
 
 <style scoped>

@@ -1,6 +1,6 @@
-const storage = window.localStorage
+const { localStorage, sessionStorage } = window
 
-export default {
+const getStorage = storage => ({
   set (key, value) {
     if (key && typeof key === 'string') {
       return storage.setItem(key, value)
@@ -26,4 +26,28 @@ export default {
   clear () {
     return storage.clear()
   }
-}
+})
+
+/**
+ * 本地存储
+ * @type {Object}
+ * @example
+ *   import { local as storage } from './storage'
+ *   stroage.get( ... )
+ *   stroage.set( ... )
+ *   stroage.remove( ... )
+ *   stroage.clear()
+ */
+export const local = getStorage(localStorage)
+
+/**
+ * 会话存储
+ * @type {Object}
+ * @example
+ *   import { session as storage } from './storage'
+ *   stroage.get( ... )
+ *   stroage.set( ... )
+ *   stroage.remove( ... )
+ *   stroage.clear()
+ */
+export const session = getStorage(sessionStorage)

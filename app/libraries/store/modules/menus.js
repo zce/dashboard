@@ -10,7 +10,7 @@ const state = {
       name: 'dashboard',
       children: [
         { title: '首页', name: 'dashboard' },
-        { title: '更新', name: 'dashboard' }
+        { title: '更新', name: 'update' }
       ]
     },
     {
