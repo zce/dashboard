@@ -17,6 +17,7 @@ function execute (cmd) {
 
 execute(`cd ${config.paths.output}`)
   .then(stdout => {
+    execute('pwd').then(s => console.log(s.toString()))
     return execute('git add --all')
   })
   .then(stdout => {
