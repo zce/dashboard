@@ -38,7 +38,12 @@ module.exports = {
     // Define HTTP proxies to your custom API backend
     // https://github.com/chimurai/http-proxy-middleware
     proxy: {
-      '/api': { target: 'http://jsonplaceholder.typicode.com/', changeOrigin: true, secure: false }
+      '/api': {
+        target: 'http://jsonplaceholder.typicode.com/',
+        changeOrigin: true,
+        secure: false,
+        pathRewrite: {'^/api' : ''}
+      }
     }
   },
   // CSS Sourcemaps off by default because relative paths are "buggy"

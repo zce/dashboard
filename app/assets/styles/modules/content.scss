@@ -11,8 +11,12 @@
   color: $content-color;
 
   > .inner {
-    margin: 1rem;
+    margin: .75rem;
     overflow: hidden;
+
+    > .el-breadcrumb {
+      margin-bottom: .75rem;
+    }
 
     > .heading {
       width: 100%;

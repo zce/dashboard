@@ -44,6 +44,7 @@ const state = {
         { text: 'Vuex', name: 'demo-vuex' },
         { text: 'Parameter', name: 'demo-parameters', params: { name: '汪磊' } },
         { text: 'Proxy', name: 'demo-proxy' },
+        { text: 'JSONP', name: 'demo-jsonp' },
         { divider: true },
         { text: 'NotFound', path: 'hello-world' }
       ]

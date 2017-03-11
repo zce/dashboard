@@ -27,6 +27,12 @@ export default [
     component: resolve => require.ensure([], () => resolve(require('views/demo/proxy')), 'demo')
   },
   {
+    name: 'demo-jsonp',
+    path: 'demo/jsonp',
+    meta: { requiresAuth: false },
+    component: resolve => require.ensure([], () => resolve(require('views/demo/jsonp')), 'demo')
+  },
+  {
     name: 'demo-parameters',
     path: 'demo/:name',
     meta: { requiresAuth: false },

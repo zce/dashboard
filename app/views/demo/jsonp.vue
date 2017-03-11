@@ -1,17 +1,17 @@
 <template>
   <div class="inner">
     <div class="heading">
-      <h1 class="title">{{ $t('demo.proxy') }}</h1>
+      <h1 class="title">{{ $t('demo.jsonp') }}</h1>
     </div>
     <div>
-      <button @click="fetch()">Fetch typicode api by proxy</button>
+      <button @click="fetch()">Fetch typicode api by jsonp</button>
     </div>
     <div v-if="error">
       <h2>{{ error.status }} - {{ error.statusText }}</h2>
       <p>{{ error.body }}</p>
     </div>
     <ul v-if="!error">
-      <li v-for="item in posts">
+      <li v-for="item in photos">
         <span>{{ item.title }}</span>
       </li>
     </ul>
@@ -20,20 +20,19 @@
 
 <script>
   export default {
-    name: 'demo-proxy',
+    name: 'demo-jsonp',
 
     data () {
-      return { posts: {}, error: false }
+      return { photos: {}, error: false }
     },
 
     mounted () { },
 
     methods: {
       fetch () {
-        this.$http
-          .get('/api/posts')
+        this.$http.jsonp('http://jsonplaceholder.typicode.com/photos')
           .then(res => {
-            this.posts = res.data
+            this.photos = res.data
           })
           .catch(err => {
             this.error = err

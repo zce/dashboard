@@ -16,6 +16,7 @@
     "vuex": "Vuex",
     "parameters": "请求参数",
     "proxy": "代理",
+    "jsonp": "JSONP",
     "components": {
       "index": "组件",
       "icons": "图标",

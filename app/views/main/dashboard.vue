@@ -1,14 +1,12 @@
 <template>
   <div class="inner">
+    <!-- <el-breadcrumb separator="/">
+      <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
+      <el-breadcrumb-item>{{ $t('dashboard') }}</el-breadcrumb-item>
+    </el-breadcrumb> -->
     <div class="heading">
       <h1 class="title">{{ $t('dashboard') }}</h1>
     </div>
-    <!--<el-breadcrumb separator="/">
-      <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-      <el-breadcrumb-item>活动管理</el-breadcrumb-item>
-      <el-breadcrumb-item>活动列表</el-breadcrumb-item>
-      <el-breadcrumb-item>活动详情</el-breadcrumb-item>
-    </el-breadcrumb>-->
     <el-row type="flex" justify="space-around">
       <el-progress type="circle" :percentage="0"></el-progress>
       <el-progress type="circle" :percentage="25"></el-progress>
@@ -24,9 +22,7 @@
             <span style="line-height: 36px;">卡片名称</span>
             <el-button style="float: right;" type="primary">操作按钮</el-button>
           </div>
-          <div v-for="o in 4" class="text item">
-            {{'列表内容 ' + o }}
-          </div>
+          <div v-for="o in 4" class="text item">{{ '列表内容 ' + o }}</div>
         </el-card>
       </el-col>
       <el-col :span="12">
@@ -35,14 +31,12 @@
             <span style="line-height: 36px;">卡片名称</span>
             <el-button style="float: right;" type="primary">操作按钮</el-button>
           </div>
-          <div v-for="o in 4" class="text item">
-            {{'列表内容 ' + o }}
-          </div>
+          <div v-for="o in 4" class="text item">{{ '列表内容 ' + o }}</div>
         </el-card>
       </el-col>
     </el-row>
     <br>
-    <el-carousel :interval="5000" arrow="always">
+    <!-- <el-carousel :interval="5000" arrow="always">
       <el-carousel-item v-for="item in 4">
         <h3>{{ item }}</h3>
       </el-carousel-item>
@@ -53,7 +47,7 @@
         <h3>{{ item }}</h3>
       </el-carousel-item>
     </el-carousel>
-    <br>
+    <br> -->
   </div>
 </template>
 
