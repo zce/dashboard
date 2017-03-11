@@ -1,0 +1,2 @@
+webpackJsonpwedn([14,18],{197:function(e,t,n){var s=n(63)(n(243),n(279),null,null);e.exports=s.exports},243:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.default={name:"comment"}},279:function(e,t){e.exports={render:function(){var e=this,t=e.$createElement,n=e._self._c||t;return n("div",{staticClass:"inner"},[n("div",{staticClass:"heading"},[n("h1",{staticClass:"title"},[e._v(e._s(e.$t("comments")))])])])},staticRenderFns:[]}}});
+//# sourceMappingURL=comments.9b2cc5.js.map
