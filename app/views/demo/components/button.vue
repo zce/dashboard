@@ -63,7 +63,7 @@
 
 <script>
   export default {
-    name: 'component'
+    name: 'component-button'
   }
 </script>
 

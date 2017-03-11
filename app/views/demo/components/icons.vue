@@ -14,7 +14,7 @@
 
 <script>
   export default {
-    name: 'components',
+    name: 'components-icons',
     mounted () {
       const icons = document.querySelectorAll('.icons > i')
       icons.forEach(i => {

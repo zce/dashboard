@@ -20,7 +20,8 @@
     "components": {
       "index": "组件",
       "icons": "图标",
-      "button": "按钮"
+      "button": "按钮",
+      "table": "表格"
     }
   }
 }

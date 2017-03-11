@@ -31,7 +31,8 @@ const state = {
       name: 'components',
       children: [
         { text: 'Icons', name: 'components-icons' },
-        { text: 'Button', name: 'components-button' }
+        { text: 'Button', name: 'components-button' },
+        { text: 'Table', name: 'components-table' }
       ]
     },
     // Demo Pages

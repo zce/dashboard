@@ -17,5 +17,11 @@ export default [
     path: 'components/button',
     meta: { requiresAuth: false },
     component: resolve => require.ensure([], () => resolve(require('views/demo/components/button')), 'components')
+  },
+  {
+    name: 'components-table',
+    path: 'components/table',
+    meta: { requiresAuth: false },
+    component: resolve => require.ensure([], () => resolve(require('views/demo/components/table')), 'components')
   }
 ]
