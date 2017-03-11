@@ -67,8 +67,10 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
 
 ## Todos
 
+- [x] Restructure config file
+- [x] Remove unused package
 - [ ] Element UI theme
-- [ ] Restructure config file
+- [ ] Try iView UI
 - [ ] Login module
 
 

@@ -51,6 +51,7 @@
         > .list {
           display: none;
           list-style: none;
+          padding: .625rem .875rem;
 
           > .divider::before {
             display: block;
@@ -92,7 +93,6 @@
             top: 0;
             left: 100%;
             z-index: 99;
-            padding: .625rem;
             min-width: $sidebar-sub-width;
             background: $menu-item-hover-background;
 
