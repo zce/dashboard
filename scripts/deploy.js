@@ -14,7 +14,7 @@ function execute (cmd) {
     })
   })
 }
-
+console.log(config.paths.output)
 execute(`cd ${config.paths.output}`)
   .then(stdout => {
     execute('pwd').then(s => console.log(s.toString()))
