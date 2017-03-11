@@ -1,0 +1,116 @@
+// # Header styles
+// ====================
+
+.header {
+  display: flex;
+  padding: 0 .5rem;
+
+  > .brand {
+    margin: 0 1rem 0 0;
+
+    > a {
+      display: block;
+      color: $brand-color;
+      font-style: italic;
+      font-size: ($header-height * .625);
+      line-height: $header-height;
+
+      &:hover {
+        color: $brand-hover-color;
+      }
+    }
+  }
+
+  > .toolbar {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+
+    > .list {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      > .item {
+        position: relative;
+
+        > a {
+          display: block;
+          padding: 0 .625rem;
+          color: $menu-item-color;
+          font-size: ($header-height * .375);
+          line-height: $header-height;
+
+          &::before {
+            margin-right: .3125rem;
+          }
+
+          > img {
+            max-width: ($header-height / 2);
+            max-height: ($header-height / 2);
+            margin-top: -.125rem;
+            background: $main-light;
+            border: .0625rem solid $main-lightest;
+            vertical-align: middle;
+          }
+        }
+
+        > .list {
+          display: none;
+          list-style: none;
+          position: absolute;
+          z-index: 99;
+          min-width: $header-sub-width;
+          margin: 0;
+          padding: .625rem;
+          background: $menu-item-hover-background;
+
+          > .divider::before {
+            display: block;
+            height: .0625rem;
+            margin: .125rem;
+            background: darken($menu-item-hover-background, 2%);
+            content: '';
+          }
+
+          > .item  {
+            > a {
+              display: block;
+              padding: .125rem;
+              color: $menu-item-color;
+              font-size: $header-height * .375 + .0625rem;
+              white-space: nowrap;
+            }
+
+            &:hover {
+              > a {
+                color: $menu-item-hover-color;
+              }
+            }
+          }
+        }
+
+        &:hover {
+          > a {
+            background: $menu-item-hover-background;
+            color: $menu-item-hover-color;
+          }
+
+          > .list {
+            display: block;
+          }
+        }
+      }
+
+      &:last-child {
+        > .item {
+          > .list {
+            right: 0;
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+}

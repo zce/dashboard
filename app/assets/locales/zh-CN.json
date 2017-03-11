@@ -1,0 +1,18 @@
+{
+  "dashboard": "仪表盘",
+  "update": "更新",
+  "posts": "文章",
+  "media": "多媒体",
+  "users": "用户",
+  "comments": "评论",
+  "themes": "主题",
+  "plugins": "插件",
+  "tools": "工具",
+  "options": "选项",
+  "about": "关于",
+  "demo": "演示",
+  "components": "组件",
+  "vuex": "Vuex",
+  "parameters": "参数",
+  "proxy": "代理"
+}

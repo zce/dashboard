@@ -1,0 +1,18 @@
+<!DOCTYPE html><% /* https://github.com/jaketrent/html-webpack-template/blob/master/index.ejs */ %>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title><%= htmlWebpackPlugin.options.title %></title>
+  <link rel="shortcut icon" href="<%= htmlWebpackPlugin.files.publicPath %>favicon.ico">
+  <% for (key in htmlWebpackPlugin.files.css) { %>
+  <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.css[key] %>">
+  <% } %>
+</head>
+<body>
+  <div id="app"></div>
+  <% for (key in htmlWebpackPlugin.files.chunks) { %>
+  <script src="<%= htmlWebpackPlugin.files.chunks[key].entry %>"></script>
+  <% } %>
+</body>
+</html>

@@ -1,0 +1,58 @@
+// # Login styles
+// ====================
+
+.login {
+  flex: 1;
+  width: 95%;
+  max-width: 22rem;
+  margin: 0 auto;
+  font-size: .875rem;
+
+  &-header {
+    .brand {
+      margin: 4.5rem 0 3.5rem;
+      text-align: center;
+      letter-spacing: .125rem;
+
+      a {
+        margin: 0;
+        color: $brand-color;
+        font: 300 3rem sans-serif;
+
+        &:hover {
+          color: $brand-hover-color;
+          text-shadow: 0 0 1rem $brand-hover-color;
+        }
+      }
+    }
+
+    .alert {
+      display: none;
+    }
+  }
+
+  &-form {
+    margin-bottom: 2.5rem;
+    padding: 1.5rem 1rem;
+    background: $brand-color;
+    color: $main-light;
+
+    .heading {
+      margin: 0 0 1rem;
+      font-weight: 400;
+      font-size: 1.5rem;
+    }
+  }
+
+  &-footer {
+    margin-bottom: 1rem;
+    padding: .625rem;
+    border: .0625rem solid $brand-color;
+    font-size: .75rem;
+    text-align: center;
+
+    a {
+      color: $brand-color;
+    }
+  }
+}

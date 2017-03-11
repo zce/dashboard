@@ -1,0 +1,50 @@
+/**
+ * Suggested order:
+ * display
+ * list-style
+ * position
+ * float
+ * clear
+ * width
+ * height
+ * margin
+ * padding
+ * border
+ * background
+ * color
+ * font
+ * text-decoration
+ * text-align
+ * vertical-align
+ * white-space
+ * other text
+ * content
+ */
+
+@import 'base/variables';
+@import 'base/venders';
+@import 'base/mixins';
+@import 'base/icons';
+
+@import 'modules/global';
+@import 'modules/header';
+@import 'modules/sidebar';
+@import 'modules/content';
+
+@import 'pages/login';
+@import 'pages/list';
+@import 'pages/error';
+
+
+// # Demo styles
+// ====================
+
+.icons {
+  width: 100%;
+  word-wrap: break-word;
+
+  i {
+    margin: 1.25rem;
+    font-size: 2rem;
+  }
+}

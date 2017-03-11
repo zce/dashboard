@@ -1,0 +1,25 @@
+// # Error pages
+// ====================
+
+.error {
+  flex: 1;
+  width: 95%;
+  max-width: 20rem;
+  margin: 0 auto;
+  text-align: center;
+  letter-spacing: .125rem;
+
+  h1, h2 {
+    font-weight: 300;
+  }
+
+  h1 {
+    margin: 14rem 0 0;
+    font-size: 10rem;
+  }
+
+  footer {
+    margin-top: 5rem;
+    font-size: .75rem;
+  }
+}

@@ -1,0 +1,66 @@
+// # Common styles
+// ====================
+
+::selection {
+  color: $white;
+  background: $teal;
+  text-shadow: none;
+}
+
+a {
+  &,
+  &:visited {
+    color: $link-color;
+    text-decoration: $link-decoration;
+  }
+
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+    // outline: 0;
+  }
+}
+
+// # Global styles
+// ====================
+
+html {
+  height: 100%;
+  background: $html-background;
+  color: $html-color;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  background: $body-background;
+  color: $body-color;
+  // Better Font Rendering
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+// # Wrapper styles
+// ====================
+
+.wrapper {
+  // flex
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+
+// # Main styles
+// ====================
+
+.main {
+  display: flex;
+  // flex
+  flex: 1;
+}
+

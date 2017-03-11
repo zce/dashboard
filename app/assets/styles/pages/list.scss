@@ -1,0 +1,21 @@
+.posts-table {
+  font-size: .875rem;
+
+  thead th,
+  tfoot th {
+    position: relative;
+    font-weight: 300;
+    font-size: .8125rem;
+    border-bottom: 0;
+
+    select {
+      cursor: pointer;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+    }
+  }
+}
