@@ -1,7 +1,7 @@
 <template>
   <div class="inner">
     <div class="heading">
-      <h1 class="title">{{ $t('demo') }}</h1>
+      <h1 class="title">{{ $t('demo.data') }}</h1>
     </div>
     <ul>
       <li v-for="todo in todos">
@@ -14,7 +14,7 @@
 
 <script>
   export default {
-    name: 'demo',
+    name: 'demo-data',
 
     data () {
       const todos = []

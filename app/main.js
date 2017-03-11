@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Resource from 'vue-resource'
+import ElementUI from 'element-ui'
 import App from './app'
 import i18n from 'libraries/i18n'
 import store from 'libraries/store'
@@ -8,12 +9,13 @@ import progressBar from 'libraries/plugins/progress-bar'
 
 // ## Import styles
 // =========================
-// ...
+import 'assets/styles/element.css'
 
 // ## Use plugins
 // =========================
 Vue.use(Resource)
 Vue.use(progressBar)
+Vue.use(ElementUI)
 
 // ## Config
 // =========================

@@ -1,7 +1,7 @@
 <template>
   <div class="inner">
     <div class="heading">
-      <h1 class="title">{{ $t('proxy') }}</h1>
+      <h1 class="title">{{ $t('demo.proxy') }}</h1>
     </div>
     <div>
       <button @click="fetch()">Fetch cnode api by proxy</button>
@@ -20,7 +20,7 @@
 
 <script>
   export default {
-    name: 'proxy',
+    name: 'demo-proxy',
 
     data () {
       return { topics: {}, error: false }

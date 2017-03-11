@@ -16,11 +16,6 @@
   .content {
     position: relative;
 
-    & > div {
-      overflow: hidden;
-      margin: .75rem;
-    }
-
     &-enter-active,
     &-leave-active {
       position: absolute;

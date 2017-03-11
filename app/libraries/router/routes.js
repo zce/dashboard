@@ -22,6 +22,6 @@ export default [
     name: 'not-found',
     path: '*',
     meta: { requiresAuth: false },
-    component: resolve => require.ensure([], () => resolve(require('views/error/404')), 'error')
+    component: resolve => require.ensure([], () => resolve(require('views/404')), 'error')
   }
 ]

@@ -1,7 +1,7 @@
 <template>
   <div class="inner">
     <div class="heading">
-      <h1 class="title">{{ $t('vuex') }} - Counter</h1>
+      <h1 class="title">{{ $t('demo.vuex') }} - Counter</h1>
     </div>
     <h2>{{ count }}</h2>
     <div class="actions">
@@ -16,7 +16,7 @@
 <script>
   import { mapGetters, mapActions } from 'vuex'
   export default {
-    name: 'component',
+    name: 'demo-vuex',
     computed: mapGetters({
       count: 'count'
     }),

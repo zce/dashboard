@@ -24,17 +24,28 @@ const state = {
         { text: '更新', name: 'users' }
       ]
     },
-    // Demo Pages magic-wand
+    // Component Pages
     {
       text: '组件',
       icon: 'lab',
+      name: 'components',
+      children: [
+        { text: 'Icons', name: 'components-icons' },
+        { text: 'Button', name: 'components-button' }
+      ]
+    },
+    // Demo Pages
+    {
+      text: '演示',
+      icon: 'magic-wand',
       name: 'demo',
       children: [
-        { text: 'Components', name: 'components' },
+        { text: 'Data', name: 'demo-data' },
+        { text: 'Vuex', name: 'demo-vuex' },
+        { text: 'Parameter', name: 'demo-parameters', params: { name: '汪磊' } },
+        { text: 'Proxy', name: 'demo-proxy' },
         { divider: true },
-        { text: 'Vuex', name: 'vuex' },
-        { text: 'Parameter', name: 'parameter', params: { name: '汪磊' } },
-        { text: 'Proxy', name: 'proxy' }
+        { text: 'NotFound', path: 'hello-world' }
       ]
     }
   ],

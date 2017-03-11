@@ -10,9 +10,16 @@
   "tools": "工具",
   "options": "选项",
   "about": "关于",
-  "demo": "演示",
-  "components": "组件",
-  "vuex": "Vuex",
-  "parameters": "参数",
-  "proxy": "代理"
+  "demo": {
+    "index": "演示",
+    "data": "数据绑定",
+    "vuex": "Vuex",
+    "parameters": "请求参数",
+    "proxy": "代理",
+    "components": {
+      "index": "组件",
+      "icons": "图标",
+      "button": "按钮"
+    }
+  }
 }

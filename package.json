@@ -13,6 +13,7 @@
     "deploy": "node scripts/deploy.js"
   },
   "dependencies": {
+    "element-ui": "^1.2.4",
     "nprogress": "^0.2.0",
     "vue": "^2.2.2",
     "vue-i18n": "6.0.0-alpha.2",

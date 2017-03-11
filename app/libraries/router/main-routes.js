@@ -1,3 +1,5 @@
+import demo from './demo-routes'
+
 export default [
   {
     name: 'default',
@@ -70,36 +72,5 @@ export default [
     path: 'about',
     meta: { requiresAuth: true },
     component: resolve => require.ensure([], () => resolve(require('views/main/about')), 'about')
-  },
-  // ## demo views
-  {
-    name: 'demo',
-    path: 'demo',
-    meta: { requiresAuth: false },
-    component: resolve => require.ensure([], () => resolve(require('views/demo/demo')), 'demo')
-  },
-  {
-    name: 'components',
-    path: 'components',
-    meta: { requiresAuth: false },
-    component: resolve => require.ensure([], () => resolve(require('views/demo/components')), 'components')
-  },
-  {
-    name: 'vuex',
-    path: 'vuex',
-    meta: { requiresAuth: false },
-    component: resolve => require.ensure([], () => resolve(require('views/demo/vuex')), 'vuex')
-  },
-  {
-    name: 'proxy',
-    path: 'demo/proxy',
-    meta: { requiresAuth: false },
-    component: resolve => require.ensure([], () => resolve(require('views/demo/proxy')), 'proxy')
-  },
-  {
-    name: 'parameter',
-    path: 'demo/:name',
-    meta: { requiresAuth: false },
-    component: resolve => require.ensure([], () => resolve(require('views/demo/parameter')), 'parameter')
   }
-]
+].concat(demo)
