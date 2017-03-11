@@ -7,7 +7,7 @@ const isProduction = !isDevelopment
 // source root
 const root = path.join(__dirname, '..')
 // `file://` won't work on `publicPath` starts with /
-const publicPath = '/'
+const publicPath = ''
 // `docs` on master branch
 const outputPath = 'dist'
 

@@ -5,12 +5,10 @@
   "author": "iceStone <ice@micua.com>",
   "private": true,
   "scripts": {
+    "lint": "eslint . --ext .js,.vue --format 'node_modules/eslint-friendly-formatter'",
     "preinstall": "git submodule init && git submodule update",
     "dev": "node scripts/dev-server.js",
-    "lint": "eslint . --ext .js,.vue --format 'node_modules/eslint-friendly-formatter'",
-    "prebuild": "npm run lint",
     "build": "node scripts/build.js",
-    "prestart": "npm run build",
     "start": "node scripts/dist-server.js",
     "deploy": "node scripts/deploy.js"
   },
