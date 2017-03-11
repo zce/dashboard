@@ -9,7 +9,7 @@ import progressBar from 'libraries/plugins/progress-bar'
 
 // ## Import styles
 // =========================
-import 'assets/styles/element.css'
+import 'assets/element/index.css'
 
 // ## Use plugins
 // =========================
