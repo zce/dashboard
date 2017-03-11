@@ -11,7 +11,8 @@
     "prebuild": "npm run lint",
     "build": "node scripts/build.js",
     "prestart": "npm run build",
-    "start": "node scripts/dist-server.js"
+    "start": "node scripts/dist-server.js",
+    "deploy": "node scripts/deploy.js"
   },
   "dependencies": {
     "nprogress": "^0.2.0",

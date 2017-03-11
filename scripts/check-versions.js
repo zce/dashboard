@@ -1,9 +1,10 @@
+const { execSync } = require('child_process')
 const chalk = require('chalk')
 const semver = require('semver')
 const packageConfig = require('../package.json')
 
 function exec (cmd) {
-  return require('child_process').execSync(cmd).toString().trim()
+  return execSync(cmd).toString().trim()
 }
 
 const versionRequirements = [

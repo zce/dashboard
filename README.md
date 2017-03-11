@@ -36,7 +36,7 @@
 # install dependencies
 npm install
 
-# serve with hot reload at localhost:8080
+# serve with hot reload at http://localhost:2017
 npm run dev
 
 # build for production with minification
@@ -52,7 +52,7 @@ or yarn
 # install dependencies
 yarn
 
-# serve with hot reload at localhost:8080
+# serve with hot reload at http://localhost:2017
 yarn dev
 
 # build for production with minification

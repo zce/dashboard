@@ -14,6 +14,12 @@ export default {
   copyright: 'WEDN.NET',
 
   /**
+   * 版权链接
+   * @type {String}
+   */
+  copyright_link: 'https://github.com/zce/dashboard',
+
+  /**
    * 是否收起边栏
    * @type {Boolean}
    */

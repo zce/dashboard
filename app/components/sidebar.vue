@@ -5,7 +5,7 @@
     </nav>
     <footer class="footer">
       <a class="toggle icon-before icon-circle-left" title="Toggle navigation menu" @click="toggleCollapse"></a>
-      <a class="copyright" href="https://github.com/zce/freedom">&copy; {{ copyright }}</a>
+      <a class="copyright" :href="copyrightLink">&copy; {{ copyright }}</a>
     </footer>
   </aside>
 </template>
@@ -20,6 +20,7 @@
     computed: mapGetters({
       menus: 'sidebar',
       copyright: 'copyright',
+      copyrightLink: 'copyrightLink',
       collapse: 'sidebarCollapse'
     }),
     methods: mapActions({

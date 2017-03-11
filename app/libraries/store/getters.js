@@ -13,6 +13,13 @@ export const name = state => state.name
 export const copyright = state => state.copyright
 
 /**
+ * 获取版权链接
+ * @param  {Object} state Vuex状态对象
+ * @return {Boolean}       版权链接
+ */
+export const copyrightLink = state => state.copyright_link
+
+/**
  * 获取是否收起边栏
  * @param  {Object} state Vuex状态对象
  * @return {Boolean}       是否收起边栏
