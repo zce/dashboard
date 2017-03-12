@@ -1,18 +1,15 @@
 <template>
-  <layout frameless>
+  <div class="wrapper">
     <section class="error">
       <h1>404</h1>
       <h2>Not Found</h2>
       <footer>← 返回到 <a href="/">WEDN.NET</a></footer>
     </section>
-  </layout>
+  </div>
 </template>
 
 <script>
-  import Layout from 'components/layout'
-
   export default {
-    name: 'not-fount',
-    components: { Layout }
+    name: 'not-fount'
   }
 </script>

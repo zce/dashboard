@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import { sync } from 'vuex-router-sync'
 import Resource from 'vue-resource'
 import ElementUI from 'element-ui'
 import App from './app'
@@ -16,6 +17,7 @@ import 'assets/styles/element.css'
 Vue.use(Resource)
 Vue.use(progressBar)
 Vue.use(ElementUI)
+sync(store, router, { moduleName: 'route' })
 
 // ## Config
 // =========================

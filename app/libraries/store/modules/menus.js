@@ -47,7 +47,7 @@ const state = {
         { text: 'Proxy', name: 'demo-proxy' },
         { text: 'JSONP', name: 'demo-jsonp' },
         { divider: true },
-        { text: 'NotFound', path: 'hello-world' }
+        { text: 'NotFound', path: '/hello-world' }
       ]
     }
   ],

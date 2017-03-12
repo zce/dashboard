@@ -1,5 +1,5 @@
 <template>
-  <layout frameless>
+  <div class="wrapper">
     <section class="login">
       <header class="login-header">
         <h1 class="brand"><a href="#" tabindex="-1">WEDN.NET</a></h1>
@@ -26,14 +26,11 @@
         ← 返回到 <a href="/">WEDN.NET</a>
       </footer>
     </section>
-  </layout>
+  </div>
 </template>
 
 <script>
-  import Layout from 'components/layout'
-
   export default {
-    name: 'login',
-    components: { Layout }
+    name: 'login'
   }
 </script>

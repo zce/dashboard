@@ -14,7 +14,7 @@ export default [
   {
     path: '/',
     meta: { requiresAuth: true },
-    component: resolve => require.ensure([], () => resolve(require('views/main')), 'main'),
+    component: resolve => require.ensure([], () => resolve(require('views/layout')), 'layout'),
     children: mainRoutes
   },
   // ## not found page
@@ -22,6 +22,6 @@ export default [
     name: 'not-found',
     path: '*',
     meta: { requiresAuth: false },
-    component: resolve => require.ensure([], () => resolve(require('views/404')), 'error')
+    component: resolve => require.ensure([], () => resolve(require('views/404')), 'common')
   }
 ]

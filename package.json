@@ -19,7 +19,8 @@
     "vue-i18n": "6.0.0-alpha.5",
     "vue-resource": "^1.2.1",
     "vue-router": "^2.3.0",
-    "vuex": "^2.2.1"
+    "vuex": "^2.2.1",
+    "vuex-router-sync": "^4.1.2"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.7",
