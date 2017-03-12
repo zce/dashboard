@@ -13,12 +13,12 @@ const commit = `cd ${config.paths.output} && git add --all && git commit -m '${m
 exec(check, (err, stdout, stderr) => {
   if (err) console.error(err)
   if (!stdout.toString().trim()) {
-    console.log(chalk.yellow(`\n  No change in ${config.paths.output}\n`))
+    console.log(chalk.yellow(`\n\n  No change in ${config.paths.output}\n`))
     return spinner.stop()
   }
   exec(commit, (err, stdout, stderr) => {
     if (err) console.error(err)
-    console.log(chalk.green(`\n  ${message}\n`))
+    console.log(chalk.green(`\n\n  ${message}\n`))
     spinner.stop()
   })
 })
