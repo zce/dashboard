@@ -15,6 +15,7 @@
 [style-url]: http://standardjs.com/
 
 > A dashboard template based on vue.js
+> demo: http://dashboard.micua.com
 
 
 ## Environment
