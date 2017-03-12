@@ -27,7 +27,7 @@
         height: .5rem;
         content: '';
         // background: $menu-border-background;
-        // box-shadow: inset 1px 1px 1px darken($menu-border-background, 6%);
+        // box-shadow: inset .0625rem .0625rem .125rem darken($menu-border-background, 5%);
       }
 
       > .item {
@@ -98,7 +98,7 @@
 
             // Sidebar hover arrow
             @if $sidebar-enable-arrow {
-              background: darken($menu-item-hover-background, 3%);
+              background: darken($menu-item-hover-background, 2%);
 
               // right bubble
               @if $sidebar-enable-radius {
@@ -113,7 +113,7 @@
                 left: -.875rem;
                 margin: (($sidebar-item-height - .875rem) / 2) 0;
                 border: (.875rem / 2) solid transparent;
-                border-right-color: darken($menu-item-hover-background, 3%);
+                border-right-color: darken($menu-item-hover-background, 2%);
                 content: '';
               }
             }

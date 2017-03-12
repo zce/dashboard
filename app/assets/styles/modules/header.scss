@@ -1,5 +1,5 @@
-// # Header styles
-// ====================
+// ## Header styles
+// ------------------------------
 
 .header {
   display: flex;
@@ -7,17 +7,19 @@
 
   > .brand {
     margin: 0 1rem 0 0;
+    font: italic ($header-height * .625) sans-serif;
+    line-height: $header-height;
 
     > a {
-      display: block;
       color: $brand-color;
-      font-style: italic;
-      font-size: ($header-height * .625);
-      line-height: $header-height;
 
       &:hover {
         color: $brand-hover-color;
       }
+    }
+
+    &:hover  {
+      color: $brand-hover-color;
     }
   }
 
@@ -50,8 +52,8 @@
             max-width: ($header-height / 2);
             max-height: ($header-height / 2);
             margin-top: -.125rem;
-            background: $main-light;
-            border: .0625rem solid $main-lightest;
+            background: $menu-image-background;
+            border: $menu-image-border;
             vertical-align: middle;
           }
         }
@@ -70,7 +72,7 @@
             display: block;
             height: .0625rem;
             margin: .125rem;
-            background: darken($menu-item-hover-background, 2%);
+            background: $menu-border-background;
             content: '';
           }
 

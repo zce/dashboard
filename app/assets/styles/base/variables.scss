@@ -1,72 +1,117 @@
 // # Variables
-// ====================
+// ========================================
 
 // ## Colors
+// ------------------------------
 
-// Start with assigning color names to specific hex values.
-$white:                     #ffffff;
-$black:                     #000000;
-$red:                       #d9534f;
-$orange:                    #f0ad4e;
-$yellow:                    #ffd500;
-$green:                     #5cb85c;
-$blue:                      #337ab7; // #0275d8;
-$teal:                      #00b9eb; // #5bc0de;
-$pink:                      #ff5b77;
-$purple:                    #613d7c;
-$transparent:               transparent;
+// - Start with assigning color names to specific hex values.
+$pure-white:                #ffffff;
+$pure-black:                #000000;
+$pure-red:                  #d9534f;
+$pure-orange:               #f0ad4e;
+$pure-yellow:               #ffd500;
+$pure-green:                #5cb85c;
+$pure-blue:                 #337ab7; // #0275d8;
+$pure-teal:                 #00b9eb; // #5bc0de;
+$pure-pink:                 #ff5b77;
+$pure-purple:               #613d7c;
 
-// Create grayscale
-$gray-lightest:             #f7f7f9;
-$gray-lighter:              #eceeef;
-$gray-light:                #636c72;
-$gray:                      #464a4c;
-$gray-dark:                 #292b2c;
+// - Blue
+$blue-lighter:              #89CCFF;
+$blue-light:                #58B7FF;
+$blue:                      #20A0FF;
+$blue-dark:                 #1D8CE0;
+$blue-darker:               #337ab7;
 
-// Global
-// > main // #2f4050; // #373a3c;
+// - Black
+$black-lighter:             #475669;
+$black-light:               #324057;
+$black:                     #1F2D3D;
+$black-dark:                #1F2D3D;
+$black-darker:              #1F2D3D;
 
-$main-lightest:             #64707a;
+// - Silver
+$silver-lighter:            #C0CCDA;
+$silver-light:              #99A9BF;
+$silver:                    #8492A6;
+$silver-dark:               #8492A6;
+$silver-darker:             #8492A6;
+
+// - Gray
+$gray-lighter:              #EFF2F7;
+$gray-light:                #E5E9F2;
+$gray:                      #D3DCE6;
+$gray-dark:                 #D3DCE6;
+$gray-darker:               #D3DCE6;
+
+// - White
+$white-lighter:             #FFFFFF;
+$white-light:               #FFFFFF;
+$white:                     #FFFFFF;
+$white-dark:                #F9FAFC;
+$white-darker:              #F9FAFC;
+
+// - Brand color
+$primary:                   #20A0FF;
+$success:                   #13CE66;
+$warning:                   #F7BA2A;
+$danger:                    #FF4949;
+$info:                      #50BFFF;
+
+// - Main color
+//   + #2f4050;
+//   + #373a3c;
 $main-lighter:              #515e6a;
 $main-light:                #3e4c59;
 $main:                      #2b3b49;
 $main-dark:                 #283643;
 $main-darker:               #24313c;
-$main-darkest:              #202b36;
 
-// Module
 
-$link-color:                      $blue; // $main;
+// ## Module
+// ------------------------------
+
+// - Selection
+$selection-color:                 $white; // inherit;
+$selection-background:            $blue-lighter;
+
+// - Link
+$link-color:                      $blue-dark; // inherit;
 $link-decoration:                 none;
-$link-hover-color:                lighten($blue, 10%); // $main-darker;
+$link-hover-color:                $blue-darker; // inherit;
 $link-hover-decoration:           none;
 
-$brand-color:                     $gray-lighter;
+// - Brand
+$brand-color:                     $gray;
 $brand-hover-color:               $white;
 
-$menu-item-color:                 $gray-lighter;
-$menu-item-background:            $transparent;
-$menu-item-hover-color:           $teal;
+// - Menu
+$menu-item-color:                 $gray;
+$menu-item-background:            transparent;
+$menu-item-hover-color:           $blue-lighter;
 $menu-item-hover-background:      $main-darker;
 $menu-item-active-color:          $white;
-$menu-item-active-background:     $blue;
-$menu-title-color:                darken($menu-item-color, 40%);
+$menu-item-active-background:     $blue-darker;
+$menu-title-color:                darken($menu-item-color, 30%);
 $menu-title-background:           $menu-item-hover-background;
 $menu-border-background:          $main-dark;
+$menu-image-background:           $main-light;
+$menu-image-border:               .0625rem solid $main-lighter;
 
-
-
-$html-color:                      $white;
+// - HTML
+// $html-color:                   $white;
 $html-background:                 $main-darker;
 
-
+// - Body
 $body-color:                      $white;
 $body-background:                 $main;
+$body-font-family:                -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
 
+// - Header
 $header-height:                   2rem;
 $header-sub-width:                5rem;
 
-
+// - Sidebar
 $sidebar-width:                   10rem;
 $sidebar-min-width:               2.25rem;
 $sidebar-sub-width:               5rem;
@@ -74,15 +119,15 @@ $sidebar-item-height:             $sidebar-min-width;
 $sidebar-enable-arrow:            true;
 $sidebar-enable-radius:           false;
 
-
-
+// - Content
 $content-margin:                  .3125rem;
 $content-color:                   $main-darker;
-$content-background:              $gray-lightest;
-
+$content-background:              $gray-lighter;
 
 
 // ## Icons
+// ------------------------------
+
 $freedom-font-path: "../fonts" !default;
 
 $icon-home: "\e900";
