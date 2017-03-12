@@ -21,6 +21,7 @@
 
 - Node >= 6.0.0
 - Yarn >= 0.20.0
+- NPM >= 3.0.0
 
 
 ## Stacks
@@ -34,6 +35,17 @@
 - ESLint 3.x
 - EditorConfig
 - Travis CI
+
+
+## Clone Repo
+
+```bash
+# clone
+$ git clone https://github.com/zce/dashboard.git
+
+# submodule
+$ git submodule init && git submodule update
+```
 
 
 ## Build Setup

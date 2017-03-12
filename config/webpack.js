@@ -18,7 +18,7 @@ module.exports = {
     library: 'wedn',
     libraryTarget: 'umd',
     path: config.paths.output,
-    filename: config.isDevelopment ? '[name].js' : utils.assetsPath('js', '[name].[hash:6].js'),
+    filename: config.isDevelopment ? '[name].js' : utils.assetsPath('js', '[name].[chunkhash:6].js'),
     publicPath: config.paths.public,
     chunkFilename: config.isDevelopment ? '[name].js' : utils.assetsPath('js', '[name].[chunkhash:6].js'),
     // source map not work
@@ -89,8 +89,8 @@ module.exports = {
   },
   performance: {
     hints: 'warning',
-    maxAssetSize: 4 * 1024 * 1000,
-    maxEntrypointSize: 3 * 1024 * 1000,
+    maxAssetSize: 8 * 1024 * 1000,
+    maxEntrypointSize: 8 * 1024 * 1000,
     assetFilter: name => name.endsWith('.css') || name.endsWith('.js')
   },
   devtool: config.isDevelopment
@@ -107,9 +107,9 @@ module.exports = {
   ]
 }
 
+// # Environment config
 if (config.isDevelopment) {
-  // Development only
-
+  // ## Development
   // add hot-reload related code to entry chunks
   for (const name in module.exports.entry) {
     module.exports.entry[name] = ['./scripts/dev-client'].concat(module.exports.entry[name])
@@ -122,38 +122,12 @@ if (config.isDevelopment) {
     new FriendlyErrorsPlugin()
   ])
 } else {
-  // Production only
-
-  // gzip
-  if (config.gzip.enable) {
-    const CompressionWebpackPlugin = require('compression-webpack-plugin')
-    module.exports.plugins.push(
-      new CompressionWebpackPlugin({
-        asset: '[path].gz[query]',
-        algorithm: 'gzip',
-        test: new RegExp(`\\.(${config.gzip.extensions.join('|')})$`),
-        threshold: 10240,
-        minRatio: 0.8
-      })
-    )
-  }
-
-  // bundle analyzer
-  if (config.enableBundleAnalyzer) {
-    const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
-    module.exports.plugins.push(new BundleAnalyzerPlugin())
-  }
-
-  // just for gh-pages 404
-  if (config.paths.pages.alias) {
-    module.exports.plugins.push(utils.htmlWebpackPlugin(config.paths.pages.alias))
-  }
-
+  // ## Production
   module.exports.plugins = (module.exports.plugins || []).concat([
     // banner
     new webpack.BannerPlugin('Copyright (c) WEDN.NET'),
-    // extract css into its own file
-    new ExtractTextPlugin(utils.assetsPath('css', '[name].css?v=[contenthash:6]')),
+    // extract css into its own file -- ?v=[contenthash:6]
+    new ExtractTextPlugin(utils.assetsPath('css', '[name].[contenthash:6].css')),
     // Compress extracted CSS. We are using this plugin so that possible
     // duplicated CSS from different components can be deduped.
     new OptimizeCSSPlugin(),
@@ -182,4 +156,29 @@ if (config.isDevelopment) {
       { from: config.paths.static, context: __dirname, ignore: ['.*'] }
     ])
   ])
+
+  // just for gh-pages 404
+  if (config.paths.pages.alias) {
+    module.exports.plugins.push(utils.htmlWebpackPlugin(config.paths.pages.alias))
+  }
+
+  // compression gzip
+  if (config.gzip.enable) {
+    const CompressionWebpackPlugin = require('compression-webpack-plugin')
+    module.exports.plugins.push(
+      new CompressionWebpackPlugin({
+        asset: '[path].gz[query]',
+        algorithm: 'gzip',
+        test: new RegExp(`\\.(${config.gzip.extensions.join('|')})$`),
+        threshold: 10240,
+        minRatio: 0.8
+      })
+    )
+  }
+
+  // bundle analyzer
+  if (config.enableBundleAnalyzer) {
+    const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
+    module.exports.plugins.push(new BundleAnalyzerPlugin())
+  }
 }
