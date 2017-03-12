@@ -14,7 +14,8 @@
 [style-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg
 [style-url]: http://standardjs.com/
 
-> A dashboard template based on vue.js
+> A dashboard template based on vue.js.
+
 > demo: http://dashboard.micua.com
 
 
