@@ -1,5 +1,5 @@
-// # Login styles
-// ====================
+// ## Login styles
+// ------------------------------
 
 .login {
   flex: 1;
@@ -25,17 +25,13 @@
         }
       }
     }
-
-    .alert {
-      display: none;
-    }
   }
 
   &-form {
     margin-bottom: 2.5rem;
-    padding: 1.5rem 1rem;
-    background: $brand-color;
-    color: $main-light;
+    padding: 1.875rem 1.25rem;
+    background: $login-form-background;
+    color: $login-form-color;
 
     .heading {
       margin: 0 0 1rem;
