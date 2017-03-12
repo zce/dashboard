@@ -16,11 +16,17 @@
 
 > A dashboard template based on vue.js
 
+
+## Environment
+
+- Node >= 6.0.0
+- Yarn >= 0.20.0
+
+
 ## Stacks
 
-- Node 7.x
-- Yarn 0.x
 - Vue 2.x
+- Vue I18n 6.x
 - Vue Router 2.x
 - Vue Resource 1.x
 - Webpack 2.x
@@ -34,32 +40,32 @@
 
 ``` bash
 # install dependencies
-npm install
+$ npm install
 
 # serve with hot reload at http://localhost:2017
-npm run dev
+$ npm run dev
 
 # build for production with minification
-npm run build
+$ npm run build
 
 # build for production and view the bundle analyzer report
-npm run build --report
+$ npm run build --report
 ```
 
 or yarn
 
 ``` bash
 # install dependencies
-yarn
+$ yarn
 
 # serve with hot reload at http://localhost:2017
-yarn dev
+$ yarn dev
 
 # build for production with minification
-yarn build
+$ yarn build
 
 # build for production and view the bundle analyzer report
-yarn build --report
+$ npm_config_report=true yarn build
 ```
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
@@ -69,15 +75,21 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
 
 - [x] Restructure config file
 - [x] Remove unused package
+- [x] Try iView UI
 - [ ] Element UI theme
-- [ ] Try iView UI
 - [ ] Login module
+
+## Link
+
+- https://github.com/ElemeFE/element-dashboard
+- https://github.com/ElementUI/element-admin
+- https://github.com/lynzz/element-admin
 
 
 ## Template version
 
-- commit link: [358ad2](https://github.com/vuejs-templates/webpack/commit/358ad2c26a8e76c7b04f4c0ce5f5fa7be69d60ee)
-- compare link: [358ad2](https://github.com/vuejs-templates/webpack/compare/358ad2c26a8e76c7b04f4c0ce5f5fa7be69d60ee...master)
+- commit: [358ad2](https://github.com/vuejs-templates/webpack/commit/358ad2c26a8e76c7b04f4c0ce5f5fa7be69d60ee)
+- compare: [358ad2](https://github.com/vuejs-templates/webpack/compare/358ad2c26a8e76c7b04f4c0ce5f5fa7be69d60ee...master)
 
 
 ## Packages

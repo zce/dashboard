@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "lint": "eslint . --ext .js,.vue --format 'node_modules/eslint-friendly-formatter'",
-    "preinstall": "git submodule init && git submodule update",
+    "init": "node scripts/init.js",
     "dev": "node scripts/dev-server.js",
     "build": "node scripts/build.js",
     "start": "node scripts/dist-server.js",
@@ -16,13 +16,13 @@
     "element-ui": "^1.2.4",
     "nprogress": "^0.2.0",
     "vue": "^2.2.2",
-    "vue-i18n": "6.0.0-alpha.2",
+    "vue-i18n": "6.0.0-alpha.5",
     "vue-resource": "^1.2.1",
     "vue-router": "^2.3.0",
     "vuex": "^2.2.1"
   },
   "devDependencies": {
-    "autoprefixer": "^6.7.6",
+    "autoprefixer": "^6.7.7",
     "babel-core": "^6.23.1",
     "babel-eslint": "^7.1.1",
     "babel-loader": "^6.4.0",

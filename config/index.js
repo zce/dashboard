@@ -59,7 +59,7 @@ module.exports = {
   gzip: { enable: false, extensions: ['.js', '.css'] },
   // Run the build command with an extra argument to
   // View the bundle analyzer report after build finishes:
-  // `npm run build --report`
+  // `npm run build --report` or `npm_config_report=true yarn build`
   // Set to `true` or `false` to always turn it on or off
   enableBundleAnalyzer: process.env.npm_config_report,
   isDevelopment: isDevelopment,
