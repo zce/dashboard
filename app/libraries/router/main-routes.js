@@ -1,15 +1,15 @@
 import demo from './demo-routes'
 
 export default [
-  {
-    name: 'default',
-    path: '',
-    meta: { requiresAuth: true },
-    redirect: { name: 'dashboard' }
-  },
+  // {
+  //   name: 'default',
+  //   path: '',
+  //   meta: { requiresAuth: true },
+  //   redirect: { name: 'dashboard' }
+  // },
   {
     name: 'dashboard',
-    path: 'dashboard',
+    path: '',
     meta: { requiresAuth: true },
     component: resolve => require.ensure([], () => resolve(require('views/main/dashboard')), 'dashboard')
   },
