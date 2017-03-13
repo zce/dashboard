@@ -65,6 +65,7 @@ app.use(hotMiddleware)
 // - serve pure static assets
 app.use(config.paths.public, express.static(config.paths.static))
 
+// - server url
 const url = `http://localhost:${config.server.port}/`
 
 // - print url to console
