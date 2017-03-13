@@ -30,16 +30,16 @@
 
 - [Vue](http://vuejs.org/)
 - [Vuex](https://github.com/vuejs/vuex)
-- [VueRouter](https://github.com/vuejs/vue-router)
-- [VuexRouterSync](https://github.com/vuejs/vuex-router-sync)
-- [VueI18n](https://github.com/kazupon/vue-i18n)
-- [VueResource](https://github.com/pagekit/vue-resource)
-- [ElementUI](https://github.com/ElemeFE/element)
+- [Vue Router](https://github.com/vuejs/vue-router)
+- [Vue I18n](https://github.com/kazupon/vue-i18n)
+- [Vue Resource](https://github.com/pagekit/vue-resource)
+- [Element UI](https://github.com/ElemeFE/element)
 - [NProgress](https://github.com/rstacruz/nprogress)
 - [Webpack](https://webpack.js.org/)
-- [VueLoader](http://vuejs.github.io/vue-loader)
+- [Vue Loader](http://vuejs.github.io/vue-loader)
 - [Babel](https://babeljs.io/)
 - [Sass](http://sass-lang.com/)
+- [JSON Server](https://github.com/typicode/json-server)
 - [Mock](http://mockjs.com/)
 - [ESLint](http://eslint.org/)
 - [EditorConfig](http://editorconfig.org/)
@@ -105,7 +105,7 @@ $ yarn deploy
 - [x] Try iView UI
 - [x] Element UI theme
 - [x] All pages structure
-- [ ] Mock
+- [ ] Mock || JSON Server
 - [ ] Global state
 - [ ] Login module
 - [ ] Options module
