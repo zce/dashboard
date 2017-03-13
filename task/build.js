@@ -2,7 +2,6 @@ process.env.NODE_ENV = process.env.NODE_ENV || 'production'
 
 const ora = require('ora')
 const rm = require('rimraf')
-const path = require('path')
 const chalk = require('chalk')
 const webpack = require('webpack')
 const config = require('../config')
@@ -11,7 +10,7 @@ const webpackConfig = require('../config/webpack')
 const spinner = ora(`Building for env:${process.env.NODE_ENV}...`)
 spinner.start()
 
-module.exports = () => rm(path.join(config.paths.output, config.paths.assets), err => {
+module.exports = () => rm(config.paths.output, err => {
   if (err) throw err
 
   webpack(webpackConfig, (err, stats) => {
