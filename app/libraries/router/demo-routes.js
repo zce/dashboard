@@ -39,9 +39,9 @@ export default [
     component: resolve => require.ensure([], () => resolve(require('views/demo/jsonp')), 'demo')
   },
   {
-    name: 'demo-parameters',
+    name: 'demo-params',
     path: 'demo/:name',
     meta: { requiresAuth: false },
-    component: resolve => require.ensure([], () => resolve(require('views/demo/parameters')), 'demo')
+    component: resolve => require.ensure([], () => resolve(require('views/demo/params')), 'demo')
   }
 ].concat(components)

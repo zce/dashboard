@@ -1,7 +1,7 @@
 <template>
   <div class="inner">
     <div class="heading">
-      <h1 class="title">{{ $t('demo.components.table') }}</h1>
+      <h1 class="title">表格</h1>
     </div>
     <el-table :data="temp" border style="width: 100%" @selection-change="handleSelectionChange">
       <el-table-column type="selection"></el-table-column>

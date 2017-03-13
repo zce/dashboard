@@ -1,9 +1,10 @@
 <template>
   <div class="inner">
     <div class="heading">
-      <h1 class="title">{{ $t('demo.proxy') }}</h1>
+      <h1 class="title">HTTP代理</h1>
     </div>
     <div>
+      <p>本示例只有在本地开发环境工作，线上托管环境没有代理配置。</p>
       <button @click="fetch()">Fetch typicode api by proxy</button>
     </div>
     <div v-if="error">

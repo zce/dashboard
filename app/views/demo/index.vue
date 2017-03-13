@@ -1,7 +1,7 @@
 <template>
   <div class="inner">
     <div class="heading">
-      <h1 class="title">{{ $t('demo.index') }}</h1>
+      <h1 class="title">演示</h1>
     </div>
   </div>
 </template>

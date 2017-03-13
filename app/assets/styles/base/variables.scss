@@ -49,14 +49,7 @@ $white-lighter:             #FFFFFF;
 $white-light:               #FFFFFF;
 $white:                     #FFFFFF;
 $white-dark:                #F9FAFC;
-$white-darker:              #F9FAFC;
-
-// - Brand color
-$primary:                   #20A0FF;
-$success:                   #13CE66;
-$warning:                   #F7BA2A;
-$danger:                    #FF4949;
-$info:                      #50BFFF;
+$white-darker:              #F0F1F3;
 
 // - Main color
 //   + #2f4050;
@@ -66,6 +59,13 @@ $main-light:                #3e4c59;
 $main:                      #2b3b49;
 $main-dark:                 #283643;
 $main-darker:               #24313c;
+
+// - Brand color
+$primary:                   #20A0FF;
+$success:                   #13CE66;
+$warning:                   #F7BA2A;
+$danger:                    #FF4949;
+$info:                      #50BFFF;
 
 
 // ## Module
@@ -122,11 +122,11 @@ $sidebar-enable-radius:           false;
 // - Content
 $content-margin:                  .3125rem;
 $content-color:                   $main-darker;
-$content-background:              $gray-lighter;
+$content-background:              $white-darker;
 
 // - Login
 $login-form-color:                $main;
-$login-form-background:           $gray-lighter;
+$login-form-background:           $content-background;
 
 
 // ## Icons

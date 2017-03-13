@@ -71,6 +71,9 @@ $ npm run build
 
 # build for production and view the bundle analyzer report
 $ npm run build --report
+
+# build for production and deploy to gh-pages
+$ npm run deploy
 ```
 
 or yarn
@@ -87,6 +90,11 @@ $ yarn build
 
 # build for production and view the bundle analyzer report
 $ npm_config_report=true yarn build
+# Windows
+$ set npm_config_report=true yarn build
+
+# build for production and deploy to gh-pages
+$ yarn deploy
 ```
 
 
@@ -96,9 +104,16 @@ $ npm_config_report=true yarn build
 - [x] Remove unused package
 - [x] Try iView UI
 - [x] Element UI theme
+- [x] All pages structure
 - [ ] Global state
 - [ ] Login module
-- [ ] All pages structure
+- [ ] Options module
+- [ ] Users module
+- [ ] Media module
+- [ ] Posts module
+- [ ] Terms module
+- [ ] Comments module
+- [ ] Other module
 
 ## Link
 

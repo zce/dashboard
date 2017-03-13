@@ -45,7 +45,7 @@ const state = {
         { text: 'Data', name: 'demo-data' },
         { text: 'Vuex', name: 'demo-vuex' },
         { text: 'I18n', name: 'demo-i18n' },
-        { text: 'Parameter', name: 'demo-parameters', params: { name: '汪磊' } },
+        { text: 'Params', name: 'demo-params', params: { name: '汪磊' } },
         { text: 'Proxy', name: 'demo-proxy' },
         { text: 'JSONP', name: 'demo-jsonp' },
         { divider: true },
@@ -68,8 +68,7 @@ const state = {
       name: 'dashboard',
       children: [
         { text: '首页', name: 'dashboard' },
-        { text: '更新', name: 'update' },
-        { text: '关于', name: 'about' }
+        { text: '更新', name: 'update' }
       ]
     },
     {

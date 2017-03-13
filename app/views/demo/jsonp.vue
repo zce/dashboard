@@ -1,7 +1,7 @@
 <template>
   <div class="inner">
     <div class="heading">
-      <h1 class="title">{{ $t('demo.jsonp') }}</h1>
+      <h1 class="title">JSONP</h1>
     </div>
     <div>
       <button @click="fetch()">Fetch typicode api by jsonp</button>

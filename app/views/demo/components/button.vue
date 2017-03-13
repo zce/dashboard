@@ -1,7 +1,7 @@
 <template>
   <div class="inner">
     <div class="heading">
-      <h1 class="title">{{ $t('demo.components.button') }}</h1>
+      <h1 class="title">按钮</h1>
     </div>
     <div class="row">
       <i class="el-icon-edit"></i>
