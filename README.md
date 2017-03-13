@@ -14,7 +14,7 @@
 [style-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg
 [style-url]: http://standardjs.com/
 
-> A dashboard template based on vue.js.
+> A dashboard scaffolding based on vue.js, inspired by [vuejs-templates/webpack](https://github.com/vuejs-templates/webpack).
 
 > demo: [http://dashboard.micua.com](http://dashboard.micua.com)
 
@@ -36,7 +36,6 @@
 - [VueResource](https://github.com/pagekit/vue-resource)
 - [ElementUI](https://github.com/ElemeFE/element)
 - [NProgress](https://github.com/rstacruz/nprogress)
-
 - [Webpack](https://webpack.js.org/)
 - [VueLoader](http://vuejs.github.io/vue-loader)
 - [Babel](https://babeljs.io/)
@@ -101,14 +100,11 @@ $ npm_config_report=true yarn build
 
 ## Link
 
-- https://github.com/ElemeFE/element-dashboard
-- https://github.com/ElementUI/element-admin
-- https://github.com/lynzz/element-admin
-
-This is vue.js scaffolding inspired by [vuejs-templates/webpack](https://github.com/vuejs-templates/webpack).
-
-- commit: [358ad2](https://github.com/vuejs-templates/webpack/commit/358ad2c26a8e76c7b04f4c0ce5f5fa7be69d60ee)
-- compare: [358ad2](https://github.com/vuejs-templates/webpack/compare/358ad2c26a8e76c7b04f4c0ce5f5fa7be69d60ee...master)
+- [ElemeFE/element-dashboard](https://github.com/ElemeFE/element-dashboard)
+- [ElementUI/element-admin](https://github.com/ElementUI/element-admin)
+- [lynzz/element-admin](https://github.com/lynzz/element-admin)
+- [commit: 358ad2](https://github.com/vuejs-templates/webpack/commit/358ad2c26a8e76c7b04f4c0ce5f5fa7be69d60ee)
+- [compare: 358ad2](https://github.com/vuejs-templates/webpack/compare/358ad2c26a8e76c7b04f4c0ce5f5fa7be69d60ee...master)
 
 
 ## Packages
