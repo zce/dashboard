@@ -1,13 +1,13 @@
 <template>
   <div class="inner">
     <div class="heading">
-      <h1 class="title">{{ $t('comments') }}</h1>
+      <h1 class="title">评论</h1>
     </div>
   </div>
 </template>
 
 <script>
   export default {
-    name: 'comment'
+    name: 'comments'
   }
 </script>

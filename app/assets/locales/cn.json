@@ -1,0 +1,6 @@
+{
+  "message": {
+    "hello": "世界你好",
+    "hello2": "{name}你好"
+  }
+}

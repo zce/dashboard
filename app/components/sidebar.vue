@@ -5,7 +5,7 @@
     </nav>
     <footer class="footer">
       <a class="toggle icon-before icon-circle-left" title="Toggle navigation menu" @click="toggleCollapse"></a>
-      <a class="copyright" target="_blank" :href="copyrightLink" :title="copyright">&copy; {{ copyright }}</a>
+      <router-link class="copyright" :to="{ name: 'about' }" :title="'About' + copyright">&copy; {{ copyright }}</router-link>
     </footer>
   </aside>
 </template>

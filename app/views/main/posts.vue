@@ -1,7 +1,7 @@
 <template>
   <div class="inner">
     <div class="heading">
-      <h1 class="title">{{ $t('posts') }}</h1>
+      <h1 class="title">{{ $route.params.type }}</h1>
     </div>
     <el-table :data="temp" border style="width: 100%" @selection-change="handleSelectionChange">
       <el-table-column type="selection"></el-table-column>

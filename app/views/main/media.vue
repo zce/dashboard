@@ -1,7 +1,7 @@
 <template>
   <div class="inner">
     <div class="heading">
-      <h1 class="title">{{ $t('media') }}</h1>
+      <h1 class="title">多媒体</h1>
     </div>
   </div>
 </template>

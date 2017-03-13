@@ -9,10 +9,10 @@
         <li class="item">
           <a href="#">Hi, {{ user.nickname }}! <img class="avatar" :src="user.avatar" :alt="user.nickname"></a>
           <ul class="list">
-            <li class="item"><a href="javascript:;">个人主页</a></li>
-            <li class="item"><a href="javascript:;">编辑个人资料</a></li>
+            <li class="item"><router-link :to="{ name: 'profile' }">个人主页</router-link></li>
+            <li class="item"><router-link :to="{ name: 'profile' }">编辑个人资料</router-link></li>
             <li class="divider"></li>
-            <li class="item"><a href="javascript:;" @click.prevent="logout">登出</a></li>
+            <li class="item"><a @click.prevent="logout">登出</a></li>
           </ul>
         </li>
       </ul>

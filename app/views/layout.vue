@@ -35,7 +35,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    transition: opacity .6s ease;
+    transition: opacity .5s ease;
   }
 
   .content-enter,

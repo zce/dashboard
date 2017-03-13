@@ -1,12 +1,7 @@
 import demo from './demo-routes'
 
 export default [
-  // {
-  //   name: 'default',
-  //   path: '',
-  //   meta: { requiresAuth: true },
-  //   redirect: { name: 'dashboard' }
-  // },
+  // - Dashboard
   {
     name: 'dashboard',
     path: '',
@@ -20,11 +15,31 @@ export default [
     component: resolve => require.ensure([], () => resolve(require('views/main/update')), 'update')
   },
   {
+    name: 'about',
+    path: 'about',
+    meta: { requiresAuth: true },
+    component: resolve => require.ensure([], () => resolve(require('views/main/about')), 'about')
+  },
+  // - Posts
+  {
     name: 'posts',
-    path: 'posts/:type?',
+    path: 'posts/:type',
     meta: { requiresAuth: true },
     component: resolve => require.ensure([], () => resolve(require('views/main/posts')), 'posts')
   },
+  {
+    name: 'add',
+    path: 'add/:type',
+    meta: { requiresAuth: true },
+    component: resolve => require.ensure([], () => resolve(require('views/main/add')), 'posts')
+  },
+  {
+    name: 'edit',
+    path: 'edit/:type/:slug?',
+    meta: { requiresAuth: true },
+    component: resolve => require.ensure([], () => resolve(require('views/main/edit')), 'posts')
+  },
+  // - Media
   {
     name: 'media',
     path: 'media',
@@ -32,28 +47,76 @@ export default [
     component: resolve => require.ensure([], () => resolve(require('views/main/media')), 'media')
   },
   {
+    name: 'upload',
+    path: 'upload',
+    meta: { requiresAuth: true },
+    component: resolve => require.ensure([], () => resolve(require('views/main/upload')), 'upload')
+  },
+  // - Terms
+  {
+    name: 'terms',
+    path: 'terms/:type',
+    meta: { requiresAuth: true },
+    component: resolve => require.ensure([], () => resolve(require('views/main/terms')), 'terms')
+  },
+  // - Users
+  {
     name: 'users',
     path: 'users',
     meta: { requiresAuth: true },
     component: resolve => require.ensure([], () => resolve(require('views/main/users')), 'users')
   },
   {
+    name: 'profile',
+    path: 'profile',
+    meta: { requiresAuth: true },
+    component: resolve => require.ensure([], () => resolve(require('views/main/profile')), 'users')
+  },
+  // - Comments
+  {
     name: 'comments',
     path: 'comments',
     meta: { requiresAuth: true },
     component: resolve => require.ensure([], () => resolve(require('views/main/comments')), 'comments')
   },
+  // - Appearances
   {
     name: 'themes',
     path: 'themes',
     meta: { requiresAuth: true },
-    component: resolve => require.ensure([], () => resolve(require('views/main/themes')), 'themes')
+    component: resolve => require.ensure([], () => resolve(require('views/main/themes')), 'appearances')
   },
+  {
+    name: 'customize',
+    path: 'customize',
+    meta: { requiresAuth: true },
+    component: resolve => require.ensure([], () => resolve(require('views/main/customize')), 'appearances')
+  },
+  {
+    name: 'widgets',
+    path: 'widgets',
+    meta: { requiresAuth: true },
+    component: resolve => require.ensure([], () => resolve(require('views/main/widgets')), 'appearances')
+  },
+  {
+    name: 'navigation',
+    path: 'navigation',
+    meta: { requiresAuth: true },
+    component: resolve => require.ensure([], () => resolve(require('views/main/navigation')), 'appearances')
+  },
+  // - Plugins
   {
     name: 'plugins',
     path: 'plugins',
     meta: { requiresAuth: true },
     component: resolve => require.ensure([], () => resolve(require('views/main/plugins')), 'plugins')
+  },
+  // - Tools
+  {
+    name: 'install',
+    path: 'install/:type',
+    meta: { requiresAuth: true },
+    component: resolve => require.ensure([], () => resolve(require('views/main/install')), 'plugins')
   },
   {
     name: 'tools',
@@ -62,15 +125,30 @@ export default [
     component: resolve => require.ensure([], () => resolve(require('views/main/tools')), 'tools')
   },
   {
-    name: 'options',
-    path: 'options',
+    name: 'import',
+    path: 'import',
     meta: { requiresAuth: true },
-    component: resolve => require.ensure([], () => resolve(require('views/main/options')), 'options')
+    component: resolve => require.ensure([], () => resolve(require('views/main/import')), 'tools')
   },
   {
-    name: 'about',
-    path: 'about',
+    name: 'export',
+    path: 'export',
     meta: { requiresAuth: true },
-    component: resolve => require.ensure([], () => resolve(require('views/main/about')), 'about')
+    component: resolve => require.ensure([], () => resolve(require('views/main/export')), 'tools')
+  },
+  // - Options
+  {
+    name: 'options',
+    path: 'options/:type',
+    meta: { requiresAuth: true },
+    component: resolve => require.ensure([], () => resolve(require('views/main/options')), 'options')
   }
 ].concat(demo)
+
+// // - Default
+// {
+//   name: 'default',
+//   path: '',
+//   meta: { requiresAuth: true },
+//   redirect: { name: 'dashboard' }
+// },

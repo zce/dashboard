@@ -1,7 +1,7 @@
 <template>
   <div class="inner">
     <div class="heading">
-      <h1 class="title">{{ $t('about') }}</h1>
+      <h1 class="title">关于 WEDN.NET</h1>
     </div>
   </div>
 </template>

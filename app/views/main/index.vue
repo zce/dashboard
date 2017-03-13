@@ -1,11 +1,12 @@
+<!-- <el-breadcrumb separator="/">
+  <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
+  <el-breadcrumb-item>{{ $t('dashboard') }}</el-breadcrumb-item>
+</el-breadcrumb> -->
+
 <template>
   <div class="inner">
-    <!-- <el-breadcrumb separator="/">
-      <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-      <el-breadcrumb-item>{{ $t('dashboard') }}</el-breadcrumb-item>
-    </el-breadcrumb> -->
     <div class="heading">
-      <h1 class="title">{{ $t('dashboard') }}</h1>
+      <h1 class="title">仪表盘</h1>
     </div>
     <el-row type="flex" justify="space-around">
       <el-progress type="circle" :percentage="0"></el-progress>

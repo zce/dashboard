@@ -1,7 +1,7 @@
 <template>
   <div class="inner">
     <div class="heading">
-      <h1 class="title">{{ $t('update') }}</h1>
+      <h1 class="title">更新</h1>
     </div>
   </div>
 </template>

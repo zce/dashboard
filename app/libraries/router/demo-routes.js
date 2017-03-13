@@ -21,6 +21,12 @@ export default [
     component: resolve => require.ensure([], () => resolve(require('views/demo/vuex')), 'demo')
   },
   {
+    name: 'demo-i18n',
+    path: 'demo/i18n',
+    meta: { requiresAuth: false },
+    component: resolve => require.ensure([], () => resolve(require('views/demo/i18n')), 'demo')
+  },
+  {
     name: 'demo-proxy',
     path: 'demo/proxy',
     meta: { requiresAuth: false },

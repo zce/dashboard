@@ -1,13 +1,13 @@
 <template>
   <div class="inner">
     <div class="heading">
-      <h1 class="title">{{ $t('themes') }}</h1>
+      <h1 class="title">主题</h1>
     </div>
   </div>
 </template>
 
 <script>
   export default {
-    name: 'theme'
+    name: 'themes'
   }
 </script>
