@@ -11,7 +11,7 @@ export default [
     name: 'dashboard',
     path: '',
     meta: { requiresAuth: true },
-    component: resolve => require.ensure([], () => resolve(require('views/main/dashboard')), 'dashboard')
+    component: resolve => require.ensure([], () => resolve(require('views/main/index')), 'dashboard')
   },
   {
     name: 'update',

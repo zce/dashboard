@@ -43,6 +43,7 @@ module.exports = {
         target: 'http://jsonplaceholder.typicode.com/',
         changeOrigin: true,
         secure: false,
+        logLevel: 'error',
         pathRewrite: { '^/api': '' }
       }
     }

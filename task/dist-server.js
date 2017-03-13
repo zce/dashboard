@@ -7,8 +7,7 @@ const app = express()
 
 if (config.server.proxy) {
   for (const key in config.server.proxy) {
-    const item = config.server.proxy[key]
-    app.use(key, proxy(Object.assign({ changeOrigin: true }, item)))
+    app.use(key, proxy(Object.assign({ changeOrigin: true }, config.server.proxy[key])))
   }
 }
 
@@ -16,7 +15,7 @@ app.use(history({ index: config.paths.public }))
 
 app.use(config.paths.public, express.static(config.paths.output))
 
-app.listen(config.server.port, err => {
+module.exports = app.listen(config.server.port, err => {
   if (err) throw err
   console.log(`> Listening at http://localhost:${config.server.port}/`)
 })

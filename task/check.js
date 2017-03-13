@@ -23,3 +23,8 @@ module.exports = () => {
     process.exit(1)
   }
 }
+
+// Execute when root
+if (!module.parent) {
+  module.exports()
+}

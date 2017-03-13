@@ -2,7 +2,6 @@ const webpack = require('webpack')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
-const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const eslintFriendlyFormatter = require('eslint-friendly-formatter')
 const utils = require('./utils')
 const config = require('./')
@@ -108,20 +107,7 @@ module.exports = {
 }
 
 // # Environment config
-if (config.isDevelopment) {
-  // ## Development
-  // add hot-reload related code to entry chunks
-  for (const name in module.exports.entry) {
-    module.exports.entry[name] = ['./scripts/dev-client'].concat(module.exports.entry[name])
-  }
-
-  module.exports.plugins = (module.exports.plugins || []).concat([
-    // https://github.com/glenjamin/webpack-hot-middleware#installation--usage
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoEmitOnErrorsPlugin(),
-    new FriendlyErrorsPlugin()
-  ])
-} else {
+if (config.isProduction) {
   // ## Production
   module.exports.plugins = (module.exports.plugins || []).concat([
     // banner

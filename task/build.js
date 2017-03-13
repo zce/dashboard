@@ -11,7 +11,7 @@ const webpackConfig = require('../config/webpack')
 const spinner = ora(`Building for env:${process.env.NODE_ENV}...`)
 spinner.start()
 
-rm(path.join(config.paths.output, config.paths.assets), err => {
+module.exports = () => rm(path.join(config.paths.output, config.paths.assets), err => {
   if (err) throw err
 
   webpack(webpackConfig, (err, stats) => {
@@ -33,3 +33,8 @@ rm(path.join(config.paths.output, config.paths.assets), err => {
     ))
   })
 })
+
+// Execute when root
+if (!module.parent) {
+  module.exports()
+}
