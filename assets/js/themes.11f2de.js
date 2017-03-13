@@ -1,2 +1,0 @@
-webpackJsonpwedn([8,18],{208:function(e,t,n){var s=n(63)(n(236),n(263),null,null);e.exports=s.exports},236:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.default={name:"theme"}},263:function(e,t){e.exports={render:function(){var e=this,t=e.$createElement,n=e._self._c||t;return n("div",{staticClass:"inner"},[n("div",{staticClass:"heading"},[n("h1",{staticClass:"title"},[e._v(e._s(e.$t("themes")))])])])},staticRenderFns:[]}}});
-//# sourceMappingURL=themes.11f2de.js.map
