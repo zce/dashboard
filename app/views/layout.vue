@@ -18,6 +18,7 @@
 
   export default {
     name: 'layout',
+    title: 'WEDN.NET | make IT better',
     components: { AppHeader, AppSidebar }
   }
 </script>

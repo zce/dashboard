@@ -2,14 +2,16 @@
   "name": "dashboard",
   "version": "0.1.0",
   "description": "A dashboard template based on vue.js",
-  "author": "iceStone <ice@micua.com>",
+  "author": "iceStone <ice@wedn.net> (https://github.com/zce)",
   "private": true,
   "scripts": {
     "lint": "eslint . --ext .js,.vue --format 'node_modules/eslint-friendly-formatter'",
-    "dev": "node task/dev-server.js",
+    "prebuild": "yarn run lint || npm run lint",
     "build": "node task/build.js",
-    "start": "node task/dist-server.js",
-    "deploy": "node task/deploy.js"
+    "predeploy": "yarn run build || npm run build",
+    "deploy": "node task/deploy.js",
+    "dev": "node task/dev-server.js",
+    "start": "node task/dist-server.js"
   },
   "dependencies": {
     "element-ui": "^1.2.4",

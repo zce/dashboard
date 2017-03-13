@@ -31,6 +31,10 @@
       }
     },
 
+    created () {
+      this.$title(this.$route.params.type)
+    },
+
     methods: {
       handleSelectionChange (value) {
         this.multipleSelection = value

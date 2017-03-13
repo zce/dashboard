@@ -6,7 +6,7 @@ import App from './app'
 import i18n from 'libraries/i18n'
 import store from 'libraries/store'
 import router from 'libraries/router'
-import progressBar from 'libraries/plugins/progress-bar'
+import Plugins from 'libraries/plugins'
 
 // ## Import styles
 // =========================
@@ -15,8 +15,8 @@ import 'assets/styles/element.css'
 // ## Use plugins
 // =========================
 Vue.use(Resource)
-Vue.use(progressBar)
 Vue.use(ElementUI)
+Vue.use(Plugins)
 sync(store, router, { moduleName: 'route' })
 
 // ## Config

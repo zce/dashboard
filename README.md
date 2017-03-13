@@ -14,7 +14,7 @@
 [style-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg
 [style-url]: http://standardjs.com/
 
-> A dashboard scaffolding based on vue.js, inspired by [vuejs-templates/webpack](https://github.com/vuejs-templates/webpack).
+> A dashboard scaffolding based on vue.js inspired by [vuejs-templates/webpack](https://github.com/vuejs-templates/webpack).
 
 > demo: [http://dashboard.micua.com](http://dashboard.micua.com)
 
@@ -95,8 +95,10 @@ $ npm_config_report=true yarn build
 - [x] Restructure config file
 - [x] Remove unused package
 - [x] Try iView UI
-- [ ] Element UI theme
+- [x] Element UI theme
+- [ ] Global state
 - [ ] Login module
+- [ ] All pages structure
 
 ## Link
 

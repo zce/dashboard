@@ -1,17 +1,5 @@
-// # Interceptor that adds progressbar to all requests
-// https://github.com/imcvampire/vue-resource-nprogress/blob/master/src/vue-resource-nprogress.js
-
-/*
-// Loading progress
-router.beforeEach((to, from, next) => NProgress.start() && next())
-router.afterEach(route => NProgress.done())
-
-// Progress with AJAX
-http.interceptors.push((request, next) => {
-  request.before = () => NProgress.start()
-  const res = next(() => { NProgress.done() })
-  res && res.catch && res.catch(() => { NProgress.done() })
-})
+/**
+ * Show progressbar on route && request
  */
 
 import NProgress from 'nprogress'
@@ -72,9 +60,23 @@ function routerProgress (Vue, options) {
   Vue.router.afterEach(route => NProgress.done())
 }
 
-export default {
-  install: (Vue, options = {}) => {
-    httpProgress(Vue, options)
-    routerProgress(Vue, options)
-  }
+export default (Vue, options) => {
+  httpProgress(Vue, options)
+  routerProgress(Vue, options)
 }
+
+// # Interceptor that adds progressbar to all requests
+// https://github.com/imcvampire/vue-resource-nprogress/blob/master/src/vue-resource-nprogress.js
+
+/*
+// Loading progress
+router.beforeEach((to, from, next) => NProgress.start() && next())
+router.afterEach(route => NProgress.done())
+
+// Progress with AJAX
+http.interceptors.push((request, next) => {
+  request.before = () => NProgress.start()
+  const res = next(() => { NProgress.done() })
+  res && res.catch && res.catch(() => { NProgress.done() })
+})
+ */

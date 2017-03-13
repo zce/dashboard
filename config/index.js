@@ -65,5 +65,6 @@ module.exports = {
   // Set to `true` or `false` to always turn it on or off
   enableBundleAnalyzer: process.env.npm_config_report,
   isDevelopment: isDevelopment,
-  isProduction: isProduction
+  isProduction: isProduction,
+  title: 'WEDN.NET'
 }

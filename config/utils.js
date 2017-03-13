@@ -8,7 +8,7 @@ exports.sourcePath = (...args) => path.join(config.paths.source, ...args)
 exports.assetsPath = (...args) => path.posix.join(config.paths.assets, ...args)
 
 exports.htmlWebpackPlugin = name => new HtmlWebpackPlugin({
-  title: 'WEDN.NET',
+  title: config.title,
   filename: name,
   template: exports.sourcePath('index.html'),
   inject: false,

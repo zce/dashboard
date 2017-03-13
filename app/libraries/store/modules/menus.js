@@ -21,7 +21,7 @@ const state = {
         { text: '文章', name: 'posts', params: { type: 'article' } },
         { text: '媒体', name: 'media' },
         { text: '页面', name: 'posts', params: { type: 'page' } },
-        { text: '更新', name: 'users' }
+        { text: '用户', name: 'users' }
       ]
     },
     // Component Pages
