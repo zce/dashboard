@@ -3,12 +3,12 @@
     <div class="heading">
       <h1 class="title">表格</h1>
     </div>
-    <el-table :data="temp" border style="width: 100%" @selection-change="handleSelectionChange">
+    <el-table :data="temp" @selection-change="handleSelectionChange">
       <el-table-column type="selection"></el-table-column>
-      <el-table-column label="日期">
+      <el-table-column label="日期" width="160">
         <template scope="scope">{{ scope.row.date }}</template>
       </el-table-column>
-      <el-table-column prop="name" label="姓名"></el-table-column>
+      <el-table-column prop="name" label="姓名" width="160"></el-table-column>
       <el-table-column prop="address" label="地址" show-overflow-tooltip></el-table-column>
     </el-table>
   </div>
