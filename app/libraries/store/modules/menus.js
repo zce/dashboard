@@ -43,11 +43,12 @@ const state = {
       name: 'demo',
       children: [
         { text: 'Data', name: 'demo-data' },
+        { text: 'Params', name: 'demo-params', params: { name: '汪磊' } },
         { text: 'Vuex', name: 'demo-vuex' },
         { text: 'I18n', name: 'demo-i18n' },
-        { text: 'Params', name: 'demo-params', params: { name: '汪磊' } },
+        { divider: true },
         { text: 'Proxy', name: 'demo-proxy' },
-        { text: 'JSONP', name: 'demo-jsonp' },
+        { text: 'CORS', name: 'demo-cors' },
         { divider: true },
         { text: 'NotFound', path: '/hello-world' }
       ]
@@ -111,7 +112,11 @@ const state = {
     {
       text: '用户',
       icon: 'users',
-      name: 'users'
+      name: 'users',
+      children: [
+        { text: '所有用户', name: 'users' },
+        { text: '我的个人资料', name: 'profile' }
+      ]
     },
     {
       text: '评论',

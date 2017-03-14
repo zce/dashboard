@@ -1,20 +1,18 @@
 <template>
   <div class="inner">
     <div class="heading">
-      <h1 class="title">HTTP代理</h1>
+      <h1 class="title">HTTP 代理</h1>
     </div>
     <div>
       <p>本示例只有在本地开发环境工作，线上托管环境没有代理配置。</p>
       <button @click="fetch()">Fetch typicode api by proxy</button>
     </div>
     <div v-if="error">
-      <h2>{{ error.status }} - {{ error.statusText }}</h2>
-      <p>{{ error.body }}</p>
+      <h2>{{ error.message }}</h2>
+      <pre><code>{{ error.stack }}</code></pre>
     </div>
-    <ul v-if="!error">
-      <li v-for="item in posts">
-        <span>{{ item.title }}</span>
-      </li>
+    <ul v-else>
+      <li v-for="item in posts">{{ item.title }}</li>
     </ul>
   </div>
 </template>
@@ -38,11 +36,9 @@
             console.log(res.headers)
             console.log(res.config)
             this.posts = res.data
+            this.error = false
           })
-          .catch(err => {
-            console.dir(err)
-            this.error = err
-          })
+          .catch(err => { this.error = err })
       }
     }
   }

@@ -33,10 +33,10 @@ export default [
     component: resolve => require.ensure([], () => resolve(require('views/demo/proxy')), 'demo')
   },
   {
-    name: 'demo-jsonp',
-    path: 'demo/jsonp',
+    name: 'demo-cors',
+    path: 'demo/cors',
     meta: { requiresAuth: false },
-    component: resolve => require.ensure([], () => resolve(require('views/demo/jsonp')), 'demo')
+    component: resolve => require.ensure([], () => resolve(require('views/demo/cors')), 'demo')
   },
   {
     name: 'demo-params',

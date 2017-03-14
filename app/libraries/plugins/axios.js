@@ -1,8 +1,12 @@
+// https://github.com/mzabriskie/axios
+// https://juejin.im/entry/587599388d6d810058a7a41a
+// https://www.mmxiaowu.com/article/589af8cde9be1c5b21ef8e9c
+
 import axios from 'axios'
 
 export default Vue => {
   const instance = axios.create({
-    baseURL: 'http://localhost:2017/api/v1/',
+    baseURL: 'http://jsonplaceholder.typicode.com/api/v1/',
     timeout: 1000,
     headers: {
       'X-Requested-With': 'XMLHttpRequest',
