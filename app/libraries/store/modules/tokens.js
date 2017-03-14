@@ -1,6 +1,7 @@
-// import { tokens } from '../../api'
-// import { session as storage } from '../../storage'
-// import http from '../../http'
+// import { tokens } from 'libraries/services'
+import { session as storage } from 'libraries/utils/storage'
+
+const STORAGE_KEY = 'wedn_net_access_token'
 
 /**
  * Initial state
@@ -11,7 +12,7 @@ const state = {
    * 客户端令牌
    * @type {String}
    */
-  token: null,
+  token: storage.get(STORAGE_KEY),
 
   /**
    * 当前登录用户
@@ -58,13 +59,13 @@ const mutations = {
    * @param  {Object} state Vuex状态对象
    */
   CHANGE_TOKEN: (state, token) => {
-    // state.token = token
-    // if (state.token) {
-    //   http.headers.common['Authorization'] = `JWT ${token}`
-    //   return storage.set('wedn-token', token)
-    // }
+    state.token = token
+    if (state.token) {
+      // http.headers.common['Authorization'] = `JWT ${token}`
+      return storage.set(STORAGE_KEY, token)
+    }
     // delete http.headers.common['Authorization']
-    // return storage.remove('wedn-token')
+    return storage.remove(STORAGE_KEY)
   },
 
   /**
@@ -91,24 +92,24 @@ const actions = {
    * 从本地存储中初始化令牌
    */
   initToken: ({ commit }) => {
-    // commit('CHANGE_TOKEN', storage.get('wedn-token'))
+    commit('CHANGE_TOKEN', storage.get(STORAGE_KEY))
   },
 
   /**
    * 创建一个新的客户端令牌
    */
   createToken ({ commit }, payload) {
-    // return new Promise((resolve, reject) => {
-    //   setTimeout(function () {
-    //     if (!(payload.username === 'admin' && payload.password === 'password')) {
-    //       commit('CHANGE_TOKEN', '')
-    //       return reject(new Error('Incorrect username or password.'))
-    //     }
-    //     const token = Date.now()
-    //     commit('CHANGE_TOKEN', token)
-    //     return resolve(token)
-    //   }, 1000)
-    // })
+    return new Promise((resolve, reject) => {
+      setTimeout(function () {
+        if (!(payload.username === 'admin' && payload.password === 'password')) {
+          commit('CHANGE_TOKEN', '')
+          return reject(new Error('Incorrect username or password.'))
+        }
+        const token = Date.now()
+        commit('CHANGE_TOKEN', token)
+        return resolve(token)
+      }, 1000)
+    })
     // return tokens.create(payload)
     //   .then(res => {
     //     if (res.data.error) throw new Error(res.data.message)
@@ -146,15 +147,15 @@ const actions = {
    * 检查登录状态
    */
   checkLoggedIn: ({ getters, dispatch }) => {
-    // if (!getters.token) return Promise.resolve(false)
-    // return dispatch('checkToken', getters.token)
+    if (!getters.token) return Promise.resolve(false)
+    return dispatch('checkToken', getters.token)
   },
 
   /**
    * 删除客户端令牌
    */
   deleteToken: ({ commit }) => {
-    // commit('CHANGE_TOKEN', '')
+    commit('CHANGE_TOKEN', '')
   }
 }
 

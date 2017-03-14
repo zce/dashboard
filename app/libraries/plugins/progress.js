@@ -2,81 +2,40 @@
  * Show progressbar on route && request
  */
 
-import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
+import NProgress from 'nprogress'
+import axios from 'axios'
+import router from '../router'
 
-function httpProgress (Vue, options) {
-  let requestsTotal = 0
-  let requestsCompleted = 0
-  const latencyThreshold = options.latencyThreshold || 100
+function httpProgress (Vue) {
+  // Add a request interceptor
+  axios.interceptors.request.use(config => {
+    // Do something before request is sent
+    NProgress.start()
+    return config
+  })
 
-  function setComplete () {
-    requestsTotal = 0
-    requestsCompleted = 0
+  // Add a response interceptor
+  axios.interceptors.response.use(response => {
+    // Do something with response data
     NProgress.done()
-  }
-
-  Vue.http.interceptors.push((request, next) => {
-    let showProgressBar = true
-    if (request.showProgressBar != null) {
-      showProgressBar = request.showProgressBar
-      delete request.showProgressBar
-    }
-
-    let completed
-
-    if (showProgressBar) {
-      if (requestsTotal === 0) {
-        setTimeout(() => NProgress.start(), latencyThreshold)
-      }
-      requestsTotal++
-      completed = requestsCompleted / requestsTotal
-      NProgress.set(completed)
-    }
-
-    next((response) => {
-      if (!showProgressBar) return response
-
-      if (!response.ok) {
-        NProgress.done()
-        setComplete()
-      }
-
-      // Finish progress bar 50 ms later
-      setTimeout(() => {
-        requestsCompleted++
-        if (requestsCompleted >= requestsTotal) return setComplete()
-        completed = (requestsCompleted / requestsTotal) - 0.1
-        NProgress.set(completed)
-      }, latencyThreshold + 50)
-
-      return response
-    })
+    return response
   })
 }
 
-function routerProgress (Vue, options) {
-  Vue.router.beforeEach((to, from, next) => NProgress.start() && next())
-  Vue.router.afterEach(route => NProgress.done())
+function routerProgress (Vue) {
+  router.beforeEach((to, from, next) => NProgress.start() && next())
+  router.afterEach(route => NProgress.done())
 }
 
-export default (Vue, options) => {
-  httpProgress(Vue, options)
-  routerProgress(Vue, options)
+export default Vue => {
+  httpProgress(Vue)
+  routerProgress(Vue)
+
+  // mount the nprogress to Vue component instance
+  Object.defineProperties(Vue.prototype, {
+    $nprogress: {
+      get: () => NProgress
+    }
+  })
 }
-
-// # Interceptor that adds progressbar to all requests
-// https://github.com/imcvampire/vue-resource-nprogress/blob/master/src/vue-resource-nprogress.js
-
-/*
-// Loading progress
-router.beforeEach((to, from, next) => NProgress.start() && next())
-router.afterEach(route => NProgress.done())
-
-// Progress with AJAX
-http.interceptors.push((request, next) => {
-  request.before = () => NProgress.start()
-  const res = next(() => { NProgress.done() })
-  res && res.catch && res.catch(() => { NProgress.done() })
-})
- */

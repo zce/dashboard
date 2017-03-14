@@ -30,7 +30,7 @@
 
     methods: {
       fetch () {
-        this.$http.jsonp('http://jsonplaceholder.typicode.com/photos')
+        this.$axios.jsonp('http://jsonplaceholder.typicode.com/photos')
           .then(res => {
             this.photos = res.data
           })

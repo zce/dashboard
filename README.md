@@ -32,7 +32,8 @@
 - [Vuex](https://github.com/vuejs/vuex)
 - [Vue Router](https://github.com/vuejs/vue-router)
 - [Vue I18n](https://github.com/kazupon/vue-i18n)
-- [Vue Resource](https://github.com/pagekit/vue-resource)
+- ~~[Vue Resource](https://github.com/pagekit/vue-resource)~~
+- [Axios](https://github.com/mzabriskie/axios)
 - [Element UI](https://github.com/ElemeFE/element)
 - [NProgress](https://github.com/rstacruz/nprogress)
 - [Webpack](https://webpack.js.org/)

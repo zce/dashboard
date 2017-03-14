@@ -27,16 +27,20 @@
       return { posts: {}, error: false }
     },
 
-    mounted () { },
-
     methods: {
       fetch () {
-        this.$http
-          .get('/api/posts')
+        this.$axios
+          .get('/posts')
           .then(res => {
+            console.log(res.data)
+            console.log(res.status)
+            console.log(res.statusText)
+            console.log(res.headers)
+            console.log(res.config)
             this.posts = res.data
           })
           .catch(err => {
+            console.dir(err)
             this.error = err
           })
       }
