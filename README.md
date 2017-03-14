@@ -16,7 +16,13 @@
 
 > A dashboard scaffolding based on vue.js inspired by [vuejs-templates/webpack](https://github.com/vuejs-templates/webpack).
 
-> demo: [http://dashboard.micua.com](http://dashboard.micua.com)
+
+## Online demo
+
+[http://dashboard.micua.com](http://dashboard.micua.com)
+
+> - username: admin
+> - password: password
 
 
 ## Environment
