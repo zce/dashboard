@@ -12,7 +12,7 @@
             <li class="item"><router-link :to="{ name: 'profile' }">个人主页</router-link></li>
             <li class="item"><router-link :to="{ name: 'profile' }">编辑个人资料</router-link></li>
             <li class="divider"></li>
-            <li class="item"><a @click.prevent="logout">登出</a></li>
+            <li class="item"><a href="#" @click.prevent="logout">登出</a></li>
           </ul>
         </li>
       </ul>
