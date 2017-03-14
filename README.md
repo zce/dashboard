@@ -107,8 +107,7 @@ $ yarn deploy
 - [x] Element UI theme
 - [x] All pages structure
 - [x] Mock || JSON Server
-- [ ] Config package
-- [ ] Global state
+- [x] Global state
 - [ ] Login module
 - [ ] Options module
 - [ ] Users module
@@ -117,6 +116,7 @@ $ yarn deploy
 - [ ] Terms module
 - [ ] Comments module
 - [ ] Other module
+- [ ] Config package
 
 ## Link
 
