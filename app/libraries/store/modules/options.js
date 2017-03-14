@@ -1,4 +1,3 @@
-// import { options } from '../../api'
 /**
  * Initial state
  * @type {Object}
@@ -47,10 +46,9 @@ const actions = {
   /**
    * 设置配置选项
    */
-  // changeOptions: async ({ commit }, options) => {
-  //   const res = await options.save({ options })
-  //   commit('CHANGE_OPTIONS', res.data)
-  // }
+  changeOptions: async ({ commit }, options) => {
+    commit('CHANGE_OPTIONS', {})
+  }
 }
 
 // Export module

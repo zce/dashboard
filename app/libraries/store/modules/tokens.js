@@ -161,18 +161,3 @@ const actions = {
 
 // Export module
 export default { state, getters, mutations, actions }
-
-// .then(() => {
-//   const user = {
-//     token: '$2a$08$Cxf4DH94cNDMKGDHeBO6BOMwKOOUuYI.BzgddpaFtNCJ6BB17b6xW',
-//     slug: 'zce',
-//     nickname: 'iceStone',
-//     avatar: 'https://avatars3.githubusercontent.com/u/6166576?v=3&s=460'
-//   }
-//   commit('CHANGE_USER', user)
-//   return user
-// })
-// .catch(err => {
-//   commit('CHANGE_USER', {})
-//   throw err
-// })

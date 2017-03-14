@@ -3,6 +3,7 @@
  * @type {Object}
  */
 const state = {
+
 }
 
 /**
@@ -10,6 +11,7 @@ const state = {
  * @type {Object}
  */
 const getters = {
+
 }
 
 /**
@@ -17,6 +19,7 @@ const getters = {
  * @type {Object}
  */
 const mutations = {
+
 }
 
 /**
@@ -24,6 +27,7 @@ const mutations = {
  * @type {Object}
  */
 const actions = {
+
 }
 
 // Export module

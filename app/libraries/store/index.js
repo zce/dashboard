@@ -33,7 +33,6 @@ if (module.hot) {
     './mutations',
     './actions',
     './modules/comments',
-    './modules/menus',
     './modules/options',
     './modules/posts',
     './modules/terms',
@@ -47,7 +46,6 @@ if (module.hot) {
       actions: require('./actions'),
       modules: {
         comments: require('./modules/comments'),
-        menus: require('./modules/menus'),
         options: require('./modules/options'),
         posts: require('./modules/posts'),
         terms: require('./modules/terms'),

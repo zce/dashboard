@@ -5,8 +5,8 @@ import { local as storage } from '../utils/storage'
  * @param  {Object} state Vuex状态对象
  */
 export const TOGGLE_SIDEBAR_COLLAPSE = state => {
-  state.sidebar_collapse = !state.sidebar_collapse
-  storage.set('wedn_net_sidebar_collapse', state.sidebar_collapse)
+  state.sidebar.collapse = !state.sidebar.collapse
+  storage.set('wedn_net_sidebar_collapse', state.sidebar.collapse)
 }
 
 // ==================== DEMO ====================

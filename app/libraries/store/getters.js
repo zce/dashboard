@@ -1,30 +1,16 @@
 /**
- * 获取站点名称
+ * 获取顶部工具栏
  * @param  {Object} state Vuex状态对象
- * @return {String}       站点名称
+ * @return {Object}       顶部工具栏
  */
-export const name = state => state.name
+export const header = state => state.header
 
 /**
- * 获取版权所属
+ * 获取侧边导航栏
  * @param  {Object} state Vuex状态对象
- * @return {String}       版权所属
+ * @return {Object}       侧边导航栏
  */
-export const copyright = state => state.copyright
-
-/**
- * 获取版权链接
- * @param  {Object} state Vuex状态对象
- * @return {Boolean}       版权链接
- */
-export const copyrightLink = state => state.copyright_link
-
-/**
- * 获取是否收起边栏
- * @param  {Object} state Vuex状态对象
- * @return {Boolean}       是否收起边栏
- */
-export const sidebarCollapse = state => state.sidebar_collapse
+export const sidebar = state => state.sidebar
 
 // ==================== DEMO ====================
 

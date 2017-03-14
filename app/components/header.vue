@@ -1,10 +1,10 @@
 <template>
   <header class="header">
     <h1 class="brand">
-      <router-link to="/">{{ name }}</router-link>
+      <router-link to="/">{{ header.name }}</router-link>
     </h1>
     <nav class="toolbar">
-      <menu-list :items="menus"/>
+      <menu-list :items="header.menus"/>
       <ul class="list">
         <li class="item">
           <a href="#">Hi, {{ user.nickname }}! <img class="avatar" :src="user.avatar" :alt="user.nickname"></a>
@@ -28,8 +28,7 @@
     name: 'header',
     components: { MenuList },
     computed: mapGetters({
-      name: 'name',
-      menus: 'toolbar',
+      header: 'header',
       user: 'currentUser'
     }),
     methods: {
