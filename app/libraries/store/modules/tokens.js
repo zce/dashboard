@@ -100,7 +100,7 @@ const actions = {
    */
   createToken ({ commit }, payload) {
     return new Promise((resolve, reject) => {
-      setTimeout(function () {
+      setTimeout(() => {
         if (!(payload.username === 'admin' && payload.password === 'password')) {
           commit('CHANGE_TOKEN', '')
           return reject(new Error('Incorrect username or password.'))
@@ -110,37 +110,13 @@ const actions = {
         return resolve(token)
       }, 1000)
     })
-    // return tokens.create(payload)
-    //   .then(res => {
-    //     if (res.data.error) throw new Error(res.data.message)
-    //     commit('CHANGE_TOKEN', res.data.token)
-    //     return res.data.token
-    //   })
-    //   .catch(err => {
-    //     commit('CHANGE_TOKEN', '')
-    //     throw err
-    //   })
   },
 
   /**
    * 检查令牌是否可用
    */
   checkToken: ({ commit, dispatch }, token) => {
-    // return tokens.check({ token: token })
-    //   .then(res => {
-    //     const available = !(res.data && res.data.error)
-    //     if (available) {
-    //       commit('CHANGE_USER', res.data)
-    //     } else {
-    //       dispatch('deleteToken')
-    //     }
-    //     return available
-    //   })
-    //   .catch(err => {
-    //     console.log(err)
-    //     dispatch('deleteToken')
-    //     return false
-    //   })
+    return Promise.resolve(true)
   },
 
   /**

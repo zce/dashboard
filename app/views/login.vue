@@ -25,7 +25,7 @@
         <el-form-item label="密码" prop="password">
           <el-input type="password" v-model="model.password" placeholder="请输入密码"/>
         </el-form-item>
-        <el-button type="primary" native-type="submit" @click.prevent="submit">提交</el-button>
+        <el-button type="primary" native-type="submit" :loading="loading" @click.prevent="submit">{{ loading ? '登陆中' : '登录' }}</el-button>
       </el-form>
       <footer class="login-footer">
         ← 返回到 <a href="/">WEDN.NET</a>
@@ -37,8 +37,10 @@
 <script>
   export default {
     name: 'login',
+
     data () {
       return {
+        loading: false,
         error: '',
         message: '',
         model: {
@@ -57,13 +59,16 @@
         }
       }
     },
-    // beforeCreate () {
-    //   if (store.getters.token) {
-    //     this.$router.replace({ path: this.$route.query.redirect || '/' })
-    //   }
-    // },
+
+    beforeCreate () {
+      if (this.$store.getters.token) {
+        this.$router.replace({ path: this.$route.query.redirect || '/' })
+      }
+    },
+
     methods: {
       submit () {
+        this.loading = true
         this.error = ''
         this.$refs['login-form'].validate(valid => {
           if (!valid) return false
@@ -72,9 +77,11 @@
             password: this.model.password
           })
           .then(token => {
+            this.loading = false
             this.$router.replace({ path: this.$route.query.redirect || '/' })
           })
           .catch(err => {
+            this.loading = false
             this.error = '错误'
             if (err.data && err.data.error) {
               switch (err.status) {
