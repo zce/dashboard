@@ -105,6 +105,7 @@ $ yarn deploy
 - [x] Try iView UI
 - [x] Element UI theme
 - [x] All pages structure
+- [ ] Config package
 - [ ] Mock || JSON Server
 - [ ] Global state
 - [ ] Login module

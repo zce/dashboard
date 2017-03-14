@@ -7,7 +7,7 @@ const app = express()
 
 if (config.server.proxy) {
   for (const key in config.server.proxy) {
-    app.use(key, proxy(Object.assign({ changeOrigin: true }, config.server.proxy[key])))
+    app.use(key, proxy(config.server.proxy[key]))
   }
 }
 
