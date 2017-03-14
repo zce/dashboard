@@ -1,4 +1,5 @@
 node_modules/
+server/
 .DS_Store
 npm-debug.log*
 yarn-error.log
