@@ -1,0 +1,2 @@
+webpackJsonpwedn([13,20],{257:function(e,t,n){var s=n(84)(n(297),n(335),null,null);e.exports=s.exports},297:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.default={name:"options"}},335:function(e,t){e.exports={render:function(){var e=this,t=e.$createElement,n=e._self._c||t;return n("div",{staticClass:"inner"},[n("div",{staticClass:"heading"},[n("h1",{staticClass:"title"},[e._v(e._s(e.$route.params.type)+"设置")])])])},staticRenderFns:[]}}});
+//# sourceMappingURL=options.bec114.js.map
