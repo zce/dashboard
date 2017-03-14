@@ -28,10 +28,10 @@ export default [
     component: resolve => require.ensure([], () => resolve(require('views/main/posts')), 'posts')
   },
   {
-    name: 'add',
-    path: 'add/:type',
+    name: 'new',
+    path: 'new/:type',
     meta: { requiresAuth: true },
-    component: resolve => require.ensure([], () => resolve(require('views/main/add')), 'posts')
+    component: resolve => require.ensure([], () => resolve(require('views/main/new')), 'posts')
   },
   {
     name: 'edit',

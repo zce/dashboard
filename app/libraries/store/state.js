@@ -25,12 +25,12 @@ export default {
       {
         text: '新建',
         icon: 'plus',
-        name: 'add',
+        name: 'new',
         params: { type: 'blog' },
         children: [
-          { text: '文章', name: 'add', params: { type: 'blog' } },
+          { text: '文章', name: 'new', params: { type: 'blog' } },
           { text: '媒体', name: 'upload' },
-          { text: '页面', name: 'add', params: { type: 'page' } },
+          { text: '页面', name: 'new', params: { type: 'page' } },
           { text: '用户', name: 'users' }
         ]
       },
@@ -115,7 +115,7 @@ export default {
         params: { type: 'blog' },
         children: [
           { text: '所有文章', name: 'posts', params: { type: 'blog' } },
-          { text: '写文章', name: 'add', params: { type: 'blog' } },
+          { text: '写文章', name: 'new', params: { type: 'blog' } },
           { text: '分类目录', name: 'terms', params: { type: 'blog-category' } },
           { text: '标签', name: 'terms', params: { type: 'blog-tag' } }
         ]
@@ -127,7 +127,7 @@ export default {
         params: { type: 'page' },
         children: [
           { text: '所有页面', name: 'posts', params: { type: 'page' } },
-          { text: '新建页面', name: 'add', params: { type: 'page' } }
+          { text: '新建页面', name: 'new', params: { type: 'page' } }
         ]
       },
       {
