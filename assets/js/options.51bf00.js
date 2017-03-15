@@ -1,2 +1,0 @@
-webpackJsonpwedn([13,20],{259:function(e,t,n){var s=n(86)(n(299),n(337),null,null);e.exports=s.exports},299:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.default={name:"options"}},337:function(e,t){e.exports={render:function(){var e=this,t=e.$createElement,n=e._self._c||t;return n("div",{staticClass:"inner"},[n("div",{staticClass:"heading"},[n("h1",{staticClass:"title"},[e._v(e._s(e.$route.params.type)+"设置")])])])},staticRenderFns:[]}}});
-//# sourceMappingURL=options.51bf00.js.map
