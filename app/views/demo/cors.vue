@@ -29,10 +29,17 @@
         const url = 'http://jsonplaceholder.typicode.com/photos'
         this.$axios.get(url)
           .then(res => {
+            console.log(res.data)
+            console.log(res.status)
+            console.log(res.statusText)
+            console.log(res.headers)
+            console.log(res.config)
             this.photos = res.data
             this.error = false
           })
-          .catch(err => { this.error = err })
+          .catch(err => {
+            this.error = err
+          })
       }
     }
   }

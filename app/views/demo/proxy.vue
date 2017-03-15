@@ -38,7 +38,9 @@
             this.posts = res.data
             this.error = false
           })
-          .catch(err => { this.error = err })
+          .catch(err => {
+            this.error = err
+          })
       }
     }
   }
