@@ -1,1 +1,9 @@
-export default {}
+/**
+ * # Users service
+ */
+
+import axios from '../utils/axios'
+
+export default {
+
+}

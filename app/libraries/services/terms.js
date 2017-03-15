@@ -1,1 +1,9 @@
-export default {}
+/**
+ * # Terms service
+ */
+
+import axios from '../utils/axios'
+
+export default {
+
+}

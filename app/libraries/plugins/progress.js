@@ -4,10 +4,10 @@
 
 import 'nprogress/nprogress.css'
 import NProgress from 'nprogress'
-import axios from 'axios'
+import axios from '../utils/axios'
 import router from '../router'
 
-function httpProgress (Vue) {
+export default Vue => {
   // Add a request interceptor
   axios.interceptors.request.use(config => {
     // Do something before request is sent
@@ -21,16 +21,10 @@ function httpProgress (Vue) {
     NProgress.done()
     return response
   })
-}
 
-function routerProgress (Vue) {
+  // Add nprogress to route
   router.beforeEach((to, from, next) => NProgress.start() && next())
   router.afterEach(route => NProgress.done())
-}
-
-export default Vue => {
-  httpProgress(Vue)
-  routerProgress(Vue)
 
   // mount the nprogress to Vue component instance
   Object.defineProperties(Vue.prototype, {
