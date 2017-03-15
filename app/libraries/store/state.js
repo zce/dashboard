@@ -2,6 +2,12 @@ import { local as storage } from '../utils/storage'
 
 export default {
   /**
+   * 页面标题
+   * @type {String}
+   */
+  title: 'WEDN.NET',
+
+  /**
    * 顶部工具栏
    * @type {Object}
    */

@@ -2,6 +2,7 @@
  * Change title on route
  */
 import router from '../router'
+import store from '../store'
 
 export default (Vue, options) => {
   let items
@@ -10,7 +11,7 @@ export default (Vue, options) => {
     items = route.matched
       .map(item => item.components.default[options.property] || item.components.default.name)
       .reverse()
-    document.title = items.join(options.separator)
+    store.dispatch('changeTitle', items.join(options.separator))
   })
 
   // partial
@@ -18,10 +19,10 @@ export default (Vue, options) => {
     $title: {
       get: () => (title, fullname) => {
         if (fullname) {
-          document.title = title
+          store.dispatch('changeTitle', title)
         } else {
           items[0] = title
-          document.title = items.join(options.separator)
+          store.dispatch('changeTitle', items.join(options.separator))
         }
       }
     }

@@ -1,4 +1,11 @@
 /**
+ * 获取页面标题
+ * @param  {Object} state Vuex状态对象
+ * @return {Object}       页面标题
+ */
+export const title = state => state.title
+
+/**
  * 获取顶部工具栏
  * @param  {Object} state Vuex状态对象
  * @return {Object}       顶部工具栏

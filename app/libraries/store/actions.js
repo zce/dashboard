@@ -1,4 +1,11 @@
 /**
+ * 改变页面标题
+ */
+export const changeTitle = ({ commit }, title) => {
+  commit('CHANGE_TITLE', title)
+}
+
+/**
  * 切换边栏的展开收起
  */
 export const toggleSidebarCollapse = ({ commit }) => {

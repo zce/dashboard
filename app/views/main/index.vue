@@ -12,7 +12,10 @@
 
 <script>
   export default {
-    name: 'dashboard'
+    name: 'dashboard',
+    created () {
+      this.$store.dispatch('changeTitle', '仪表盘')
+    }
   }
 </script>
 
