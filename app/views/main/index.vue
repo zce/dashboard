@@ -20,9 +20,18 @@
 </script>
 
 <style scoped>
+  .inner {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 2rem);
+  }
+
   .jumbotron {
-    padding: 6rem 2rem;
-    margin: 2rem 1rem;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1rem 1.5rem;
     /*background-color: #E5E9F2;*/
     background-color: #475669;
     border-radius: .5rem;

@@ -1,5 +1,10 @@
+/**
+ * Authoriztion token
+ * TODO: storage - local or session
+ */
+
 // import { tokens } from 'libraries/services'
-import { session as storage } from 'libraries/utils/storage'
+import { local as storage } from 'libraries/utils/storage'
 
 const STORAGE_KEY = 'wedn_net_access_token'
 

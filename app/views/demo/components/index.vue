@@ -78,7 +78,11 @@
   }
 </script>
 
-<style>
+<style scoped>
+  .el-breadcrumb {
+    margin-bottom: .75rem;
+  }
+
   .el-carousel__item h3 {
     margin: 0;
     color: #475669;

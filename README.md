@@ -127,6 +127,8 @@ $ yarn deploy
 ## Link
 
 - [Intro Vue stack](https://blog.ygxdxx.com/2017/03/06/Vue2&Weixin-Develop/)
+- [Resources](http://blog.yubangweb.com/xue-xi-vuede-yi-xie-zi-yuan/)
+- [Notepad](https://github.com/lin-xin/notepad/)
 - [ElemeFE/element-dashboard](https://github.com/ElemeFE/element-dashboard)
 - [ElementUI/element-admin](https://github.com/ElementUI/element-admin)
 - [lynzz/element-admin](https://github.com/lynzz/element-admin)
