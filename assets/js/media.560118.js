@@ -1,2 +1,0 @@
-webpackJsonpwedn([14,20],{258:function(e,t,n){var s=n(86)(n(298),n(346),null,null);e.exports=s.exports},298:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.default={name:"media"}},346:function(e,t){e.exports={render:function(){var e=this,t=e.$createElement;e._self._c;return e._m(0)},staticRenderFns:[function(){var e=this,t=e.$createElement,n=e._self._c||t;return n("div",{staticClass:"inner"},[n("div",{staticClass:"heading"},[n("h1",{staticClass:"title"},[e._v("多媒体")])])])}]}}});
-//# sourceMappingURL=media.560118.js.map
