@@ -1,5 +1,6 @@
 /**
  * Change title on route
+ * TODO: title case
  */
 import router from '../router'
 import store from '../store'
@@ -9,7 +10,7 @@ export default (Vue, options) => {
 
   router.afterEach(route => {
     items = route.matched
-      .map(item => item.components.default[options.property] || item.components.default.name)
+      .map(item => (item.components.default[options.property] || item.components.default.name).toUpperCase())
       .reverse()
     store.dispatch('changeTitle', items.join(options.separator))
   })
@@ -19,9 +20,9 @@ export default (Vue, options) => {
     $title: {
       get: () => (title, fullname) => {
         if (fullname) {
-          store.dispatch('changeTitle', title)
+          store.dispatch('changeTitle', title.toUpperCase())
         } else {
-          items[0] = title
+          items[0] = title.toUpperCase()
           store.dispatch('changeTitle', items.join(options.separator))
         }
       }
