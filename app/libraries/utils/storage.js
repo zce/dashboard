@@ -1,3 +1,8 @@
+/**
+ * # Storage
+ * TODO: use store.js
+ * > - https://github.com/marcuswestin/store.js
+ */
 const { localStorage, sessionStorage } = window
 
 const wrapStorage = storage => ({
