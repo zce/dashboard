@@ -10,10 +10,12 @@ import NProgress from '../utils/nprogress'
 export default Vue => {
   // Add nprogress to route
   router.beforeEach((to, from, next) => {
+    // console.log('before each')
     NProgress.start()
     next()
   })
   router.afterEach(route => {
+    // console.log('after each')
     NProgress.done()
   })
 

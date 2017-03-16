@@ -114,6 +114,7 @@ $ yarn deploy
 - [x] All pages structure
 - [x] Mock || JSON Server
 - [x] Global state
+- [x] List table
 - [ ] Login module
 - [ ] Options module
 - [ ] Users module

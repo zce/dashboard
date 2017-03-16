@@ -3,7 +3,7 @@
  * TODO: storage - local or session
  */
 
-// import { tokens } from 'libraries/services'
+import { tokens } from 'libraries/services'
 import { local as storage } from 'libraries/utils/storage'
 
 const STORAGE_KEY = 'wedn_net_access_token'
@@ -103,31 +103,35 @@ const actions = {
   /**
    * 创建一个新的客户端令牌
    */
-  createToken ({ commit }, payload) {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        if (!(payload.username === 'admin' && payload.password === 'password')) {
-          commit('CHANGE_TOKEN', '')
-          return reject(new Error('Incorrect username or password.'))
-        }
-        const token = Date.now()
+  createToken ({ commit }, { username, password }) {
+    return tokens.post({ username: username.trim(), password: password.trim() })
+      .then(res => {
+        const token = res.data.token || ''
         commit('CHANGE_TOKEN', token)
-        return resolve(token)
-      }, 1000)
-    })
+        return token
+      })
   },
 
   /**
    * 检查令牌是否可用
    */
   checkToken: ({ commit, dispatch }, token) => {
-    return Promise.resolve(true)
+    return tokens.get({ params: { token } })
+      .then(res => {
+        commit('CHANGE_USER', res.data)
+        return res.data
+      })
+      .catch(e => {
+        console.log(e)
+        dispatch('deleteToken')
+        return false
+      })
   },
 
   /**
    * 检查登录状态
    */
-  checkLoggedIn: ({ getters, dispatch }) => {
+  checkLogin: ({ getters, dispatch }) => {
     if (!getters.token) return Promise.resolve(false)
     return dispatch('checkToken', getters.token)
   },

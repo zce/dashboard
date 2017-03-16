@@ -40,7 +40,7 @@ module.exports = {
     // https://github.com/chimurai/http-proxy-middleware
     proxy: {
       '/api': {
-        target: 'http://jsonplaceholder.typicode.com/',
+        target: 'http://jsonplaceholder.micua.com/',
         changeOrigin: true,
         secure: false,
         logLevel: 'error'

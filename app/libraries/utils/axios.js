@@ -6,12 +6,13 @@
  */
 
 import axios from 'axios'
-import { session as storage } from './storage'
+import { local as storage } from './storage'
 
 const STORAGE_KEY = 'wedn_net_access_token'
 
 const instance = axios.create({
-  baseURL: 'http://jsonplaceholder.typicode.com/api/v1/',
+  // TODO: full url
+  baseURL: 'http://jsonplaceholder.micua.com/api/v1/',
   timeout: 3000,
   headers: {
     'X-Requested-With': 'XMLHttpRequest',
@@ -24,6 +25,7 @@ instance.interceptors.request.use(config => {
   // Add authorization in the header
   // TODO: token in store
   const token = storage.get(STORAGE_KEY)
+  console.log(token)
   if (token) {
     config.headers.Authorization = `Bearer ${token}`
   }

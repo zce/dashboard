@@ -2,21 +2,9 @@
   <div class="wrapper">
     <section class="login">
       <header class="login-header">
-        <h1 class="brand"><a href="#" tabindex="-1">WEDN.NET</a></h1>
-        <el-alert :title="error" :description="message" v-show="error" class="alert" type="warning" show-icon/>
+        <h1 class="brand"><router-link to="/" tabindex="-1">WEDN.NET</router-link></h1>
+        <el-alert :title="error.title" :description="error.message" v-if="error" class="alert" type="warning" show-icon/>
       </header>
-      <!-- <form class="login-form">
-        <h2 class="heading">登录</h2>
-        <div class="form-group">
-          <label for="username">用户名</label>
-          <input type="text" id="username" class="form-control form-control-md" placeholder="用户名">
-        </div>
-        <div class="form-group">
-          <label for="password">密码</label>
-          <input type="password" id="password" class="form-control" placeholder="密码">
-        </div>
-        <button class="btn btn-primary btn-block">登录</button>
-      </form> -->
       <el-form :model="model" :rules="rules" class="login-form" ref="login-form" auto-complete="off" label-position="top">
         <h2 class="heading">登录</h2>
         <el-form-item label="用户名" prop="username">
@@ -39,63 +27,58 @@
     name: 'login',
 
     data () {
-      return {
-        loading: false,
-        error: '',
-        message: '',
-        model: {
-          username: '',
-          password: ''
-        },
-        rules: {
-          username: [
-            { required: true, message: '请输入用户名' },
-            { min: 2, max: 16, message: '长度在 2 到 16 个字符' }
-          ],
-          password: [
-            { required: true, message: '请输入密码' },
-            { min: 6, max: 16, message: '长度在 6 到 16 个字符' }
-          ]
-        }
+      // form model
+      const model = {
+        username: 'admin',
+        password: 'password'
       }
-    },
 
-    beforeCreate () {
-      if (this.$store.getters.token) {
-        this.$router.replace({ path: this.$route.query.redirect || '/' })
+      // form validate rules
+      const rules = {
+        username: [
+          { required: true, message: '请输入用户名' },
+          { min: 2, max: 16, message: '长度在 2 到 16 个字符' }
+        ],
+        password: [
+          { required: true, message: '请输入密码' },
+          { min: 6, max: 16, message: '长度在 6 到 16 个字符' }
+        ]
+      }
+
+      return {
+        model: model,
+        rules: rules,
+        error: null,
+        loading: false
       }
     },
 
     methods: {
       submit () {
-        this.loading = true
-        this.error = ''
+        // form validate
         this.$refs['login-form'].validate(valid => {
           if (!valid) return false
-          this.$store.dispatch('createToken', {
-            username: this.model.username,
-            password: this.model.password
-          })
+
+          // validated
+          this.loading = true
+          this.error = null
+
+          // create token from remote
+          this.$store.dispatch('createToken', this.model)
           .then(token => {
             this.loading = false
             this.$router.replace({ path: this.$route.query.redirect || '/' })
           })
           .catch(err => {
             this.loading = false
-            this.error = '错误'
-            if (err.data && err.data.error) {
-              switch (err.status) {
-                case 401:
-                  this.message = '用户名或密码错误！'
-                  break
-                case 500:
-                  this.message = '服务器内部异常，请稍后再试！'
-                  break
-                default:
-                  this.message = '出现异常，请稍后再试！'
-              }
-            } else {
-              this.message = err.message
+            this.error = { title: '发生错误', message: '出现异常，请稍后再试！' }
+            switch (err.response.status) {
+              case 401:
+                this.error.message = '用户名或密码错误！'
+                break
+              case 500:
+                this.error.message = '服务器内部异常，请稍后再试！'
+                break
             }
           })
         })
@@ -105,11 +88,8 @@
 </script>
 
 <style scoped>
-  .el-form-item {
-    margin-bottom: 30px
-  }
-
   .el-button {
+    margin-top: .5rem;
     width: 100%;
   }
 </style>

@@ -123,6 +123,7 @@
     },
 
     // https://router.vuejs.org/zh-cn/essentials/dynamic-matching.html#响应路由参数的变化
+    // https://router.vuejs.org/zh-cn/advanced/data-fetching.html
     watch: {
       $route () {
         this.initData()
