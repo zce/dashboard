@@ -1,11 +1,11 @@
 import Vue from 'vue'
 import { sync } from 'vuex-router-sync'
-import ElementUI from 'element-ui'
+import element from 'element-ui'
 import App from './app'
 import i18n from 'libraries/i18n'
 import store from 'libraries/store'
 import router from 'libraries/router'
-import Plugins from 'libraries/plugins'
+import plugins from 'libraries/plugins'
 
 // ## Import styles
 // =========================
@@ -13,8 +13,8 @@ import 'assets/styles/element.css'
 
 // ## Use plugins
 // =========================
-Vue.use(ElementUI)
-Vue.use(Plugins)
+Vue.use(element)
+Vue.use(plugins)
 sync(store, router, { moduleName: 'route' })
 
 // ## Config

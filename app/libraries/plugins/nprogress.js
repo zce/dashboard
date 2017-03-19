@@ -4,38 +4,33 @@
  */
 
 import router from '../router'
-import axios from '../utils/axios'
-import NProgress from '../utils/nprogress'
+import { axios, nprogress } from '../utils'
 
 export default Vue => {
   // Add nprogress to route
   router.beforeEach((to, from, next) => {
-    // console.log('before each')
-    NProgress.start()
+    nprogress.start()
     next()
   })
   router.afterEach(route => {
-    // console.log('after each')
-    NProgress.done()
+    nprogress.done()
   })
 
   // Add nprogress to ajax
   axios.interceptors.request.use(config => {
-    NProgress.start()
+    nprogress.start()
     return config
   })
   axios.interceptors.response.use(response => {
-    NProgress.done()
+    nprogress.done()
     return response
-  }, error => {
-    NProgress.done()
-    return Promise.reject(error)
+  }, err => {
+    nprogress.done()
+    return Promise.reject(err)
   })
 
   // mount the nprogress to Vue component instance
   Object.defineProperties(Vue.prototype, {
-    $nprogress: {
-      get: () => NProgress
-    }
+    $nprogress: { get: () => nprogress }
   })
 }

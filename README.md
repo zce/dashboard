@@ -115,7 +115,8 @@ $ yarn deploy
 - [x] Mock || JSON Server
 - [x] Global state
 - [x] List table
-- [ ] Login module
+- [x] Login module
+- [x] Restructure libs
 - [ ] Options module
 - [ ] Users module
 - [ ] Media module
@@ -127,14 +128,8 @@ $ yarn deploy
 
 ## Link
 
-- [Intro Vue stack](https://blog.ygxdxx.com/2017/03/06/Vue2&Weixin-Develop/)
-- [Resources](http://blog.yubangweb.com/xue-xi-vuede-yi-xie-zi-yuan/)
-- [Notepad](https://github.com/lin-xin/notepad/)
-- [ElemeFE/element-dashboard](https://github.com/ElemeFE/element-dashboard)
-- [ElementUI/element-admin](https://github.com/ElementUI/element-admin)
-- [lynzz/element-admin](https://github.com/lynzz/element-admin)
-- [commit: 358ad2](https://github.com/vuejs-templates/webpack/commit/358ad2c26a8e76c7b04f4c0ce5f5fa7be69d60ee)
-- [compare: 358ad2](https://github.com/vuejs-templates/webpack/compare/358ad2c26a8e76c7b04f4c0ce5f5fa7be69d60ee...master)
+- [commit: c72105](https://github.com/vuejs-templates/webpack/commit/c72105e2a9e79d2e49508e489cf03e85ccb21a90)
+- [compare: c72105](https://github.com/vuejs-templates/webpack/compare/c72105e2a9e79d2e49508e489cf03e85ccb21a90...master)
 
 
 ## Packages

@@ -1,4 +1,4 @@
-import { local as storage } from '../utils/storage'
+import { storage } from '../utils'
 
 /**
  * 改变页面标题

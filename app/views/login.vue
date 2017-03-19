@@ -13,7 +13,7 @@
         <el-form-item label="密码" prop="password">
           <el-input type="password" v-model="model.password" placeholder="请输入密码"/>
         </el-form-item>
-        <el-button type="primary" native-type="submit" :loading="loading" @click.prevent="submit">{{ loading ? '登陆中' : '登录' }}</el-button>
+        <el-button type="primary" native-type="submit" :loading="loading" @click.prevent="submit">{{ loading ? '登陆中...' : '登录' }}</el-button>
       </el-form>
       <footer class="login-footer">
         ← 返回到 <a href="/">WEDN.NET</a>

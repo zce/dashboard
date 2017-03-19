@@ -17,6 +17,7 @@
     "axios": "^0.15.3",
     "element-ui": "^1.2.4",
     "nprogress": "^0.2.0",
+    "store": "^2.0.4",
     "vue": "^2.2.4",
     "vue-i18n": "^6.0.0-alpha.5",
     "vue-router": "^2.3.0",

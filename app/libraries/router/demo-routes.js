@@ -1,5 +1,3 @@
-import components from './components-routes'
-
 export default [
   // ## demo views
   {
@@ -43,5 +41,30 @@ export default [
     path: 'demo/:name',
     meta: { requiresAuth: false },
     component: resolve => require.ensure([], () => resolve(require('views/demo/params')), 'demo')
+  },
+  // ## component views
+  {
+    name: 'components',
+    path: 'components',
+    meta: { requiresAuth: false },
+    component: resolve => require.ensure([], () => resolve(require('views/demo/components/index')), 'components')
+  },
+  {
+    name: 'components-icons',
+    path: 'components/icons',
+    meta: { requiresAuth: false },
+    component: resolve => require.ensure([], () => resolve(require('views/demo/components/icons')), 'components')
+  },
+  {
+    name: 'components-button',
+    path: 'components/button',
+    meta: { requiresAuth: false },
+    component: resolve => require.ensure([], () => resolve(require('views/demo/components/button')), 'components')
+  },
+  {
+    name: 'components-table',
+    path: 'components/table',
+    meta: { requiresAuth: false },
+    component: resolve => require.ensure([], () => resolve(require('views/demo/components/table')), 'components')
   }
-].concat(components)
+]

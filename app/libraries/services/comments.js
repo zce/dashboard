@@ -1,8 +1,8 @@
 /**
- * # Comments service
+ * Comments service
  */
 
-import axios from '../utils/axios'
+import { axios } from '../utils'
 
 export default {
   get: (...args) => axios.get('/comments', ...args),

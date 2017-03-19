@@ -4,7 +4,7 @@
  */
 
 import { tokens } from 'libraries/services'
-import { local as storage } from 'libraries/utils/storage'
+import { storage } from 'libraries/utils'
 
 const STORAGE_KEY = 'wedn_net_access_token'
 

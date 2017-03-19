@@ -2,8 +2,8 @@
  * Change title when route
  * TODO: title case
  */
-import router from '../router'
 import store from '../store'
+import router from '../router'
 
 export default (Vue, options) => {
   let items

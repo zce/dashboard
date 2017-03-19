@@ -57,7 +57,7 @@ module.exports = {
   // Surge or Netlify already gzip all static assets for you.
   // Before setting to `true`, make sure to:
   // npm install --save-dev compression-webpack-plugin
-  gzip: { enable: true, extensions: ['js', 'css', 'ttf', 'woff', 'svg'] },
+  gzip: { enable: false, extensions: ['js', 'css', 'ttf', 'woff', 'svg'] },
   // Run the build command with an extra argument to
   // View the bundle analyzer report after build finishes:
   // `npm run build --report` or `npm_config_report=true yarn build`

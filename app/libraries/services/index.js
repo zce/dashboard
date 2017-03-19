@@ -5,6 +5,8 @@ import terms from './terms'
 import tokens from './tokens'
 import users from './users'
 
+export { comments, options, posts, terms, tokens, users }
+
 // const defaultActions = {
 //   get: { method: 'GET' },
 //   save: { method: 'POST' },
@@ -13,5 +15,3 @@ import users from './users'
 //   remove: { method: 'DELETE' },
 //   delete: { method: 'DELETE' }
 // }
-
-export { comments, options, posts, terms, tokens, users }
