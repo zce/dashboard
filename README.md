@@ -125,6 +125,8 @@ $ yarn deploy
 - [ ] Comments module
 - [ ] Other module
 - [ ] Config package
+- [ ] Deploy to GitHub Pages by Travis CI
+
 
 ## Link
 
