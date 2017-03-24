@@ -130,8 +130,8 @@ $ yarn deploy
 
 ## Link
 
-- [commit: c72105](https://github.com/vuejs-templates/webpack/commit/c72105e2a9e79d2e49508e489cf03e85ccb21a90)
-- [compare: c72105](https://github.com/vuejs-templates/webpack/compare/c72105e2a9e79d2e49508e489cf03e85ccb21a90...master)
+- [commit: d399af](https://github.com/vuejs-templates/webpack/commit/d399afa403273862da2420881f01eba00aca47ae)
+- [compare: d399af](https://github.com/vuejs-templates/webpack/compare/d399afa403273862da2420881f01eba00aca47ae...master)
 
 
 ## Packages
