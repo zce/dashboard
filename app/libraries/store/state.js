@@ -2,6 +2,15 @@ import { storage } from '../utils'
 
 export default {
   /**
+   * 当前登录用户
+   * @type {Object}
+   */
+  current_user: {
+    name: '',
+    meta: {}
+  },
+
+  /**
    * 页面标题
    * @type {String}
    */

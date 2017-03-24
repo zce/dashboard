@@ -1,3 +1,16 @@
+import { users } from '../services'
+
+/**
+ * 获取当前登录用户信息
+ */
+export const getCurrentUser = ({ commit }) => {
+  return users.get('me')
+    .then(res => {
+      commit('CHANGE_USER', res.data)
+      return res.data
+    })
+}
+
 /**
  * 改变页面标题
  */

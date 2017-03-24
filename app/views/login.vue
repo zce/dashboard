@@ -29,8 +29,8 @@
     data () {
       // form model
       const model = {
-        username: 'admin',
-        password: 'password'
+        username: 'zce',
+        password: 'wanglei'
       }
 
       // form validate rules
@@ -65,22 +65,22 @@
 
           // create token from remote
           this.$store.dispatch('createToken', this.model)
-          .then(token => {
-            this.loading = false
-            this.$router.replace({ path: this.$route.query.redirect || '/' })
-          })
-          .catch(err => {
-            this.loading = false
-            this.error = { title: '发生错误', message: '出现异常，请稍后再试！' }
-            switch (err.response.status) {
-              case 401:
-                this.error.message = '用户名或密码错误！'
-                break
-              case 500:
-                this.error.message = '服务器内部异常，请稍后再试！'
-                break
-            }
-          })
+            .then(token => {
+              this.loading = false
+              this.$router.replace({ path: this.$route.query.redirect || '/' })
+            })
+            .catch(err => {
+              this.loading = false
+              this.error = { title: '发生错误', message: '出现异常，请稍后再试！' }
+              switch (err.response.status) {
+                case 401:
+                  this.error.message = '用户名或密码错误！'
+                  break
+                case 500:
+                  this.error.message = '服务器内部异常，请稍后再试！'
+                  break
+              }
+            })
         })
       }
     }

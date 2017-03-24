@@ -2,7 +2,6 @@
  * Vuex docs
  * https://vuex.vuejs.org/zh-cn
  * https://github.com/vuejs/vue-hackernews-2.0
- * http://www.ruanyifeng.com/blog/2014/05/restful_api.html
  */
 
 import Vue from 'vue'

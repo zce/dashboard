@@ -7,7 +7,7 @@
       <menu-list :items="header.menus"/>
       <ul class="list">
         <li class="item">
-          <a href="#">Hi, {{ user.nickname }}! <img class="avatar" :src="user.avatar" :alt="user.nickname"></a>
+          <a href="#">Hi, {{ currentUser.name }}! <img class="avatar" :src="currentUser.meta.avatar" :alt="currentUser.name"></a>
           <ul class="list">
             <li class="item"><router-link :to="{ name: 'profile' }">个人主页</router-link></li>
             <li class="item"><router-link :to="{ name: 'profile' }">编辑个人资料</router-link></li>
@@ -29,8 +29,11 @@
     components: { MenuList },
     computed: mapGetters({
       header: 'header',
-      user: 'currentUser'
+      currentUser: 'currentUser'
     }),
+    created () {
+      this.$store.dispatch('getCurrentUser')
+    },
     methods: {
       logout () {
         this.$store.dispatch('deleteToken')

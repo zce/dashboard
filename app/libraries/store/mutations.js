@@ -1,6 +1,15 @@
 import { storage } from '../utils'
 
 /**
+ * 改变当前登录用户
+ * @param  {Object} state   Vuex状态对象
+ * @param  {Object} user    新的当前登录用户
+ */
+export const CHANGE_USER = (state, user) => {
+  state.current_user = user
+}
+
+/**
  * 改变页面标题
  * @param  {Object} state Vuex状态对象
  * @param  {String} title 新的页面标题

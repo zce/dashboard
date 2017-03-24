@@ -5,7 +5,7 @@
 import { axios } from '../utils'
 
 export default {
-  get: (...args) => axios.get('/users', ...args),
+  get: (id) => axios.get(`/users${id && '/' + id}`),
   delete: (...args) => axios.delete('/users', ...args),
   head: (...args) => axios.head('/users', ...args),
   post: (...args) => axios.post('/users', ...args),

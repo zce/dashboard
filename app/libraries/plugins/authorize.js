@@ -15,31 +15,31 @@ export default Vue => {
     // don't need authorize
     if (!to.meta.requiresAuth) return next()
     // check login state
-    store.dispatch('checkLogin')
-      .then(loggedIn => {
+    store.dispatch('checkToken')
+      .then(validated => {
         // authorized
-        if (loggedIn) return next()
+        if (validated) return next()
         // unauthorized
         console.log('Unauthorized')
         next({ name: 'login', query: { redirect: to.fullPath } })
       })
   })
 
-  // login page visiable
-  router.beforeEach((to, from, next) => {
-    if (to.name !== 'login') return next()
-    // check login state
-    store.dispatch('checkLogin')
-      .then(loggedIn => {
-        if (!loggedIn) return next()
-        // when logged in
-        console.log('dont need authorize')
-        next({ path: to.query.redirect || '/' })
-      })
-  })
+  // // login page visiable
+  // router.beforeEach((to, from, next) => {
+  //   if (to.name !== 'login') return next()
+  //   // check login state
+  //   store.dispatch('checkToken')
+  //     .then(validated => {
+  //       if (!validated) return next()
+  //       // when logged in
+  //       console.log('dont need authorize')
+  //       next({ path: to.query.redirect || '/' })
+  //     })
+  // })
 
-  // mount the authorize to Vue component instance
-  Object.defineProperties(Vue.prototype, {
-    $authorize: { get: () => store.dispatch('checkLogin') }
-  })
+  // // mount the authorize to Vue component instance
+  // Object.defineProperties(Vue.prototype, {
+  //   $authorize: { get: () => store.dispatch('refreshToken') }
+  // })
 }

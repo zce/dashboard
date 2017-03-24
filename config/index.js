@@ -41,6 +41,7 @@ module.exports = {
     proxy: {
       '/api': {
         target: 'http://jsonplaceholder.micua.com/',
+        // target: 'http://localhost:2080/',
         changeOrigin: true,
         secure: false,
         logLevel: 'error'

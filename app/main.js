@@ -19,6 +19,7 @@ sync(store, router, { moduleName: 'route' })
 
 // ## Config
 // =========================
+Vue.config.devtools = true
 Vue.config.productionTip = false
 Vue.config.debug = process.env.DEBUG_MODE
 

@@ -21,8 +21,8 @@
 
 [http://dashboard.micua.com](http://dashboard.micua.com)
 
-> - username: admin
-> - password: password
+> - username: zce
+> - password: wanglei
 
 
 ## Environment
