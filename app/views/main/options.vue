@@ -10,10 +10,6 @@
   export default {
     name: 'options',
 
-    data () {
-      return {}
-    },
-
     computed: {
       title () {
         const dist = {
@@ -26,10 +22,6 @@
         }
         return dist[this.$route.params.type]
       }
-    },
-
-    created () {
-      console.log(123)
     }
   }
 </script>
