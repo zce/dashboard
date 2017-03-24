@@ -10,11 +10,10 @@
 import axios from 'axios'
 // import storage from './storage'
 
-// const STORAGE_KEY = 'wedn_net_access_token'
-
 const instance = axios.create({
-  // TODO: full url
-  baseURL: '//jsonplaceholder.micua.com/api/v1/',
+  // // TODO: full base url
+  // baseURL: '//jsonplaceholder.micua.com/api/v1/',
+  baseURL: '//localhost:2080/api/v1/',
   timeout: 3000,
   headers: {
     // 'X-Custom-Header': 'foobar',
@@ -27,7 +26,7 @@ const instance = axios.create({
 // instance.interceptors.request.use(config => {
 //   // Add authorization in the header
 //   // TODO: token in store
-//   const token = storage.get(STORAGE_KEY)
+//   const token = storage.get('wedn_net_access_token')
 //   if (token && config.headers.Authorization) {
 //     config.headers.Authorization = `Bearer ${token}`
 //   }

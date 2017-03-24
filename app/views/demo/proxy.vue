@@ -5,6 +5,7 @@
     </div>
     <div>
       <p>本示例只有在本地开发环境工作，线上托管环境没有代理配置。</p>
+      <p>！！！过时的示例！！！</p>
       <button @click="fetch()">Fetch jsonplaceholder api by proxy</button>
     </div>
     <div v-if="error">

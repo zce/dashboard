@@ -9,5 +9,6 @@ export default new Router({
   base: process.env.PUBLIC_URL,
   routes: routes
 })
+
 // https://router.vuejs.org/zh-cn/advanced/scroll-behavior.html
 // https://github.com/vuejs/vue-router/blob/next/examples/scroll-behavior/app.js

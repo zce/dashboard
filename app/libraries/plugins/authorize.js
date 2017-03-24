@@ -16,9 +16,9 @@ export default Vue => {
     if (!to.meta.requiresAuth) return next()
     // check login state
     store.dispatch('checkToken')
-      .then(validated => {
+      .then(valid => {
         // authorized
-        if (validated) return next()
+        if (valid) return next()
         // unauthorized
         console.log('Unauthorized')
         next({ name: 'login', query: { redirect: to.fullPath } })
@@ -30,8 +30,8 @@ export default Vue => {
   //   if (to.name !== 'login') return next()
   //   // check login state
   //   store.dispatch('checkToken')
-  //     .then(validated => {
-  //       if (!validated) return next()
+  //     .then(valid => {
+  //       if (!valid) return next()
   //       // when logged in
   //       console.log('dont need authorize')
   //       next({ path: to.query.redirect || '/' })

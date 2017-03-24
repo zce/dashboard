@@ -74,7 +74,7 @@ devMiddleware.waitUntilValid(() => console.log(`> Listening at ${url}\n`))
 module.exports = app.listen(config.server.port, err => {
   if (err) throw err
   // when env is testing, don't need open it
-  if (config.server.opn && process.env.NODE_ENV !== 'testing') {
+  if (config.server.autoOpenBrowser && process.env.NODE_ENV !== 'testing') {
     opn(url)
   }
 })

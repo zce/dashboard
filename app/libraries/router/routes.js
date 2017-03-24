@@ -1,4 +1,5 @@
 import mainRoutes from './main-routes'
+
 /**
  * 路由表配置
  */
@@ -14,7 +15,7 @@ export default [
   {
     path: '/',
     meta: { requiresAuth: true },
-    component: resolve => require.ensure([], () => resolve(require('views/layout')), 'layout'),
+    component: resolve => require.ensure([], () => resolve(require('views/layout')), 'common'),
     children: mainRoutes
   },
   // ## not found page
