@@ -133,16 +133,6 @@
 </script>
 
 <style>
-  .fade-enter-active,
-  .fade-leave-active {
-    transition: opacity .2s ease;
-  }
-
-  .fade-enter,
-  .fade-leave-active {
-    opacity: 0;
-  }
-
   .el-pagination {
     margin: 1rem 0 2rem;
     text-align: right;

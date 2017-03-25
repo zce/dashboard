@@ -1,11 +1,4 @@
 /**
- * 获取当前登录用户
- * @param  {Object} state Vuex状态对象
- * @return {Object}       当前登录用户
- */
-export const currentUser = state => state.current_user
-
-/**
  * 获取页面标题
  * @param  {Object} state Vuex状态对象
  * @return {String}       页面标题
@@ -25,6 +18,20 @@ export const header = state => state.header
  * @return {Object}       侧边导航栏
  */
 export const sidebar = state => state.sidebar
+
+/**
+ * 获取访问令牌
+ * @param  {Object} state Vuex状态对象
+ * @return {Object}       访问令牌
+ */
+export const token = state => state.token
+
+/**
+ * 获取当前登录用户
+ * @param  {Object} state Vuex状态对象
+ * @return {Object}       当前登录用户
+ */
+export const currentUser = state => state.current_user
 
 // ==================== DEMO ====================
 

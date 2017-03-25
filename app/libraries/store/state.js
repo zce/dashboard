@@ -1,15 +1,6 @@
-import { storage } from '../utils'
+import { axios, storage } from '../utils'
 
 export default {
-  /**
-   * 当前登录用户
-   * @type {Object}
-   */
-  current_user: {
-    name: '',
-    meta: {}
-  },
-
   /**
    * 页面标题
    * @type {String}
@@ -90,12 +81,6 @@ export default {
      * @type {String}
      */
     copyright: 'WEDN.NET',
-
-    /**
-     * 版权链接
-     * @type {String}
-     */
-    copyright_link: 'https://github.com/zce/dashboard',
 
     /**
      * 是否收起边栏
@@ -222,6 +207,24 @@ export default {
     ]
   },
 
+  /**
+   * 访问令牌
+   * @type {String}
+   * TODO: storage - local or session
+   * https://github.com/auth0-blog/vue-jwt-authentication
+   * https://auth0.com/blog/build-an-app-with-vuejs/
+   */
+  token: storage.get('wedn_net_access_token'),
+
+  /**
+   * 当前登录用户
+   * @type {Object}
+   */
+  current_user: {
+    name: '',
+    meta: {}
+  },
+
   // ==================== DEMO ====================
 
   /**
@@ -230,3 +233,6 @@ export default {
    */
   count: storage.get('wedn_net_demo_count') || 0
 }
+
+// change axios authorization header
+axios.defaults.headers.Authorization = `Bearer ${storage.get('wedn_net_access_token')}`

@@ -36,7 +36,6 @@ if (module.hot) {
     './modules/options',
     './modules/posts',
     './modules/terms',
-    './modules/tokens',
     './modules/users',
     './modules/demo'
   ], () => {
@@ -49,7 +48,6 @@ if (module.hot) {
         options: require('./modules/options'),
         posts: require('./modules/posts'),
         terms: require('./modules/terms'),
-        tokens: require('./modules/tokens'),
         users: require('./modules/users'),
         demo: require('./modules/demo')
       }
