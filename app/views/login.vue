@@ -1,3 +1,8 @@
+<docs>
+  * https://github.com/auth0-blog/vue-jwt-authentication
+  * https://auth0.com/blog/build-an-app-with-vuejs/
+</docs>
+
 <template>
   <div class="wrapper">
     <section class="login">
@@ -66,6 +71,7 @@
               this.loading = false
             })
             .catch(err => {
+              console.error(err)
               this.error = { title: '发生错误', message: '出现异常，请稍后再试！' }
               switch (err.response && err.response.status) {
                 case 401:

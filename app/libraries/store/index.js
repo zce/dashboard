@@ -25,6 +25,8 @@ const store = new Vuex.Store({ state, getters, mutations, actions, modules, stri
 
 // ## Initial
 // store.dispatch('initToken')
+// // change axios authorization header
+// axios.defaults.headers.Authorization = `Bearer ${storage.get('wedn_net_access_token')}`
 
 // ## Hot module replacement
 if (module.hot) {

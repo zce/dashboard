@@ -4,14 +4,7 @@ import { tokens, users } from '../services'
  * 改变页面标题
  */
 export const changeTitle = ({ commit }, title) => {
-  commit('CHANGE_TITLE', title)
-}
-
-/**
- * 切换边栏的展开收起
- */
-export const toggleSidebarCollapse = ({ commit }) => {
-  commit('TOGGLE_SIDEBAR_COLLAPSE')
+  commit('CHANGE_SESSION', { title: title })
 }
 
 /**
@@ -23,7 +16,7 @@ export const createToken = ({ commit }, { username, password }) => {
     password: password.trim()
   })
   .then(res => {
-    commit('CHANGE_TOKEN', res.data.token)
+    commit('CHANGE_SESSION', { token: res.data.token })
     return res.data.token
   })
 }
@@ -34,7 +27,7 @@ export const createToken = ({ commit }, { username, password }) => {
 export const checkToken = ({ commit, getters }) => {
   return new Promise((resolve, reject) => {
     // validate local store
-    if (!getters.token) {
+    if (!getters.session.token) {
       return resolve(false)
     }
     // remote
@@ -42,7 +35,7 @@ export const checkToken = ({ commit, getters }) => {
       .then(res => resolve(true))
       .catch(err => {
         console.error(err)
-        commit('CHANGE_TOKEN')
+        commit('CHANGE_SESSION', { token: null })
         resolve(false)
       })
   })
@@ -54,7 +47,7 @@ export const checkToken = ({ commit, getters }) => {
 export const deleteToken = ({ commit }) => {
   return tokens.delete()
     .then(res => {
-      commit('CHANGE_TOKEN')
+      commit('CHANGE_SESSION', { token: null })
     })
 }
 
@@ -64,9 +57,16 @@ export const deleteToken = ({ commit }) => {
 export const getCurrentUser = ({ commit }) => {
   return users.getItem('me')
     .then(res => {
-      commit('CHANGE_USER', res.data)
+      commit('CHANGE_SESSION', { user: res.data })
       return res.data
     })
+}
+
+/**
+ * 切换边栏的展开收起
+ */
+export const toggleSidebarCollapse = ({ commit }) => {
+  commit('TOGGLE_SIDEBAR_COLLAPSE')
 }
 
 // ==================== DEMO ====================
@@ -74,27 +74,19 @@ export const getCurrentUser = ({ commit }) => {
 /**
  * 增加计数器计数
  */
-export const increment = ({ commit }) => {
-  commit('INCREMENT')
-}
+export const increment = ({ commit }) => commit('INCREMENT')
 
 /**
  * 增加计数器计数
  */
-export const incrementAsync = ({ commit }) => {
-  setTimeout(() => commit('INCREMENT'), 1000)
-}
+export const incrementAsync = ({ commit }) => setTimeout(() => commit('INCREMENT'), 1000)
 
 /**
  * 减少计数器计数
  */
-export const decrement = ({ commit }) => {
-  commit('DECREMENT')
-}
+export const decrement = ({ commit }) => commit('DECREMENT')
 
 /**
  * 减少计数器计数
  */
-export const decrementAsync = ({ commit }) => {
-  setTimeout(() => commit('DECREMENT'), 1000)
-}
+export const decrementAsync = ({ commit }) => setTimeout(() => commit('DECREMENT'), 1000)
