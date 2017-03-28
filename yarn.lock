@@ -3327,9 +3327,9 @@ optionator@^0.8.2:
     type-check "~0.3.2"
     wordwrap "~1.0.0"
 
-ora@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.npmjs.org/ora/-/ora-1.1.0.tgz#69aaa4a209630e43b142c5f7ff41820da87e2faf"
+ora@^1.2.0:
+  version "1.2.0"
+  resolved "http://registry.npm.taobao.org/ora/download/ora-1.2.0.tgz#32fb3183500efe83f5ea89101785f0ee6060fec9"
   dependencies:
     chalk "^1.1.1"
     cli-cursor "^2.1.0"
@@ -4251,9 +4251,9 @@ source-list-map@^0.1.7, source-list-map@~0.1.7:
   version "0.1.8"
   resolved "https://registry.npmjs.org/source-list-map/-/source-list-map-0.1.8.tgz#c550b2ab5427f6b3f21f5afead88c4f5587b2106"
 
-source-list-map@^1.0.1:
-  version "1.0.1"
-  resolved "http://registry.npm.taobao.org/source-list-map/download/source-list-map-1.0.1.tgz#cc1fc17122ae0a51978024c2cc0f8c35659026b8"
+source-list-map@^1.1.1:
+  version "1.1.1"
+  resolved "http://registry.npm.taobao.org/source-list-map/download/source-list-map-1.1.1.tgz#1a33ac210ca144d1e561f906ebccab5669ff4cb4"
 
 source-map-support@^0.4.2:
   version "0.4.12"
@@ -4652,9 +4652,9 @@ vue-i18n@^6.0.0-beta.1:
   version "6.0.0-beta.1"
   resolved "http://registry.npm.taobao.org/vue-i18n/download/vue-i18n-6.0.0-beta.1.tgz#299c6f3d15c9459d4c63af13073a8bffc25a8b80"
 
-vue-loader@^11.3.2:
-  version "11.3.2"
-  resolved "http://registry.npm.taobao.org/vue-loader/download/vue-loader-11.3.2.tgz#08bb99446222e223d1e01e6228221acf1bcc95c9"
+vue-loader@^11.3.3:
+  version "11.3.3"
+  resolved "http://registry.npm.taobao.org/vue-loader/download/vue-loader-11.3.3.tgz#045d27afacf70c58889d46debe4adf6d67ec8cf3"
   dependencies:
     consolidate "^0.14.0"
     hash-sum "^1.0.2"
@@ -4673,16 +4673,16 @@ vue-router@^2.3.0:
   version "2.3.0"
   resolved "https://registry.npmjs.org/vue-router/-/vue-router-2.3.0.tgz#a25c8359e8ca989d22ce79f64322eb0ad0c8670f"
 
-vue-style-loader@^2.0.0, vue-style-loader@^2.0.3:
-  version "2.0.3"
-  resolved "https://registry.npmjs.org/vue-style-loader/-/vue-style-loader-2.0.3.tgz#b464ffb6279702d4137a80ac81b5c12ac440f0a0"
+vue-style-loader@^2.0.0, vue-style-loader@^2.0.4:
+  version "2.0.4"
+  resolved "http://registry.npm.taobao.org/vue-style-loader/download/vue-style-loader-2.0.4.tgz#4fc19e18bf162225338aac3b17d0fd0e1cfb7439"
   dependencies:
     hash-sum "^1.0.2"
     loader-utils "^1.0.2"
 
-vue-template-compiler@^2.2.5:
-  version "2.2.5"
-  resolved "http://registry.npm.taobao.org/vue-template-compiler/download/vue-template-compiler-2.2.5.tgz#71b1366c3f716e8137a87f82591de9f816609b57"
+vue-template-compiler@^2.2.6:
+  version "2.2.6"
+  resolved "http://registry.npm.taobao.org/vue-template-compiler/download/vue-template-compiler-2.2.6.tgz#2e2928daf0cd0feca9dfc35a9729adeae173ec68"
   dependencies:
     de-indent "^1.0.2"
     he "^1.1.0"
@@ -4691,9 +4691,9 @@ vue-template-es2015-compiler@^1.2.2:
   version "1.5.1"
   resolved "https://registry.npmjs.org/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.5.1.tgz#0c36cc57aa3a9ec13e846342cb14a72fcac8bd93"
 
-vue@^2.2.5:
-  version "2.2.5"
-  resolved "http://registry.npm.taobao.org/vue/download/vue-2.2.5.tgz#528eba68447d7eff99f86767b31176aa656c6963"
+vue@^2.2.6:
+  version "2.2.6"
+  resolved "http://registry.npm.taobao.org/vue/download/vue-2.2.6.tgz#451714b394dd6d4eae7b773c40c2034a59621aed"
 
 vuex-router-sync@^4.1.2:
   version "4.1.2"
@@ -4751,16 +4751,16 @@ webpack-sources@^0.1.0:
     source-list-map "~0.1.7"
     source-map "~0.5.3"
 
-webpack-sources@^0.2.0:
-  version "0.2.0"
-  resolved "http://registry.npm.taobao.org/webpack-sources/download/webpack-sources-0.2.0.tgz#fea93ba840f16cdd3f246f0ee95f88a9492c69fb"
+webpack-sources@^0.2.3:
+  version "0.2.3"
+  resolved "http://registry.npm.taobao.org/webpack-sources/download/webpack-sources-0.2.3.tgz#17c62bfaf13c707f9d02c479e0dcdde8380697fb"
   dependencies:
-    source-list-map "^1.0.1"
+    source-list-map "^1.1.1"
     source-map "~0.5.3"
 
-webpack@^2.3.1:
-  version "2.3.1"
-  resolved "http://registry.npm.taobao.org/webpack/download/webpack-2.3.1.tgz#55bce8baffe7c1f9dc3029adc048643b448318a8"
+webpack@^2.3.2:
+  version "2.3.2"
+  resolved "http://registry.npm.taobao.org/webpack/download/webpack-2.3.2.tgz#7d521e6f0777a3a58985c69425263fdfe977b458"
   dependencies:
     acorn "^4.0.4"
     acorn-dynamic-import "^2.0.0"
@@ -4780,7 +4780,7 @@ webpack@^2.3.1:
     tapable "~0.2.5"
     uglify-js "^2.8.5"
     watchpack "^1.3.1"
-    webpack-sources "^0.2.0"
+    webpack-sources "^0.2.3"
     yargs "^6.0.0"
 
 whet.extend@~0.9.9:
