@@ -11,12 +11,3 @@ import tokens from './tokens'
 import users from './users'
 
 export { comments, options, posts, terms, tokens, users }
-
-// const defaultActions = {
-//   get: { method: 'GET' },
-//   save: { method: 'POST' },
-//   query: { method: 'GET' },
-//   update: { method: 'PUT' },
-//   remove: { method: 'DELETE' },
-//   delete: { method: 'DELETE' }
-// }

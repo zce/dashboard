@@ -14,7 +14,7 @@
   export default {
     name: 'dashboard',
     created () {
-      this.$store.dispatch('changeTitle', '仪表盘')
+      this.$title('仪表盘')
     }
   }
 </script>

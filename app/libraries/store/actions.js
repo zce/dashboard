@@ -44,8 +44,8 @@ export const checkToken = ({ commit, getters }) => {
 /**
  * 删除客户端令牌
  */
-export const deleteToken = ({ commit }) => {
-  return tokens.delete()
+export const deleteToken = ({ commit, getters }) => {
+  return tokens.delete(getters.session.token)
     .then(res => {
       commit('CHANGE_SESSION', { token: null })
     })
@@ -55,7 +55,7 @@ export const deleteToken = ({ commit }) => {
  * 获取当前登录用户信息
  */
 export const getCurrentUser = ({ commit }) => {
-  return users.getItem('me')
+  return users.get('me')
     .then(res => {
       commit('CHANGE_SESSION', { user: res.data })
       return res.data

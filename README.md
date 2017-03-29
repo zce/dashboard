@@ -117,6 +117,7 @@ $ yarn deploy
 - [x] List table
 - [x] Login module
 - [x] Restructure libs
+- [x] Axios resource
 - [ ] Options module
 - [ ] Users module
 - [ ] Media module
