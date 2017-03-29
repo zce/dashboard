@@ -138,7 +138,7 @@ $ yarn deploy
 ## Packages
 
 ```bash
-yarn add element-ui nprogress vue vue-i18n vue-resource vue-router vuex vuex-router-sync -S
+yarn add axios element-ui nprogress store vue vue-i18n vue-router vuex vuex-router-sync -S
 ```
 
 ```bash
