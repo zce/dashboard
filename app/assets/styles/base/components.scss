@@ -1,0 +1,31 @@
+// ## Status icon
+// ------------------------------
+
+.status {
+  display: inline-block;
+  cursor: pointer;
+  width: .875rem;
+  height: .875rem;
+  vertical-align: middle;
+  border-radius: 50%;
+
+  &-primary {
+    background: $primary;
+  }
+
+  &-success {
+    background: $success;
+  }
+
+  &-warning {
+    background: $warning;
+  }
+
+  &-danger {
+    background: $danger;
+  }
+
+  &-info {
+    background: $info;
+  }
+}
