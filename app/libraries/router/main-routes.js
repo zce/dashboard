@@ -20,6 +20,12 @@ export default [
     meta: { requiresAuth: true },
     component: resolve => require.ensure([], () => resolve(require('views/main/about')), 'about')
   },
+  {
+    name: 'profile',
+    path: 'profile',
+    meta: { requiresAuth: true },
+    component: resolve => require.ensure([], () => resolve(require('views/main/profile')), 'users')
+  },
   // - Posts
   {
     name: 'posts',
@@ -67,10 +73,16 @@ export default [
     component: resolve => require.ensure([], () => resolve(require('views/main/users')), 'users')
   },
   {
-    name: 'profile',
-    path: 'profile',
+    name: 'roles',
+    path: 'roles',
     meta: { requiresAuth: true },
-    component: resolve => require.ensure([], () => resolve(require('views/main/profile')), 'users')
+    component: resolve => require.ensure([], () => resolve(require('views/main/roles')), 'users')
+  },
+  {
+    name: 'permissions',
+    path: 'permissions',
+    meta: { requiresAuth: true },
+    component: resolve => require.ensure([], () => resolve(require('views/main/permissions')), 'users')
   },
   // - Comments
   {

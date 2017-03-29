@@ -149,7 +149,8 @@ const state = {
         name: 'users',
         children: [
           { text: '所有用户', name: 'users' },
-          { text: '我的个人资料', name: 'profile' }
+          { text: '角色', name: 'roles' },
+          { text: '权限', name: 'permissions' }
         ]
       },
       {
