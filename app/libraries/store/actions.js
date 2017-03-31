@@ -1,4 +1,4 @@
-import { tokens, users } from '../services'
+import { TokenService, UserService } from '../services'
 
 /**
  * 改变页面标题
@@ -11,7 +11,7 @@ export const changeTitle = ({ commit }, title) => {
  * 创建新的客户端令牌
  */
 export const createToken = ({ commit }, { username, password }) => {
-  return tokens.post({
+  return TokenService.post({
     username: username.trim(),
     password: password.trim()
   })
@@ -31,7 +31,7 @@ export const checkToken = ({ commit, getters }) => {
       return resolve(false)
     }
     // remote
-    tokens.get()
+    TokenService.get()
       .then(res => resolve(true))
       .catch(err => {
         console.error(err)
@@ -45,7 +45,7 @@ export const checkToken = ({ commit, getters }) => {
  * 删除客户端令牌
  */
 export const deleteToken = ({ commit, getters }) => {
-  return tokens.delete(getters.session.token)
+  return TokenService.delete(getters.session.token)
     .then(res => {
       commit('CHANGE_SESSION', { token: null })
     })
@@ -55,7 +55,7 @@ export const deleteToken = ({ commit, getters }) => {
  * 获取当前登录用户信息
  */
 export const getCurrentUser = ({ commit }) => {
-  return users.get('me')
+  return UserService.get('me')
     .then(res => {
       commit('CHANGE_SESSION', { user: res.data })
       return res.data

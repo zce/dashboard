@@ -6,16 +6,9 @@ import { axios, storage } from '../utils'
  * @param  {Object} session 新的客户端会话信息
  */
 export const CHANGE_SESSION = (state, session) => {
-  if (session) {
-    const { title, token } = session
-    if (token) {
-      // change axios authorization header
-      axios.defaults.headers.Authorization = `Bearer ${token}`
-    }
-    if (title) {
-      // change document title
-      document.title = title
-    }
+  if (session && session.token) {
+    // change axios authorization header
+    axios.defaults.headers.Authorization = `Bearer ${session.token}`
   }
   // TODO: new session mixin
   Object.assign(state.session, session)
