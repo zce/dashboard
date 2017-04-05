@@ -1,5 +1,7 @@
 <template>
-  <router-view></router-view>
+  <transition name="fade">
+    <router-view></router-view>
+  </transition>
 </template>
 
 <script>
@@ -7,5 +9,3 @@
     name: 'app'
   }
 </script>
-
-<style src="assets/styles/main.scss" lang="scss"></style>

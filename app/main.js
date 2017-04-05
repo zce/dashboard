@@ -1,6 +1,6 @@
 import Vue from 'vue'
-import { sync } from 'vuex-router-sync'
 import element from 'element-ui'
+import { sync } from 'vuex-router-sync'
 import App from './app'
 import i18n from 'libraries/i18n'
 import store from 'libraries/store'
@@ -10,6 +10,7 @@ import plugins from 'libraries/plugins'
 // ## Import styles
 // =========================
 import 'assets/styles/element.css'
+import 'assets/styles/main.scss'
 
 // ## Use plugins
 // =========================

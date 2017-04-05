@@ -22,34 +22,3 @@
     components: { AppHeader, AppSidebar }
   }
 </script>
-
-<style>
-  .content {
-    position: relative;
-  }
-
-  .content-enter-active,
-  .content-leave-active {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    transition: opacity .5s ease;
-  }
-
-  .content-enter,
-  .content-leave-active {
-    opacity: 0
-  }
-
-  .fade-enter-active,
-  .fade-leave-active {
-    transition: opacity .2s ease;
-  }
-
-  .fade-enter,
-  .fade-leave-active {
-    opacity: 0;
-  }
-</style>

@@ -133,6 +133,7 @@ body {
               background: transparent;
               border: 0;
               border-bottom: .0625rem solid transparent;
+              border-radius: 0;
               color: lighten($content-color, 20%);
               font-size: .875rem;
               transition: border-bottom .2s;

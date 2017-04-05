@@ -22,18 +22,14 @@
  */
 
 @import 'base/variables';
-@import 'base/venders';
 @import 'base/mixins';
 @import 'base/icons';
+@import 'base/transitions';
 @import 'base/components';
 
 @import 'modules/global';
 @import 'modules/header';
 @import 'modules/sidebar';
-
-@import 'pages/login';
-@import 'pages/list';
-@import 'pages/error';
 
 
 // # Demo styles
