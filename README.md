@@ -131,8 +131,7 @@ $ yarn deploy
 
 ## Link
 
-- [commit: d399af](https://github.com/vuejs-templates/webpack/commit/d399afa403273862da2420881f01eba00aca47ae)
-- [compare: d399af](https://github.com/vuejs-templates/webpack/compare/d399afa403273862da2420881f01eba00aca47ae...master)
+- [Compare vs: f78054](https://github.com/vuejs-templates/webpack/compare/f78054e9d3d40fcf5ebf3224b6117c4a46d8c097...master)
 
 
 ## Packages
@@ -142,7 +141,7 @@ yarn add axios element-ui nprogress store vue vue-i18n vue-router vuex vuex-rout
 ```
 
 ```bash
-yarn add autoprefixer babel-core babel-eslint babel-loader babel-plugin-transform-runtime babel-preset-env babel-preset-stage-2 chalk compression-webpack-plugin connect-history-api-fallback copy-webpack-plugin css-loader eslint eslint-config-standard eslint-friendly-formatter eslint-loader eslint-plugin-html eslint-plugin-promise eslint-plugin-standard eventsource-polyfill express extract-text-webpack-plugin file-loader friendly-errors-webpack-plugin html-webpack-plugin http-proxy-middleware node-sass opn optimize-css-assets-webpack-plugin ora rimraf sass-loader semver url-loader vue-loader vue-style-loader vue-template-compiler webpack webpack-bundle-analyzer webpack-dev-middleware webpack-hot-middleware -D
+yarn add autoprefixer babel-core babel-eslint babel-loader babel-plugin-transform-runtime babel-preset-env babel-preset-stage-2 chalk compression-webpack-plugin connect-history-api-fallback copy-webpack-plugin css-loader eslint eslint-config-standard eslint-friendly-formatter eslint-loader eslint-plugin-html eslint-plugin-import eslint-plugin-node eslint-plugin-promise eslint-plugin-standard eventsource-polyfill express extract-text-webpack-plugin file-loader friendly-errors-webpack-plugin html-webpack-plugin http-proxy-middleware node-sass opn optimize-css-assets-webpack-plugin ora rimraf sass-loader semver url-loader vue-loader vue-style-loader vue-template-compiler webpack webpack-bundle-analyzer webpack-dev-middleware webpack-hot-middleware -D
 ```
 
 
