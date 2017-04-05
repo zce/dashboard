@@ -1,5 +1,5 @@
 <template>
-  <div class="inner">
+  <div>
     <div class="heading">
       <h1 class="title" v-if="selections.length">{{ selections.length }} 条被选中</h1>
       <h1 class="title" v-else>{{ posts.length }} 条{{ type }}</h1>

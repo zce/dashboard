@@ -4,13 +4,13 @@
 </docs>
 
 <template>
-  <div class="wrapper">
+  <div>
     <section class="login">
       <header class="login-header">
         <h1 class="brand"><router-link to="/" tabindex="-1">WEDN.NET</router-link></h1>
-        <el-alert :title="error.title" :description="error.message" v-if="error" class="alert" type="warning" show-icon/>
+        <el-alert v-if="error" :title="error.title" type="warning" :description="error.message" show-icon/>
       </header>
-      <el-form class="login-form" auto-complete="off" ref="login-form" label-position="top" :model="model" :rules="rules">
+      <el-form class="login-form" auto-complete="off" :model="model" :rules="rules" ref="login-form" label-position="top">
         <h2 class="heading">登录</h2>
         <el-form-item label="用户名" prop="username">
           <el-input type="text" v-model="model.username" placeholder="请输入用户名"/>

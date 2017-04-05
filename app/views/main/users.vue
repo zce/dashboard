@@ -1,5 +1,5 @@
 <template>
-  <div class="inner">
+  <div>
     <div class="heading">
       <h1 class="title" v-if="selections.length">{{ selections.length }}个被选中</h1>
       <h1 class="title" v-else>{{ total }}个用户</h1>
@@ -68,16 +68,19 @@
         search: '',
         sort: '',
         order: '',
-        filters: {}
+        filters: {},
+        loading: false
       }
     },
 
     created () {
-      this.loadData()
+      this.loadUsers()
     },
 
     methods: {
-      loadData () {
+      loadUsers () {
+        // toggle loading
+        this.loading = true
         // paginate
         const params = { _page: this.page, _limit: this.size }
         // sort
@@ -92,6 +95,8 @@
           .then(res => {
             this.users = res.data
             this.total = res.headers['x-total-count'] - 0
+            // toggle loading
+            this.loading = false
           })
           .catch(err => {
             console.error(err)
@@ -99,7 +104,7 @@
       },
 
       handleSearch () {
-        this.loadData()
+        this.loadUsers()
       },
 
       handleSelectionChange (value) {
@@ -113,18 +118,18 @@
       handleSortChange (e) {
         this.sort = e.prop
         if (e.order) this.order = e.order === 'ascending' ? 'ASC' : 'DESC'
-        this.loadData()
+        this.loadUsers()
         return false
       },
 
       handlePageSizeChange (value) {
         this.size = value
-        this.loadData()
+        this.loadUsers()
       },
 
       handleCurrentPageChange (value) {
         this.page = value
-        this.loadData()
+        this.loadUsers()
       }
     }
   }

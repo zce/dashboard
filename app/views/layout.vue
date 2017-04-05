@@ -1,11 +1,11 @@
 <template>
-  <div class="wrapper">
+  <div>
     <app-header/>
     <section class="main">
       <app-sidebar/>
       <main class="content">
         <transition name="content">
-          <router-view></router-view>
+          <router-view class="inner"></router-view>
         </transition>
       </main>
     </section>
@@ -13,12 +13,15 @@
 </template>
 
 <script>
-  import AppHeader from '../components/header'
-  import AppSidebar from '../components/sidebar'
+  import Header from '../components/header'
+  import Sidebar from '../components/sidebar'
 
   export default {
     name: 'layout',
     title: 'WEDN.NET | make IT better',
-    components: { AppHeader, AppSidebar }
+    components: {
+      'app-header': Header,
+      'app-sidebar': Sidebar
+    }
   }
 </script>

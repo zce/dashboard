@@ -1,5 +1,5 @@
 <template>
-  <div class="inner">
+  <div>
     <div class="heading">
       <h1 class="title">安装{{ title }}</h1>
     </div>

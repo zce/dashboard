@@ -1,6 +1,6 @@
 <template>
   <transition name="fade">
-    <router-view></router-view>
+    <router-view class="wrapper"></router-view>
   </transition>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="inner">
+  <div>
     <el-breadcrumb separator="/">
       <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
       <el-breadcrumb-item>组件</el-breadcrumb-item>
