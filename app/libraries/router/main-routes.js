@@ -68,7 +68,7 @@ export default [
   // - Users
   {
     name: 'users',
-    path: 'users',
+    path: 'users/:page?',
     meta: { requiresAuth: true },
     component: resolve => require.ensure([], () => resolve(require('views/main/users')), 'users')
   },

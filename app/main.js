@@ -9,7 +9,7 @@ import plugins from 'libraries/plugins'
 
 // ## Import styles
 // =========================
-import 'assets/styles/element.css'
+import '../node_modules/element-ui/lib/theme-default/index.css'
 import 'assets/styles/main.scss'
 
 // ## Use plugins
@@ -20,9 +20,10 @@ sync(store, router, { moduleName: 'route' })
 
 // ## Config
 // =========================
+Vue.config.debug = process.env.DEBUG_MODE
+Vue.config.silent = !process.env.DEBUG_MODE
 Vue.config.devtools = true
 Vue.config.productionTip = false
-Vue.config.debug = process.env.DEBUG_MODE
 
 // ## Initial
 // =========================

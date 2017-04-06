@@ -116,19 +116,19 @@ body {
           }
 
           > .search {
-            display: flex;
             flex: 1;
             margin: 0 1.25rem;
             border-left: .0625rem solid lighten($content-color, 50%);
 
             &::before {
-              margin: .3125rem .625rem;
+              display: inline-block;
+              padding: .375rem .625rem;
               color: $content-color;
               opacity: .6;
             }
 
             input {
-              flex: 1;
+              width: 30%;
               padding: .25rem .3rem;
               background: transparent;
               border: 0;
@@ -136,9 +136,10 @@ body {
               border-radius: 0;
               color: lighten($content-color, 20%);
               font-size: .875rem;
-              transition: border-bottom .2s;
+              transition: border-bottom .2s ease, width .3s ease;
 
               &:focus {
+                width: 90%;
                 border-bottom-color: lighten($content-color, 40%);
                 outline: 0;
               }
