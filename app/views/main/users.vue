@@ -28,7 +28,7 @@
           </div>
         </template>
       </el-table-column>
-      <el-table-column label="状态" width="100" align="center" :filters="filters.status">
+      <el-table-column prop="status" label="状态" width="100" align="center" :filters="filters.status" column-key="status">
         <template scope="scope">
           <i class="status status-primary" title="已激活" v-if="scope.row.status === 'activated'"></i>
           <i class="status status-warning" title="邮箱未激活" v-else-if="scope.row.status === 'email-unactivated'"></i>
@@ -38,7 +38,7 @@
       </el-table-column>
       <el-table-column prop="email" label="邮箱" width="200" sortable="custom"></el-table-column>
       <el-table-column prop="phone" label="手机" width="140" sortable="custom"></el-table-column>
-      <el-table-column label="角色" width="240" :filters="filters.roles">
+      <el-table-column prop="roles" label="角色" width="240" :filters="filters.roles" column-key="roles">
         <template scope="scope">{{ scope.row.roles.toString() }}</template>
       </el-table-column>
     </el-table>
@@ -116,7 +116,25 @@
           })
       },
 
-      handleSearch () {
+      handleCurrentPageChange (page) {
+        this.page = page
+        this.loadUsers()
+      },
+
+      handlePageSizeChange (size) {
+        this.size = size
+        this.loadUsers()
+      },
+
+      handleSortChange (e) {
+        this.sort = e.prop
+        if (e.order) this.order = e.order === 'ascending' ? 'ASC' : 'DESC'
+        this.loadUsers()
+      },
+
+      // TODO
+      handleFilterChange (filter) {
+        Object.assign(this.filter, filter)
         this.loadUsers()
       },
 
@@ -125,25 +143,7 @@
         this.selections = value
       },
 
-      // TODO
-      handleFilterChange (value) {
-        console.log(value)
-      },
-
-      handleSortChange (e) {
-        this.sort = e.prop
-        if (e.order) this.order = e.order === 'ascending' ? 'ASC' : 'DESC'
-        this.loadUsers()
-        return false
-      },
-
-      handlePageSizeChange (value) {
-        this.size = value
-        this.loadUsers()
-      },
-
-      handleCurrentPageChange (value) {
-        this.page = value
+      handleSearch () {
         this.loadUsers()
       }
     }

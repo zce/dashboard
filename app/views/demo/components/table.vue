@@ -3,12 +3,12 @@
     <div class="heading">
       <h1 class="title">表格</h1>
     </div>
-    <el-table :data="temp" @selection-change="handleSelectionChange">
+    <el-table :data="temp" @selection-change="handleSelectionChange" @filter-change="handleFilterChange">
       <el-table-column type="selection"></el-table-column>
       <el-table-column label="日期" width="160">
         <template scope="scope">{{ scope.row.date }}</template>
       </el-table-column>
-      <el-table-column prop="name" label="姓名" width="160"></el-table-column>
+      <el-table-column prop="name" label="姓名" width="160" :filters="[{ text: '汪磊', value: '汪磊' }, { text: '汪子文', value: '汪子文' }]"></el-table-column>
       <el-table-column prop="address" label="地址" show-overflow-tooltip></el-table-column>
     </el-table>
   </div>
@@ -36,6 +36,9 @@
     methods: {
       handleSelectionChange (value) {
         this.multipleSelection = value
+      },
+      handleFilterChange (value) {
+        console.log(value)
       }
     }
   }
