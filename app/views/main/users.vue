@@ -5,9 +5,9 @@
       <h1 class="title" v-else>{{ selections.length }}个被选中</h1>
       <transition name="fade">
         <ul class="action" v-show="selections.length">
-          <li><a href="#" class="icon-before icon-checkmark"></a></li>
-          <li><a href="#" class="icon-before icon-blocked"></a></li>
-          <li><a href="#" class="icon-before icon-bin"></a></li>
+          <li><a href="#" class="icon-before icon-checkmark" @click="handleToggleSelection(true)"></a></li>
+          <li><a href="#" class="icon-before icon-blocked" @click="handleToggleSelection(false)"></a></li>
+          <li><a href="#" class="icon-before icon-bin" @click="handleDeleteSelection"></a></li>
         </ul>
       </transition>
       <form class="search icon-before icon-search" @submit.prevent="handleSearch">
@@ -30,16 +30,18 @@
       </el-table-column>
       <el-table-column prop="status" label="状态" width="100" align="center" :filters="filters.status" column-key="status">
         <template scope="scope">
-          <i class="status status-primary" title="已激活" v-if="scope.row.status === 'activated'"></i>
+          <i class="status status-primary" title="已激活，点击禁用" v-if="scope.row.status === 'activated'" @click="handleToggleStatus(scope.row)"></i>
           <i class="status status-warning" title="邮箱未激活" v-else-if="scope.row.status === 'email-unactivated'"></i>
           <i class="status status-warning" title="手机未激活" v-else-if="scope.row.status === 'phone-unactivated'"></i>
-          <i class="status status-danger" title="已禁用" v-else-if="scope.row.status === 'forbidden'"></i>
+          <i class="status status-danger" title="已禁用，点击激活" v-else-if="scope.row.status === 'forbidden'" @click="handleToggleStatus(scope.row)"></i>
         </template>
       </el-table-column>
       <el-table-column prop="email" label="邮箱" width="200" sortable="custom"></el-table-column>
       <el-table-column prop="phone" label="手机" width="140" sortable="custom"></el-table-column>
       <el-table-column prop="roles" label="角色" width="240" :filters="filters.roles" column-key="roles">
-        <template scope="scope">{{ scope.row.roles.toString() }}</template>
+        <template scope="scope">
+          <el-tag type="success" v-for="item in scope.row.roles" :key="item">{{ item }}</el-tag>
+        </template>
       </el-table-column>
     </el-table>
     <el-pagination :total="total" :page-size="size" :current-page="page" :page-sizes="[20, 30, 50]" layout="total, sizes, prev, pager, next" @size-change="handlePageSizeChange" @current-change="handleCurrentPageChange"></el-pagination>
@@ -132,19 +134,39 @@
         this.loadUsers()
       },
 
-      // TODO
       handleFilterChange (filter) {
         Object.assign(this.filter, filter)
         this.loadUsers()
       },
 
+      handleSearch () {
+        this.loadUsers()
+      },
+
+      handleToggleStatus (item) {
+        const targetStatus = item.status === 'forbidden' ? 'activated' : 'forbidden'
+        this.$services.user
+          .patch(item.id, { status: targetStatus })
+          .then(res => Object.assign(item, res.data))
+      },
+
+      handleDeleteSelection () {
+        this.$confirm('此操作将永久删除选中用户, 是否继续?')
+          .then(() => this.selections.map(item => this.$services.user.delete(item.id)))
+          .then(() => this.loadUsers())
+          .catch(e => console.info(e))
+      },
+
+      handleToggleSelection (enable) {
+        const targetStatus = enable ? 'activated' : 'forbidden'
+        this.selections.forEach(item => this.$services.user
+          .patch(item.id, { status: targetStatus })
+          .then(res => Object.assign(item, res.data)))
+      },
+
       // TODO
       handleSelectionChange (value) {
         this.selections = value
-      },
-
-      handleSearch () {
-        this.loadUsers()
       }
     }
   }
@@ -154,6 +176,10 @@
   .el-pagination {
     margin: 1rem 0 2rem;
     text-align: right;
+  }
+
+  .el-tag {
+    margin: 0 .0625rem;
   }
 
   .user-info {
