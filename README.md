@@ -17,6 +17,11 @@
 > A dashboard scaffolding based on vue.js inspired by [vuejs-templates/webpack](https://github.com/vuejs-templates/webpack).
 
 
+## Preview
+
+![WEDN.NET Dashboard](static/preview.png)
+
+
 ## Online demo
 
 [http://dashboard.micua.com](http://dashboard.micua.com)
