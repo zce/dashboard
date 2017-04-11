@@ -29,33 +29,11 @@
 > - username: zce
 > - password: wanglei
 
+### API Server
 
-## Environment
+[http://jsonplaceholder.micua.com](http://jsonplaceholder.micua.com)
 
-- [Node](https://nodejs.org/) >= 6.0.0
-- [Yarn](https://yarnpkg.com/) >= 0.20.0
-- [NPM](https://www.npmjs.com/) >= 3.0.0
-
-
-## Stacks
-
-- [Vue](http://vuejs.org/)
-- [Vuex](https://github.com/vuejs/vuex)
-- [Vue Router](https://github.com/vuejs/vue-router)
-- [Vue I18n](https://github.com/kazupon/vue-i18n)
-- ~~[Vue Resource](https://github.com/pagekit/vue-resource)~~
-- [Axios](https://github.com/mzabriskie/axios)
-- [Element UI](https://github.com/ElemeFE/element)
-- [NProgress](https://github.com/rstacruz/nprogress)
-- [Webpack](https://webpack.js.org/)
-- [Vue Loader](http://vuejs.github.io/vue-loader)
-- [Babel](https://babeljs.io/)
-- [Sass](http://sass-lang.com/)
-- [JSON Server](https://github.com/typicode/json-server)
-- [Mock](http://mockjs.com/)
-- [ESLint](http://eslint.org/)
-- [EditorConfig](http://editorconfig.org/)
-- [Travis CI](https://travis-ci.org/)
+Source: [zce/api-server](https://github.com/zce/api-server)
 
 
 ## Clone Repo
@@ -63,6 +41,9 @@
 ```bash
 # clone
 $ git clone https://github.com/zce/dashboard.git
+
+# api server
+$ git clone https://github.com/zce/api-server.git
 
 # submodule
 $ git submodule init && git submodule update
@@ -110,6 +91,34 @@ $ yarn deploy
 ```
 
 
+## Environment
+
+- [Node](https://nodejs.org/) >= 6.0.0
+- [Yarn](https://yarnpkg.com/) >= 0.20.0
+- [NPM](https://www.npmjs.com/) >= 3.0.0
+
+
+## Stacks
+
+- [Vue](http://vuejs.org/)
+- [Vuex](https://github.com/vuejs/vuex)
+- [Vue Router](https://github.com/vuejs/vue-router)
+- [Vue I18n](https://github.com/kazupon/vue-i18n)
+- ~~[Vue Resource](https://github.com/pagekit/vue-resource)~~
+- [Axios](https://github.com/mzabriskie/axios)
+- [Element UI](https://github.com/ElemeFE/element)
+- [NProgress](https://github.com/rstacruz/nprogress)
+- [Webpack](https://webpack.js.org/)
+- [Vue Loader](http://vuejs.github.io/vue-loader)
+- [Babel](https://babeljs.io/)
+- [Sass](http://sass-lang.com/)
+- [JSON Server](https://github.com/typicode/json-server)
+- [Mock](http://mockjs.com/)
+- [ESLint](http://eslint.org/)
+- [EditorConfig](http://editorconfig.org/)
+- [Travis CI](https://travis-ci.org/)
+
+
 ## Todos
 
 - [x] Restructure config file
@@ -138,6 +147,7 @@ $ yarn deploy
 - [Compare vs: f78054](https://github.com/vuejs-templates/webpack/compare/f78054e9d3d40fcf5ebf3224b6117c4a46d8c097...master)
 
 
+<!--
 ## Packages
 
 ```bash
@@ -147,6 +157,7 @@ yarn add axios element-ui nprogress store vue vue-i18n vue-router vuex vuex-rout
 ```bash
 yarn add autoprefixer babel-core babel-eslint babel-loader babel-plugin-transform-runtime babel-preset-env babel-preset-stage-2 chalk compression-webpack-plugin connect-history-api-fallback copy-webpack-plugin css-loader eslint eslint-config-standard eslint-friendly-formatter eslint-loader eslint-plugin-html eslint-plugin-import eslint-plugin-node eslint-plugin-promise eslint-plugin-standard eventsource-polyfill express extract-text-webpack-plugin file-loader friendly-errors-webpack-plugin html-webpack-plugin http-proxy-middleware node-sass opn optimize-css-assets-webpack-plugin ora rimraf sass-loader semver url-loader vue-loader vue-style-loader vue-template-compiler webpack webpack-bundle-analyzer webpack-dev-middleware webpack-hot-middleware -D
 ```
+-->
 
 
 ## License
