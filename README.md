@@ -113,16 +113,15 @@ $ yarn deploy
 ## Todos
 
 - [x] Restructure config file
-- [x] Remove unused package
-- [x] Try iView UI
-- [x] Element UI theme
+- [x] Remove unused packages
+- [x] Custom Element UI theme
 - [x] All pages structure
-- [x] Mock || JSON Server
+- [x] JSON Server
 - [x] Global state
-- [x] List table
+- [x] Table demo
 - [x] Login module
-- [x] Restructure libs
-- [x] Axios resource
+- [x] Restructure libs code
+- [x] vue-resource -> Axios
 - [ ] Options module
 - [ ] Users module
 - [ ] Media module
