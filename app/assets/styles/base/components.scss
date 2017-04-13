@@ -29,3 +29,7 @@
     background: $info;
   }
 }
+
+.nprogress-busy * {
+  cursor: wait !important;
+}
