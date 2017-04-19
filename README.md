@@ -144,7 +144,7 @@ $ yarn deploy
 
 ## Link
 
-- [Compare vs: f78054](https://github.com/vuejs-templates/webpack/compare/f78054e9d3d40fcf5ebf3224b6117c4a46d8c097...master)
+- [Compare vs: 2e7aad](https://github.com/vuejs-templates/webpack/compare/2e7aad5a3f9ebf1c249a68ca1a8fbd6ebeac5bcc...master)
 
 
 ## License

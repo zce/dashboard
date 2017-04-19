@@ -62,7 +62,7 @@ module.exports = {
   // Before setting to `true`, make sure to:
   // npm install --save-dev compression-webpack-plugin
   gzip: {
-    enable: false,
+    enable: true,
     extensions: ['js', 'css', 'ttf', 'woff', 'svg']
   },
   // Run the build command with an extra argument to
