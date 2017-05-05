@@ -170,9 +170,9 @@ async-foreach@^0.1.3:
   version "0.1.3"
   resolved "http://registry.npm.taobao.org/async-foreach/download/async-foreach-0.1.3.tgz#36121f845c0578172de419a97dbeb1d16ec34542"
 
-async-validator@^1.6.6:
-  version "1.6.8"
-  resolved "http://registry.npm.taobao.org/async-validator/download/async-validator-1.6.8.tgz#fbaaa9002b41066fdf3ba21d8a4ca8b1179ad36b"
+async-validator@^1.6.9:
+  version "1.6.9"
+  resolved "http://registry.npm.taobao.org/async-validator/download/async-validator-1.6.9.tgz#a8309daa8b83421cdbd4628e026d6abb25192d34"
 
 async@0.2.x:
   version "0.2.10"
@@ -245,14 +245,14 @@ babel-core@^6.24.1:
     slash "^1.0.0"
     source-map "^0.5.0"
 
-babel-eslint@^7.2.2:
-  version "7.2.2"
-  resolved "http://registry.npm.taobao.org/babel-eslint/download/babel-eslint-7.2.2.tgz#0da2cbe6554fd0fb069f19674f2db2f9c59270ff"
+babel-eslint@^7.2.3:
+  version "7.2.3"
+  resolved "http://registry.npm.taobao.org/babel-eslint/download/babel-eslint-7.2.3.tgz#b2fe2d80126470f5c19442dc757253a897710827"
   dependencies:
     babel-code-frame "^6.22.0"
     babel-traverse "^6.23.1"
     babel-types "^6.23.0"
-    babylon "^6.16.1"
+    babylon "^6.17.0"
 
 babel-generator@^6.24.1:
   version "6.24.1"
@@ -389,14 +389,13 @@ babel-helpers@^6.24.1:
     babel-runtime "^6.22.0"
     babel-template "^6.24.1"
 
-babel-loader@^6.4.1:
-  version "6.4.1"
-  resolved "http://registry.npm.taobao.org/babel-loader/download/babel-loader-6.4.1.tgz#0b34112d5b0748a8dcdbf51acf6f9bd42d50b8ca"
+babel-loader@^7.0.0:
+  version "7.0.0"
+  resolved "http://registry.npm.taobao.org/babel-loader/download/babel-loader-7.0.0.tgz#2e43a66bee1fff4470533d0402c8a4532fafbaf7"
   dependencies:
     find-cache-dir "^0.1.1"
-    loader-utils "^0.2.16"
+    loader-utils "^1.0.2"
     mkdirp "^0.5.1"
-    object-assign "^4.0.1"
 
 babel-messages@^6.23.0:
   version "6.23.0"
@@ -784,9 +783,13 @@ babel-types@^6.19.0, babel-types@^6.23.0, babel-types@^6.24.1:
     lodash "^4.2.0"
     to-fast-properties "^1.0.1"
 
-babylon@^6.11.0, babylon@^6.15.0, babylon@^6.16.1:
+babylon@^6.11.0:
   version "6.16.1"
   resolved "http://registry.npm.taobao.org/babylon/download/babylon-6.16.1.tgz#30c5a22f481978a9e7f8cdfdf496b11d94b404d3"
+
+babylon@^6.15.0, babylon@^6.17.0:
+  version "6.17.0"
+  resolved "http://registry.npm.taobao.org/babylon/download/babylon-6.17.0.tgz#37da948878488b9c4e3c4038893fa3314b3fc932"
 
 balanced-match@^0.4.1, balanced-match@^0.4.2:
   version "0.4.2"
@@ -1325,9 +1328,9 @@ css-color-names@0.0.4:
   version "0.0.4"
   resolved "http://registry.npm.taobao.org/css-color-names/download/css-color-names-0.0.4.tgz#808adc2e79cf84738069b646cb20ec27beb629e0"
 
-css-loader@^0.28.0:
-  version "0.28.0"
-  resolved "http://registry.npm.taobao.org/css-loader/download/css-loader-0.28.0.tgz#417cfa9789f8cde59a30ccbf3e4da7a806889bad"
+css-loader@^0.28.1:
+  version "0.28.1"
+  resolved "http://registry.npm.taobao.org/css-loader/download/css-loader-0.28.1.tgz#220325599f8f00452d9ceb4c3ca6c8a66798642d"
   dependencies:
     babel-code-frame "^6.11.0"
     css-selector-tokenizer "^0.7.0"
@@ -1340,6 +1343,7 @@ css-loader@^0.28.0:
     postcss-modules-local-by-default "^1.0.1"
     postcss-modules-scope "^1.0.0"
     postcss-modules-values "^1.1.0"
+    postcss-value-parser "^3.3.0"
     source-list-map "^0.1.7"
 
 css-select@^1.1.0:
@@ -1633,11 +1637,11 @@ electron-to-chromium@^1.2.7:
   version "1.3.4"
   resolved "http://registry.npm.taobao.org/electron-to-chromium/download/electron-to-chromium-1.3.4.tgz#e51769c0cf550e0cf5aedf6aa2b803a264b3a900"
 
-element-ui@^1.2.8:
-  version "1.2.8"
-  resolved "http://registry.npm.taobao.org/element-ui/download/element-ui-1.2.8.tgz#aa95bde8ad550d17b23b2a73ae84cfa1f0c2635d"
+element-ui@^1.3.0:
+  version "1.3.0"
+  resolved "http://registry.npm.taobao.org/element-ui/download/element-ui-1.3.0.tgz#ca8e2783f10dfbeded90f09b0a25e65a0d856519"
   dependencies:
-    async-validator "^1.6.6"
+    async-validator "^1.6.9"
     babel-helper-vue-jsx-merge-props "^2.0.0"
     deepmerge "^1.2.0"
     throttle-debounce "^1.0.1"
@@ -1890,10 +1894,6 @@ espree@^3.4.0:
 esprima@^2.6.0:
   version "2.7.3"
   resolved "http://registry.npm.taobao.org/esprima/download/esprima-2.7.3.tgz#96e3b70d5779f6ad49cd032673d1c312767ba581"
-
-esprima@^3.1.1:
-  version "3.1.3"
-  resolved "http://registry.npm.taobao.org/esprima/download/esprima-3.1.3.tgz#fdca51cee6133895e3c88d535ce49dbff62a4633"
 
 esquery@^1.0.0:
   version "1.0.0"
@@ -2713,6 +2713,10 @@ is-utf8@^0.2.0:
   version "0.2.1"
   resolved "http://registry.npm.taobao.org/is-utf8/download/is-utf8-0.2.1.tgz#4b0da1442104d1b336340e80797e865cf39f7d72"
 
+is-wsl@^1.1.0:
+  version "1.1.0"
+  resolved "http://registry.npm.taobao.org/is-wsl/download/is-wsl-1.1.0.tgz#1f16e4aa22b04d1336b66188a66af3c600c3a66d"
+
 isarray@0.0.1:
   version "0.0.1"
   resolved "http://registry.npm.taobao.org/isarray/download/isarray-0.0.1.tgz#8a18acfca9a8f4177e09abfc6038939b05d1eedf"
@@ -2762,14 +2766,7 @@ js-tokens@^3.0.0:
   version "3.0.1"
   resolved "http://registry.npm.taobao.org/js-tokens/download/js-tokens-3.0.1.tgz#08e9f132484a2c45a30907e9dc4d5567b7f114d7"
 
-js-yaml@^3.4.3, js-yaml@^3.5.1:
-  version "3.8.3"
-  resolved "http://registry.npm.taobao.org/js-yaml/download/js-yaml-3.8.3.tgz#33a05ec481c850c8875929166fe1beb61c728766"
-  dependencies:
-    argparse "^1.0.7"
-    esprima "^3.1.1"
-
-js-yaml@~3.7.0:
+js-yaml@^3.4.3, js-yaml@^3.5.1, js-yaml@~3.7.0:
   version "3.7.0"
   resolved "http://registry.npm.taobao.org/js-yaml/download/js-yaml-3.7.0.tgz#5c967ddd837a9bfdca5f2de84253abe8a1c03b80"
   dependencies:
@@ -3361,12 +3358,11 @@ opener@^1.4.3:
   version "1.4.3"
   resolved "http://registry.npm.taobao.org/opener/download/opener-1.4.3.tgz#5c6da2c5d7e5831e8ffa3964950f8d6674ac90b8"
 
-opn@^4.0.2:
-  version "4.0.2"
-  resolved "http://registry.npm.taobao.org/opn/download/opn-4.0.2.tgz#7abc22e644dff63b0a96d5ab7f2790c0f01abc95"
+opn@^5.0.0:
+  version "5.0.0"
+  resolved "http://registry.npm.taobao.org/opn/download/opn-5.0.0.tgz#f8870d7cd969b218030cb6ce5a1285e795931df3"
   dependencies:
-    object-assign "^4.0.1"
-    pinkie-promise "^2.0.0"
+    is-wsl "^1.1.0"
 
 optimize-css-assets-webpack-plugin@^1.3.1:
   version "1.3.1"
@@ -4129,7 +4125,13 @@ resolve-from@^1.0.0:
   version "1.0.1"
   resolved "http://registry.npm.taobao.org/resolve-from/download/resolve-from-1.0.1.tgz#26cbfe935d1aeeeabb29bc3fe5aeb01e93d44226"
 
-resolve@^1.1.6, resolve@^1.1.7:
+resolve@^1.1.6, resolve@^1.3.3:
+  version "1.3.3"
+  resolved "http://registry.npm.taobao.org/resolve/download/resolve-1.3.3.tgz#655907c3469a8680dc2de3a275a8fdd69691f0e5"
+  dependencies:
+    path-parse "^1.0.5"
+
+resolve@^1.1.7:
   version "1.3.2"
   resolved "http://registry.npm.taobao.org/resolve/download/resolve-1.3.2.tgz#1f0442c9e0cbb8136e87b9305f932f46c7f28235"
   dependencies:
@@ -4703,17 +4705,17 @@ vm-browserify@0.0.4:
   dependencies:
     indexof "0.0.1"
 
-vue-hot-reload-api@^2.0.11:
+vue-hot-reload-api@^2.1.0:
   version "2.1.0"
   resolved "http://registry.npm.taobao.org/vue-hot-reload-api/download/vue-hot-reload-api-2.1.0.tgz#9ca58a6e0df9078554ce1708688b6578754d86de"
 
-vue-i18n@^6.1.0:
-  version "6.1.0"
-  resolved "http://registry.npm.taobao.org/vue-i18n/download/vue-i18n-6.1.0.tgz#1c2607c411a1a5a12b2154592e4b28eabce7f33a"
+vue-i18n@^6.1.1:
+  version "6.1.1"
+  resolved "http://registry.npm.taobao.org/vue-i18n/download/vue-i18n-6.1.1.tgz#6481915c59f16692b5f4bd8681afdce62492570c"
 
-vue-loader@^11.3.4:
-  version "11.3.4"
-  resolved "http://registry.npm.taobao.org/vue-loader/download/vue-loader-11.3.4.tgz#65e10a44ce092d906e14bbc72981dec99eb090d2"
+vue-loader@^12.0.3:
+  version "12.0.3"
+  resolved "http://registry.npm.taobao.org/vue-loader/download/vue-loader-12.0.3.tgz#78d9c500f36a2e400ca61a1dbad45dc91897b24c"
   dependencies:
     consolidate "^0.14.0"
     hash-sum "^1.0.2"
@@ -4723,32 +4725,26 @@ vue-loader@^11.3.4:
     postcss "^5.0.21"
     postcss-load-config "^1.1.0"
     postcss-selector-parser "^2.0.0"
+    resolve "^1.3.3"
     source-map "^0.5.6"
-    vue-hot-reload-api "^2.0.11"
-    vue-style-loader "^2.0.0"
+    vue-hot-reload-api "^2.1.0"
+    vue-style-loader "^3.0.0"
     vue-template-es2015-compiler "^1.2.2"
 
-vue-router@^2.4.0:
-  version "2.4.0"
-  resolved "http://registry.npm.taobao.org/vue-router/download/vue-router-2.4.0.tgz#56a635e1434a1966ac095f2a485bebdcfc36cec5"
+vue-router@^2.5.3:
+  version "2.5.3"
+  resolved "http://registry.npm.taobao.org/vue-router/download/vue-router-2.5.3.tgz#073783f564b6aece6c8a59c63e298dc2aabfb51b"
 
-vue-style-loader@^2.0.0:
-  version "2.0.5"
-  resolved "http://registry.npm.taobao.org/vue-style-loader/download/vue-style-loader-2.0.5.tgz#f0efac992febe3f12e493e334edb13cd235a3d22"
+vue-style-loader@^3.0.0, vue-style-loader@^3.0.1:
+  version "3.0.1"
+  resolved "http://registry.npm.taobao.org/vue-style-loader/download/vue-style-loader-3.0.1.tgz#c8b639bb2f24baf9d78274dc17e4f264c1deda08"
   dependencies:
     hash-sum "^1.0.2"
     loader-utils "^1.0.2"
 
-vue-style-loader@^3.0.0:
-  version "3.0.0"
-  resolved "http://registry.npm.taobao.org/vue-style-loader/download/vue-style-loader-3.0.0.tgz#edeaee3b529d5796ef0b01bb7142a8a7e0025353"
-  dependencies:
-    hash-sum "^1.0.2"
-    loader-utils "^1.0.2"
-
-vue-template-compiler@^2.2.6:
-  version "2.2.6"
-  resolved "http://registry.npm.taobao.org/vue-template-compiler/download/vue-template-compiler-2.2.6.tgz#2e2928daf0cd0feca9dfc35a9729adeae173ec68"
+vue-template-compiler@^2.3.2:
+  version "2.3.2"
+  resolved "http://registry.npm.taobao.org/vue-template-compiler/download/vue-template-compiler-2.3.2.tgz#d48a7f53df5f497033827182ceb4f0d340803017"
   dependencies:
     de-indent "^1.0.2"
     he "^1.1.0"
@@ -4757,9 +4753,9 @@ vue-template-es2015-compiler@^1.2.2:
   version "1.5.2"
   resolved "http://registry.npm.taobao.org/vue-template-es2015-compiler/download/vue-template-es2015-compiler-1.5.2.tgz#a0a6c50c941d2a4abda963f2f42c337ac450ee95"
 
-vue@^2.2.6:
-  version "2.2.6"
-  resolved "http://registry.npm.taobao.org/vue/download/vue-2.2.6.tgz#451714b394dd6d4eae7b773c40c2034a59621aed"
+vue@^2.3.2:
+  version "2.3.2"
+  resolved "http://registry.npm.taobao.org/vue/download/vue-2.3.2.tgz#9e52aae3593480be235ff227557837e69f98203a"
 
 vuex-router-sync@^4.1.2:
   version "4.1.2"
@@ -4792,9 +4788,9 @@ webpack-bundle-analyzer@^2.4.0:
     mkdirp "^0.5.1"
     opener "^1.4.3"
 
-webpack-dev-middleware@^1.10.1:
-  version "1.10.1"
-  resolved "http://registry.npm.taobao.org/webpack-dev-middleware/download/webpack-dev-middleware-1.10.1.tgz#c6b4cf428139cf1aefbe06a0c00fdb4f8da2f893"
+webpack-dev-middleware@^1.10.2:
+  version "1.10.2"
+  resolved "http://registry.npm.taobao.org/webpack-dev-middleware/download/webpack-dev-middleware-1.10.2.tgz#2e252ce1dfb020dbda1ccb37df26f30ab014dbd1"
   dependencies:
     memory-fs "~0.4.1"
     mime "^1.3.4"
@@ -4824,9 +4820,9 @@ webpack-sources@^0.2.3:
     source-list-map "^1.1.1"
     source-map "~0.5.3"
 
-webpack@^2.4.1:
-  version "2.4.1"
-  resolved "http://registry.npm.taobao.org/webpack/download/webpack-2.4.1.tgz#15a91dbe34966d8a4b99c7d656efd92a2e5a6f6a"
+webpack@^2.5.0:
+  version "2.5.0"
+  resolved "http://registry.npm.taobao.org/webpack/download/webpack-2.5.0.tgz#5a17089f8d0e43442e606d6cf9b2a146c8ed9911"
   dependencies:
     acorn "^5.0.0"
     acorn-dynamic-import "^2.0.0"
