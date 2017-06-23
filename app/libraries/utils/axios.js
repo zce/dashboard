@@ -14,7 +14,7 @@ import axios from 'axios'
 const instance = axios.create({
   // // TODO: full base url
   // baseURL: '//localhost:2080/api/',
-  baseURL: '//jsonplaceholder.micua.com/',
+  baseURL: '//jsonplaceholder.uieee.com/',
   timeout: 3000,
   headers: {
     // 'X-Custom-Header': 'foobar',

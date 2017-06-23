@@ -23,21 +23,21 @@
 
 ## Online demo
 
-[http://dashboard.micua.com](http://dashboard.micua.com)
+[http://dashboard.uieee.com](http://dashboard.uieee.com)
 
 > - username: zce
 > - password: wanglei
 
 ### API Server
 
-[http://jsonplaceholder.micua.com](http://jsonplaceholder.micua.com)
+[http://jsonplaceholder.uieee.com](http://jsonplaceholder.uieee.com)
 
 Source: [zce/api-server](https://github.com/zce/api-server)
 
 
 ## Clone Repo
 
-```bash
+```shell
 # clone
 $ git clone https://github.com/zce/dashboard.git
 
@@ -51,7 +51,7 @@ $ git submodule init && git submodule update
 
 ## Build Setup
 
-``` bash
+```shell
 # install dependencies
 $ npm install
 
@@ -70,7 +70,7 @@ $ npm run deploy
 
 or yarn
 
-``` bash
+```shell
 # install dependencies
 $ yarn
 
@@ -143,7 +143,7 @@ $ yarn deploy
 
 ## Link
 
-- [Compare vs: 2e7aad](https://github.com/vuejs-templates/webpack/compare/2e7aad5a3f9ebf1c249a68ca1a8fbd6ebeac5bcc...master)
+- [Compare vs: 2e7aad](https://github.com/vuejs-templates/webpack/compare/8563cdb8d8d1e4abaef64f7695697b70957b9490...master)
 
 
 ## License
@@ -154,11 +154,11 @@ $ yarn deploy
 <!--
 ## Packages
 
-```bash
+```shell
 yarn add axios element-ui nprogress store vue vue-i18n vue-router vuex vuex-router-sync -S
 ```
 
-```bash
+```shell
 yarn add autoprefixer babel-core babel-eslint babel-loader babel-plugin-transform-runtime babel-preset-env babel-preset-stage-2 chalk compression-webpack-plugin connect-history-api-fallback copy-webpack-plugin css-loader eslint eslint-config-standard eslint-friendly-formatter eslint-loader eslint-plugin-html eslint-plugin-import eslint-plugin-node eslint-plugin-promise eslint-plugin-standard eventsource-polyfill express extract-text-webpack-plugin file-loader friendly-errors-webpack-plugin html-webpack-plugin http-proxy-middleware node-sass opn optimize-css-assets-webpack-plugin ora rimraf sass-loader semver url-loader vue-loader vue-style-loader vue-template-compiler webpack webpack-bundle-analyzer webpack-dev-middleware webpack-hot-middleware -D
 ```
 -->

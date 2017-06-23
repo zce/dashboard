@@ -15,10 +15,10 @@ export const createToken = ({ commit }, { username, password }) => {
     username: username.trim(),
     password: password.trim()
   })
-  .then(res => {
-    commit('CHANGE_SESSION', { token: res.data.token })
-    return res.data.token
-  })
+    .then(res => {
+      commit('CHANGE_SESSION', { token: res.data.token })
+      return res.data.token
+    })
 }
 
 /**
