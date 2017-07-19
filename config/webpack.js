@@ -41,7 +41,8 @@ module.exports = {
         loader: 'vue-loader',
         exclude: /node_modules/,
         options: {
-          loaders: utils.cssLoaders(config.isProduction)
+          loaders: utils.cssLoaders(config.isProduction),
+          preserveWhitespace: false
         }
       },
       {
@@ -119,6 +120,7 @@ if (config.isProduction) {
     new OptimizeCSSPlugin({
       cssProcessorOptions: { safe: true }
     }),
+    new webpack.optimize.ModuleConcatenationPlugin(),
     // split vendor js into its own file
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',

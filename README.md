@@ -143,22 +143,10 @@ $ yarn deploy
 
 ## Link
 
-- [Compare vs: 2e7aad](https://github.com/vuejs-templates/webpack/compare/8563cdb8d8d1e4abaef64f7695697b70957b9490...master)
+- [Compare vs: db40d7](https://github.com/vuejs-templates/webpack/compare/db40d7f5af18ca1b7c30cc7691dfe54831e427e5...master)
 
 
 ## License
 
 [MIT](LICENSE) &copy; [汪磊](http://github.com/zce) & [WEDN.NET](http://wedn.net)
 
-
-<!--
-## Packages
-
-```shell
-yarn add axios element-ui nprogress store vue vue-i18n vue-router vuex vuex-router-sync -S
-```
-
-```shell
-yarn add autoprefixer babel-core babel-eslint babel-loader babel-plugin-transform-runtime babel-preset-env babel-preset-stage-2 chalk compression-webpack-plugin connect-history-api-fallback copy-webpack-plugin css-loader eslint eslint-config-standard eslint-friendly-formatter eslint-loader eslint-plugin-html eslint-plugin-import eslint-plugin-node eslint-plugin-promise eslint-plugin-standard eventsource-polyfill express extract-text-webpack-plugin file-loader friendly-errors-webpack-plugin html-webpack-plugin http-proxy-middleware node-sass opn optimize-css-assets-webpack-plugin ora rimraf sass-loader semver url-loader vue-loader vue-style-loader vue-template-compiler webpack webpack-bundle-analyzer webpack-dev-middleware webpack-hot-middleware -D
-```
--->
