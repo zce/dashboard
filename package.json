@@ -5,11 +5,12 @@
   "author": "iceStone <ice@wedn.net> (https://github.com/zce)",
   "private": true,
   "scripts": {
+    "preinstall": "git submodule init && git submodule update",
     "lint": "eslint . --ext .js,.vue --format 'node_modules/eslint-friendly-formatter'",
     "prebuild": "yarn run lint || npm run lint",
     "build": "node task/build.js",
     "predeploy": "yarn run build || npm run build",
-    "deploy": "node task/deploy.js",
+    "deploy": "gh-pages -d dist",
     "dev": "node task/dev-server.js",
     "start": "node task/dist-server.js"
   },
@@ -51,6 +52,7 @@
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^0.11.2",
     "friendly-errors-webpack-plugin": "^1.6.1",
+    "gh-pages": "^1.0.0",
     "html-webpack-plugin": "^2.29.0",
     "http-proxy-middleware": "^0.17.4",
     "node-sass": "^4.5.3",
