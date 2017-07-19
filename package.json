@@ -2,7 +2,7 @@
   "name": "dashboard",
   "version": "0.1.0",
   "description": "A dashboard template based on vue.js",
-  "author": "iceStone <ice@wedn.net> (https://github.com/zce)",
+  "author": "zce <w@zce.me> (https://zce.me)",
   "private": true,
   "scripts": {
     "preinstall": "git submodule init && git submodule update",
