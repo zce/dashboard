@@ -9,7 +9,8 @@ import plugins from 'libraries/plugins'
 
 // ## Import styles
 // =========================
-import '../node_modules/element-ui/lib/theme-default/index.css'
+// import '../node_modules/element-ui/lib/theme-default/index.css'
+import 'assets/styles/element/index.css'
 import 'assets/styles/main.scss'
 
 // ## Use plugins
