@@ -9,10 +9,10 @@
         <li class="item">
           <a href="#" v-if="session.user">Hi, {{ session.user.name }}! <img class="avatar" :src="session.user.meta.avatar" :alt="session.user.name"></a>
           <ul class="list">
-            <li class="item"><router-link :to="{ name: 'profile' }">个人主页</router-link></li>
-            <li class="item"><router-link :to="{ name: 'profile' }">编辑个人资料</router-link></li>
+            <li class="item"><router-link :to="{ name: 'profile' }">Profile</router-link></li>
+            <li class="item"><router-link :to="{ name: 'profile' }">Edit profile</router-link></li>
             <li class="divider"></li>
-            <li class="item"><a href="#" @click.prevent="logout">登出</a></li>
+            <li class="item"><a href="#" @click.prevent="logout">Logout</a></li>
           </ul>
         </li>
       </ul>

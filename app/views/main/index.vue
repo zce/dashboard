@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="heading">
-      <h1 class="title">仪表盘</h1>
+      <h1 class="title">Dashboard</h1>
     </div>
     <div class="jumbotron">
       <h2>Hello, world!</h2>
@@ -14,7 +14,7 @@
   export default {
     name: 'dashboard',
     created () {
-      this.$title('仪表盘')
+      this.$title('Dashboard')
     }
   }
 </script>

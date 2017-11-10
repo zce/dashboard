@@ -7,7 +7,7 @@
       <i class="el-icon-edit"></i>
       <i class="el-icon-share"></i>
       <i class="el-icon-delete"></i>
-      <el-button type="primary" icon="search">搜索</el-button>
+      <el-button type="primary" icon="search">Search</el-button>
     </div>
     <div class="row">
       <el-button>默认按钮</el-button>
@@ -35,7 +35,7 @@
       <el-button type="primary" icon="edit"></el-button>
       <el-button type="primary" icon="share"></el-button>
       <el-button type="primary" icon="delete"></el-button>
-      <el-button type="primary" icon="search">搜索</el-button>
+      <el-button type="primary" icon="search">Search</el-button>
       <el-button type="primary">上传<i class="el-icon-upload el-icon--right"></i></el-button>
     </div>
     <div class="row">

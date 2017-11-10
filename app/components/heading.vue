@@ -10,7 +10,7 @@
       </ul>
     </transition>
     <form class="search icon-before icon-search" v-if="showSearch" @submit="handleSearch">
-      <input type="text" placeholder="搜索">
+      <input type="text" placeholder="Search">
     </form>
     <el-button :type="btnType" :size="btnSize" :icon="btnIcon" v-if="btnText">{{ btnText }}</el-button>
   </div>

@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="heading">
-      <h1 class="title" v-if="selections.length">{{ selections.length }} 条被选中</h1>
+      <h1 class="title" v-if="selections.length">{{ selections.length }} items selected</h1>
       <h1 class="title" v-else>{{ posts.length }} 条{{ type }}</h1>
       <transition name="fade">
         <ul class="action" v-show="selections.length">
@@ -12,39 +12,39 @@
         </ul>
       </transition>
       <div class="search icon-before icon-search">
-        <input type="text" placeholder="搜索">
+        <input type="text" placeholder="Search">
       </div>
       <router-link :to="{ name: 'new', params: { type: $route.params.type } }"><el-button type="primary" size="small" icon="edit">写{{ type }}</el-button></router-link>
     </div>
     <el-table :data="posts" @selection-change="handleSelectionChange">
       <el-table-column type="selection"></el-table-column>
-      <el-table-column prop="title" label="标题" show-overflow-tooltip></el-table-column>
-      <el-table-column label="状态" width="80">
+      <el-table-column prop="title" label="Title" show-overflow-tooltip></el-table-column>
+      <el-table-column label="Status" width="80">
         <template scope="scope">
           {{ scope.row.status }}
         </template>
       </el-table-column>
-      <el-table-column label="分类" width="200">
+      <el-table-column label="Categories" width="200">
         <template scope="scope">
-          <a v-for="item in scope.row.categories" :key="item.slug" href="#">{{ item.name }}、</a>
+          <a v-for="item in scope.row.categories" :key="item.slug" href="#">{{ item.name }}, </a>
         </template>
       </el-table-column>
-      <el-table-column label="标签" width="240">
+      <el-table-column label="Tags" width="240">
         <template scope="scope">
-          <a v-for="item in scope.row.tags" :key="item.slug" href="#">{{ item.name }}、</a>
+          <a v-for="item in scope.row.tags" :key="item.slug" href="#">{{ item.name }}, </a>
         </template>
       </el-table-column>
-      <el-table-column label="作者" width="100">
+      <el-table-column label="Author" width="100">
         <template scope="scope">
           <a href="#">{{ scope.row.author.name }}</a>
         </template>
       </el-table-column>
-      <el-table-column label="评论" width="80">
+      <el-table-column label="Comments" width="120">
         <template scope="scope">
           <i class="icon-before icon-bubble">{{ scope.row.comment }}</i>
         </template>
       </el-table-column>
-      <el-table-column prop="date" label="日期" width="120"></el-table-column>
+      <el-table-column prop="date" label="Date" width="120"></el-table-column>
     </el-table>
     <el-pagination
       @size-change="handleSizeChange"
@@ -84,14 +84,14 @@
             title: `Hello world ${i}`,
             status: 'pub',
             categories: [
-              { name: '未分类', slug: 'uncategoried' },
-              { name: '测试分类', slug: 'test-category' }
+              { name: 'None', slug: 'uncategoried' },
+              { name: 'Test', slug: 'test-category' }
             ],
             tags: [
-              { name: '示例', slug: 'demo' },
-              { name: '测试标签', slug: 'test-tag' },
-              { name: '测试标签', slug: 'test-tag2' },
-              { name: '测试标签', slug: 'test-tag3' }
+              { name: 'demo', slug: 'demo' },
+              { name: 'tag', slug: 'test-tag' },
+              { name: 'tag2', slug: 'test-tag2' },
+              { name: 'tag3', slug: 'test-tag3' }
             ],
             author: { name: '汪磊', slug: 'zce' },
             comment: 10,
