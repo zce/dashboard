@@ -10,17 +10,17 @@
       <el-alert v-if="error" :title="error.title" type="warning" :description="error.message" show-icon/>
     </header>
     <el-form class="login-form" auto-complete="off" :model="model" :rules="rules" ref="login-form" label-position="top">
-      <h2 class="heading">登录</h2>
-      <el-form-item label="用户名" prop="username">
-        <el-input type="text" v-model="model.username" placeholder="请输入用户名"/>
+      <h2 class="heading">Sign-in</h2>
+      <el-form-item label="Login" prop="username">
+        <el-input type="text" v-model="model.username" placeholder="Please enter username"/>
       </el-form-item>
-      <el-form-item label="密码" prop="password">
-        <el-input type="password" v-model="model.password" placeholder="请输入密码"/>
+      <el-form-item label="Password" prop="password">
+        <el-input type="password" v-model="model.password" placeholder="Please enter password"/>
       </el-form-item>
-      <el-button type="primary" :loading="loading" @click="submit('login-form')">{{ loading ? '登陆中...' : '登录' }}</el-button>
+      <el-button type="primary" :loading="loading" @click="submit('login-form')">{{ loading ? 'Loading...' : 'Login' }}</el-button>
     </el-form>
     <footer class="login-footer">
-      ← 返回到 <a href="/">WEDN.NET</a>
+      ← Back to <a href="/">WEDN.NET</a>
     </footer>
   </section>
 </template>

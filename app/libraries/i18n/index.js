@@ -5,10 +5,10 @@ Vue.use(I18n)
 
 // https://kazupon.github.io/vue-i18n/dynamic.html
 export default new I18n({
-  locale: 'cn',
+  locale: 'en',
   messages: {
-    // 'en': require('assets/locales/en'),
-    // 'ja': require('assets/locales/ja'),
+    'en': require('assets/locales/en'),
+    'ja': require('assets/locales/ja'),
     'cn': require('assets/locales/cn')
   }
 })

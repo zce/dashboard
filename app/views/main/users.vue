@@ -11,7 +11,7 @@
         </ul>
       </transition>
       <form class="search icon-before icon-search" @submit.prevent="handleSearch">
-        <input type="text" placeholder="搜索" v-model="search">
+        <input type="text" placeholder="Search" v-model="search">
       </form>
       <el-button type="primary" size="small" icon="plus">添加用户</el-button>
     </div>
@@ -28,7 +28,7 @@
           </div>
         </template>
       </el-table-column>
-      <el-table-column prop="status" label="状态" width="100" align="center" :filters="filters.status" column-key="status">
+      <el-table-column prop="status" label="Status" width="100" align="center" :filters="filters.status" column-key="status">
         <template scope="scope">
           <i class="status status-primary" title="已激活，点击禁用" v-if="scope.row.status === 'activated'" @click="handleToggleStatus(scope.row)"></i>
           <i class="status status-warning" title="邮箱未激活" v-else-if="scope.row.status === 'email-unactivated'"></i>

@@ -13,7 +13,7 @@ import axios from 'axios'
 
 const instance = axios.create({
   // // TODO: full base url
-  // baseURL: '//localhost:2080/api/',
+  // baseURL: '//localhost:2080/',
   baseURL: '//jsonplaceholder.uieee.com/',
   timeout: 3000,
   headers: {

@@ -30,20 +30,20 @@ const state = {
         name: 'comments'
       },
       {
-        text: '新建',
+        text: 'New',
         icon: 'plus',
         name: 'new',
         params: { type: 'blog' },
         children: [
-          { text: '文章', name: 'new', params: { type: 'blog' } },
-          { text: '媒体', name: 'upload' },
-          { text: '页面', name: 'new', params: { type: 'page' } },
-          { text: '用户', name: 'users' }
+          { text: 'Post', name: 'new', params: { type: 'blog' } },
+          { text: 'Media', name: 'upload' },
+          { text: 'Page', name: 'new', params: { type: 'page' } },
+          { text: 'User', name: 'users' }
         ]
       },
       // Component Pages
       {
-        text: '组件',
+        text: 'Components',
         icon: 'lab',
         name: 'components',
         children: [
@@ -54,7 +54,7 @@ const state = {
       },
       // Demo Pages
       {
-        text: '演示',
+        text: 'Demo',
         icon: 'magic-wand',
         name: 'demo',
         children: [
@@ -98,63 +98,63 @@ const state = {
         title: 'Actions'
       },
       {
-        text: '仪表盘',
+        text: 'Dashboard',
         icon: 'meter',
         name: 'dashboard',
         children: [
-          { text: '首页', name: 'dashboard' },
-          { text: '更新', name: 'update' }
+          { text: 'Home', name: 'dashboard' },
+          { text: 'Update', name: 'update' }
         ]
       },
       {
         divider: true
       },
       {
-        text: '文章',
+        text: 'Posts',
         icon: 'pushpin',
         name: 'posts',
         params: { type: 'blog' },
         children: [
-          { text: '所有文章', name: 'posts', params: { type: 'blog' } },
-          { text: '写文章', name: 'new', params: { type: 'blog' } },
-          { text: '分类目录', name: 'terms', params: { type: 'blog-category' } },
-          { text: '标签', name: 'terms', params: { type: 'blog-tag' } }
+          { text: 'All', name: 'posts', params: { type: 'blog' } },
+          { text: 'New', name: 'new', params: { type: 'blog' } },
+          { text: 'Categories', name: 'terms', params: { type: 'blog-category' } },
+          { text: 'Tags', name: 'terms', params: { type: 'blog-tag' } }
         ]
       },
       {
-        text: '页面',
+        text: 'Pages',
         icon: 'newspaper',
         name: 'posts',
         params: { type: 'page' },
         children: [
-          { text: '所有页面', name: 'posts', params: { type: 'page' } },
-          { text: '新建页面', name: 'new', params: { type: 'page' } }
+          { text: 'All pages', name: 'posts', params: { type: 'page' } },
+          { text: 'New page', name: 'new', params: { type: 'page' } }
         ]
       },
       {
-        text: '多媒体',
+        text: 'Media',
         icon: 'images',
         name: 'media',
         children: [
-          { text: '媒体库', name: 'media' },
-          { text: '添加', name: 'upload' }
+          { text: 'Media library', name: 'media' },
+          { text: 'Upload', name: 'upload' }
         ]
       },
       {
         divider: true
       },
       {
-        text: '用户',
+        text: 'Users',
         icon: 'users',
         name: 'users',
         children: [
-          { text: '所有用户', name: 'users' },
-          { text: '角色', name: 'roles' },
-          { text: '权限', name: 'permissions' }
+          { text: 'All users', name: 'users' },
+          { text: 'Roles', name: 'roles' },
+          { text: 'Permissions', name: 'permissions' }
         ]
       },
       {
-        text: '评论',
+        text: 'Comments',
         icon: 'bubbles',
         name: 'comments'
       },
@@ -162,48 +162,48 @@ const state = {
         divider: true
       },
       {
-        text: '外观',
+        text: 'Themes',
         icon: 'paint-format',
         name: 'themes',
         children: [
-          { text: '主题', name: 'themes' },
-          { text: '自定义', name: 'customize' },
-          { text: '小工具', name: 'widgets' },
-          { text: '菜单', name: 'navigation' }
+          { text: 'Themes', name: 'themes' },
+          { text: 'Customization', name: 'customize' },
+          { text: 'Widgets', name: 'widgets' },
+          { text: 'Navigation', name: 'navigation' }
         ]
       },
       {
-        text: '插件',
+        text: 'Plugins',
         icon: 'power-cord',
         name: 'plugins',
         children: [
-          { text: '已安装插件', name: 'plugins' },
-          { text: '安装插件', name: 'install', params: { type: 'plugin' } }
+          { text: 'Installed plugins', name: 'plugins' },
+          { text: 'Install plugin', name: 'install', params: { type: 'plugin' } }
         ]
       },
       {
-        text: '工具',
+        text: 'Tools',
         icon: 'wrench',
         name: 'tools',
         children: [
-          { text: '可用工具', name: 'tools' },
-          { text: '导入', name: 'import' },
-          { text: '导出', name: 'export' }
+          { text: 'Available tools', name: 'tools' },
+          { text: 'Import', name: 'import' },
+          { text: 'Export', name: 'export' }
         ]
       },
       {
-        text: '设置',
+        text: 'Settings',
         icon: 'equalizer',
         name: 'options',
         params: { type: 'general' },
         children: [
-          { text: '常规', name: 'options', params: { type: 'general' } },
+          { text: 'General', name: 'options', params: { type: 'general' } },
           { divider: true },
-          { text: '撰写', name: 'options', params: { type: 'writing' } },
-          { text: '阅读', name: 'options', params: { type: 'reading' } },
-          { text: '讨论', name: 'options', params: { type: 'discussion' } },
-          { text: '多媒体', name: 'options', params: { type: 'media' } },
-          { text: '固定链接', name: 'options', params: { type: 'permalink' } }
+          { text: 'Write', name: 'options', params: { type: 'writing' } },
+          { text: 'Read', name: 'options', params: { type: 'reading' } },
+          { text: 'Discuss', name: 'options', params: { type: 'discussion' } },
+          { text: 'Media', name: 'options', params: { type: 'media' } },
+          { text: 'Permalink', name: 'options', params: { type: 'permalink' } }
         ]
       }
     ]

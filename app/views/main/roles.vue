@@ -6,7 +6,7 @@
 <template>
   <div>
     <div class="heading">
-      <h1 class="title">角色</h1>
+      <h1 class="title">Roles</h1>
     </div>
   </div>
 </template>

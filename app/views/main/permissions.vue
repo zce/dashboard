@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="heading">
-      <h1 class="title">权限</h1>
+      <h1 class="title">Permissions</h1>
     </div>
   </div>
 </template>
