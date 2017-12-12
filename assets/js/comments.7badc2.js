@@ -1,2 +1,0 @@
-webpackJsonpwedn([15],{266:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var s={name:"comments"},l=function(){var e=this,t=e.$createElement;e._self._c;return e._m(0)},r=[function(){var e=this,t=e.$createElement,n=e._self._c||t;return n("div",[n("div",{staticClass:"heading"},[n("h1",{staticClass:"title"},[e._v("评论")])])])}],a={render:l,staticRenderFns:r},c=a,i=n(84),u=i(s,c,null,null,null);t.default=u.exports}});
-//# sourceMappingURL=comments.7badc2.js.map
