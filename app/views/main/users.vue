@@ -13,12 +13,12 @@
       <form class="search icon-before icon-search" @submit.prevent="handleSearch">
         <input type="text" placeholder="Search" v-model="search">
       </form>
-      <el-button type="primary" size="small" icon="plus">添加用户</el-button>
+      <el-button type="primary" size="small" icon="el-icon-plus">Add</el-button>
     </div>
     <el-table :data="users" v-loading="loading" element-loading-text="Loading..." @selection-change="handleSelectionChange" @filter-change="handleFilterChange" @sort-change="handleSortChange">
       <el-table-column type="selection"></el-table-column>
-      <el-table-column prop="username" label="用户名" min-width="180" sortable="custom">
-        <template scope="scope">
+      <el-table-column prop="username" label="Username" min-width="180" sortable="custom">
+        <template slot-scope="scope">
           <div class="user-info">
             <img :src="scope.row.meta.avatar" alt="scope.row.name">
             <div class="names">
@@ -28,18 +28,18 @@
           </div>
         </template>
       </el-table-column>
-      <el-table-column prop="status" label="Status" width="100" align="center" :filters="filters.status" column-key="status">
-        <template scope="scope">
-          <i class="status status-primary" title="已激活，点击禁用" v-if="scope.row.status === 'activated'" @click="handleToggleStatus(scope.row)"></i>
-          <i class="status status-warning" title="邮箱未激活" v-else-if="scope.row.status === 'email-unactivated'"></i>
-          <i class="status status-warning" title="手机未激活" v-else-if="scope.row.status === 'phone-unactivated'"></i>
-          <i class="status status-danger" title="已禁用，点击激活" v-else-if="scope.row.status === 'forbidden'" @click="handleToggleStatus(scope.row)"></i>
+      <el-table-column prop="status" label="Status" width="120" align="center" :filters="filters.status" column-key="status">
+        <template slot-scope="scope">
+          <i class="status status-primary" title="Activated" v-if="scope.row.status === 'activated'" @click="handleToggleStatus(scope.row)"></i>
+          <i class="status status-warning" title="Email Unactivated" v-else-if="scope.row.status === 'email-unactivated'"></i>
+          <i class="status status-warning" title="Phone Unactivated" v-else-if="scope.row.status === 'phone-unactivated'"></i>
+          <i class="status status-danger" title="Forbidden" v-else-if="scope.row.status === 'forbidden'" @click="handleToggleStatus(scope.row)"></i>
         </template>
       </el-table-column>
-      <el-table-column prop="email" label="邮箱" width="200" sortable="custom"></el-table-column>
-      <el-table-column prop="phone" label="手机" width="140" sortable="custom"></el-table-column>
-      <el-table-column prop="roles" label="角色" width="240" :filters="filters.roles" column-key="roles">
-        <template scope="scope">
+      <el-table-column prop="email" label="Email" width="200" sortable="custom"></el-table-column>
+      <el-table-column prop="phone" label="Mobile" width="140" sortable="custom"></el-table-column>
+      <el-table-column prop="roles" label="Role" width="240" :filters="filters.roles" column-key="roles">
+        <template slot-scope="scope">
           <el-tag type="success" v-for="item in scope.row.roles" :key="item">{{ item }}</el-tag>
         </template>
       </el-table-column>

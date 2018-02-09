@@ -14,33 +14,33 @@
       <div class="search icon-before icon-search">
         <input type="text" placeholder="Search">
       </div>
-      <router-link :to="{ name: 'new', params: { type: $route.params.type } }"><el-button type="primary" size="small" icon="edit">写{{ type }}</el-button></router-link>
+      <router-link :to="{ name: 'new', params: { type: $route.params.type } }"><el-button type="primary" size="small" icon="el-icon-edit">写{{ type }}</el-button></router-link>
     </div>
     <el-table :data="posts" @selection-change="handleSelectionChange">
       <el-table-column type="selection"></el-table-column>
       <el-table-column prop="title" label="Title" show-overflow-tooltip></el-table-column>
-      <el-table-column label="Status" width="80">
-        <template scope="scope">
+      <el-table-column label="Status" width="100">
+        <template slot-scope="scope">
           {{ scope.row.status }}
         </template>
       </el-table-column>
       <el-table-column label="Categories" width="200">
-        <template scope="scope">
+        <template slot-scope="scope">
           <a v-for="item in scope.row.categories" :key="item.slug" href="#">{{ item.name }}, </a>
         </template>
       </el-table-column>
       <el-table-column label="Tags" width="240">
-        <template scope="scope">
+        <template slot-scope="scope">
           <a v-for="item in scope.row.tags" :key="item.slug" href="#">{{ item.name }}, </a>
         </template>
       </el-table-column>
       <el-table-column label="Author" width="100">
-        <template scope="scope">
+        <template slot-scope="scope">
           <a href="#">{{ scope.row.author.name }}</a>
         </template>
       </el-table-column>
       <el-table-column label="Comments" width="120">
-        <template scope="scope">
+        <template slot-scope="scope">
           <i class="icon-before icon-bubble">{{ scope.row.comment }}</i>
         </template>
       </el-table-column>
@@ -49,10 +49,10 @@
     <el-pagination
       @size-change="handleSizeChange"
       @current-change="handleCurrentChange"
+      layout="total, sizes, prev, pager, next, jumper"
       :current-page="4"
       :page-sizes="[50, 100, 150, 200]"
       :page-size="50"
-      layout="total, sizes, prev, pager, next, jumper"
       :total="400">
     </el-pagination>
   </div>
