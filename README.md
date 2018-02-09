@@ -23,7 +23,7 @@
 
 ## Online demo
 
-[http://dashboard.uieee.com](http://dashboard.uieee.com)
+[http://dashboard.uieee.com](http://dashboard.zce.me)
 
 > - username: zce
 > - password: wanglei
