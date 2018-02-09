@@ -1,0 +1,2 @@
+webpackJsonpwedn([13],{271:function(e,t,i){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var n={name:"options",computed:{title:function(){return{general:"常规选项",writing:"撰写设置",reading:"阅读设置",discussion:"讨论设置",media:"多媒体选项",permalink:"固定链接设置"}[this.$route.params.type]}}},s=function(){var e=this,t=e.$createElement,i=e._self._c||t;return i("div",[i("div",{staticClass:"heading"},[i("h1",{staticClass:"title"},[e._v(e._s(e.title))])])])},a=[],l=i(88),r=Object(l.a)(n,s,a,!1,null,null,null);t.default=r.exports}});
+//# sourceMappingURL=options.e91acc.js.map

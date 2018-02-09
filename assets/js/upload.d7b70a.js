@@ -1,0 +1,2 @@
+webpackJsonpwedn([10],{256:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var l={name:"upload"},a=function(){var e=this,t=e.$createElement;e._self._c;return e._m(0)},s=[function(){var e=this,t=e.$createElement,n=e._self._c||t;return n("div",[n("div",{staticClass:"heading"},[n("h1",{staticClass:"title"},[e._v("上传媒体文件")])])])}],c=n(88),i=Object(c.a)(l,a,s,!1,null,null,null);t.default=i.exports}});
+//# sourceMappingURL=upload.d7b70a.js.map
