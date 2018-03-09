@@ -5,11 +5,14 @@
   "scripts": {
     "serve": "vue-cli-service serve --open",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "predeploy": "yarn lint && yarn build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "axios": "^0.18.0",
     "element-ui": "^2.2.1",
+    "gh-pages": "^1.1.0",
     "nprogress": "^0.2.0",
     "store": "^2.0.12",
     "vue": "^2.5.13",

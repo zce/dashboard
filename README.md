@@ -56,6 +56,9 @@ $ yarn serve
 
 # build for production with minification
 $ yarn build
+
+# build for production and deploy to gh-pages
+$ yarn deploy
 ```
 
 ## Environment
