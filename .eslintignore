@@ -1,5 +1,0 @@
-# build/*.js
-# config/*.js
-dist/
-docs/
-node_modules/

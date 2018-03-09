@@ -14,11 +14,11 @@
 [style-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg
 [style-url]: http://standardjs.com/
 
-> A dashboard scaffolding based on vue.js inspired by [vuejs-templates/webpack](https://github.com/vuejs-templates/webpack).
+> A dashboard scaffolding based on vue.js created by [vuejs/vue-cli](https://github.com/vuejs/vue-cli).
 
 ## Preview
 
-![WEDN.NET Dashboard](static/preview.png)
+![WEDN.NET Dashboard](https://github.com/zce/dashboard/raw/vue/static/preview.png)
 
 
 ## Online demo
@@ -43,52 +43,20 @@ $ git clone https://github.com/zce/dashboard.git
 
 # api server
 $ git clone https://github.com/zce/api-server.git
-
-# submodule
-$ git submodule init && git submodule update
 ```
-
 
 ## Build Setup
 
 ```shell
 # install dependencies
-$ npm install
-
-# serve with hot reload at http://localhost:2017
-$ npm run dev
-
-# build for production with minification
-$ npm run build
-
-# build for production and view the bundle analyzer report
-$ npm run build --report
-
-# build for production and deploy to gh-pages
-$ npm run deploy
-```
-
-or yarn
-
-```shell
-# install dependencies
 $ yarn
 
-# serve with hot reload at http://localhost:2017
-$ yarn dev
+# serve with hot reload at http://localhost:8080
+$ yarn serve
 
 # build for production with minification
 $ yarn build
-
-# build for production and view the bundle analyzer report
-$ npm_config_report=true yarn build
-# Windows
-$ set npm_config_report=true yarn build
-
-# build for production and deploy to gh-pages
-$ yarn deploy
 ```
-
 
 ## Environment
 
@@ -96,9 +64,9 @@ $ yarn deploy
 - [Yarn](https://yarnpkg.com/) >= 0.20.0
 - [NPM](https://www.npmjs.com/) >= 3.0.0
 
-
 ## Stacks
 
+- [Vue CLI 3](https://github.com/vuejs/vue-cli)
 - [Vue](http://vuejs.org/)
 - [Vuex](https://github.com/vuejs/vuex)
 - [Vue Router](https://github.com/vuejs/vue-router)
@@ -139,12 +107,6 @@ $ yarn deploy
 - [ ] Other module
 - [ ] Config package
 - [ ] Deploy to GitHub Pages by Travis CI
-
-
-## Link
-
-- [Compare vs: db40d7](https://github.com/vuejs-templates/webpack/compare/db40d7f5af18ca1b7c30cc7691dfe54831e427e5...master)
-
 
 ## License
 
