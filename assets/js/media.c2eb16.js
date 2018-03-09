@@ -1,2 +1,0 @@
-webpackJsonpwedn([14],{255:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var a={name:"media"},l=function(){var e=this,t=e.$createElement;e._self._c;return e._m(0)},s=[function(){var e=this,t=e.$createElement,n=e._self._c||t;return n("div",[n("div",{staticClass:"heading"},[n("h1",{staticClass:"title"},[e._v("多媒体")])])])}],i=n(88),c=Object(i.a)(a,l,s,!1,null,null,null);t.default=c.exports}});
-//# sourceMappingURL=media.c2eb16.js.map

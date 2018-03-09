@@ -1,2 +1,0 @@
-webpackJsonpwedn([12],{257:function(e,t,s){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var a={name:"terms"},l=function(){var e=this,t=e.$createElement,s=e._self._c||t;return s("div",[s("div",{staticClass:"heading"},[s("h1",{staticClass:"title"},[e._v(e._s(e.$route.params.type))])])])},n=[],r=s(88),i=Object(r.a)(a,l,n,!1,null,null,null);t.default=i.exports}});
-//# sourceMappingURL=terms.70fa05.js.map
