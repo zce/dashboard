@@ -27,8 +27,8 @@ module.exports = {
 
   // tweak internal webpack configuration.
   // see https://github.com/vuejs/vue-cli/blob/dev/docs/webpack.md
-  chainWebpack: () => {},
-  configureWebpack: () => {},
+  chainWebpack: config => {},
+  configureWebpack: config => {},
 
   // vue-loader options
   // https://vue-loader.vuejs.org/en/options.html

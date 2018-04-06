@@ -3,7 +3,8 @@ sudo: false
 language: node_js
 
 node_js:
-  - stable
+  - 8
+  - 9
 
 notifications:
   email:
@@ -18,3 +19,4 @@ before_script:
 
 script:
   - yarn lint
+  - yarn build

@@ -1,14 +1,14 @@
 <template>
   <ul class="list">
-    <template v-for="item in items">
-      <li class="divider" v-if="item.divider" :key="item"></li>
-      <li class="title" v-else-if="item.title" :key="item">{{ item.title }}</li>
-      <li class="item" v-else :class="{ active: activeClass && isActive(item) }" :key="item">
+    <template v-for="(item, i) in items">
+      <li class="divider" v-if="item.divider" :key="i"></li>
+      <li class="title" v-else-if="item.title" :key="i">{{ item.title }}</li>
+      <li class="item" v-else :class="{ active: activeClass && isActive(item) }" :key="i">
         <router-link :to="item" :class="'icon-before icon-' + item.icon" :title="item.text">{{ item.text }}</router-link>
         <ul class="list" v-if="item.children">
-          <template v-for="sub in item.children">
-            <li class="divider" v-if="sub.divider" :key="sub"></li>
-            <li class="item" v-else :class="{ active: activeClass && isActive(sub) }" :key="sub"><router-link :to="sub" :title="sub.text">{{ sub.text }}</router-link></li>
+          <template v-for="(sub, s) in item.children">
+            <li class="divider" v-if="sub.divider" :key="s"></li>
+            <li class="item" v-else :class="{ active: activeClass && isActive(sub) }" :key="s"><router-link :to="sub" :title="sub.text">{{ sub.text }}</router-link></li>
           </template>
         </ul>
       </li>

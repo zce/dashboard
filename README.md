@@ -18,34 +18,25 @@
 
 ## Preview
 
-![WEDN.NET Dashboard](https://github.com/zce/dashboard/raw/vue/static/preview.png)
+![WEDN.NET Dashboard](https://raw.githubusercontent.com/zce/dashboard/vue-backup/static/preview.png)
 
-
-## Online demo
+### Online demo
 
 [http://dashboard.zce.me](http://dashboard.zce.me)
 
 > - username: zce
 > - password: wanglei
 
-### API Server
+## Usage
 
-[http://jsonplaceholder.uieee.com](http://jsonplaceholder.uieee.com)
-
-Source: [zce/api-server](https://github.com/zce/api-server)
-
-
-## Clone Repo
+### Clone Repo
 
 ```shell
 # clone
 $ git clone https://github.com/zce/dashboard.git
-
-# api server
-$ git clone https://github.com/zce/api-server.git
 ```
 
-## Build Setup
+### Build Setup
 
 ```shell
 # install dependencies
@@ -61,11 +52,35 @@ $ yarn build
 $ yarn deploy
 ```
 
+## API Server
+
+[https://jsonplaceholder.uieee.com](https://jsonplaceholder.uieee.com)
+
+Source: [zce/dashboard-server](https://github.com/zce/dashboard-server)
+
+### Usage
+
+```shell
+# clone api server
+$ git clone https://github.com/zce/dashboard-server.git
+# run api server
+$ cd dashboard-server
+$ yarn
+$ yarn start
+# => api server run @ http://localhost:2080
+```
+
+modify `baseURL` in `src/utils/axios.js`:
+
+```diff
+- baseURL: 'https://jsonplaceholder.uieee.com/',
++ baseURL: 'http://localhost:2080/',
+```
+
 ## Environment
 
 - [Node](https://nodejs.org/) >= 6.0.0
-- [Yarn](https://yarnpkg.com/) >= 0.20.0
-- [NPM](https://www.npmjs.com/) >= 3.0.0
+- [Yarn](https://yarnpkg.com/) >= 0.20.0 or [NPM](https://www.npmjs.com/) >= 3.0.0
 
 ## Stacks
 
@@ -87,7 +102,6 @@ $ yarn deploy
 - [ESLint](http://eslint.org/)
 - [EditorConfig](http://editorconfig.org/)
 - [Travis CI](https://travis-ci.org/)
-
 
 ## Todos
 
@@ -113,5 +127,4 @@ $ yarn deploy
 
 ## License
 
-[MIT](LICENSE) &copy; [汪磊](http://github.com/zce) & [WEDN.NET](http://wedn.net)
-
+[MIT](LICENSE) &copy; [汪磊](https://zce.me) & [WEDN.NET](https://wedn.net)

@@ -25,7 +25,7 @@ import { mapGetters } from 'vuex'
 import MenuList from './menu'
 
 export default {
-  name: 'header',
+  name: 'app-header',
 
   components: { MenuList },
 

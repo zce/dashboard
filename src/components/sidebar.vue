@@ -15,7 +15,7 @@ import { mapGetters, mapActions } from 'vuex'
 import MenuList from './menu'
 
 export default {
-  name: 'sidebar',
+  name: 'app-sidebar',
   components: { MenuList },
   computed: mapGetters({
     sidebar: 'sidebar'

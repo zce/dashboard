@@ -12,15 +12,14 @@ import axios from 'axios'
 // import storage from './storage'
 
 const instance = axios.create({
-  // // TODO: full base url
-  // baseURL: '//localhost:2080/',
-  baseURL: '//jsonplaceholder.uieee.com/',
-  timeout: 10000,
+  // baseURL: 'http://localhost:2080/',
+  baseURL: 'https://jsonplaceholder.uieee.com/',
+  timeout: 5000,
   headers: {
     // 'X-Custom-Header': 'foobar',
     // // true: need, false: dont need
     // 'Authorization': true,
-    'X-Requested-With': 'XMLHttpRequest'
+    // 'X-Requested-With': 'XMLHttpRequest'
   }
 })
 
