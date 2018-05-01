@@ -1,0 +1,2 @@
+webpackJsonp([16],{"+bYH":function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var l={name:"comments"},s=function(){var e=this,t=e.$createElement;e._self._c;return e._m(0)},a=[function(){var e=this,t=e.$createElement,n=e._self._c||t;return n("div",[n("div",{staticClass:"heading"},[n("h1",{staticClass:"title"},[e._v("评论")])])])}],c=n("XyMi"),i=!1,r=null,u=null,o=null,_=Object(c["a"])(l,s,a,i,r,u,o);t["default"]=_.exports}});
+//# sourceMappingURL=comments.16.078658c9.js.map

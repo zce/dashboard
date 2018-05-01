@@ -1,2 +1,0 @@
-webpackJsonp([12],{gfuz:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var a={name:"update"},l=function(){var e=this,t=e.$createElement;e._self._c;return e._m(0)},s=[function(){var e=this,t=e.$createElement,n=e._self._c||t;return n("div",[n("div",{staticClass:"heading"},[n("h1",{staticClass:"title"},[e._v("更新")])]),n("p",[e._v("你这么完美主义，什么时候能有一个小结版本？")]),n("p",[e._v("那有哪里来的更新？")])])}],i=n("XyMi"),u=!1,c=null,r=null,_=null,v=Object(i["a"])(a,l,s,u,c,r,_);t["default"]=v.exports}});
-//# sourceMappingURL=12.59dc1249.js.map

@@ -1,0 +1,2 @@
+webpackJsonp([13],{HnBi:function(e,t,s){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var a={name:"terms"},l=function(){var e=this,t=e.$createElement,s=e._self._c||t;return s("div",[s("div",{staticClass:"heading"},[s("h1",{staticClass:"title"},[e._v(e._s(e.$route.params.type))])])])},n=[],i=s("XyMi"),r=!1,u=null,c=null,o=null,d=Object(i["a"])(a,l,n,r,u,c,o);t["default"]=d.exports}});
+//# sourceMappingURL=terms.13.c2d0b3ee.js.map

@@ -1,2 +1,0 @@
-webpackJsonp([15],{uTDp:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var a={name:"media"},l=function(){var e=this,t=e.$createElement;e._self._c;return e._m(0)},i=[function(){var e=this,t=e.$createElement,n=e._self._c||t;return n("div",[n("div",{staticClass:"heading"},[n("h1",{staticClass:"title"},[e._v("多媒体")])])])}],s=n("XyMi"),c=!1,r=null,u=null,_=null,d=Object(s["a"])(a,l,i,c,r,u,_);t["default"]=d.exports}});
-//# sourceMappingURL=15.1dad44d6.js.map
