@@ -6,154 +6,154 @@ export default [
     name: 'dashboard',
     path: '',
     meta: { requiresAuth: true },
-    component: resolve => require.ensure([], () => resolve(require('../views/main/index')), 'dashboard')
+    component: () => import(/* webpackChunkName: 'dashboard' */ '../views/main/index')
   },
   {
     name: 'update',
     path: 'update',
     meta: { requiresAuth: true },
-    component: resolve => require.ensure([], () => resolve(require('../views/main/update')), 'update')
+    component: () => import(/* webpackChunkName: 'update' */ '../views/main/update')
   },
   {
     name: 'about',
     path: 'about',
     meta: { requiresAuth: true },
-    component: resolve => require.ensure([], () => resolve(require('../views/main/about')), 'about')
+    component: () => import(/* webpackChunkName: 'about' */ '../views/main/about')
   },
   {
     name: 'profile',
     path: 'profile',
     meta: { requiresAuth: true },
-    component: resolve => require.ensure([], () => resolve(require('../views/main/profile')), 'users')
+    component: () => import(/* webpackChunkName: 'users' */ '../views/main/profile')
   },
   // - Posts
   {
     name: 'posts',
     path: 'posts/:type',
     meta: { requiresAuth: true },
-    component: resolve => require.ensure([], () => resolve(require('../views/main/posts')), 'posts')
+    component: () => import(/* webpackChunkName: 'posts' */ '../views/main/posts')
   },
   {
     name: 'new',
     path: 'new/:type',
     meta: { requiresAuth: true },
-    component: resolve => require.ensure([], () => resolve(require('../views/main/new')), 'posts')
+    component: () => import(/* webpackChunkName: 'posts' */ '../views/main/new')
   },
   {
     name: 'edit',
     path: 'edit/:type/:slug?',
     meta: { requiresAuth: true },
-    component: resolve => require.ensure([], () => resolve(require('../views/main/edit')), 'posts')
+    component: () => import(/* webpackChunkName: 'posts' */ '../views/main/edit')
   },
   // - Media
   {
     name: 'media',
     path: 'media',
     meta: { requiresAuth: true },
-    component: resolve => require.ensure([], () => resolve(require('../views/main/media')), 'media')
+    component: () => import(/* webpackChunkName: 'media' */ '../views/main/media')
   },
   {
     name: 'upload',
     path: 'upload',
     meta: { requiresAuth: true },
-    component: resolve => require.ensure([], () => resolve(require('../views/main/upload')), 'upload')
+    component: () => import(/* webpackChunkName: 'upload' */ '../views/main/upload')
   },
   // - Terms
   {
     name: 'terms',
     path: 'terms/:type',
     meta: { requiresAuth: true },
-    component: resolve => require.ensure([], () => resolve(require('../views/main/terms')), 'terms')
+    component: () => import(/* webpackChunkName: 'terms' */ '../views/main/terms')
   },
   // - Users
   {
     name: 'users',
     path: 'users/:page?',
     meta: { requiresAuth: true },
-    component: resolve => require.ensure([], () => resolve(require('../views/main/users')), 'users')
+    component: () => import(/* webpackChunkName: 'users' */ '../views/main/users')
   },
   {
     name: 'roles',
     path: 'roles',
     meta: { requiresAuth: true },
-    component: resolve => require.ensure([], () => resolve(require('../views/main/roles')), 'users')
+    component: () => import(/* webpackChunkName: 'users' */ '../views/main/roles')
   },
   {
     name: 'permissions',
     path: 'permissions',
     meta: { requiresAuth: true },
-    component: resolve => require.ensure([], () => resolve(require('../views/main/permissions')), 'users')
+    component: () => import(/* webpackChunkName: 'users' */ '../views/main/permissions')
   },
   // - Comments
   {
     name: 'comments',
     path: 'comments',
     meta: { requiresAuth: true },
-    component: resolve => require.ensure([], () => resolve(require('../views/main/comments')), 'comments')
+    component: () => import(/* webpackChunkName: 'comments' */ '../views/main/comments')
   },
   // - Appearances
   {
     name: 'themes',
     path: 'themes',
     meta: { requiresAuth: true },
-    component: resolve => require.ensure([], () => resolve(require('../views/main/themes')), 'appearances')
+    component: () => import(/* webpackChunkName: 'appearances' */ '../views/main/themes')
   },
   {
     name: 'customize',
     path: 'customize',
     meta: { requiresAuth: true },
-    component: resolve => require.ensure([], () => resolve(require('../views/main/customize')), 'appearances')
+    component: () => import(/* webpackChunkName: 'appearances' */ '../views/main/customize')
   },
   {
     name: 'widgets',
     path: 'widgets',
     meta: { requiresAuth: true },
-    component: resolve => require.ensure([], () => resolve(require('../views/main/widgets')), 'appearances')
+    component: () => import(/* webpackChunkName: 'appearances' */ '../views/main/widgets')
   },
   {
     name: 'navigation',
     path: 'navigation',
     meta: { requiresAuth: true },
-    component: resolve => require.ensure([], () => resolve(require('../views/main/navigation')), 'appearances')
+    component: () => import(/* webpackChunkName: 'appearances' */ '../views/main/navigation')
   },
   // - Plugins
   {
     name: 'plugins',
     path: 'plugins',
     meta: { requiresAuth: true },
-    component: resolve => require.ensure([], () => resolve(require('../views/main/plugins')), 'plugins')
+    component: () => import(/* webpackChunkName: 'plugins' */ '../views/main/plugins')
   },
   // - Tools
   {
     name: 'install',
     path: 'install/:type',
     meta: { requiresAuth: true },
-    component: resolve => require.ensure([], () => resolve(require('../views/main/install')), 'plugins')
+    component: () => import(/* webpackChunkName: 'plugins' */ '../views/main/install')
   },
   {
     name: 'tools',
     path: 'tools',
     meta: { requiresAuth: true },
-    component: resolve => require.ensure([], () => resolve(require('../views/main/tools')), 'tools')
+    component: () => import(/* webpackChunkName: 'tools' */ '../views/main/tools')
   },
   {
     name: 'import',
     path: 'import',
     meta: { requiresAuth: true },
-    component: resolve => require.ensure([], () => resolve(require('../views/main/import')), 'tools')
+    component: () => import(/* webpackChunkName: 'tools' */ '../views/main/import')
   },
   {
     name: 'export',
     path: 'export',
     meta: { requiresAuth: true },
-    component: resolve => require.ensure([], () => resolve(require('../views/main/export')), 'tools')
+    component: () => import(/* webpackChunkName: 'tools' */ '../views/main/export')
   },
   // - Options
   {
     name: 'options',
     path: 'options/:type',
     meta: { requiresAuth: true },
-    component: resolve => require.ensure([], () => resolve(require('../views/main/options')), 'options')
+    component: () => import(/* webpackChunkName: 'options' */ '../views/main/options')
   }
 ].concat(demo)
 

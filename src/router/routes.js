@@ -9,13 +9,13 @@ export default [
     name: 'login',
     path: '/login',
     meta: { requiresAuth: false },
-    component: resolve => require.ensure([], () => resolve(require('../views/login')), 'login')
+    component: () => import(/* webpackChunkName: 'login' */ '../views/login')
   },
   // ## main page
   {
     path: '/',
     meta: { requiresAuth: true },
-    component: resolve => require.ensure([], () => resolve(require('../views/layout')), 'common'),
+    component: () => import(/* webpackChunkName: 'common' */ '../views/layout'),
     children: mainRoutes
   },
   // ## not found page
@@ -23,6 +23,6 @@ export default [
     name: 'not-found',
     path: '*',
     meta: { requiresAuth: false },
-    component: resolve => require.ensure([], () => resolve(require('../views/error')), 'common')
+    component: () => import(/* webpackChunkName: 'common' */ '../views/error')
   }
 ]
