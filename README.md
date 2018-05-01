@@ -5,15 +5,6 @@
 [![devDependency Status][devdependency-image]][devdependency-url]
 [![Code Style][style-image]][style-url]
 
-[travis-image]: https://img.shields.io/travis/zce/dashboard/vue.svg
-[travis-url]: https://travis-ci.org/zce/dashboard
-[dependency-image]: https://img.shields.io/david/zce/dashboard.svg
-[dependency-url]: https://david-dm.org/zce/dashboard
-[devdependency-image]: https://img.shields.io/david/dev/zce/dashboard.svg
-[devdependency-url]: https://david-dm.org/zce/dashboard?type=dev
-[style-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg
-[style-url]: http://standardjs.com/
-
 > A dashboard scaffolding based on vue.js created by [vuejs/vue-cli](https://github.com/vuejs/vue-cli).
 
 ## Preview
@@ -128,3 +119,14 @@ modify `baseURL` in `src/utils/axios.js`:
 ## License
 
 [MIT](LICENSE) &copy; [汪磊](https://zce.me) & [WEDN.NET](https://wedn.net)
+
+
+
+[travis-image]: https://img.shields.io/travis/zce/dashboard/vue.svg
+[travis-url]: https://travis-ci.org/zce/dashboard
+[dependency-image]: https://img.shields.io/david/zce/dashboard.svg
+[dependency-url]: https://david-dm.org/zce/dashboard
+[devdependency-image]: https://img.shields.io/david/dev/zce/dashboard.svg
+[devdependency-url]: https://david-dm.org/zce/dashboard?type=dev
+[style-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg
+[style-url]: http://standardjs.com/
