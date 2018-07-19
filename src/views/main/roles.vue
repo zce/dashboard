@@ -1,8 +1,3 @@
-<docs>
-  REST API权限集成设计 - 坚持很贵 - 博客园
-  http://www.cnblogs.com/fangfan/p/4997277.html
-</docs>
-
 <template>
   <div>
     <div class="heading">
@@ -12,6 +7,9 @@
 </template>
 
 <script>
+// REST API权限集成设计 - 坚持很贵 - 博客园
+// http://www.cnblogs.com/fangfan/p/4997277.html
+
 export default {
   name: 'roles'
 }

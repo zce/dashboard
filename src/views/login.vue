@@ -1,8 +1,3 @@
-<docs>
-  * https://github.com/auth0-blog/vue-jwt-authentication
-  * https://auth0.com/blog/build-an-app-with-vuejs/
-</docs>
-
 <template>
   <section class="login">
     <header class="login-header">
@@ -26,6 +21,9 @@
 </template>
 
 <script>
+// https://github.com/auth0-blog/vue-jwt-authentication
+// https://auth0.com/blog/build-an-app-with-vuejs/
+
 export default {
   name: 'login',
 
