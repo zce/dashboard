@@ -1,2 +1,0 @@
-webpackJsonp([11],{"8nLs":function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var l={name:"upload"},a=function(){var e=this,t=e.$createElement;e._self._c;return e._m(0)},s=[function(){var e=this,t=e.$createElement,n=e._self._c||t;return n("div",[n("div",{staticClass:"heading"},[n("h1",{staticClass:"title"},[e._v("上传媒体文件")])])])}],i=n("XyMi"),c=!1,r=null,u=null,o=null,_=Object(i["a"])(l,a,s,c,r,u,o);t["default"]=_.exports}});
-//# sourceMappingURL=upload.11.fc3e8687.js.map
