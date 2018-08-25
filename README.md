@@ -9,7 +9,9 @@
 
 ## Preview
 
-![WEDN.NET Dashboard](https://raw.githubusercontent.com/zce/dashboard/vue-backup/static/preview.png)
+![WEDN.NET Dashboard Login](https://user-images.githubusercontent.com/6166576/44618442-71adfc80-a8a8-11e8-8ff5-3dcb95dcaa8b.png)
+
+![WEDN.NET Dashboard List](https://user-images.githubusercontent.com/6166576/44618443-74105680-a8a8-11e8-9af9-06ae4afb6d27.png)
 
 ### Online demo
 
