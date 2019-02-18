@@ -4,7 +4,6 @@
  */
 
 module.exports = {
-  baseUrl: '/',
-  outputDir: 'dist',
+  publicPath: '.',
   assetsDir: 'assets'
 }

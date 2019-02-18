@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import element from 'element-ui'
-import { sync } from 'vuex-router-sync'
+// import { sync } from 'vuex-router-sync'
 
 import App from './app'
 import i18n from './i18n'
@@ -21,7 +21,7 @@ import './assets/styles/main.scss'
 
 Vue.use(element)
 Vue.use(plugins)
-sync(store, router, { moduleName: 'route' })
+// sync(store, router, { moduleName: 'route' })
 
 /**
  * Config

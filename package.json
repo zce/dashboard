@@ -2,51 +2,126 @@
   "name": "dashboard",
   "version": "0.1.0",
   "private": true,
+  "description": "A dashboard scaffolding based on vue.js created by vuejs/vue-cli 3.x.",
+  "keywords": [
+    "dashboard",
+    "scaffolding",
+    "vue",
+    "vue-cli",
+    "vue-i18n",
+    "vue-router",
+    "vuejs",
+    "vuex",
+    "zce"
+  ],
+  "homepage": "https://github.com/zce/dashboard#readme",
+  "bugs": {
+    "url": "https://github.com/zce/dashboard/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zce/dashboard.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "zce",
+    "email": "w@zce.me",
+    "url": "https://zce.me"
+  },
+  "main": "src/main.js",
   "scripts": {
+    "serve": "vue-cli-service serve",
+    "lint": "vue-cli-service lint",
     "build": "vue-cli-service build",
     "predeploy": "yarn lint && yarn build",
     "deploy": "gh-pages -d dist",
-    "lint": "vue-cli-service lint",
-    "serve": "vue-cli-service serve --open"
+    "commit": "git-cz",
+    "release": "standard-version"
   },
-  "dependencies": {
-    "axios": "^0.18.0",
-    "element-ui": "^2.4.4",
-    "nprogress": "^0.2.0",
-    "store": "^2.0.12",
-    "vue": "^2.5.16",
-    "vue-i18n": "^8.0.0",
-    "vue-router": "^3.0.1",
-    "vuex": "^3.0.1",
-    "vuex-router-sync": "^5.0.0"
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   },
-  "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.0.0-rc.5",
-    "@vue/cli-plugin-eslint": "^3.0.0-rc.5",
-    "@vue/cli-service": "^3.0.0-rc.5",
-    "@vue/eslint-config-standard": "^3.0.0-rc.5",
-    "gh-pages": "^1.2.0",
-    "lint-staged": "^7.2.0",
-    "node-sass": "^4.9.2",
-    "sass-loader": "^7.0.3",
-    "vue-template-compiler": "^2.5.16"
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    "*.js": [
+      "yarn lint --fix",
+      "git add"
+    ],
+    "*.vue": [
+      "yarn lint --fix",
+      "git add"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "babel": {
+    "presets": [
+      "@vue/app"
+    ]
   },
   "browserslist": [
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
   ],
-  "gitHooks": {
-    "pre-commit": "lint-staged"
-  },
-  "lint-staged": {
-    "*.js": [
-      "vue-cli-service lint",
-      "git add"
+  "eslintConfig": {
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "@vue/standard"
     ],
-    "*.vue": [
-      "vue-cli-service lint",
-      "git add"
-    ]
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "root": true,
+    "rules": {}
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "element-ui": "^2.5.4",
+    "nprogress": "^0.2.0",
+    "store": "^2.0.12",
+    "vue": "^2.6.6",
+    "vue-i18n": "^8.8.2",
+    "vue-router": "^3.0.2",
+    "vuex": "^3.1.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^7.5.2",
+    "@commitlint/config-conventional": "^7.5.0",
+    "@vue/cli-plugin-babel": "^3.4.0",
+    "@vue/cli-plugin-eslint": "^3.4.0",
+    "@vue/cli-service": "^3.4.0",
+    "@vue/eslint-config-standard": "^4.0.0",
+    "babel-eslint": "^10.0.1",
+    "commitizen": "^3.0.5",
+    "cz-conventional-changelog": "^2.1.0",
+    "eslint": "^5.8.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "fibers": "^3.1.1",
+    "gh-pages": "^2.0.1",
+    "husky": "^1.3.1",
+    "lint-staged": "^8.1.4",
+    "sass": "^1.16.0",
+    "sass-loader": "^7.1.0",
+    "standard-version": "^5.0.0",
+    "vue-template-compiler": "^2.5.21"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
   }
 }

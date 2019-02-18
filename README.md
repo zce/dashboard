@@ -108,6 +108,8 @@ modify `baseURL` in `src/utils/axios.js`:
 - [x] Login module
 - [x] Restructure libs code
 - [x] vue-resource -> Axios
+- [ ] I18n Translation
+- [ ] Deploy to GitHub Pages by CI
 - [ ] Options module
 - [ ] Users module
 - [ ] Media module
@@ -116,7 +118,6 @@ modify `baseURL` in `src/utils/axios.js`:
 - [ ] Comments module
 - [ ] Other module
 - [ ] Config package
-- [ ] Deploy to GitHub Pages by Travis CI
 
 ## License
 
