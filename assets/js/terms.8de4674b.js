@@ -1,2 +1,0 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([[10],{sLox:function(t,e,s){"use strict";s.r(e);var a=function(){var t=this,e=t.$createElement,s=t._self._c||e;return s("div",[s("div",{staticClass:"heading"},[s("h1",{staticClass:"title"},[t._v(t._s(t.$route.params.type))])])])},n=[],i={name:"terms"},l=i,r=s("KHd+"),c=Object(r["a"])(l,a,n,!1,null,null,null);e["default"]=c.exports}}]);
-//# sourceMappingURL=terms.8de4674b.js.map
