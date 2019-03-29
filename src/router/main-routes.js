@@ -1,5 +1,3 @@
-import demo from './demo-routes'
-
 export default [
   // - Dashboard
   {
@@ -155,7 +153,7 @@ export default [
     meta: { requiresAuth: true },
     component: () => import(/* webpackChunkName: 'options' */ '../views/main/options')
   }
-].concat(demo)
+]
 
 // // - Default
 // {
