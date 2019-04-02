@@ -12,7 +12,7 @@ import plugins from './plugins'
  * Import styles
  */
 
-import './assets/styles/element/index.css'
+import './assets/styles/element.scss'
 import './assets/styles/main.scss'
 
 /**

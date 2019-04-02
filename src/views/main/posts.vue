@@ -1,8 +1,8 @@
 <template>
   <div>
     <div class="heading">
-      <h1 class="title" v-if="selections.length">{{ selections.length }} items selected</h1>
-      <h1 class="title" v-else>{{ posts.length }} 条{{ type }}</h1>
+      <h1 class="title" v-if="selections.length">{{ selections.length }} {{ selections.length === 1 ? 'item' : 'items' }} selected</h1>
+      <h1 class="title" v-else>{{ posts.length }} {{ posts.length === 1 ? 'item' : 'items' }}</h1>
       <transition name="fade">
         <ul class="action" v-show="selections.length">
           <li><a href="#" class="icon-before icon-checkmark"></a></li>
@@ -11,10 +11,10 @@
           <li><a href="#" class="icon-before icon-copy"></a></li>
         </ul>
       </transition>
-      <div class="search icon-before icon-search">
+      <label class="search icon-before icon-search">
         <input type="text" placeholder="Search">
-      </div>
-      <router-link :to="{ name: 'new', params: { type: $route.params.type } }"><el-button type="primary" size="small" icon="el-icon-edit">写{{ type }}</el-button></router-link>
+      </label>
+      <router-link :to="{ name: 'new', params: { type: $route.params.type } }"><el-button type="primary" size="small" icon="el-icon-edit">Add item</el-button></router-link>
     </div>
     <el-table :data="posts" @selection-change="handleSelectionChange">
       <el-table-column type="selection"></el-table-column>
@@ -64,7 +64,6 @@ export default {
 
   data () {
     return {
-      type: '',
       size: 50,
       posts: [],
       selections: []
@@ -97,15 +96,6 @@ export default {
           comment: 10,
           date: new Date().toLocaleDateString()
         })
-      }
-
-      switch (this.$route.params.type) {
-        case 'blog':
-          this.type = '博客'
-          break
-        case 'page':
-          this.type = '页面'
-          break
       }
     },
     handleSelectionChange (value) {

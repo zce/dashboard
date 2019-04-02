@@ -18,7 +18,9 @@ import Sidebar from '../components/sidebar'
 
 export default {
   name: 'layout',
-  title: 'WEDN.NET | make IT better',
+
+  title: 'WEDN.NET | MAKE IT BETTER!',
+
   components: {
     'app-header': Header,
     'app-sidebar': Sidebar

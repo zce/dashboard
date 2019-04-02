@@ -12,7 +12,7 @@
 export default {
   name: 'not-fount',
 
-  title: 'Not Found « WEDN.NET | make IT better'
+  title: 'Not Found « WEDN.NET | MAKE IT BETTER!'
 }
 </script>
 

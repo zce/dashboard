@@ -8,6 +8,16 @@
 
 <script>
 export default {
-  name: 'add'
+  name: 'new'
+
+  // computed: {
+  //   title () {
+  //     const dict = {
+  //       blog: 'Blog',
+  //       page: 'Page'
+  //     }
+  //     return dict[this.$route.params.type]
+  //   }
+  // }
 }
 </script>

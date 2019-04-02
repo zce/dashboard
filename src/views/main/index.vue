@@ -12,10 +12,7 @@
 
 <script>
 export default {
-  name: 'dashboard',
-  created () {
-    this.$title('Dashboard')
-  }
+  name: 'dashboard'
 }
 </script>
 

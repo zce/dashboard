@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="heading">
-      <h1 class="title">上传媒体文件</h1>
+      <h1 class="title">Upload media</h1>
     </div>
   </div>
 </template>

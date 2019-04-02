@@ -12,7 +12,7 @@ export default {
 
   computed: {
     title () {
-      const dist = {
+      const dict = {
         general: '常规选项',
         writing: '撰写设置',
         reading: '阅读设置',
@@ -20,7 +20,7 @@ export default {
         media: '多媒体选项',
         permalink: '固定链接设置'
       }
-      return dist[this.$route.params.type]
+      return dict[this.$route.params.type]
     }
   }
 }

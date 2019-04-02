@@ -1,19 +1,19 @@
 <template>
   <div>
     <div class="heading">
-      <h1 class="title" v-if="!selections.length">{{ total }}个用户</h1>
-      <h1 class="title" v-else>{{ selections.length }}个被选中</h1>
+      <h1 class="title" v-if="!selections.length">{{ total }} 个用户</h1>
+      <h1 class="title" v-else>{{ selections.length }} 个被选中</h1>
       <transition name="fade">
         <ul class="action" v-show="selections.length">
-          <li><a href="#" class="icon-before icon-checkmark" @click="handleToggleSelection(true)"></a></li>
-          <li><a href="#" class="icon-before icon-blocked" @click="handleToggleSelection(false)"></a></li>
-          <li><a href="#" class="icon-before icon-bin" @click="handleDeleteSelection"></a></li>
+          <li><a href="#" class="icon-before icon-checkmark" @click.prevent="handleToggleSelection(true)"></a></li>
+          <li><a href="#" class="icon-before icon-blocked" @click.prevent="handleToggleSelection(false)"></a></li>
+          <li><a href="#" class="icon-before icon-bin" @click.prevent="handleDeleteSelection"></a></li>
         </ul>
       </transition>
       <form class="search icon-before icon-search" @submit.prevent="handleSearch">
         <input type="text" placeholder="Search" v-model="search">
       </form>
-      <el-button type="primary" size="small" icon="el-icon-plus">Add</el-button>
+      <el-button type="primary" size="small" icon="el-icon-plus">Add user</el-button>
     </div>
     <el-table :data="users" v-loading="loading" element-loading-text="Loading..." @selection-change="handleSelectionChange" @filter-change="handleFilterChange" @sort-change="handleSortChange">
       <el-table-column type="selection"></el-table-column>
@@ -154,7 +154,7 @@ export default {
       this.$confirm('此操作将永久删除选中用户, 是否继续?')
         .then(() => this.selections.map(item => this.$services.user.delete(item.id)))
         .then(() => this.loadUsers())
-        .catch(e => console.info(e))
+        .catch(e => console.error(e))
     },
 
     handleToggleSelection (enable) {

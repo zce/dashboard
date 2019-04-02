@@ -1,9 +1,9 @@
 <template>
   <div>
     <div class="heading">
-      <h1 class="title">安装{{ title }}</h1>
+      <h1 class="title">{{ title }}</h1>
     </div>
-    <p>暂时不考虑！</p>
+    <p>Not yet!</p>
   </div>
 </template>
 
@@ -13,11 +13,11 @@ export default {
 
   computed: {
     title () {
-      const dist = {
-        plugin: '插件',
-        theme: '主题'
+      const dict = {
+        plugin: 'Install plugin',
+        theme: 'Install theme'
       }
-      return dist[this.$route.params.type]
+      return dict[this.$route.params.type]
     }
   }
 }

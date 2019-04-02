@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="heading">
-      <h1 class="title">评论</h1>
+      <h1 class="title">Comments</h1>
     </div>
   </div>
 </template>

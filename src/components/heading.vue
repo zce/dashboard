@@ -17,8 +17,10 @@
 </template>
 
 <script>
+// TODO: use this component for all page heading
 export default {
   name: 'heading',
+
   props: {
     title: String,
     showAction: Boolean,
@@ -36,8 +38,6 @@ export default {
       type: String,
       default: 'plus'
     }
-  },
-  methods: {
   }
 }
 </script>

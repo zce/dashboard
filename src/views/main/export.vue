@@ -1,9 +1,9 @@
 <template>
   <div>
     <div class="heading">
-      <h1 class="title">导出</h1>
+      <h1 class="title">Export</h1>
     </div>
-    <p>暂时不考虑！</p>
+    <p>Not yet!</p>
   </div>
 </template>
 

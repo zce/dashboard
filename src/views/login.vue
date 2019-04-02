@@ -27,7 +27,7 @@
 export default {
   name: 'login',
 
-  title: 'Login « WEDN.NET | make IT better',
+  title: 'Login « WEDN.NET | MAKE IT BETTER!',
 
   data () {
     // form model
