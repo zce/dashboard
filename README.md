@@ -1,6 +1,7 @@
 # Dashboard
 
 [![Build Status][travis-image]][travis-url]
+[![License][license-image]][license-url]
 [![Dependency Status][dependency-image]][dependency-url]
 [![devDependency Status][devdependency-image]][devdependency-url]
 [![Code Style][style-image]][style-url]
@@ -125,8 +126,10 @@ modify `baseURL` in `src/utils/axios.js`:
 
 
 
-[travis-image]: https://img.shields.io/travis/zce/dashboard/vue.svg
+[travis-image]: https://img.shields.io/travis/zce/dashboard/master.svg
 [travis-url]: https://travis-ci.org/zce/dashboard
+[license-image]: https://img.shields.io/github/license/zce/pages-boilerplate.svg
+[license-url]: https://github.com/zce/pages-boilerplate/blob/master/LICENSE
 [dependency-image]: https://img.shields.io/david/zce/dashboard.svg
 [dependency-url]: https://david-dm.org/zce/dashboard
 [devdependency-image]: https://img.shields.io/david/dev/zce/dashboard.svg
