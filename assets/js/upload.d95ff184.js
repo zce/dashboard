@@ -1,2 +1,0 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["upload"],{"58a9":function(e,t,a){"use strict";a.r(t);var n=function(){var e=this,t=e.$createElement;e._self._c;return e._m(0)},l=[function(){var e=this,t=e.$createElement,a=e._self._c||t;return a("div",[a("div",{staticClass:"heading"},[a("h1",{staticClass:"title"},[e._v("Upload media")])])])}],s={name:"upload"},i=s,c=a("2877"),u=Object(c["a"])(i,n,l,!1,null,null,null);t["default"]=u.exports}}]);
-//# sourceMappingURL=upload.d95ff184.js.map
