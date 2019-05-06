@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["terms"],{b0ba:function(t,e,s){"use strict";s.r(e);var a=function(){var t=this,e=t.$createElement,s=t._self._c||e;return s("div",[s("div",{staticClass:"heading"},[s("h1",{staticClass:"title"},[t._v(t._s(t.$route.params.type))])])])},n=[],i={name:"terms"},l=i,r=s("2877"),c=Object(r["a"])(l,a,n,!1,null,null,null);e["default"]=c.exports}}]);
+//# sourceMappingURL=terms.22faf85c.js.map
