@@ -99,8 +99,8 @@
     "vuex": "3.1.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "7.5.2",
-    "@commitlint/config-conventional": "7.5.0",
+    "@commitlint/cli": "7.6.0",
+    "@commitlint/config-conventional": "7.6.0",
     "@vue/cli-plugin-babel": "3.7.0",
     "@vue/cli-plugin-eslint": "3.7.0",
     "@vue/cli-service": "3.7.0",
