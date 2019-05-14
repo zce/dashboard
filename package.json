@@ -112,7 +112,7 @@
     "eslint-plugin-vue": "5.2.2",
     "fibers": "4.0.1",
     "gh-pages": "2.0.1",
-    "husky": "2.2.0",
+    "husky": "2.3.0",
     "lint-staged": "8.1.6",
     "sass": "1.20.1",
     "sass-loader": "7.1.0",
