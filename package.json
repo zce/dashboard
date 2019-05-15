@@ -113,7 +113,7 @@
     "fibers": "4.0.1",
     "gh-pages": "2.0.1",
     "husky": "2.3.0",
-    "lint-staged": "8.1.6",
+    "lint-staged": "8.1.7",
     "sass": "1.20.1",
     "sass-loader": "7.1.0",
     "standard-version": "6.0.1",
