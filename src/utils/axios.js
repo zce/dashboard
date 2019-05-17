@@ -14,7 +14,7 @@ import axios from 'axios'
 const instance = axios.create({
   // baseURL: 'http://localhost:3000',
   baseURL: 'https://dashboard-server.zce.now.sh',
-  timeout: 5000,
+  timeout: 8 * 1000, // 8s
   headers: {
     // 'X-Custom-Header': 'foobar',
     // // true: need, false: dont need

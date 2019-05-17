@@ -45,7 +45,7 @@ export default {
       ],
       password: [
         { required: true, message: 'Password is required' },
-        { min: 6, max: 16, message: 'Password must be between 6 and 16 characters' }
+        { min: 4, max: 16, message: 'Password must be between 4 and 16 characters' }
       ]
     }
 
