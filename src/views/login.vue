@@ -76,7 +76,7 @@ export default {
                 this.error.message = 'Incorrect username or password!'
                 break
               case 500:
-                this.error.message = 'Server internal error, please try again later!'
+                this.error.message = 'Internal server error, please try again later!'
                 break
             }
             this.loading = false
