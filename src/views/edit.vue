@@ -1,13 +1,14 @@
 <template>
   <div>
     <div class="heading">
-      <h1 class="title">Permissions</h1>
+      <h1 class="title">Edit {{ $route.params.type }}</h1>
     </div>
+    <p>Not yet!</p>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'permissions'
+  name: 'edit'
 }
 </script>

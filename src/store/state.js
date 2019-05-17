@@ -199,9 +199,9 @@ const state = {
         children: [
           { text: 'General', name: 'options', params: { type: 'general' } },
           { divider: true },
-          { text: 'Write', name: 'options', params: { type: 'writing' } },
-          { text: 'Read', name: 'options', params: { type: 'reading' } },
-          { text: 'Discuss', name: 'options', params: { type: 'discussion' } },
+          { text: 'Writing', name: 'options', params: { type: 'writing' } },
+          { text: 'Reading', name: 'options', params: { type: 'reading' } },
+          { text: 'Discussion', name: 'options', params: { type: 'discussion' } },
           { text: 'Media', name: 'options', params: { type: 'media' } },
           { text: 'Permalink', name: 'options', params: { type: 'permalink' } }
         ]

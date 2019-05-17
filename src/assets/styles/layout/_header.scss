@@ -48,8 +48,8 @@
           }
 
           > img {
-            max-width: ($header-height / 2);
-            max-height: ($header-height / 2);
+            width: ($header-height * 0.6);
+            height: ($header-height * 0.6);
             margin-top: -.25rem;
             background: $menu-image-background;
             border: $menu-image-border;

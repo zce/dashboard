@@ -188,6 +188,7 @@ export default {
 
     img {
       width: 2rem;
+      height: 2rem;
       margin: 1rem 1rem 1rem 0;
       border: .0625rem solid #c0c0c0;
       border-radius: 50%;

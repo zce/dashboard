@@ -22,14 +22,13 @@
  */
 
 @import 'base/variables';
-@import 'base/mixins';
 @import 'base/icons';
 @import 'base/transitions';
 @import 'base/components';
 
-@import 'modules/global';
-@import 'modules/header';
-@import 'modules/sidebar';
+@import 'layout/global';
+@import 'layout/header';
+@import 'layout/sidebar';
 
 
 // # Demo styles

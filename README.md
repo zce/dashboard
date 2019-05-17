@@ -23,21 +23,24 @@
 
 ## Usage
 
-### Clone Repo
+### Getting Started
 
 ```shell
-# clone
+# clone repo
 $ git clone https://github.com/zce/dashboard.git
+$ cd dashboard
+# install dependencies
+$ yarn # or npm install
 ```
 
-### Build Setup
+### Available Scripts
 
 ```shell
-# install dependencies
-$ yarn
-
 # serve with hot reload at http://localhost:8080
 $ yarn serve
+
+# lint the source files.
+$ yarn lint
 
 # build for production with minification
 $ yarn build
@@ -48,7 +51,7 @@ $ yarn deploy
 
 ## API Server
 
-[https://jsonplaceholder.uieee.com](https://jsonplaceholder.uieee.com)
+[https://dashboard-server.zce.now.sh](https://dashboard-server.zce.now.sh)
 
 Source: [zce/dashboard-server](https://github.com/zce/dashboard-server)
 
@@ -67,8 +70,8 @@ $ yarn start
 modify `baseURL` in `src/utils/axios.js`:
 
 ```diff
-- baseURL: 'https://jsonplaceholder.uieee.com/',
-+ baseURL: 'http://localhost:2080/',
+- baseURL: 'https://dashboard-server.zce.now.sh',
++ baseURL: 'http://localhost:3000',
 ```
 
 ## Environment
@@ -109,8 +112,8 @@ modify `baseURL` in `src/utils/axios.js`:
 - [x] Login module
 - [x] Restructure libs code
 - [x] vue-resource -> Axios
+- [x] Deploy to GitHub Pages by CI
 - [ ] I18n Translation
-- [ ] Deploy to GitHub Pages by CI
 - [ ] Options module
 - [ ] Users module
 - [ ] Media module
@@ -118,7 +121,6 @@ modify `baseURL` in `src/utils/axios.js`:
 - [ ] Terms module
 - [ ] Comments module
 - [ ] Other module
-- [ ] Config package
 
 ## License
 
@@ -128,8 +130,8 @@ modify `baseURL` in `src/utils/axios.js`:
 
 [travis-image]: https://img.shields.io/travis/zce/dashboard/master.svg
 [travis-url]: https://travis-ci.org/zce/dashboard
-[license-image]: https://img.shields.io/github/license/zce/pages-boilerplate.svg
-[license-url]: https://github.com/zce/pages-boilerplate/blob/master/LICENSE
+[license-image]: https://img.shields.io/github/license/zce/dashboard.svg
+[license-url]: https://github.com/zce/dashboard/blob/master/LICENSE
 [dependency-image]: https://img.shields.io/david/zce/dashboard.svg
 [dependency-url]: https://david-dm.org/zce/dashboard
 [devdependency-image]: https://img.shields.io/david/dev/zce/dashboard.svg

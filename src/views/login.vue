@@ -40,12 +40,12 @@ export default {
     // form validate rules
     const rules = {
       username: [
-        { required: true, message: '请输入用户名' },
-        { min: 2, max: 16, message: '长度在 2 到 16 个字符' }
+        { required: true, message: 'Username is required' },
+        { min: 2, max: 16, message: 'Username must be between 2 and 16 characters' }
       ],
       password: [
-        { required: true, message: '请输入密码' },
-        { min: 6, max: 16, message: '长度在 6 到 16 个字符' }
+        { required: true, message: 'Password is required' },
+        { min: 6, max: 16, message: 'Password must be between 6 and 16 characters' }
       ]
     }
 
@@ -70,13 +70,13 @@ export default {
           })
           .catch(err => {
             console.error(err)
-            this.error = { title: '发生错误', message: '出现异常，请稍后再试！' }
+            this.error = { title: 'Error occurred', message: 'Abnormal, please try again later!' }
             switch (err.response && err.response.status) {
               case 401:
-                this.error.message = '用户名或密码错误！'
+                this.error.message = 'Incorrect username or password!'
                 break
               case 500:
-                this.error.message = '服务器内部异常，请稍后再试！'
+                this.error.message = 'Server internal error, please try again later!'
                 break
             }
             this.loading = false

@@ -92,7 +92,7 @@ export default {
             { name: 'tag2', slug: 'test-tag2' },
             { name: 'tag3', slug: 'test-tag3' }
           ],
-          author: { name: '汪磊', slug: 'zce' },
+          author: { name: 'Wang Lei', slug: 'zce' },
           comment: 10,
           date: new Date().toLocaleDateString()
         })

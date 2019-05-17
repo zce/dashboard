@@ -12,8 +12,8 @@ import axios from 'axios'
 // import storage from './storage'
 
 const instance = axios.create({
-  // baseURL: 'http://localhost:2080/',
-  baseURL: 'https://jsonplaceholder.uieee.com/',
+  // baseURL: 'http://localhost:3000',
+  baseURL: 'https://dashboard-server.zce.now.sh',
   timeout: 5000,
   headers: {
     // 'X-Custom-Header': 'foobar',

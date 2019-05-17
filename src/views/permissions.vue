@@ -1,13 +1,14 @@
 <template>
   <div>
     <div class="heading">
-      <h1 class="title">编辑{{ $route.params.type }}</h1>
+      <h1 class="title">Permissions</h1>
     </div>
+    <p>Not yet!</p>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'edit'
+  name: 'permissions'
 }
 </script>

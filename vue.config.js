@@ -4,6 +4,11 @@
  */
 
 module.exports = {
-  publicPath: '.',
-  assetsDir: 'assets'
+  publicPath: '',
+  assetsDir: 'assets',
+  productionSourceMap: false,
+  css: {
+    // extract: true,
+    sourceMap: true
+  }
 }

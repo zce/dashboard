@@ -3,6 +3,7 @@
     <div class="heading">
       <h1 class="title">{{ title }}</h1>
     </div>
+    <p>Not yet!</p>
   </div>
 </template>
 
@@ -13,12 +14,12 @@ export default {
   computed: {
     title () {
       const dict = {
-        general: '常规选项',
-        writing: '撰写设置',
-        reading: '阅读设置',
-        discussion: '讨论设置',
-        media: '多媒体选项',
-        permalink: '固定链接设置'
+        general: 'General Settings',
+        writing: 'Writing Settings',
+        reading: 'Reading Settings',
+        discussion: 'Discussion Settings',
+        media: 'Media Settings',
+        permalink: 'Permalink Settings'
       }
       return dict[this.$route.params.type]
     }
