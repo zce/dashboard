@@ -13,7 +13,7 @@ import axios from 'axios'
 
 const instance = axios.create({
   // baseURL: 'http://localhost:3000',
-  baseURL: 'https://dashboard-server.zce.now.sh',
+  baseURL: 'https://jsonplaceholder.uieee.com',
   timeout: 8 * 1000, // 8s
   headers: {
     // 'X-Custom-Header': 'foobar',

@@ -16,7 +16,7 @@
 
 ### Online demo
 
-[http://dashboard.zce.me](http://dashboard.zce.me)
+http://dashboard.zce.me
 
 > - username: zce
 > - password: wanglei
@@ -51,9 +51,9 @@ $ yarn deploy
 
 ## API Server
 
-[https://dashboard-server.zce.now.sh](https://dashboard-server.zce.now.sh)
+https://jsonplaceholder.uieee.com
 
-Source: [zce/dashboard-server](https://github.com/zce/dashboard-server)
+> Source: [zce/dashboard-server](https://github.com/zce/dashboard-server)
 
 ### Usage
 
@@ -70,7 +70,7 @@ $ yarn start
 modify `baseURL` in `src/utils/axios.js`:
 
 ```diff
-- baseURL: 'https://dashboard-server.zce.now.sh',
+- baseURL: 'https://jsonplaceholder.uieee.com',
 + baseURL: 'http://localhost:3000',
 ```
 
