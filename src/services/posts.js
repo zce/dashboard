@@ -4,4 +4,14 @@
 
 import Resource from './resource'
 
-export default new Resource('posts')
+class Posts extends Resource {
+  constructor () {
+    super('posts')
+  }
+
+  getComments (id, options) {
+    this.axios.get(`/${this.base}/${id}/comments`, options)
+  }
+}
+
+export default new Posts()

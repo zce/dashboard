@@ -4,12 +4,12 @@
 
 import { axios } from '../utils'
 
-function Resource (base, otherActions) {
-  this.base = base
-  Object.assign(this, otherActions)
-}
+export default class Resource {
+  constructor (base) {
+    this.base = base
+    this.axios = axios
+  }
 
-Resource.prototype = {
   get (id, options) {
     let url = `/${this.base}`
     if (typeof id === 'object') {
@@ -17,33 +17,26 @@ Resource.prototype = {
     } else if (id !== undefined) {
       url += `/${id}`
     }
-    return axios.get(url, options)
-  },
-  delete (id, options) {
-    const url = `/${this.base}/${id}`
-    return axios.delete(url, options)
-  },
+    return this.axios.get(url, options)
+  }
+
   post (options) {
     const url = `/${this.base}`
-    return axios.post(url, options)
-  },
+    return this.axios.post(url, options)
+  }
+
   put (id, options) {
     const url = `/${this.base}/${id}`
-    return axios.put(url, options)
-  },
+    return this.axios.put(url, options)
+  }
+
   patch (id, options) {
     const url = `/${this.base}/${id}`
-    return axios.patch(url, options)
+    return this.axios.patch(url, options)
+  }
+
+  delete (id, options) {
+    const url = `/${this.base}/${id}`
+    return this.axios.delete(url, options)
   }
 }
-
-export default Resource
-
-// const defaultActions = {
-//   get: { method: 'GET' },
-//   save: { method: 'POST' },
-//   query: { method: 'GET' },
-//   update: { method: 'PUT' },
-//   remove: { method: 'DELETE' },
-//   delete: { method: 'DELETE' }
-// }

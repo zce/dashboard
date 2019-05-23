@@ -77,6 +77,15 @@ export default {
 
   methods: {
     initData () {
+      this.$services.post.get()
+        .then(res => {
+          console.log(res.data)
+          return this.$services.post.getComments(res.data[0].id)
+        })
+        .then(comments => {
+          console.log(comments)
+        })
+
       this.posts = []
       for (let i = 0; i < this.size; i++) {
         this.posts.push({
