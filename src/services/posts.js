@@ -10,7 +10,7 @@ class Posts extends Resource {
   }
 
   getComments (id, options) {
-    this.axios.get(`/${this.base}/${id}/comments`, options)
+    return this.axios.get(`/${this.base}/${id}/comments`, options)
   }
 }
 
