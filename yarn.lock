@@ -3679,10 +3679,10 @@ elegant-spinner@^1.0.1:
   resolved "https://registry.yarnpkg.com/elegant-spinner/-/elegant-spinner-1.0.1.tgz#db043521c95d7e303fd8f345bedc3349cfb0729e"
   integrity sha1-2wQ1IcldfjA/2PNFvtwzSc+wcp4=
 
-element-ui@2.9.0:
-  version "2.9.0"
-  resolved "https://registry.yarnpkg.com/element-ui/-/element-ui-2.9.0.tgz#e9e5b615e05d31af4e740ee88c2ce5301fea8058"
-  integrity sha512-1i50qB9ygrokuuMFsmWaX8DsRNIxdziK2IBhcWgOy+gO1mPmhZpp48hurvh1GOcInlE2KUidMKuxVMRgwW7URg==
+element-ui@2.9.1:
+  version "2.9.1"
+  resolved "https://registry.yarnpkg.com/element-ui/-/element-ui-2.9.1.tgz#a05f2e76023d529ba0dfa2d03ae16e5134b20c4e"
+  integrity sha512-w8vrCW5Q+2gfDzs19MUrFdnCy5IjF98rs7DBsKnJQKFfZJZiZ2O+YAsSp/EuPrCm3P/2o/N3MtvZ34VANel13g==
   dependencies:
     async-validator "~1.8.1"
     babel-helper-vue-jsx-merge-props "^2.0.0"
