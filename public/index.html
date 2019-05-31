@@ -5,13 +5,13 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="theme-color" content="#40586F" />
+  <meta name="theme-color" content="#40586f">
   <meta name="description" content="A dashboard scaffolding based on vue.js created by vuejs/vue-cli">
   <meta name="keywords" content="vue, webpack, vuex, dashboard, scaffolding, zce, zce.me">
   <meta name="generator" content="https://github.com/zce/dashboard">
   <meta name="author" content="zce <w@zce.me> (https://github.com/zce)">
   <link rel="shortcut icon" href="<%= BASE_URL %>favicon.ico">
-  <title>Dashboard</title>
+  <title><%= VUE_APP_NAME %></title>
 </head>
 
 <body>
@@ -20,9 +20,9 @@
   </noscript>
   <div id="app">
     <style>
-      body { margin: 0; }
-      #app { display: flex; justify-content: center; align-items: center; height: 100vh; background: #2b3b49; }
-      .loading { height: 5rem; }
+      body { background: #2b3b49; }
+      #app { display: flex; justify-content: center; align-items: center; height: 100vh; }
+      .loading { width: 5rem; height: 5rem; }
       .loading .blue { fill: #dff0fc; }
       .loading .gray { fill: #69cdff; }
       .loading .item { transform-origin: 50px 50px 0; animation: spin 2s infinite; will-change: transform; }

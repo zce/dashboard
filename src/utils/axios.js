@@ -12,15 +12,14 @@ import axios from 'axios'
 // import storage from './storage'
 
 const instance = axios.create({
-  // baseURL: 'http://localhost:3000',
-  baseURL: 'https://jsonplaceholder.uieee.com',
-  timeout: 8 * 1000, // 8s
-  headers: {
-    // 'X-Custom-Header': 'foobar',
-    // // true: need, false: dont need
-    // 'Authorization': true,
-    // 'X-Requested-With': 'XMLHttpRequest'
-  }
+  baseURL: process.env.VUE_APP_API_BASE,
+  timeout: 8 * 1000 // 8s
+  // headers: {
+  //   'X-Custom-Header': 'foobar',
+  //   // true: need, false: dont need
+  //   'Authorization': true,
+  //   'X-Requested-With': 'XMLHttpRequest'
+  // }
 })
 
 // instance.interceptors.request.use(config => {

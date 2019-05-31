@@ -88,7 +88,7 @@ export default {
 </script>
 
 <style lang="scss">
-  @import '../assets/styles/base/variables';
+  @import '../assets/styles/variables';
 
   .login {
     flex: 1;

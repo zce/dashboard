@@ -67,22 +67,22 @@ $ yarn start
 # => api server run @ http://localhost:2080
 ```
 
-modify `baseURL` in `src/utils/axios.js`:
+modify `VUE_APP_API_BASE` in `.env.development` or `.env.prodution`:
 
 ```diff
-- baseURL: 'https://jsonplaceholder.uieee.com',
-+ baseURL: 'http://localhost:3000',
+- VUE_APP_API_BASE=https://jsonplaceholder.uieee.com
++ VUE_APP_API_BASE=http://localhost:3000
 ```
 
 ## Environment
 
-- [Node](https://nodejs.org/) >= 6.0.0
-- [Yarn](https://yarnpkg.com/) >= 0.20.0 or [NPM](https://www.npmjs.com/) >= 3.0.0
+- [Node](https://nodejs.org) >= 8.0.0
+- [Yarn](https://yarnpkg.com) >= 0.20.0 or [NPM](https://www.npmjs.com) >= 3.0.0
 
 ## Stacks
 
 - [Vue CLI 3](https://github.com/vuejs/vue-cli)
-- [Vue](http://vuejs.org/)
+- [Vue](https://vuejs.org)
 - [Vuex](https://github.com/vuejs/vuex)
 - [Vue Router](https://github.com/vuejs/vue-router)
 - [Vue I18n](https://github.com/kazupon/vue-i18n)
@@ -90,15 +90,15 @@ modify `baseURL` in `src/utils/axios.js`:
 - [Axios](https://github.com/mzabriskie/axios)
 - [Element UI](https://github.com/ElemeFE/element)
 - [NProgress](https://github.com/rstacruz/nprogress)
-- [Webpack](https://webpack.js.org/)
-- [Vue Loader](http://vuejs.github.io/vue-loader)
-- [Babel](https://babeljs.io/)
-- [Sass](http://sass-lang.com/)
+- [Webpack](https://webpack.js.org)
+- [Vue Loader](https://vue-loader-v14.vuejs.org)
+- [Babel](https://babeljs.io)
+- [Sass](https://sass-lang.com)
 - [JSON Server](https://github.com/typicode/json-server)
-- [Mock](http://mockjs.com/)
-- [ESLint](http://eslint.org/)
-- [EditorConfig](http://editorconfig.org/)
-- [Travis CI](https://travis-ci.org/)
+- [Mock](http://mockjs.com)
+- [ESLint](http://eslint.org)
+- [EditorConfig](https://editorconfig.org)
+- [Travis CI](https://travis-ci.org)
 
 ## Todos
 
@@ -128,7 +128,7 @@ modify `baseURL` in `src/utils/axios.js`:
 
 
 
-[travis-image]: https://img.shields.io/travis/zce/dashboard/master.svg
+[travis-image]: https://img.shields.io/travis/zce/dashboard.svg
 [travis-url]: https://travis-ci.org/zce/dashboard
 [license-image]: https://img.shields.io/github/license/zce/dashboard.svg
 [license-url]: https://github.com/zce/dashboard/blob/master/LICENSE
@@ -137,4 +137,4 @@ modify `baseURL` in `src/utils/axios.js`:
 [devdependency-image]: https://img.shields.io/david/dev/zce/dashboard.svg
 [devdependency-url]: https://david-dm.org/zce/dashboard?type=dev
 [style-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg
-[style-url]: http://standardjs.com/
+[style-url]: http://standardjs.com
