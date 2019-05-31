@@ -124,7 +124,7 @@ modify `VUE_APP_API_BASE` in `.env.development` or `.env.prodution`:
 
 ## License
 
-[MIT](LICENSE) &copy; [汪磊](https://zce.me) & [WEDN.NET](https://wedn.net)
+[MIT](LICENSE) &copy; [汪磊](https://zce.me) &amp; [WEDN.NET](https://wedn.net)
 
 
 
