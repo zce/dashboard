@@ -1,6 +1,5 @@
 /**
  * Initial state
- * @type {Object}
  */
 const state = {
 
@@ -8,7 +7,6 @@ const state = {
 
 /**
  * Getters
- * @type {Object}
  */
 const getters = {
 
@@ -16,7 +14,6 @@ const getters = {
 
 /**
  * Mutations
- * @type {Object}
  */
 const mutations = {
 
@@ -24,7 +21,6 @@ const mutations = {
 
 /**
  * Actions
- * @type {Object}
  */
 const actions = {
 

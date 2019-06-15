@@ -4,6 +4,4 @@ import posts from './posts'
 import terms from './terms'
 import users from './users'
 
-import demo from './demo'
-
-export { comments, options, posts, terms, users, demo }
+export default { comments, options, posts, terms, users }
