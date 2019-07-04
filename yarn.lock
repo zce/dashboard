@@ -1014,10 +1014,10 @@
     babel-loader "^8.0.5"
     webpack ">=4 < 4.29"
 
-"@vue/cli-plugin-eslint@3.9.0":
-  version "3.9.0"
-  resolved "https://registry.yarnpkg.com/@vue/cli-plugin-eslint/-/cli-plugin-eslint-3.9.0.tgz#e4c94976755c960c9770b16dd2cdc60959fb5fc0"
-  integrity sha512-H26tsx6ZeXlbe1yZXIjzQ2TdqJEQ2mss4bS2LZK2PVQiXHSv2WOUf89nD71OD+1Li/9TORjoWmRVdy2Nptu0Zg==
+"@vue/cli-plugin-eslint@3.9.1":
+  version "3.9.1"
+  resolved "https://registry.yarnpkg.com/@vue/cli-plugin-eslint/-/cli-plugin-eslint-3.9.1.tgz#11f3bdc425619ea2f9e2ab74a8f89f75aa6c2657"
+  integrity sha512-j/ZF3G+OhtYO229UIkH6ef6UekW6MER9+o5jGOkwWed4ZheeT2ssFD2rCSJMXCuV7ygJvKOFGaBJBULL8Ibmzg==
   dependencies:
     "@vue/cli-shared-utils" "^3.9.0"
     babel-eslint "^10.0.1"
