@@ -932,10 +932,10 @@
     lodash.kebabcase "^4.1.1"
     svg-tags "^1.0.0"
 
-"@vue/babel-preset-app@^3.9.0":
-  version "3.9.0"
-  resolved "https://registry.yarnpkg.com/@vue/babel-preset-app/-/babel-preset-app-3.9.0.tgz#2dc32a40baf41ea4af8170dad177e2d2d109e899"
-  integrity sha512-5ypQMjY+EBt2v6sBGFXRILIrAcFF2kZEMKJKpG/1+DlkQlJ9a+Fhhri+TZpBOwuDUOwPOj8tghbVWAmbSJYnPw==
+"@vue/babel-preset-app@^3.9.2":
+  version "3.9.2"
+  resolved "https://registry.yarnpkg.com/@vue/babel-preset-app/-/babel-preset-app-3.9.2.tgz#b72a9b06abbe3f8f272783be13951271277be338"
+  integrity sha512-0suuCbu4jkVcVYBjPmuKxeDbrhwThYZHu3DUmtsVuOzFEGeXmco60VmXveniL/bnDUdZyknSuYP4FxgS34gw9w==
   dependencies:
     "@babel/helper-module-imports" "^7.0.0"
     "@babel/plugin-proposal-class-properties" "^7.0.0"
@@ -1003,21 +1003,21 @@
   resolved "https://registry.yarnpkg.com/@vue/cli-overlay/-/cli-overlay-3.9.0.tgz#11f513d1fa11b0135fb8ba8b88d228df0dc542e0"
   integrity sha512-QfyvpJl2ChehBT2qzb5EvW921JxW94uFL3+lHa6VT42ImH8awrvkTGZmxTQWhHvATa7r0LKy7M7ZRMyo547esg==
 
-"@vue/cli-plugin-babel@3.9.0":
-  version "3.9.0"
-  resolved "https://registry.yarnpkg.com/@vue/cli-plugin-babel/-/cli-plugin-babel-3.9.0.tgz#f73da1593463eaa3fea850604ed7846bf1a6761d"
-  integrity sha512-4aN6uzvxytJzhE1agsclezKrkVUvocRd9Y+wcJRd901Pi5/w1u6YUMybrq+Xeicm9wOqg5e2VDh6fdZvwJ4GUQ==
+"@vue/cli-plugin-babel@3.9.2":
+  version "3.9.2"
+  resolved "https://registry.yarnpkg.com/@vue/cli-plugin-babel/-/cli-plugin-babel-3.9.2.tgz#8ff962a383aaeafd2b280998428a57ea23e9539c"
+  integrity sha512-XqfmGjUGnnJ3NA+HC31F6nkBvB9pFDhk4Lxeao8ZNJcEjKNEBYjlmHunJQdIe/jEXXum6U+U/ZE6DjDStHTIMw==
   dependencies:
     "@babel/core" "^7.0.0"
-    "@vue/babel-preset-app" "^3.9.0"
+    "@vue/babel-preset-app" "^3.9.2"
     "@vue/cli-shared-utils" "^3.9.0"
     babel-loader "^8.0.5"
     webpack ">=4 < 4.29"
 
-"@vue/cli-plugin-eslint@3.9.1":
-  version "3.9.1"
-  resolved "https://registry.yarnpkg.com/@vue/cli-plugin-eslint/-/cli-plugin-eslint-3.9.1.tgz#11f3bdc425619ea2f9e2ab74a8f89f75aa6c2657"
-  integrity sha512-j/ZF3G+OhtYO229UIkH6ef6UekW6MER9+o5jGOkwWed4ZheeT2ssFD2rCSJMXCuV7ygJvKOFGaBJBULL8Ibmzg==
+"@vue/cli-plugin-eslint@3.9.2":
+  version "3.9.2"
+  resolved "https://registry.yarnpkg.com/@vue/cli-plugin-eslint/-/cli-plugin-eslint-3.9.2.tgz#747c616b13a11f34ac80554eee899cbfcd1977b8"
+  integrity sha512-AdvWJN+4Px2r3hbTDM2/rCtTcS6VyI7XuRljbfr2V9nF9cJiH4qsXFrTCRj3OgupbXJ14fUGKrLxmznLZIm1jA==
   dependencies:
     "@vue/cli-shared-utils" "^3.9.0"
     babel-eslint "^10.0.1"
@@ -1029,10 +1029,10 @@
     eslint "^4.19.1"
     eslint-plugin-vue "^4.7.1"
 
-"@vue/cli-service@3.9.0":
-  version "3.9.0"
-  resolved "https://registry.yarnpkg.com/@vue/cli-service/-/cli-service-3.9.0.tgz#e62b4489d90ba7bd5f4efc8edf1cde3676440578"
-  integrity sha512-fP66ro3+JF+/kNor2q75icesbQLTKVGQ21sGaeQqR1y601TzJwuey8NPswS8RlrEGnu6KcteKI62+nNVKW4lJw==
+"@vue/cli-service@3.9.2":
+  version "3.9.2"
+  resolved "https://registry.yarnpkg.com/@vue/cli-service/-/cli-service-3.9.2.tgz#59c95500f1f20ab1cd1905c28f6c3b17c04d6de8"
+  integrity sha512-R4L9tCMpJ4DzLgu/aU9CEtl5QYsj/FXRrtEgXSKm+71OVtA/o2rkLTC8SLB2Bu7wHP/HCYbaoy4NZqSEQzTuLw==
   dependencies:
     "@intervolga/optimize-cssnano-plugin" "^1.0.5"
     "@soda/friendly-errors-webpack-plugin" "^1.7.1"
