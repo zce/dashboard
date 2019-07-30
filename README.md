@@ -51,7 +51,7 @@ $ yarn deploy
 
 ## API Server
 
-https://jsonplaceholder.uieee.com
+https://dashboard-server.now.sh
 
 > Source: [zce/dashboard-server](https://github.com/zce/dashboard-server)
 
@@ -70,7 +70,7 @@ $ yarn start
 modify `VUE_APP_API_BASE` in `.env.development` or `.env.prodution`:
 
 ```diff
-- VUE_APP_API_BASE=https://jsonplaceholder.uieee.com
+- VUE_APP_API_BASE=https://dashboard-server.now.sh
 + VUE_APP_API_BASE=http://localhost:3000
 ```
 
