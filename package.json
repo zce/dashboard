@@ -95,7 +95,7 @@
     "store": "2.0.12",
     "vue": "2.6.10",
     "vue-i18n": "8.13.0",
-    "vue-router": "3.1.1",
+    "vue-router": "3.1.2",
     "vuex": "3.1.1"
   },
   "devDependencies": {
