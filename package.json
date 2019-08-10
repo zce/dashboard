@@ -114,7 +114,7 @@
     "husky": "3.0.2",
     "lint-staged": "9.2.1",
     "sass": "1.22.9",
-    "sass-loader": "7.1.0",
+    "sass-loader": "7.2.0",
     "standard-version": "7.0.0",
     "vue-template-compiler": "2.6.10"
   }
