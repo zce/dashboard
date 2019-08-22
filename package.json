@@ -111,7 +111,7 @@
     "eslint": "6.1.0",
     "eslint-plugin-vue": "5.2.3",
     "gh-pages": "2.1.1",
-    "husky": "3.0.3",
+    "husky": "3.0.4",
     "lint-staged": "9.2.1",
     "sass": "1.22.10",
     "sass-loader": "7.2.0",
