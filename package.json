@@ -105,7 +105,7 @@
     "@vue/cli-plugin-eslint": "3.11.0",
     "@vue/cli-service": "3.11.0",
     "@vue/eslint-config-standard": "4.0.0",
-    "babel-eslint": "10.0.2",
+    "babel-eslint": "10.0.3",
     "commitizen": "4.0.3",
     "cz-conventional-changelog": "3.0.2",
     "eslint": "6.2.2",
