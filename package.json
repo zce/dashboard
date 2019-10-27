@@ -113,7 +113,7 @@
     "gh-pages": "2.1.1",
     "husky": "3.0.9",
     "lint-staged": "9.4.2",
-    "sass": "1.23.0",
+    "sass": "1.23.1",
     "sass-loader": "8.0.0",
     "standard-version": "7.0.0",
     "vue-template-compiler": "2.6.10"
