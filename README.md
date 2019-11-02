@@ -16,7 +16,7 @@
 
 ### Online demo
 
-http://dashboard.zce.me
+https://dashboard.zce.me
 
 > - username: zce
 > - password: wanglei
@@ -95,8 +95,8 @@ modify `VUE_APP_API_BASE` in `.env.development` or `.env.prodution`:
 - [Babel](https://babeljs.io)
 - [Sass](https://sass-lang.com)
 - [JSON Server](https://github.com/typicode/json-server)
-- [Mock](http://mockjs.com)
-- [ESLint](http://eslint.org)
+- [Mock](https://mockjs.com)
+- [ESLint](https://eslint.org)
 - [EditorConfig](https://editorconfig.org)
 - [Travis CI](https://travis-ci.org)
 
@@ -137,4 +137,4 @@ modify `VUE_APP_API_BASE` in `.env.development` or `.env.prodution`:
 [devdependency-image]: https://img.shields.io/david/dev/zce/dashboard.svg
 [devdependency-url]: https://david-dm.org/zce/dashboard?type=dev
 [style-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg
-[style-url]: http://standardjs.com
+[style-url]: https://standardjs.com
