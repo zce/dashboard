@@ -116,7 +116,7 @@
     "lint-staged": "9.5.0",
     "sass": "1.23.7",
     "sass-loader": "8.0.0",
-    "standard-version": "7.0.0",
+    "standard-version": "7.0.1",
     "vue-template-compiler": "2.6.10"
   }
 }
