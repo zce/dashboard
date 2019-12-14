@@ -30,8 +30,8 @@
   },
   "main": "src/main.js",
   "scripts": {
-    "serve": "vue-cli-service serve",
     "lint": "vue-cli-service lint",
+    "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "predeploy": "yarn lint && yarn build",
     "deploy": "gh-pages -d dist",
@@ -62,7 +62,7 @@
   },
   "babel": {
     "presets": [
-      "@vue/app"
+      "@vue/cli-plugin-babel/preset"
     ]
   },
   "browserslist": [
@@ -70,6 +70,7 @@
     "last 2 versions"
   ],
   "eslintConfig": {
+    "root": true,
     "env": {
       "node": true
     },
@@ -77,11 +78,10 @@
       "plugin:vue/essential",
       "@vue/standard"
     ],
+    "rules": {},
     "parserOptions": {
       "parser": "babel-eslint"
-    },
-    "root": true,
-    "rules": {}
+    }
   },
   "postcss": {
     "plugins": {
@@ -90,11 +90,11 @@
   },
   "dependencies": {
     "axios": "0.19.0",
-    "core-js": "3.4.5",
+    "core-js": "3.5.0",
     "element-ui": "2.13.0",
     "nprogress": "0.2.0",
     "store": "2.0.12",
-    "vue": "2.6.10",
+    "vue": "2.6.11",
     "vue-i18n": "8.15.1",
     "vue-router": "3.1.3",
     "vuex": "3.1.2"
@@ -105,11 +105,15 @@
     "@vue/cli-plugin-babel": "4.1.1",
     "@vue/cli-plugin-eslint": "4.1.1",
     "@vue/cli-service": "4.1.1",
-    "@vue/eslint-config-standard": "5.0.0",
+    "@vue/eslint-config-standard": "5.0.1",
     "babel-eslint": "10.0.3",
     "commitizen": "4.0.3",
     "cz-conventional-changelog": "3.0.2",
-    "eslint": "6.7.1",
+    "eslint": "6.7.2",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
     "eslint-plugin-vue": "6.0.1",
     "gh-pages": "2.1.1",
     "husky": "3.1.0",
@@ -117,6 +121,6 @@
     "sass": "1.23.7",
     "sass-loader": "8.0.0",
     "standard-version": "7.0.1",
-    "vue-template-compiler": "2.6.10"
+    "vue-template-compiler": "2.6.11"
   }
 }
