@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Setup Node
+        uses: actions/setup-node@v1
+      - name: Install Dependencies
+        run: yarn
+      - name: Lint Source
+        run: yarn lint
+      - name: Build
+        run: yarn build
+        env:
+          NODE_ENV: production
+          CI: true
+      # - name: Deploy Site
+      #   # if: github.event == 'push'
+      #   run: npx gh-pages
+      #     -d public
+      #     -r https://${{secrets.CODING_TOKEN}}@git.dev.tencent.com/zce/zce.me.git
+      #     -b master
+      #     -u "GitHub Actions <bots@github.com>"
+      # - name: Deploy to Surge
+      #   run: npx surge
+      #     public
+      #     zce.surge.sh
+      #     --token ${{secrets.SURGE_TOKEN}}
+# TODO: nightly & beta deploy
