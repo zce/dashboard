@@ -114,7 +114,7 @@
     "eslint-plugin-node": "10.0.0",
     "eslint-plugin-promise": "4.2.1",
     "eslint-plugin-standard": "4.0.1",
-    "eslint-plugin-vue": "6.0.1",
+    "eslint-plugin-vue": "6.1.1",
     "gh-pages": "2.1.1",
     "husky": "3.1.0",
     "lint-staged": "9.5.0",
