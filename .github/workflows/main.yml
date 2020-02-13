@@ -1,9 +1,6 @@
 name: CI
 
-on:
-  push:
-    branches:
-      - master
+on: push
 
 jobs:
   build:
@@ -14,21 +11,21 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v1
       - name: Install Dependencies
-        run: yarn
+        run: npm install
       - name: Lint Source
-        run: yarn lint
-      - name: Build
-        run: yarn build
+        run: npm run lint
+      - name: Build Site
+        run: npm run build
         env:
           NODE_ENV: production
           CI: true
       # - name: Deploy Site
-      #   # if: github.event == 'push'
+      #   if: github.ref == 'refs/heads/master'
       #   run: npx gh-pages
-      #     -d public
+      #     -d dist
       #     -u "GitHub Actions <bots@github.com>"
       # - name: Deploy to Surge
+      #   if: github.ref == 'refs/heads/master'
       #   run: npx surge
-      #     public
-      #     zce.surge.sh
+      #     dist
       #     --token ${{secrets.SURGE_TOKEN}}

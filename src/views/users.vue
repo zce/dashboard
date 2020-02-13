@@ -17,7 +17,7 @@
     </div>
     <el-table :data="users" v-loading="loading" element-loading-text="Loading..." @selection-change="handleSelectionChange" @filter-change="handleFilterChange" @sort-change="handleSortChange">
       <el-table-column type="selection"></el-table-column>
-      <el-table-column prop="username" label="Username" min-width="180" sortable="custom">
+      <el-table-column prop="username" label="Username" sortable="custom">
         <template slot-scope="scope">
           <div class="user-info">
             <img :src="scope.row.meta.avatar" alt="scope.row.name">
@@ -36,9 +36,9 @@
           <i class="status status-danger" title="Forbidden" v-else-if="scope.row.status === 'forbidden'" @click="handleToggleStatus(scope.row)"></i>
         </template>
       </el-table-column>
-      <el-table-column prop="email" label="Email" width="200" sortable="custom"></el-table-column>
-      <el-table-column prop="phone" label="Mobile" width="140" sortable="custom"></el-table-column>
-      <el-table-column prop="roles" label="Role" width="240" :filters="filters.roles" column-key="roles">
+      <el-table-column prop="email" label="Email" width="240" sortable="custom"></el-table-column>
+      <el-table-column prop="phone" label="Mobile" width="160" sortable="custom"></el-table-column>
+      <el-table-column prop="roles" label="Role" width="320" :filters="filters.roles" column-key="roles">
         <template slot-scope="scope">
           <el-tag type="success" v-for="item in scope.row.roles" :key="item">{{ item }}</el-tag>
         </template>

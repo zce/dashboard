@@ -39,9 +39,10 @@
           <a href="#">{{ scope.row.author.name }}</a>
         </template>
       </el-table-column>
-      <el-table-column label="Comments" width="120">
+      <el-table-column label="Comments" width="120" align="center">
         <template slot-scope="scope">
-          <i class="icon-before icon-bubble">{{ scope.row.comment }}</i>
+          <i class="icon-before icon-bubble"></i>
+          <span>{{ scope.row.comment }}</span>
         </template>
       </el-table-column>
       <el-table-column prop="date" label="Date" width="120"></el-table-column>

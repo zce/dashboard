@@ -10,12 +10,9 @@ notifications:
     on_success: never
     on_failure: change
 
-cache:
-  yarn: true
-
 script:
-  - yarn lint
-  - yarn build
+  - npm run lint
+  - npm run build
 
 # https://docs.travis-ci.com/user/deployment/pages/
 deploy:

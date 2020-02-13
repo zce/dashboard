@@ -1,5 +1,6 @@
 # Dashboard
 
+[![Actions Status][action-image]][action-url]
 [![Build Status][travis-image]][travis-url]
 [![License][license-image]][license-url]
 [![Dependency Status][dependency-image]][dependency-url]
@@ -30,23 +31,23 @@ https://dashboard.zce.me
 $ git clone https://github.com/zce/dashboard.git
 $ cd dashboard
 # install dependencies
-$ yarn # or npm install
+$ npm install # or yarn
 ```
 
 ### Available Scripts
 
 ```shell
 # serve with hot reload at http://localhost:8080
-$ yarn serve
+$ npm run serve # or yarn serve
 
 # lint the source files.
-$ yarn lint
+$ npm run lint # or yarn lint
 
 # build for production with minification
-$ yarn build
+$ npm run build # or yarn build
 
 # build for production and deploy to gh-pages
-$ yarn deploy
+$ npm run deploy # or yarn deploy
 ```
 
 ## API Server
@@ -62,8 +63,8 @@ https://dashboard-server.now.sh
 $ git clone https://github.com/zce/dashboard-server.git
 # run api server
 $ cd dashboard-server
-$ yarn
-$ yarn start
+$ npm install # or yarn
+$ npm start # or yarn start
 # => api server run @ http://localhost:2080
 ```
 
@@ -76,29 +77,31 @@ modify `VUE_APP_API_BASE` in `.env.development` or `.env.prodution`:
 
 ## Environment
 
-- [Node](https://nodejs.org) >= 8.0.0
-- [Yarn](https://yarnpkg.com) >= 0.20.0 or [NPM](https://www.npmjs.com) >= 3.0.0
+- [Node](https://nodejs.org) >= 10.0.0
+- [NPM](https://www.npmjs.com) >= 6.0.0 or [Yarn](https://yarnpkg.com) >= 1.20.0
 
 ## Stacks
 
-- [Vue CLI 3](https://github.com/vuejs/vue-cli)
-- [Vue](https://vuejs.org)
-- [Vuex](https://github.com/vuejs/vuex)
-- [Vue Router](https://github.com/vuejs/vue-router)
-- [Vue I18n](https://github.com/kazupon/vue-i18n)
-- ~~[Vue Resource](https://github.com/pagekit/vue-resource)~~
-- [Axios](https://github.com/mzabriskie/axios)
-- [Element UI](https://github.com/ElemeFE/element)
-- [NProgress](https://github.com/rstacruz/nprogress)
-- [Webpack](https://webpack.js.org)
-- [Vue Loader](https://vue-loader-v14.vuejs.org)
-- [Babel](https://babeljs.io)
-- [Sass](https://sass-lang.com)
-- [JSON Server](https://github.com/typicode/json-server)
-- [Mock](https://mockjs.com)
-- [ESLint](https://eslint.org)
+- [Vue CLI](https://cli.vuejs.org/) - Standard Tooling for Vue.js Development
+- [Vue](https://vuejs.org/) - The Progressive JavaScript Framework
+- [Vuex](https://vuex.vuejs.org/) - Official state management pattern / library for Vue.js applications
+- [Vue Router](http://router.vuejs.org/) - Official router for Vue.js applications
+- [Vue I18n](https://kazupon.github.io/vue-i18n/) - Internationalization plugin for Vue.js
+- ~~[Vue Resource](https://github.com/pagekit/vue-resource)~~ - RESTful APIs library (instead by axios)
+- [Axios](https://github.com/axios/axios) - AJAX call library
+- [Element UI](https://github.com/ElemeFE/element) - UI Framework (Partial use, such as forms, forms, etc)
+- [NProgress](https://github.com/rstacruz/nprogress) - For slim progress bars like on YouTube, Medium, etc
+- ~~[Webpack](https://webpack.js.org)~~ - Bundler (within @vue/cli-service)
+- ~~[Vue Loader](https://vue-loader.vuejs.org/)~~ - Bundler (within @vue/cli-service)
+- ~~[Babel](https://babeljs.io)~~ - JavaScript compiler (within @vue/cli-plugin-babel)
+- ~~[ESLint](https://eslint.org)~~ - Linter (within @vue/cli-plugin-eslint)
+- [Sass](https://sass-lang.com) - CSS Preprocessor
 - [EditorConfig](https://editorconfig.org)
-- [Travis CI](https://travis-ci.org)
+- [Travis CI](https://travis-ci.org) - CI System
+- [GitHub Actions](https://github.com/features/actions) - CI System
+- [JSON Server](https://github.com/typicode/json-server) - Basic framework of serverside 
+- [Mock](https://mockjs.com)
+- etc.
 
 ## Todos
 
@@ -128,6 +131,8 @@ modify `VUE_APP_API_BASE` in `.env.development` or `.env.prodution`:
 
 
 
+[actions-image]: https://github.com/zce/dashboard/workflows/CI/badge.svg
+[actions-url]: https://github.com/zce/dashboard/actions
 [travis-image]: https://img.shields.io/travis/zce/dashboard.svg
 [travis-url]: https://travis-ci.org/zce/dashboard
 [license-image]: https://img.shields.io/github/license/zce/dashboard.svg

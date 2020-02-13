@@ -4,12 +4,11 @@
  */
 
 module.exports = {
-  publicPath: '',
+  publicPath: '', // for relative path
   assetsDir: 'assets',
-  lintOnSave: false,
+  lintOnSave: process.env.NODE_ENV !== 'production',
   productionSourceMap: false,
   css: {
-    // extract: true,
-    sourceMap: true
+    sourceMap: process.env.NODE_ENV !== 'production'
   }
 }
