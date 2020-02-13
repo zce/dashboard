@@ -4,8 +4,8 @@
 @font-face {
   font-family: 'freedom';
   src:
-    url('#{$freedom-font-path}/freedom.ttf?b7r2dg') format('truetype'),
     url('#{$freedom-font-path}/freedom.woff?b7r2dg') format('woff'),
+    url('#{$freedom-font-path}/freedom.ttf?b7r2dg') format('truetype'),
     url('#{$freedom-font-path}/freedom.svg?b7r2dg#freedom') format('svg');
   font-weight: normal;
   font-style: normal;
