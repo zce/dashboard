@@ -56,18 +56,18 @@ body {
   flex-direction: column;
   width: 100%;
   height: 100%;
-  overflow: hidden;
 
   > .main {
     display: flex;
     flex: 1;
+    overflow: hidden;
 
     > .content {
       flex: 1;
       margin: 0 $content-margin 0 0;
       overflow: auto;
-      border-top-left-radius: $content-margin * .6;
-      border-top-right-radius: $content-margin * .6;
+      border-top-left-radius: $content-margin * .8;
+      border-top-right-radius: $content-margin * .8;
       background-color: $content-background;
       color: $content-color;
       font-size: .875rem;

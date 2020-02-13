@@ -17,7 +17,7 @@
     </div>
     <el-table :data="users" v-loading="loading" element-loading-text="Loading..." @selection-change="handleSelectionChange" @filter-change="handleFilterChange" @sort-change="handleSortChange">
       <el-table-column type="selection"></el-table-column>
-      <el-table-column prop="username" label="Username" sortable="custom">
+      <el-table-column prop="username" label="Username" min-width="200" sortable="custom">
         <template slot-scope="scope">
           <div class="user-info">
             <img :src="scope.row.meta.avatar" alt="scope.row.name">

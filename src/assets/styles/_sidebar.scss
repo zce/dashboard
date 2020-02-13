@@ -94,11 +94,10 @@
             left: 100%;
             z-index: 99;
             min-width: $sidebar-sub-width;
-            background: $menu-item-hover-background;
 
             // Sidebar hover arrow
             @if $sidebar-enable-arrow {
-              background: darken($menu-item-hover-background, 2%);
+              background: darken($menu-item-hover-background, 4%);
 
               // right bubble
               @if $sidebar-enable-radius {
@@ -113,9 +112,11 @@
                 left: -.875rem;
                 margin: (($sidebar-item-height - .875rem) / 2) 0;
                 border: (.875rem / 2) solid transparent;
-                border-right-color: darken($menu-item-hover-background, 2%);
+                border-right-color: darken($menu-item-hover-background, 4%);
                 content: '';
               }
+            } @else {
+              background: $menu-item-hover-background;
             }
           }
         }
