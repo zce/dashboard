@@ -115,8 +115,8 @@ const state = {
         name: 'posts',
         params: { type: 'blog' },
         children: [
-          { text: 'All', name: 'posts', params: { type: 'blog' } },
-          { text: 'New', name: 'new', params: { type: 'blog' } },
+          { text: 'All posts', name: 'posts', params: { type: 'blog' } },
+          { text: 'New post', name: 'new', params: { type: 'blog' } },
           { text: 'Categories', name: 'terms', params: { type: 'blog-category' } },
           { text: 'Tags', name: 'terms', params: { type: 'blog-tag' } }
         ]
