@@ -6,6 +6,7 @@
     <div class="jumbotron">
       <h2>Hello, world!</h2>
       <p>A dashboard scaffolding based on Vue.js created by Vue CLI.</p>
+      <p>Source code: <a href="https://github.com/zce/dashboard">zce/dashboard</a></p>
     </div>
   </div>
 </template>
@@ -38,5 +39,9 @@ export default {
     font-size: 4.5rem;
     font-weight: 300;
     line-height: 1.1;
+  }
+
+  a {
+    color: #fff;
   }
 </style>
