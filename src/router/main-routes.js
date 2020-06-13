@@ -1,10 +1,10 @@
 export default [
   // - Dashboard
   {
-    name: 'dashboard',
+    name: 'home',
     path: '',
     meta: { requiresAuth: true },
-    component: () => import(/* webpackChunkName: 'dashboard' */ '../views/index')
+    component: () => import(/* webpackChunkName: 'home' */ '../views/home')
   },
   {
     name: 'update',
@@ -160,5 +160,5 @@ export default [
 //   name: 'default',
 //   path: '',
 //   meta: { requiresAuth: true },
-//   redirect: { name: 'dashboard' }
+//   redirect: { name: 'home' }
 // },

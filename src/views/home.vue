@@ -5,14 +5,14 @@
     </div>
     <div class="jumbotron">
       <h2>Hello, world!</h2>
-      <p>Coming soon...</p>
+      <p>A dashboard scaffolding based on Vue.js created by Vue CLI.</p>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'dashboard'
+  name: 'home'
 }
 </script>
 
@@ -38,9 +38,5 @@ export default {
     font-size: 4.5rem;
     font-weight: 300;
     line-height: 1.1;
-  }
-
-  p {
-    font-size: 1.5rem;
   }
 </style>

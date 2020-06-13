@@ -4,7 +4,7 @@
       <h1 class="title">About</h1>
     </div>
 
-    <img class="sign" src="https://img.zce.me/sign.png" alt="Wang Lei">
+    <img class="sign" src="https://img.zce.me/logo/sign.png" alt="Wang Lei">
     <ul>
       <li><a href="https://zce.me">https://zce.me</a></li>
       <li><a href="https://github.com/zce">https://github.com/zce</a></li>
@@ -25,6 +25,6 @@ export default {
 
 <style scoped>
   .sign {
-    max-width: 80%;
+    max-width: 30rem;
   }
 </style>

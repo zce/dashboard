@@ -100,9 +100,9 @@ const state = {
       {
         text: 'Dashboard',
         icon: 'meter',
-        name: 'dashboard',
+        name: 'home',
         children: [
-          { text: 'Home', name: 'dashboard' },
+          { text: 'Home', name: 'home' },
           { text: 'Update', name: 'update' }
         ]
       },
