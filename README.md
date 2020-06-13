@@ -99,7 +99,7 @@ modify `VUE_APP_API_BASE` in `.env.development` or `.env.prodution`:
 - [EditorConfig](https://editorconfig.org)
 - [Travis CI](https://travis-ci.org) - CI System
 - [GitHub Actions](https://github.com/features/actions) - CI System
-- [JSON Server](https://github.com/typicode/json-server) - Basic framework of serverside 
+- [JSON Server](https://github.com/typicode/json-server) - Basic framework of serverside
 - [Mock](https://mockjs.com)
 - etc.
 
@@ -116,9 +116,9 @@ modify `VUE_APP_API_BASE` in `.env.development` or `.env.prodution`:
 - [x] Restructure libs code
 - [x] vue-resource -> Axios
 - [x] Deploy to GitHub Pages by CI
-- [ ] I18n Translation
+- [x] I18n Translation
+- [x] Users module
 - [ ] Options module
-- [ ] Users module
 - [ ] Media module
 - [ ] Posts module
 - [ ] Terms module
