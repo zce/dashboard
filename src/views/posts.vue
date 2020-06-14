@@ -62,7 +62,6 @@
 <script>
 export default {
   name: 'posts',
-
   data () {
     return {
       size: 50,
@@ -70,12 +69,10 @@ export default {
       selections: []
     }
   },
-
   created () {
     this.$title(this.$route.params.type)
     this.initData()
   },
-
   methods: {
     initData () {
       this.$services.post.get()
@@ -121,7 +118,6 @@ export default {
       console.log(`当前页: ${value}`)
     }
   },
-
   // https://router.vuejs.org/zh-cn/essentials/dynamic-matching.html#响应路由参数的变化
   // https://router.vuejs.org/zh-cn/advanced/data-fetching.html
   watch: {
@@ -132,9 +128,9 @@ export default {
 }
 </script>
 
-<style>
-  .el-pagination {
-    margin: 1rem 0 2rem;
-    text-align: right;
-  }
+<style scoped>
+.el-pagination {
+  margin: 1rem 0 2rem;
+  text-align: right;
+}
 </style>

@@ -19,12 +19,10 @@
 <script>
 export default {
   name: 'menu-list',
-
   props: {
     items: Array,
     activeClass: Boolean
   },
-
   methods: {
     isActive (route) {
       const objectEqual = (a, b) => (Object.keys(a).length !== Object.keys(b).length) || Object.keys(a).every(key => String(a[key]) === String(b[key]))

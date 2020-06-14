@@ -9,11 +9,10 @@ import store from '../store'
 import router from '../router'
 
 export default Vue => {
-  // Authorize
-  // Make sure that is the first hook.
+  // Authorize (Make sure that is the first hook.)
   router.beforeHooks.unshift((to, from, next) => {
     // don't need authorize
-    if (!to.meta.requiresAuth) return next()
+    if (!to.meta.requireAuth) return next()
     // check login state
     store.dispatch('checkToken')
       .then(valid => {
@@ -25,21 +24,16 @@ export default Vue => {
       })
   })
 
-  // // login page visiable
-  // router.beforeEach((to, from, next) => {
-  //   if (to.name !== 'login') return next()
-  //   // check login state
-  //   store.dispatch('checkToken')
-  //     .then(valid => {
-  //       if (!valid) return next()
-  //       // when logged in
-  //       console.log('dont need authorize')
-  //       next({ path: to.query.redirect || '/' })
-  //     })
-  // })
-
-  // // mount the authorize to Vue component instance
-  // Object.defineProperties(Vue.prototype, {
-  //   $authorize: { get: () => store.dispatch('refreshToken') }
-  // })
+  // login page visiable
+  router.beforeEach((to, from, next) => {
+    if (to.name !== 'login') return next()
+    // check login state
+    store.dispatch('checkToken')
+      .then(valid => {
+        if (!valid) return next()
+        // when logged in
+        console.log('Authorized')
+        next({ path: to.query.redirect || '/' })
+      })
+  })
 }

@@ -17,7 +17,6 @@
 <script>
 export default {
   name: 'components-table',
-
   data () {
     const temp = []
     for (let i = 0; i < 100; i++) {
@@ -32,7 +31,6 @@ export default {
       multipleSelection: []
     }
   },
-
   methods: {
     handleSelectionChange (value) {
       this.multipleSelection = value

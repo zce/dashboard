@@ -11,6 +11,7 @@
  *   storage.each( ... )
  */
 
-import store from 'store'
+import { createStore } from 'store/src/store-engine'
+import storage from 'store/storages/localStorage'
 
-export default store
+export default createStore([storage], [], process.env.VUE_APP_STORAGE_PREFIX)

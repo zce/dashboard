@@ -1,4 +1,7 @@
-export default {
+/**
+ * @type {import('vuex/types').GetterTree<typeof import('./state').default>}
+ */
+const getters = {
   /**
    * 获取页面标题
    */
@@ -26,3 +29,5 @@ export default {
    */
   count: state => state.count
 }
+
+export default getters

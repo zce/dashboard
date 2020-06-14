@@ -118,6 +118,7 @@ modify `VUE_APP_API_BASE` in `.env.development` or `.env.prodution`:
 - [x] Deploy to GitHub Pages by CI
 - [x] I18n Translation
 - [x] Users module
+- [ ] JSDoc supports - https://code.visualstudio.com/Docs/languages/javascript
 - [ ] Options module
 - [ ] Media module
 - [ ] Posts module

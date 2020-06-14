@@ -3,28 +3,39 @@
  * TODO: title case
  */
 import router from '../router'
+import store from '../store'
 
-export default (Vue, options) => {
-  let items
+const property = 'title'
+const separator = ' « '
 
-  // change title
+export default Vue => {
   router.afterEach(route => {
-    items = route.matched
-      .map(item => (item.components.default[options.property] || item.components.default.name).toUpperCase())
-      .reverse()
-    document.title = items.join(options.separator)
+    const current = route.matched[route.matched.length - 1].components.default
+    const title = current[property] || current.name
+    const items = [process.env.VUE_APP_TITLE]
+    title && items.unshift(title)
+
+    // change title
+    store.dispatch('changeTitle', items.join(separator).toLocaleUpperCase())
+
+    // console.log(route.matched)
+    // const items = route.matched
+    //   .map(({ components }) => {
+    //     const title = (components.default[property] || components.default.name)
+    //     return title && title.toLocaleUpperCase()
+    //   })
+    //   .filter(t => t && t.trim())
+    //   .reverse()
+    // document.title = [...items, process.env.VUE_APP_TITLE].join(separator)
   })
 
   Object.defineProperties(Vue.prototype, {
     $title: {
-      get: () => (title, fullname) => {
-        if (fullname) {
-          document.title = title.toUpperCase()
-        } else {
-          // partial
-          items[0] = title.toUpperCase()
-          document.title = items.join(options.separator)
-        }
+      get: () => {
+        return store.getters.title
+      },
+      set: value => {
+        store.dispatch('changeTitle', value.toLocaleUpperCase())
       }
     }
   })

@@ -21,11 +21,9 @@
 <script>
 export default {
   name: 'demo-proxy',
-
   data () {
     return { posts: {}, error: false }
   },
-
   methods: {
     fetch () {
       this.$axios
@@ -46,7 +44,3 @@ export default {
   }
 }
 </script>
-
-<style>
-
-</style>

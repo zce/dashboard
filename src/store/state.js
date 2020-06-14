@@ -1,27 +1,26 @@
-import { axios, storage } from '../utils'
+import { storage } from '../utils'
 
-const state = {
+export default {
   /**
    * 客户端会话信息
-   * @type {Object}
-   * TODO: storage - local or session
+   * @type {object}
    */
-  session: storage.get('wedn_net_session_info') || {},
+  session: storage.get('session') ?? {},
 
   /**
    * 顶部工具栏
-   * @type {Object}
+   * @type {object}
    */
   header: {
     /**
      * 站点名称
-     * @type {String}
+     * @type {string}
      */
-    name: 'WEDN.NET',
+    name: process.env.VUE_APP_NAME,
 
     /**
      * 顶部菜单
-     * @type {Array}
+     * @type {object[]}
      */
     menus: [
       {
@@ -74,24 +73,24 @@ const state = {
 
   /**
    * 侧边导航栏
-   * @type {Object}
+   * @type {object}
    */
   sidebar: {
     /**
      * 版权所属
-     * @type {String}
+     * @type {string}
      */
-    copyright: 'WEDN.NET',
+    copyright: process.env.VUE_APP_NAME,
 
     /**
      * 是否收起边栏
-     * @type {Boolean}
+     * @type {boolean}
      */
-    collapse: storage.get('wedn_net_sidebar_collapse'),
+    collapse: storage.get('sidebar_collapse'),
 
     /**
      * 侧边菜单
-     * @type {Array}
+     * @type {object[]}
      */
     menus: [
       {
@@ -213,14 +212,7 @@ const state = {
 
   /**
    * 计数器
-   * @type {Number}
+   * @type {number}
    */
-  count: storage.get('wedn_net_demo_count') || 0
+  count: storage.get('demo_count') ?? 0
 }
-
-if (state.session && state.session.token) {
-  // init axios headers
-  axios.defaults.headers.Authorization = `Bearer ${state.session.token}`
-}
-
-export default state

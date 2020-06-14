@@ -20,7 +20,6 @@
 // TODO: use this component for all page heading
 export default {
   name: 'heading',
-
   props: {
     title: String,
     showAction: Boolean,

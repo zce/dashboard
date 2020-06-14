@@ -25,22 +25,18 @@ import { mapGetters } from 'vuex'
 import MenuList from './menu'
 
 export default {
-  name: 'app-header',
-
+  name: 'header',
   components: { MenuList },
-
   computed: mapGetters({
     header: 'header',
     session: 'session'
   }),
-
   created () {
     this.$store.dispatch('getCurrentUser')
   },
-
   methods: {
-    logout () {
-      this.$store.dispatch('deleteToken')
+    async logout () {
+      await this.$store.dispatch('deleteToken')
       this.$router.replace({ path: '/login' })
     }
   }

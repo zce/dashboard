@@ -26,9 +26,6 @@
 
 export default {
   name: 'login',
-
-  title: 'Login « WEDN.NET | MAKE IT BETTER!',
-
   data () {
     // form model
     // TODO: remove default values
@@ -51,7 +48,6 @@ export default {
 
     return { model: model, rules: rules, error: null, loading: false }
   },
-
   methods: {
     submit (ref) {
       // form validate
@@ -88,64 +84,64 @@ export default {
 </script>
 
 <style lang="scss">
-  @import '../assets/styles/variables';
+@import '../assets/styles/variables';
 
-  .login {
-    flex: 1;
-    width: 95%;
-    max-width: 22rem;
-    margin: 0 auto;
-    font-size: .875rem;
+.login {
+  flex: 1;
+  width: 95%;
+  max-width: 22rem;
+  margin: 0 auto;
+  font-size: .875rem;
 
-    &-header {
-      margin-bottom: 1rem;
+  &-header {
+    margin-bottom: 1rem;
 
-      .brand {
-        margin: 4.5rem 0 3.5rem;
-        text-align: center;
-        letter-spacing: .125rem;
+    .brand {
+      margin: 4.5rem 0 3.5rem;
+      text-align: center;
+      letter-spacing: .125rem;
 
-        a {
-          margin: 0;
-          color: $brand-color;
-          font: 300 3rem sans-serif;
+      a {
+        margin: 0;
+        color: $brand-color;
+        font: 300 3rem sans-serif;
 
-          &:hover {
-            color: $brand-hover-color;
-            text-shadow: 0 0 1rem $brand-hover-color;
-          }
+        &:hover {
+          color: $brand-hover-color;
+          text-shadow: 0 0 1rem $brand-hover-color;
         }
       }
     }
+  }
 
-    &-form {
-      margin-bottom: 2.5rem;
-      padding: 1.875rem 1.25rem;
-      background: $login-form-background;
-      color: $login-form-color;
+  &-form {
+    margin-bottom: 2.5rem;
+    padding: 1.875rem 1.25rem;
+    background: $login-form-background;
+    color: $login-form-color;
 
-      .heading {
-        margin: 0 0 1rem;
-        font-weight: 400;
-        font-size: 1.5rem;
-      }
-
-      .el-button {
-        margin-top: .5rem;
-        width: 100%;
-      }
+    .heading {
+      margin: 0 0 1rem;
+      font-weight: 400;
+      font-size: 1.5rem;
     }
 
-    &-footer {
-      margin-bottom: 1rem;
-      padding: .625rem;
-      border: .0625rem solid $brand-color;
-      font-size: .75rem;
-      text-align: center;
-
-      a {
-        color: $brand-color;
-      }
+    .el-button {
+      margin-top: .5rem;
+      width: 100%;
     }
   }
+
+  &-footer {
+    margin-bottom: 1rem;
+    padding: .625rem;
+    border: .0625rem solid $brand-color;
+    font-size: .75rem;
+    text-align: center;
+
+    a {
+      color: $brand-color;
+    }
+  }
+}
 </style>

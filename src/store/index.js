@@ -20,14 +20,14 @@ Vue.use(Vuex)
 
 const strict = process.env.NODE_ENV !== 'production'
 
+/**
+ * @type {import('vuex/types').Store<typeof import('./state').default>}
+ */
 const store = new Vuex.Store({ state, getters, mutations, actions, modules, plugins, strict })
 
-// ## Initial
-// store.dispatch('initToken')
-// // change axios authorization header
-// axios.defaults.headers.Authorization = `Bearer ${storage.get('wedn_net_access_token')}`
+export default store
 
-// ## Hot module replacement
+// Hot module replacement
 if (module.hot) {
   module.hot.accept([
     './getters',
@@ -53,21 +53,3 @@ if (module.hot) {
     })
   })
 }
-
-export default store
-
-// // accept first param must be literal !!!
-// if (module.hot) {
-//   const accepts = [
-//     './getters',
-//     './mutations',
-//     './actions'
-//   ]
-//   module.hot.accept(accepts, () => {
-//     store.hotUpdate({
-//       getters: require('./getters'),
-//       mutations: require('./mutations'),
-//       actions: require('./actions')
-//     })
-//   })
-// }

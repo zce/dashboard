@@ -9,27 +9,13 @@
  */
 
 import axios from 'axios'
-// import storage from './storage'
 
-const instance = axios.create({
+export default axios.create({
   baseURL: process.env.VUE_APP_API_BASE,
-  timeout: 8 * 1000 // 8s
-  // headers: {
-  //   'X-Custom-Header': 'foobar',
-  //   // true: need, false: dont need
-  //   'Authorization': true,
-  //   'X-Requested-With': 'XMLHttpRequest'
-  // }
+  timeout: 3 * 1000, // 3s
+  headers: {
+    // 'X-Custom-Header': 'foobar',
+    // 'Authorization': true,
+    'X-Requested-With': 'XMLHttpRequest'
+  }
 })
-
-// instance.interceptors.request.use(config => {
-//   // Add authorization in the header
-//   // TODO: token in store
-//   const token = storage.get('wedn_net_access_token')
-//   if (token && config.headers.Authorization) {
-//     config.headers.Authorization = `Bearer ${token}`
-//   }
-//   return config
-// })
-
-export default instance

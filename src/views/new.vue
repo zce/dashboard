@@ -9,7 +9,6 @@
 <script>
 export default {
   name: 'new'
-
   // computed: {
   //   title () {
   //     const dict = {

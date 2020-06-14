@@ -10,7 +10,6 @@
 <script>
 export default {
   name: 'install',
-
   computed: {
     title () {
       const dict = {

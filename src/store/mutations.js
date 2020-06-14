@@ -1,6 +1,16 @@
-import { CHANGE_SESSION, TOGGLE_SIDEBAR_COLLAPSE, INCREMENT, DECREMENT } from './mutation-types'
+import { CHANGE_TITLE, CHANGE_SESSION, TOGGLE_SIDEBAR_COLLAPSE, INCREMENT, DECREMENT } from './mutation-types'
 
-export default {
+/**
+ * @type {import('vuex/types').MutationTree<typeof import('./state').default>}
+ */
+const mutations = {
+  /**
+   * 改变页面标题
+   */
+  [CHANGE_TITLE]: (state, title) => {
+    state.title = title
+  },
+
   /**
    * 改变客户端会话信息
    */
@@ -32,3 +42,5 @@ export default {
     state.count--
   }
 }
+
+export default mutations

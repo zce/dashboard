@@ -67,9 +67,9 @@ export default {
 }
 </script>
 
-<style lang="scss">
-  .row {
-    margin-bottom: 1rem;
-    text-align: center;
-  }
+<style scoped>
+.row {
+  margin-bottom: 1rem;
+  text-align: center;
+}
 </style>

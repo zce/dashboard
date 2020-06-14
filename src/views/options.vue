@@ -10,7 +10,6 @@
 <script>
 export default {
   name: 'options',
-
   computed: {
     title () {
       const dict = {

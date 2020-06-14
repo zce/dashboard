@@ -15,14 +15,11 @@ import { mapGetters, mapActions } from 'vuex'
 import MenuList from './menu'
 
 export default {
-  name: 'app-sidebar',
-
+  name: 'sidebar',
   components: { MenuList },
-
   computed: mapGetters({
     sidebar: 'sidebar'
   }),
-
   methods: mapActions({
     toggleCollapse: 'toggleSidebarCollapse'
   })

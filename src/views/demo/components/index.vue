@@ -79,24 +79,24 @@ export default {
 </script>
 
 <style scoped>
-  .el-breadcrumb {
-    margin-bottom: .75rem;
-  }
+.el-breadcrumb {
+  margin-bottom: .75rem;
+}
 
-  .el-carousel__item h3 {
-    margin: 0;
-    color: #475669;
-    font-size: 18px;
-    opacity: 0.75;
-    line-height: 300px;
-    text-align: center;
-  }
+.el-carousel__item h3 {
+  margin: 0;
+  color: #475669;
+  font-size: 18px;
+  opacity: 0.75;
+  line-height: 300px;
+  text-align: center;
+}
 
-  .el-carousel__item:nth-child(2n) {
-    background-color: #99a9bf;
-  }
+.el-carousel__item:nth-child(2n) {
+  background-color: #99a9bf;
+}
 
-  .el-carousel__item:nth-child(2n+1) {
-    background-color: #d3dce6;
-  }
+.el-carousel__item:nth-child(2n+1) {
+  background-color: #d3dce6;
+}
 </style>

@@ -11,13 +11,13 @@ export default [
   {
     name: 'login',
     path: '/login',
-    meta: { requiresAuth: false },
+    meta: { requireAuth: false },
     component: () => import(/* webpackChunkName: 'login' */ '../views/login')
   },
   // ## main page
   {
     path: '/',
-    meta: { requiresAuth: true },
+    meta: { requireAuth: true },
     component: () => import(/* webpackChunkName: 'common' */ '../views/layout'),
     children: mainRoutes.concat(demoRoutes)
   },
@@ -25,7 +25,7 @@ export default [
   {
     name: 'not-found',
     path: '*',
-    meta: { requiresAuth: false },
+    meta: { requireAuth: false },
     component: () => import(/* webpackChunkName: 'common' */ '../views/error')
   }
 ]

@@ -2,8 +2,6 @@
  * Utils
  */
 
-import axios from './axios'
-import storage from './storage'
-import nprogress from './nprogress'
-
-export { axios, storage, nprogress }
+export { default as axios } from './axios'
+export { default as storage } from './storage'
+export { default as nprogress } from './nprogress'

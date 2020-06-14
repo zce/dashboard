@@ -15,7 +15,6 @@
 <script>
 export default {
   name: 'demo-data',
-
   data () {
     const todos = []
     for (let i = 0; i < 100; i++) {
@@ -25,7 +24,3 @@ export default {
   }
 }
 </script>
-
-<style>
-
-</style>

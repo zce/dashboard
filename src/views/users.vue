@@ -51,7 +51,6 @@
 <script>
 export default {
   name: 'users',
-
   data () {
     // column filters
     const filters = {
@@ -83,12 +82,10 @@ export default {
       loading: false
     }
   },
-
   created () {
     // initial data
     this.loadUsers()
   },
-
   methods: {
     loadUsers () {
       // toggle loading
@@ -173,34 +170,34 @@ export default {
 </script>
 
 <style lang="scss">
-  .el-pagination {
-    margin: 1rem 0 2rem;
-    text-align: right;
+.el-pagination {
+  margin: 1rem 0 2rem;
+  text-align: right;
+}
+
+.el-tag {
+  margin: 0 .0625rem;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+
+  img {
+    width: 2rem;
+    height: 2rem;
+    margin: 1rem 1rem 1rem 0;
+    border: .0625rem solid #c0c0c0;
+    border-radius: 50%;
+    background: #cfd2d7;
   }
 
-  .el-tag {
-    margin: 0 .0625rem;
-  }
-
-  .user-info {
+  .names {
     display: flex;
-    align-items: center;
-
-    img {
-      width: 2rem;
-      height: 2rem;
-      margin: 1rem 1rem 1rem 0;
-      border: .0625rem solid #c0c0c0;
-      border-radius: 50%;
-      background: #cfd2d7;
-    }
-
-    .names {
-      display: flex;
-      flex: 1;
-      flex-direction: column;
-      font-size: .8125rem;
-      line-height: 1.4;
-    }
+    flex: 1;
+    flex-direction: column;
+    font-size: .8125rem;
+    line-height: 1.4;
   }
+}
 </style>

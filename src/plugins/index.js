@@ -11,7 +11,7 @@ import authorize from './authorize'
 export default {
   install (Vue) {
     axios(Vue)
-    title(Vue, { property: 'title', separator: ' « ' })
+    title(Vue)
     services(Vue)
     nprogress(Vue)
     authorize(Vue)

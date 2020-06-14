@@ -19,11 +19,9 @@
 <script>
 export default {
   name: 'demo-cors',
-
   data () {
     return { photos: {}, error: false }
   },
-
   methods: {
     fetch () {
       const url = 'http://jsonplaceholder.typicode.com/photos'
@@ -44,7 +42,3 @@ export default {
   }
 }
 </script>
-
-<style>
-
-</style>

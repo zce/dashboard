@@ -1,67 +1,63 @@
 import { TokenService, UserService } from '../services'
-import { CHANGE_SESSION, TOGGLE_SIDEBAR_COLLAPSE, INCREMENT, DECREMENT } from './mutation-types'
+import { CHANGE_TITLE, CHANGE_SESSION, TOGGLE_SIDEBAR_COLLAPSE, INCREMENT, DECREMENT } from './mutation-types'
 
-export default {
+/**
+ * @type {import('vuex/types').ActionTree<typeof import('./state').default>}
+ */
+const actions = {
   /**
    * 改变页面标题
    */
   changeTitle: ({ commit }, title) => {
-    commit(CHANGE_SESSION, { title: title })
+    commit(CHANGE_TITLE, title)
   },
 
   /**
    * 创建新的客户端令牌
    */
-  createToken: ({ commit }, { username, password }) => {
-    return TokenService.post({
+  createToken: async ({ commit }, { username, password }) => {
+    const res = await TokenService.post({
       username: username.trim(),
       password: password.trim()
     })
-      .then(res => {
-        commit(CHANGE_SESSION, { token: res.data.token })
-        return res.data.token
-      })
+    commit(CHANGE_SESSION, { token: res.data.token })
+    return res.data.token
   },
 
   /**
    * 检查客户端令牌是否可用
    */
-  checkToken: ({ commit, getters }) => {
-    return new Promise((resolve, reject) => {
-      // validate local store
-      if (!getters.session.token) {
-        return resolve(false)
-      }
-      // remote
-      TokenService.get()
-        .then(res => resolve(true))
-        .catch(err => {
-          console.error(err)
-          commit(CHANGE_SESSION, { token: null })
-          resolve(false)
-        })
-    })
+  checkToken: async ({ commit, getters }) => {
+    // validate local store
+    if (!getters.session.token) {
+      return Promise.resolve(false)
+    }
+    // remote
+    try {
+      await TokenService.get()
+      return true
+    } catch (err) {
+      console.error(err)
+      commit(CHANGE_SESSION, { token: null })
+      return false
+    }
   },
 
   /**
    * 删除客户端令牌
    */
-  deleteToken: ({ commit, getters }) => {
-    return TokenService.delete(getters.session.token)
-      .then(res => {
-        commit(CHANGE_SESSION, { token: null })
-      })
+  deleteToken: async ({ commit, getters }) => {
+    await TokenService.delete(getters.session.token)
+    commit(CHANGE_SESSION, { token: null })
   },
 
   /**
    * 获取当前登录用户信息
    */
-  getCurrentUser: ({ commit }) => {
-    return UserService.get('me')
-      .then(res => {
-        commit(CHANGE_SESSION, { user: res.data })
-        return res.data
-      })
+  getCurrentUser: async ({ commit }) => {
+    const res = await UserService.get('me')
+    commit(CHANGE_SESSION, { user: res.data })
+    return res.data
   },
 
   /**
@@ -93,3 +89,5 @@ export default {
    */
   decrementAsync: ({ commit }) => setTimeout(() => commit(DECREMENT), 1000)
 }
+
+export default actions
