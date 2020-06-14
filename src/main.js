@@ -1,47 +1,27 @@
 import Vue from 'vue'
 import element from 'element-ui'
 // import { sync } from 'vuex-router-sync'
-
 import App from './app'
 import i18n from './i18n'
 import store from './store'
 import router from './router'
 import plugins from './plugins'
 
-/**
- * Import styles
- */
-
+// global styles
 import './assets/styles/element.scss'
 import './assets/styles/main.scss'
 
-/**
- * Use plugins
- */
+// global config
+Vue.config.debug = process.env.NODE_ENV === 'development'
+Vue.config.silent = process.env.NODE_ENV === 'production'
+Vue.config.productionTip = false
 
+// plugins
 Vue.use(element)
 Vue.use(plugins)
 // sync(store, router, { moduleName: 'route' })
 
-/**
- * Config
- */
-
-Vue.config.debug = process.env.NODE_ENV === 'development'
-Vue.config.silent = process.env.NODE_ENV === 'production'
-Vue.config.devtools = true
-Vue.config.productionTip = false
-
-/**
- * Initial
- */
-
-// ...
-
-/**
- * Root app
- */
-
+// Create root app
 const app = new Vue({
   name: 'root',
   i18n: i18n,
@@ -50,8 +30,5 @@ const app = new Vue({
   render: h => h(App)
 })
 
-/**
- * Mount to `#app` element
- */
-
+// Mount to `#app` element
 app.$mount('#app')
