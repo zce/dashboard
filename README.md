@@ -22,6 +22,8 @@ https://dashboard.zce.me
 > - username: zce
 > - password: wanglei
 
+> P.S. For Chinese: https://zce.gitee.io/vue-admin
+
 ## Usage
 
 ### Getting Started
