@@ -4,7 +4,7 @@
       <h1 class="brand"><router-link to="/" tabindex="-1">WEDN.NET</router-link></h1>
       <el-alert v-if="error" :title="error.title" type="warning" :description="error.message" show-icon/>
     </header>
-    <el-form class="login-form" auto-complete="off" :model="model" :rules="rules" ref="login-form" label-position="top">
+    <el-form class="login-form" :class="{ shaking: error }" auto-complete="off" :model="model" :rules="rules" ref="login-form" label-position="top">
       <h2 class="heading">Sign-in</h2>
       <el-form-item label="Login" prop="username">
         <el-input type="text" v-model="model.username" placeholder="Please enter username"/>
@@ -46,7 +46,7 @@ export default {
       ]
     }
 
-    return { model: model, rules: rules, error: null, loading: false }
+    return { model, rules, error: null, loading: false }
   },
   methods: {
     submit (ref) {
@@ -130,6 +130,10 @@ export default {
       margin-top: .5rem;
       width: 100%;
     }
+
+    &.shaking {
+      animation: shakeX 1s;
+    }
   }
 
   &-footer {
@@ -142,6 +146,28 @@ export default {
     a {
       color: $brand-color;
     }
+  }
+}
+
+@keyframes shakeX {
+  from,
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translate3d(-1rem, 0, 0);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translate3d(1rem, 0, 0);
   }
 }
 </style>
