@@ -6,8 +6,8 @@
     <nav class="toolbar">
       <menu-list :items="header.menus"/>
       <ul class="list">
-        <li class="item">
-          <a href="#" v-if="session.user">Hi, {{ session.user.name }}! <img class="avatar" :src="session.user.meta.avatar" :alt="session.user.name"></a>
+        <li class="item" v-if="session.user">
+          <a href="#">Hi, {{ session.user.name }}! <img class="avatar" :src="session.user.meta.avatar" :alt="session.user.name"></a>
           <ul class="list">
             <li class="item"><router-link :to="{ name: 'profile' }">Profile</router-link></li>
             <li class="item"><router-link :to="{ name: 'profile' }">Edit profile</router-link></li>
