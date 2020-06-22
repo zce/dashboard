@@ -84,16 +84,21 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../assets/styles/variables';
+@import '../theme';
 
-.login {
-  flex: 1;
+@mixin inner {
   width: 95%;
   max-width: 22rem;
   margin: 0 auto;
+}
+
+.login {
+  flex: 1;
   font-size: .875rem;
+  overflow: auto;
 
   &-header {
+    @include inner;
     margin-bottom: 1rem;
 
     .brand {
@@ -116,6 +121,7 @@ export default {
   }
 
   &-form {
+    @include inner;
     margin-bottom: 2.5rem;
     padding: 1.875rem 1.25rem;
     background: $login-form-background;
@@ -138,6 +144,7 @@ export default {
   }
 
   &-footer {
+    @include inner;
     margin-bottom: 1rem;
     padding: .625rem;
     border: .0625rem solid $brand-color;

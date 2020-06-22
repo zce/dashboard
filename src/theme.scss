@@ -114,7 +114,7 @@ $header-sub-width:                5rem;
 // - Sidebar
 $sidebar-width:                   10rem;
 $sidebar-min-width:               2.25rem;
-$sidebar-sub-width:               5rem;
+$sidebar-sub-width:               8rem;
 $sidebar-item-height:             $sidebar-min-width;
 $sidebar-enable-arrow:            true;
 $sidebar-enable-radius:           false;
@@ -132,7 +132,7 @@ $login-form-background:           $content-background;
 // ## Icons
 // ------------------------------
 
-$freedom-font-path: '../fonts' !default;
+$freedom-font-path: 'assets/fonts' !default;
 
 $icon-home: '\e900';
 $icon-home2: '\e901';

@@ -1,3 +1,60 @@
+@import 'theme';
+
+// ## Common styles
+// ------------------------------
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+::selection {
+  color: $selection-color;
+  background: $selection-background;
+  text-shadow: none;
+}
+
+a {
+  &,
+  &:visited {
+    color: $link-color;
+    text-decoration: $link-decoration;
+  }
+
+  &:hover {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+  }
+
+  &:active,
+  &:focus {
+    outline: 0;
+  }
+}
+
+
+// ## Global styles
+// ------------------------------
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+html {
+  overflow: hidden;
+  background: $html-background;
+  // color: $html-color;
+}
+
+body {
+  background: $body-background;
+  color: $body-color;
+  font-family: $body-font-family;
+  // better Font Rendering
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 // # Freedom icon imports
 // ====================
 
@@ -1516,3 +1573,74 @@
     content: $icon-freedom;
   }
 }
+
+// ## Status icon
+// ------------------------------
+
+.status {
+  display: inline-block;
+  cursor: pointer;
+  width: .875rem;
+  height: .875rem;
+  vertical-align: middle;
+  border-radius: 50%;
+
+  &-primary {
+    background: $primary;
+  }
+
+  &-success {
+    background: $success;
+  }
+
+  &-warning {
+    background: $warning;
+  }
+
+  &-danger {
+    background: $danger;
+  }
+
+  &-info {
+    background: $info;
+  }
+}
+
+.nprogress-busy {
+  cursor: wait !important;
+}
+
+// ## Element theme
+// ------------------------------
+
+// 改变主题色变量
+$--color-primary: #40586F;
+// $--color-primary: teal;
+
+// 改变 icon 字体路径变量，必需
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+@import '~element-ui/packages/theme-chalk/src/index';
+
+/**
+ * Suggested order:
+ * display
+ * list-style
+ * position
+ * float
+ * clear
+ * width
+ * height
+ * margin
+ * padding
+ * border
+ * background
+ * color
+ * font
+ * text-decoration
+ * text-align
+ * vertical-align
+ * white-space
+ * other text
+ * content
+ */

@@ -8,8 +8,7 @@ import router from './router'
 import plugins from './plugins'
 
 // global styles
-import './assets/styles/element.scss'
-import './assets/styles/main.scss'
+import './style.scss'
 
 // global config
 Vue.config.debug = process.env.NODE_ENV === 'development'

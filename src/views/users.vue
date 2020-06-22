@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div class="heading">
+  <section class="users">
+    <header class="heading">
       <h1 class="title" v-if="!selections.length">{{ total }} 个用户</h1>
       <h1 class="title" v-else>{{ selections.length }} 个被选中</h1>
       <transition name="fade">
@@ -14,7 +14,7 @@
         <input type="text" placeholder="Search" v-model="search">
       </form>
       <el-button type="primary" size="small" icon="el-icon-plus">Add user</el-button>
-    </div>
+    </header>
     <el-table :data="users" v-loading="loading" element-loading-text="Loading..." @selection-change="handleSelectionChange" @filter-change="handleFilterChange" @sort-change="handleSortChange">
       <el-table-column type="selection"></el-table-column>
       <el-table-column prop="username" label="Username" min-width="200" sortable="custom">
@@ -45,7 +45,7 @@
       </el-table-column>
     </el-table>
     <el-pagination :total="total" :page-size="size" :current-page="page" :page-sizes="[20, 30, 50]" layout="total, sizes, prev, pager, next" @size-change="handlePageSizeChange" @current-change="handleCurrentPageChange"></el-pagination>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -170,6 +170,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import '../theme';
+
 .el-pagination {
   margin: 1rem 0 2rem;
   text-align: right;
@@ -186,7 +188,7 @@ export default {
   img {
     width: 2rem;
     height: 2rem;
-    margin: 1rem 1rem 1rem 0;
+    margin-right: 1rem;
     border: .0625rem solid #c0c0c0;
     border-radius: 50%;
     background: #cfd2d7;

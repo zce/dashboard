@@ -25,3 +25,16 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+.icons {
+  width: 100%;
+  word-wrap: break-word;
+
+  i {
+    display: inline-block;
+    margin: 1rem;
+    font-size: 2.25rem;
+  }
+}
+</style>

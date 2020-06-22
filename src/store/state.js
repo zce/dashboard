@@ -86,7 +86,7 @@ export default {
      * 是否收起边栏
      * @type {boolean}
      */
-    collapse: storage.get('sidebar_collapse'),
+    collapse: window.innerWidth < 768 || storage.get('sidebar_collapse'),
 
     /**
      * 侧边菜单

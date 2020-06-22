@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div class="heading">
+  <section class="posts">
+    <header class="heading">
       <h1 class="title" v-if="selections.length">{{ selections.length }} {{ selections.length === 1 ? 'item' : 'items' }} selected</h1>
       <h1 class="title" v-else>{{ posts.length }} {{ posts.length === 1 ? 'item' : 'items' }}</h1>
       <transition name="fade">
@@ -15,7 +15,7 @@
         <input type="text" placeholder="Search">
       </label>
       <router-link :to="{ name: 'new', params: { type: $route.params.type } }"><el-button type="primary" size="small" icon="el-icon-edit">Add item</el-button></router-link>
-    </div>
+    </header>
     <el-table :data="posts" @selection-change="handleSelectionChange">
       <el-table-column type="selection"></el-table-column>
       <el-table-column prop="title" label="Title" show-overflow-tooltip></el-table-column>
@@ -56,7 +56,7 @@
       :page-size="50"
       :total="400">
     </el-pagination>
-  </div>
+  </section>
 </template>
 
 <script>
