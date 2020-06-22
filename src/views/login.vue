@@ -105,10 +105,11 @@ export default {
         margin: 0;
         color: $brand-color;
         font: 300 3rem sans-serif;
+        transition: text-shadow 0.3s;
 
         &:hover {
           color: $brand-hover-color;
-          text-shadow: 0 0 1rem $brand-hover-color;
+          text-shadow: 0 0 0.5rem rgba($brand-hover-color, 0.2);
         }
       }
     }
@@ -160,14 +161,14 @@ export default {
   50%,
   70%,
   90% {
-    transform: translate3d(-1rem, 0, 0);
+    transform: translate3d(-0.5rem, 0, 0);
   }
 
   20%,
   40%,
   60%,
   80% {
-    transform: translate3d(1rem, 0, 0);
+    transform: translate3d(0.5rem, 0, 0);
   }
 }
 </style>
