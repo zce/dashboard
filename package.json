@@ -84,7 +84,7 @@
     "eslint-plugin-vue": "6.2.2",
     "husky": "4.2.5",
     "lint-staged": "10.2.11",
-    "sass": "1.26.8",
+    "sass": "1.26.9",
     "sass-loader": "8.0.2",
     "standard-version": "8.0.0",
     "vue-template-compiler": "2.6.11"
