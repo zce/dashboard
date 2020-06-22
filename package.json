@@ -48,10 +48,7 @@
     ]
   },
   "lint-staged": {
-    "*.{js,vue}": [
-      "vue-cli-service lint",
-      "git add"
-    ]
+    "*.{js,vue}": "vue-cli-service lint"
   },
   "config": {
     "commitizen": {
@@ -72,9 +69,9 @@
   "devDependencies": {
     "@commitlint/cli": "9.0.1",
     "@commitlint/config-conventional": "9.0.1",
-    "@vue/cli-plugin-babel": "4.4.4",
-    "@vue/cli-plugin-eslint": "4.4.4",
-    "@vue/cli-service": "4.4.4",
+    "@vue/cli-plugin-babel": "4.4.5",
+    "@vue/cli-plugin-eslint": "4.4.5",
+    "@vue/cli-service": "4.4.5",
     "@vue/eslint-config-standard": "5.1.2",
     "babel-eslint": "10.1.0",
     "commitizen": "4.1.2",
