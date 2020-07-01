@@ -8,7 +8,7 @@ import {
   TermService,
   PostService,
   CommentService
-} from '../services'
+} from './services'
 
 interface Services {
   option: typeof OptionService
