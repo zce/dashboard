@@ -32,9 +32,7 @@
   "scripts": {
     "lint": "vue-cli-service lint",
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "commit": "git-cz",
-    "release": "standard-version"
+    "build": "vue-cli-service build"
   },
   "husky": {
     "hooks": {
@@ -50,10 +48,10 @@
   "lint-staged": {
     "*.{js,vue}": "vue-cli-service lint"
   },
-  "config": {
-    "commitizen": {
-      "path": "cz-conventional-changelog"
-    }
+  "renovate": {
+    "extends": [
+      "zce"
+    ]
   },
   "dependencies": {
     "axios": "0.19.2",
@@ -62,7 +60,7 @@
     "nprogress": "0.2.0",
     "store": "2.0.12",
     "vue": "2.6.11",
-    "vue-i18n": "8.19.0",
+    "vue-i18n": "8.20.0",
     "vue-router": "3.3.4",
     "vuex": "3.5.1"
   },
@@ -74,8 +72,6 @@
     "@vue/cli-service": "4.4.6",
     "@vue/eslint-config-standard": "5.1.2",
     "babel-eslint": "10.1.0",
-    "commitizen": "4.1.2",
-    "cz-conventional-changelog": "3.2.0",
     "eslint": "7.6.0",
     "eslint-plugin-import": "2.22.0",
     "eslint-plugin-node": "11.1.0",
@@ -86,7 +82,6 @@
     "lint-staged": "10.2.11",
     "sass": "1.26.10",
     "sass-loader": "9.0.2",
-    "standard-version": "8.0.1",
     "vue-template-compiler": "2.6.11"
   }
 }

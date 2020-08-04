@@ -1,19 +1,19 @@
 # Dashboard
 
-[![Actions Status][actions-image]][actions-url]
-[![Build Status][travis-image]][travis-url]
-[![License][license-image]][license-url]
-[![Dependency Status][dependency-image]][dependency-url]
-[![devDependency Status][devdependency-image]][devdependency-url]
-[![Code Style][style-image]][style-url]
+[![Actions Status][actions-img]][actions-url]
+[![Build Status][travis-img]][travis-url]
+[![License][license-img]][license-url]
+[![Dependency Status][dependency-img]][dependency-url]
+[![devDependency Status][devdependency-img]][devdependency-url]
+[![Code Style][style-img]][style-url]
 
 > A dashboard scaffolding based on vue.js created by [vuejs/vue-cli](https://github.com/vuejs/vue-cli).
 
 ## Preview
 
-![WEDN.NET Dashboard Login](https://user-images.githubusercontent.com/6166576/44618442-71adfc80-a8a8-11e8-8ff5-3dcb95dcaa8b.png)
+![WEDN.NET Dashboard Login](https://user-imgs.githubusercontent.com/6166576/44618442-71adfc80-a8a8-11e8-8ff5-3dcb95dcaa8b.png)
 
-![WEDN.NET Dashboard List](https://user-images.githubusercontent.com/6166576/44618443-74105680-a8a8-11e8-9af9-06ae4afb6d27.png)
+![WEDN.NET Dashboard List](https://user-imgs.githubusercontent.com/6166576/44618443-74105680-a8a8-11e8-9af9-06ae4afb6d27.png)
 
 ### Online demo
 
@@ -105,44 +105,21 @@ modify `VUE_APP_API_BASE` in `.env.development` or `.env.prodution`:
 - [Mock](https://mockjs.com)
 - etc.
 
-## Todos
-
-- [x] Restructure config file
-- [x] Remove unused packages
-- [x] Custom Element UI theme
-- [x] All pages structure
-- [x] JSON Server
-- [x] Global state
-- [x] Table demo
-- [x] Login module
-- [x] Restructure libs code
-- [x] vue-resource -> Axios
-- [x] Deploy to GitHub Pages by CI
-- [x] I18n Translation
-- [x] Users module
-- [ ] JSDoc supports - https://code.visualstudio.com/Docs/languages/javascript
-- [ ] Options module
-- [ ] Media module
-- [ ] Posts module
-- [ ] Terms module
-- [ ] Comments module
-- [ ] Other module
-
 ## License
 
 [MIT](LICENSE) &copy; [汪磊](https://zce.me) &amp; [WEDN.NET](https://wedn.net)
 
 
 
-[actions-image]: https://github.com/zce/dashboard/workflows/CI/badge.svg
+[actions-img]: https://github.com/zce/dashboard/workflows/CI/badge
 [actions-url]: https://github.com/zce/dashboard/actions
-[travis-image]: https://img.shields.io/travis/zce/dashboard.svg
-[travis-url]: https://travis-ci.org/zce/dashboard
-[license-image]: https://img.shields.io/github/license/zce/dashboard.svg
+[travis-img]: https://img.shields.io/travis/com/zce/dashboard
+[travis-url]: https://travis-ci.com/zce/dashboard
+[license-img]: https://img.shields.io/github/license/zce/dashboard
 [license-url]: https://github.com/zce/dashboard/blob/master/LICENSE
-[dependency-image]: https://img.shields.io/david/zce/dashboard.svg
+[dependency-img]: https://img.shields.io/david/zce/dashboard
 [dependency-url]: https://david-dm.org/zce/dashboard
-[devdependency-image]: https://img.shields.io/david/dev/zce/dashboard.svg
+[devdependency-img]: https://img.shields.io/david/dev/zce/dashboard
 [devdependency-url]: https://david-dm.org/zce/dashboard?type=dev
-[style-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg
+[style-img]: https://img.shields.io/badge/code%20style-standard-brightgreen
 [style-url]: https://standardjs.com

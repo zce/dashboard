@@ -1,14 +1,7 @@
-sudo: false
-
 language: node_js
 
 node_js:
   - lts/*
-
-notifications:
-  email:
-    on_success: never
-    on_failure: change
 
 script:
   - npm run lint
