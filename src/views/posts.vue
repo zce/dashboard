@@ -70,7 +70,7 @@ export default {
     }
   },
   created () {
-    this.$title(this.$route.params.type)
+    this.$title = this.$route.params.type
     this.initData()
   },
   methods: {
