@@ -1,4 +1,4 @@
-# Dashboard
+# dashboard
 
 [![Actions Status][actions-img]][actions-url]
 [![Build Status][travis-img]][travis-url]
@@ -7,9 +7,20 @@
 [![devDependency Status][devdependency-img]][devdependency-url]
 [![Code Style][style-img]][style-url]
 
-> A dashboard scaffolding based on vue.js created by [vuejs/vue-cli](https://github.com/vuejs/vue-cli).
+> A dashboard scaffolding based on Vue.js.
 
-## Preview
+### Features
+
+- Type annotation enhancement by JSDoc
+- Access control by route interception
+- Vuex (modules, plugins)
+- API Services
+- I18n support
+- Element UI custom theme
+- Travis CI & GitHub Actions
+- etc.
+
+### Preview
 
 ![WEDN.NET Dashboard Login](https://user-imgs.githubusercontent.com/6166576/44618442-71adfc80-a8a8-11e8-8ff5-3dcb95dcaa8b.png)
 
@@ -24,9 +35,15 @@ https://dashboard.zce.me
 
 > P.S. For Chinese: https://zce.gitee.io/vue-admin
 
-## Usage
+## Getting Started
 
-### Getting Started
+### Prerequisites
+
+- [Node.js](https://nodejs.org) (>= 10.12, 12.10 preferred)
+- [npm](https://www.npmjs.com) (>= 6.x) or [yarn](https://yarnpkg.com) (>= 1.20)
+- [Git](https://git-scm.com) (>= 2.20)
+
+### Clone & Install
 
 ```shell
 # clone repo
@@ -52,9 +69,9 @@ $ npm run build # or yarn build
 $ npm run deploy # or yarn deploy
 ```
 
-## API Server
+## Fake API Server
 
-https://dashboard-server.now.sh
+Online service by Vercel: https://dashboard-server.now.sh
 
 > Source: [zce/dashboard-server](https://github.com/zce/dashboard-server)
 
@@ -63,47 +80,24 @@ https://dashboard-server.now.sh
 ```shell
 # clone api server
 $ git clone https://github.com/zce/dashboard-server.git
-# run api server
+
 $ cd dashboard-server
+
+# install deps
 $ npm install # or yarn
+
+# run api server
 $ npm start # or yarn start
+
 # => api server run @ http://localhost:2080
 ```
 
-modify `VUE_APP_API_BASE` in `.env.development` or `.env.prodution`:
+Then modify `VUE_APP_API_BASE` in `.env.development` or `.env.prodution`:
 
 ```diff
 - VUE_APP_API_BASE=https://dashboard-server.now.sh
 + VUE_APP_API_BASE=http://localhost:3000
 ```
-
-## Environment
-
-- [Node](https://nodejs.org) >= 10.0.0
-- [NPM](https://www.npmjs.com) >= 6.0.0 or [Yarn](https://yarnpkg.com) >= 1.20.0
-
-## Stacks
-
-- [Vue CLI](https://cli.vuejs.org/) - Standard Tooling for Vue.js Development
-- [Vue](https://vuejs.org/) - The Progressive JavaScript Framework
-- [Vuex](https://vuex.vuejs.org/) - Official state management pattern / library for Vue.js applications
-- [Vue Router](http://router.vuejs.org/) - Official router for Vue.js applications
-- [Vue I18n](https://kazupon.github.io/vue-i18n/) - Internationalization plugin for Vue.js
-- ~~[Vue Resource](https://github.com/pagekit/vue-resource)~~ - RESTful APIs library (instead by axios)
-- [Axios](https://github.com/axios/axios) - AJAX call library
-- [Element UI](https://github.com/ElemeFE/element) - UI Framework (Partial use, such as forms, forms, etc)
-- [NProgress](https://github.com/rstacruz/nprogress) - For slim progress bars like on YouTube, Medium, etc
-- ~~[Webpack](https://webpack.js.org)~~ - Bundler (within @vue/cli-service)
-- ~~[Vue Loader](https://vue-loader.vuejs.org/)~~ - Bundler (within @vue/cli-service)
-- ~~[Babel](https://babeljs.io)~~ - JavaScript compiler (within @vue/cli-plugin-babel)
-- ~~[ESLint](https://eslint.org)~~ - Linter (within @vue/cli-plugin-eslint)
-- [Sass](https://sass-lang.com) - CSS Preprocessor
-- [EditorConfig](https://editorconfig.org)
-- [Travis CI](https://travis-ci.org) - CI System
-- [GitHub Actions](https://github.com/features/actions) - CI System
-- [JSON Server](https://github.com/typicode/json-server) - Basic framework of serverside
-- [Mock](https://mockjs.com)
-- etc.
 
 ## License
 
