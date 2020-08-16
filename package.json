@@ -65,8 +65,8 @@
     "vuex": "3.5.1"
   },
   "devDependencies": {
-    "@commitlint/cli": "9.1.1",
-    "@commitlint/config-conventional": "9.1.1",
+    "@commitlint/cli": "9.1.2",
+    "@commitlint/config-conventional": "9.1.2",
     "@vue/cli-plugin-babel": "4.5.3",
     "@vue/cli-plugin-eslint": "4.5.3",
     "@vue/cli-service": "4.5.3",
