@@ -53,6 +53,17 @@ $ cd dashboard
 $ npm install # or yarn
 ```
 
+### Scaffolding tools
+
+Create an application by [zce/caz](https://github.com/zce/caz)
+
+```shell
+# create vue.js apps through this
+$ npx caz vue dashboard
+# enter generated directory
+$ cd dashboard
+```
+
 ### Available Scripts
 
 ```shell
