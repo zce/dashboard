@@ -3,6 +3,7 @@
  * https://cli.vuejs.org/config/
  */
 
+/** @type {import('@vue/cli-service').ProjectOptions} */
 module.exports = {
   publicPath: '', // for relative path
   assetsDir: 'assets',
