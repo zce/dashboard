@@ -56,7 +56,7 @@
   "dependencies": {
     "axios": "0.21.0",
     "core-js": "3.6.5",
-    "element-ui": "2.14.0",
+    "element-ui": "2.14.1",
     "nprogress": "0.2.0",
     "store": "2.0.12",
     "vue": "2.6.12",
