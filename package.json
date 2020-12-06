@@ -55,7 +55,7 @@
   },
   "dependencies": {
     "axios": "0.21.0",
-    "core-js": "3.6.5",
+    "core-js": "3.8.1",
     "element-ui": "2.14.0",
     "nprogress": "0.2.0",
     "store": "2.0.12",
