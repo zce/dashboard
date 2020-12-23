@@ -1,6 +1,5 @@
-import Vue from 'vue'
-import element from 'element-ui'
-// import { sync } from 'vuex-router-sync'
+import { createApp } from 'vue'
+import element from 'element-plus'
 import App from './app'
 import i18n from './i18n'
 import store from './store'
@@ -10,24 +9,20 @@ import plugins from './plugins'
 // global styles
 import './style.scss'
 
+// Create root app
+const app = createApp(App)
+
 // global config
-Vue.config.debug = process.env.NODE_ENV === 'development'
-Vue.config.silent = process.env.NODE_ENV === 'production'
-Vue.config.productionTip = false
+// app.config.debug = process.env.NODE_ENV === 'development'
+// app.config.silent = process.env.NODE_ENV === 'production'
+// app.config.productionTip = false
 
 // plugins
-Vue.use(element)
-Vue.use(plugins)
-// sync(store, router, { moduleName: 'route' })
-
-// Create root app
-const app = new Vue({
-  name: 'root',
-  i18n: i18n,
-  store: store,
-  router: router,
-  render: h => h(App)
-})
+app.use(i18n)
+app.use(store)
+app.use(router)
+app.use(element)
+app.use(plugins)
 
 // Mount to `#app` element
-app.$mount('#app')
+app.mount('#app')

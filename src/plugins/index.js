@@ -9,11 +9,11 @@ import nprogress from './nprogress'
 import authorize from './authorize'
 
 export default {
-  install (Vue) {
-    axios(Vue)
-    title(Vue)
-    services(Vue)
-    nprogress(Vue)
-    authorize(Vue)
+  install (app, options) {
+    axios(app)
+    title(app)
+    services(app)
+    nprogress(app)
+    authorize(app)
   }
 }

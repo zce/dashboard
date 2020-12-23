@@ -6,7 +6,7 @@
 import router from '../router'
 import { axios, nprogress } from '../utils'
 
-export default Vue => {
+export default app => {
   // Add nprogress to route
   router.beforeEach((to, from, next) => {
     nprogress.start()
@@ -30,7 +30,5 @@ export default Vue => {
   })
 
   // mount the nprogress to Vue component instance
-  Object.defineProperties(Vue.prototype, {
-    $nprogress: { get: () => nprogress }
-  })
+  app.config.globalProperties.$nprogress = nprogress
 }

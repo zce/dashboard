@@ -24,7 +24,7 @@ export default [
   // ## not found page
   {
     name: 'not-found',
-    path: '*',
+    path: '/*',
     meta: { requireAuth: false },
     component: () => import(/* webpackChunkName: 'common' */ '../views/error')
   }

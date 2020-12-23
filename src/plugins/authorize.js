@@ -8,9 +8,9 @@
 import store from '../store'
 import router from '../router'
 
-export default Vue => {
+export default app => {
   // Authorize (Make sure that is the first hook.)
-  router.beforeHooks.unshift((to, from, next) => {
+  router.beforeEach((to, from, next) => {
     // don't need authorize
     if (!to.meta.requireAuth) return next()
     // check login state
