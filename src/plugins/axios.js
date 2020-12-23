@@ -7,14 +7,8 @@
 
 import { axios } from '../utils'
 
-export default Vue => {
-  // mount the axios to Vue
-  Object.defineProperties(Vue, {
-    axios: { get: () => axios }
-  })
-
+export default app => {
   // mount the axios to Vue component instance
-  Object.defineProperties(Vue.prototype, {
-    $axios: { get: () => axios }
-  })
+  app.config.globalProperties.$axios = axios
+  // app
 }

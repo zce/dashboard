@@ -8,7 +8,7 @@ import store from '../store'
 const property = 'title'
 const separator = ' « '
 
-export default Vue => {
+export default app => {
   router.afterEach(route => {
     const current = route.matched[route.matched.length - 1].components.default
     const title = current[property] || current.name
@@ -29,7 +29,7 @@ export default Vue => {
     // document.title = [...items, process.env.VUE_APP_TITLE].join(separator)
   })
 
-  Object.defineProperties(Vue.prototype, {
+  Object.defineProperties(app.config.globalProperties, {
     $title: {
       get: () => {
         return store.getters.title

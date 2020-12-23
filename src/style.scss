@@ -1610,6 +1610,10 @@ body {
   cursor: wait !important;
 }
 
+#app {
+  height: 100%;
+}
+
 // ## Element theme
 // ------------------------------
 
@@ -1618,9 +1622,9 @@ $--color-primary: #40586F;
 // $--color-primary: teal;
 
 // 改变 icon 字体路径变量，必需
-$--font-path: '~element-ui/lib/theme-chalk/fonts';
+$--font-path: '~element-plus/lib/theme-chalk/fonts';
 
-@import '~element-ui/packages/theme-chalk/src/index';
+@import '~element-plus/packages/theme-chalk/src/index';
 
 /**
  * Suggested order:
