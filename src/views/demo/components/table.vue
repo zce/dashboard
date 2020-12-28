@@ -6,7 +6,7 @@
     <el-table :data="temp" @selection-change="handleSelectionChange" @filter-change="handleFilterChange">
       <el-table-column type="selection"></el-table-column>
       <el-table-column label="Date" width="160">
-        <template slot-scope="scope">{{ scope.row.date }}</template>
+        <template #default="scope">{{ scope.row.date }}</template>
       </el-table-column>
       <el-table-column prop="name" label="Name" width="160" :filters="[{ text: '汪磊', value: '汪磊' }, { text: '汪子文', value: '汪子文' }]"></el-table-column>
       <el-table-column prop="address" label="Address" show-overflow-tooltip></el-table-column>

@@ -18,7 +18,7 @@
     <el-table :data="users" v-loading="loading" element-loading-text="Loading..." @selection-change="handleSelectionChange" @filter-change="handleFilterChange" @sort-change="handleSortChange">
       <el-table-column type="selection"></el-table-column>
       <el-table-column prop="username" label="Username" min-width="200" sortable="custom">
-        <template slot-scope="scope">
+        <template #default="scope">
           <div class="user-info">
             <img :src="scope.row.meta.avatar" alt="scope.row.name">
             <div class="names">
@@ -29,7 +29,7 @@
         </template>
       </el-table-column>
       <el-table-column prop="status" label="Status" width="120" align="center" :filters="filters.status" column-key="status">
-        <template slot-scope="scope">
+        <template #default="scope">
           <i class="status status-primary" title="Activated" v-if="scope.row.status === 'activated'" @click="handleToggleStatus(scope.row)"></i>
           <i class="status status-warning" title="Email Unactivated" v-else-if="scope.row.status === 'email-unactivated'"></i>
           <i class="status status-warning" title="Phone Unactivated" v-else-if="scope.row.status === 'phone-unactivated'"></i>
@@ -39,7 +39,7 @@
       <el-table-column prop="email" label="Email" width="240" sortable="custom"></el-table-column>
       <el-table-column prop="phone" label="Mobile" width="160" sortable="custom"></el-table-column>
       <el-table-column prop="roles" label="Role" width="320" :filters="filters.roles" column-key="roles">
-        <template slot-scope="scope">
+        <template #default="scope">
           <el-tag type="success" v-for="item in scope.row.roles" :key="item">{{ item }}</el-tag>
         </template>
       </el-table-column>

@@ -20,27 +20,27 @@
       <el-table-column type="selection"></el-table-column>
       <el-table-column prop="title" label="Title" show-overflow-tooltip></el-table-column>
       <el-table-column label="Status" width="100">
-        <template slot-scope="scope">
+        <template #default="scope">
           {{ scope.row.status }}
         </template>
       </el-table-column>
       <el-table-column label="Categories" width="200">
-        <template slot-scope="scope">
+        <template #default="scope">
           <a v-for="item in scope.row.categories" :key="item.slug" href="#">{{ item.name }}, </a>
         </template>
       </el-table-column>
       <el-table-column label="Tags" width="240">
-        <template slot-scope="scope">
+        <template #default="scope">
           <a v-for="item in scope.row.tags" :key="item.slug" href="#">{{ item.name }}, </a>
         </template>
       </el-table-column>
       <el-table-column label="Author" width="100">
-        <template slot-scope="scope">
+        <template #default="scope">
           <a href="#">{{ scope.row.author.name }}</a>
         </template>
       </el-table-column>
       <el-table-column label="Comments" width="120" align="center">
-        <template slot-scope="scope">
+        <template #default="scope">
           <i class="icon-before icon-bubble"></i>
           <span>{{ scope.row.comment }}</span>
         </template>
