@@ -56,9 +56,8 @@
   "dependencies": {
     "axios": "0.21.1",
     "core-js": "3.8.1",
-    "element-plus": "1.0.1-beta.11",
+    "element-plus": "1.0.1-beta.17",
     "nprogress": "0.2.0",
-    "store": "2.0.12",
     "vue": "3.0.4",
     "vue-i18n": "9.0.0-beta.16",
     "vue-router": "4.0.1",

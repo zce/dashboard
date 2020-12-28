@@ -1,17 +1,26 @@
 /**
  * Storage
- * > - https://github.com/marcuswestin/store.js
- * > - https://github.com/marcuswestin/store.js#make-your-own-build
+ *
+ * Ref:
+ * - https://github.com/marcuswestin/store.js
+ *
  * @example
- *   import storage from './storage'
  *   storage.get( ... )
  *   storage.set( ... )
- *   storage.remove( ... )
- *   storage.clearAll()
- *   storage.each( ... )
  */
 
-import { createStore } from 'store/src/store-engine'
-import storage from 'store/storages/localStorage'
-
-export default createStore([storage], [], process.env.VUE_APP_STORAGE_PREFIX)
+export default {
+  get: key => {
+    const json = localStorage.getItem(process.env.VUE_APP_STORAGE_PREFIX + key)
+    try {
+      if (!json) return json
+      return JSON.parse(json)
+    } catch {
+      return json
+    }
+  },
+  set: (key, value) => {
+    const json = JSON.stringify(value)
+    localStorage.setItem(process.env.VUE_APP_STORAGE_PREFIX + key, json)
+  }
+}
