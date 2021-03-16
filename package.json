@@ -20,7 +20,6 @@
   "main": "N/A",
   "scripts": {
     "dev": "vite",
-    "lint": "vite lint",
     "build": "vite build",
     "serve": "vite preview"
   },
@@ -28,9 +27,6 @@
     "extends": [
       "@commitlint/config-conventional"
     ]
-  },
-  "lint-staged": {
-    "*.{js,vue}": "vite lint"
   },
   "renovate": {
     "extends": [
