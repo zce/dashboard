@@ -16,7 +16,7 @@ export default {
      * 站点名称
      * @type {string}
      */
-    name: process.env.VUE_APP_NAME,
+    name: import.meta.env.VITE_NAME,
 
     /**
      * 顶部菜单
@@ -80,7 +80,7 @@ export default {
      * 版权所属
      * @type {string}
      */
-    copyright: process.env.VUE_APP_NAME,
+    copyright: import.meta.env.VITE_NAME,
 
     /**
      * 是否收起边栏

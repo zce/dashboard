@@ -15,7 +15,7 @@ import actions from './actions'
 import modules from './modules'
 import plugins from './plugins'
 
-const strict = process.env.NODE_ENV !== 'production'
+const strict = import.meta.env.DEV
 
 /**
  * @type {import('vuex/types').Store<typeof import('./state').default>}
@@ -25,8 +25,8 @@ const store = createStore({ state, getters, mutations, actions, modules, plugins
 export default store
 
 // Hot module replacement
-if (module.hot) {
-  module.hot.accept([
+if (import.meta.hot) {
+  import.meta.hot.accept([
     './getters',
     './mutations',
     './actions',

@@ -7,10 +7,11 @@
 [![devDependency Status][devdependency-img]][devdependency-url]
 [![Code Style][style-img]][style-url]
 
-> A dashboard scaffolding based on Vue.js 3.0.
+> A dashboard scaffolding based on Vue.js 3.0 & Vite.
 
 ### TODOs
 
+- [x] Vite
 - [x] Migration deps to 3.0
 - [x] Basic API usage
 - [ ] Compatibility issues

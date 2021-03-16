@@ -12,7 +12,7 @@ export default app => {
   router.afterEach(route => {
     const current = route.matched[route.matched.length - 1].components.default
     const title = current[property] || current.name
-    const items = [process.env.VUE_APP_TITLE]
+    const items = [import.meta.env.VITE_TITLE]
     title && items.unshift(title)
 
     // change title
@@ -26,7 +26,7 @@ export default app => {
     //   })
     //   .filter(t => t && t.trim())
     //   .reverse()
-    // document.title = [...items, process.env.VUE_APP_TITLE].join(separator)
+    // document.title = [...items, import.meta.env.VITE_TITLE].join(separator)
   })
 
   Object.defineProperties(app.config.globalProperties, {

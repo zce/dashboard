@@ -6,7 +6,7 @@ import routes from './routes'
 
 const router = createRouter({
   history: createWebHashHistory(),
-  base: process.env.BASE_URL,
+  base: import.meta.env.BASE_URL,
   routes
 })
 

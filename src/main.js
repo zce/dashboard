@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
 import element from 'element-plus'
-import App from './app'
+import App from './app.vue'
 import i18n from './i18n'
 import store from './store'
 import router from './router'
@@ -13,8 +13,8 @@ import './style.scss'
 const app = createApp(App)
 
 // global config
-// app.config.debug = process.env.NODE_ENV === 'development'
-// app.config.silent = process.env.NODE_ENV === 'production'
+// app.config.debug = import.meta.env.DEV
+// app.config.silent = import.meta.env.PROD
 // app.config.productionTip = false
 
 // plugins

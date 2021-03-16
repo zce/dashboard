@@ -11,7 +11,7 @@
 
 export default {
   get: key => {
-    const json = localStorage.getItem(process.env.VUE_APP_STORAGE_PREFIX + key)
+    const json = localStorage.getItem(import.meta.env.VITE_STORAGE_PREFIX + key)
     try {
       if (!json) return json
       return JSON.parse(json)
@@ -21,6 +21,6 @@ export default {
   },
   set: (key, value) => {
     const json = JSON.stringify(value)
-    localStorage.setItem(process.env.VUE_APP_STORAGE_PREFIX + key, json)
+    localStorage.setItem(import.meta.env.VITE_STORAGE_PREFIX + key, json)
   }
 }

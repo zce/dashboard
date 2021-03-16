@@ -12,7 +12,7 @@
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
-import MenuList from './menu'
+import MenuList from './menu.vue'
 
 export default {
   name: 'sidebar',

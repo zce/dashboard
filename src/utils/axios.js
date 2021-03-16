@@ -11,7 +11,7 @@
 import axios from 'axios'
 
 export default axios.create({
-  baseURL: process.env.VUE_APP_API_BASE,
+  baseURL: import.meta.env.VITE_API_BASE,
   timeout: 3 * 1000, // 3s
   headers: {
     // 'X-Custom-Header': 'foobar',
