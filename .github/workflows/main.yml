@@ -24,11 +24,11 @@ jobs:
         env:
           NODE_ENV: production
           CI: true
-      # - name: Deploy Site
-      #   if: github.ref == 'refs/heads/master'
-      #   run: npx gh-pages
-      #     -d dist
-      #     -u "GitHub Actions <bots@github.com>"
+      - name: Deploy Site
+        if: github.ref == 'refs/heads/master'
+        run: npx gh-pages
+          -d dist
+          -u "GitHub Actions <bots@github.com>"
       # - name: Deploy to Surge
       #   if: github.ref == 'refs/heads/master'
       #   run: npx surge
