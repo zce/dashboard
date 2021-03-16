@@ -14,31 +14,14 @@
     "vuex",
     "zce"
   ],
-  "homepage": "https://github.com/zce/dashboard#readme",
-  "bugs": {
-    "url": "https://github.com/zce/dashboard/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/zce/dashboard.git"
-  },
+  "repository": "zce/dashboard",
   "license": "MIT",
-  "author": {
-    "name": "zce",
-    "email": "w@zce.me",
-    "url": "https://zce.me"
-  },
+  "author": "zce <w@zce.me> (https://zce.me)",
   "main": "N/A",
   "scripts": {
     "lint": "vue-cli-service lint",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
   },
   "commitlint": {
     "extends": [
@@ -55,33 +38,33 @@
   },
   "dependencies": {
     "axios": "0.21.1",
-    "core-js": "3.8.1",
-    "element-ui": "2.14.1",
+    "core-js": "3.9.1",
+    "element-ui": "2.15.1",
     "nprogress": "0.2.0",
     "store": "2.0.12",
     "vue": "2.6.12",
-    "vue-i18n": "8.22.2",
-    "vue-router": "3.4.9",
-    "vuex": "3.6.0"
+    "vue-i18n": "8.24.1",
+    "vue-router": "3.5.1",
+    "vuex": "3.6.2"
   },
   "devDependencies": {
-    "@commitlint/cli": "11.0.0",
-    "@commitlint/config-conventional": "11.0.0",
-    "@vue/cli-plugin-babel": "4.5.9",
-    "@vue/cli-plugin-eslint": "4.5.9",
-    "@vue/cli-service": "4.5.9",
+    "@commitlint/cli": "12.0.1",
+    "@commitlint/config-conventional": "12.0.1",
+    "@vue/cli-plugin-babel": "4.5.11",
+    "@vue/cli-plugin-eslint": "4.5.11",
+    "@vue/cli-service": "4.5.11",
     "@vue/eslint-config-standard": "6.0.0",
     "babel-eslint": "10.1.0",
-    "eslint": "7.16.0",
+    "eslint": "7.22.0",
     "eslint-plugin-import": "2.22.1",
     "eslint-plugin-node": "11.1.0",
-    "eslint-plugin-promise": "4.2.1",
+    "eslint-plugin-promise": "4.3.1",
     "eslint-plugin-standard": "5.0.0",
-    "eslint-plugin-vue": "7.3.0",
-    "husky": "4.3.6",
-    "lint-staged": "10.5.3",
-    "sass": "1.30.0",
-    "sass-loader": "10.1.0",
+    "eslint-plugin-vue": "7.7.0",
+    "husky": "5.1.3",
+    "lint-staged": "10.5.4",
+    "sass": "1.32.8",
+    "sass-loader": "11.0.1",
     "vue-template-compiler": "2.6.12"
   }
 }

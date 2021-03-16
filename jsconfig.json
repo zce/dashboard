@@ -2,11 +2,10 @@
   "compilerOptions": {
     "baseUrl": ".",
     "module": "commonjs",
-    "target": "es2015",
+    "target": "esnext",
     "paths": {
       "@/*": ["src/*"]
     }
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "dist"]
+  "include": ["src"]
 }
