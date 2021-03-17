@@ -16,7 +16,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v2
       - name: Install Dependencies
-        run: npm ci
+        run: npm install
       - name: Build Site
         run: npm run build
         env:
