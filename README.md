@@ -1,7 +1,6 @@
 # dashboard
 
-[![Actions Status][actions-img]][actions-url]
-[![Build Status][travis-img]][travis-url]
+[![Build Status][actions-img]][actions-url]
 [![License][license-img]][license-url]
 [![Dependency Status][dependency-img]][dependency-url]
 [![devDependency Status][devdependency-img]][devdependency-url]
@@ -120,8 +119,6 @@ Then modify `VUE_APP_API_BASE` in `.env.development` or `.env.prodution`:
 
 [actions-img]: https://github.com/zce/dashboard/workflows/CI/badge
 [actions-url]: https://github.com/zce/dashboard/actions
-[travis-img]: https://img.shields.io/travis/com/zce/dashboard
-[travis-url]: https://travis-ci.com/zce/dashboard
 [license-img]: https://img.shields.io/github/license/zce/dashboard
 [license-url]: https://github.com/zce/dashboard/blob/master/LICENSE
 [dependency-img]: https://img.shields.io/david/zce/dashboard
