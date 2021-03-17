@@ -20,5 +20,5 @@ jobs:
           CI: true
       - name: Deploy Site
         if: github.ref == 'refs/heads/master'
-        run: npx gh-pages -d dist -u "GitHub Actions <bots@github.com>" -x -t
+        run: npx gh-pages -d dist -u "GitHub Actions <bots@github.com>" -t
           -r https://${{ github.token }}@github.com/${{ github.repository }}.git
