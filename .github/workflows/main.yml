@@ -24,11 +24,5 @@ jobs:
           CI: true
       - name: Deploy Site
         if: github.ref == 'refs/heads/master'
-        run: npx gh-pages
-          -d dist
-          -u "GitHub Actions <bots@github.com>"
-      # - name: Deploy to Surge
-      #   if: github.ref == 'refs/heads/master'
-      #   run: npx surge
-      #     dist
-      #     --token ${{secrets.SURGE_TOKEN}}
+        run: npx gh-pages -d dist -u "GitHub Actions <bots@github.com>" -x -t
+          -r https://${{ github.token }}@github.com/${{ github.repository }}.git
