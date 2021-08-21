@@ -8,6 +8,40 @@
 
 > A dashboard scaffolding based on Vue.js 3.0 & Vite.
 
+## 🎉 New dashboard scaffolding
+
+https://github.com/zce/fearless
+
+### Features
+
+- Modern Vue.js Ecosystem
+  - vue 3.x
+  - vuex 4.x
+  - vue-router 4.x
+- Fully strongly typed
+  - typescript 4.x
+- Next generation frontend tooling
+  - vite 2.x
+- HTTP request based on Fetch API
+  - ky 0.x (not axios)
+- Customizable UI Library
+  - naive-ui 2.x
+- Complete engineering workflow
+  - eslint 7.x
+  - husky 7.x
+  - lint-staged 11.x
+  - commitlint 13.x
+- Locally mocked API server
+  - express 4.x
+- Authorization
+  - Access token
+  - Refresh token
+  - Auth refresh token
+  - Role based authorization
+- Modern application deployment
+  - GitHub Actions
+  - Vercel (with Serverless functions)
+
 ### TODOs
 
 - [x] Vite
