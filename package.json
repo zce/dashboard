@@ -49,7 +49,7 @@
     "@commitlint/config-conventional": "12.1.1",
     "@vitejs/plugin-vue": "1.2.1",
     "@vue/compiler-sfc": "3.0.11",
-    "husky": "6.0.0",
+    "husky": "7.0.4",
     "sass": "1.32.8",
     "vite": "2.1.5"
   }
