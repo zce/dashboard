@@ -50,7 +50,7 @@
     "@vitejs/plugin-vue": "1.2.1",
     "@vue/compiler-sfc": "3.0.11",
     "husky": "6.0.0",
-    "sass": "1.32.8",
+    "sass": "1.77.2",
     "vite": "2.1.5"
   }
 }
