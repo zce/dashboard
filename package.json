@@ -36,7 +36,7 @@
   },
   "dependencies": {
     "axios": "0.21.1",
-    "core-js": "3.10.0",
+    "core-js": "3.38.1",
     "element-plus": "1.0.2-beta.36",
     "nprogress": "0.2.0",
     "vue": "3.0.11",
